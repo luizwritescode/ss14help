@@ -1,0 +1,263 @@
+/* styles.css */
+
+/* Reset default styles */
+body, h1, p {
+	margin: 0;
+	padding: 0;
+}
+
+/* Add custom styles */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #111;
+	display: flex;
+	flex-direction: column;
+}
+
+h1 {
+	color: #333;
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+h2 {
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+h3 {
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+
+}
+
+p {
+	color: #666;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+i {
+	color: white;
+}
+
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+	text-align: center;
+}
+
+footer p {
+	margin: 10px 0;
+	color: white;
+}
+
+footer a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: inline-block;
+
+	color: lightblue;
+}
+/* Add more styles as needed */
+
+ul.horizontal-tab {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 0px;
+	list-style: none;
+}
+
+ul.horizontal-tab button {
+	margin-right: 10px;
+	padding: 10px 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #222;
+	color: #f2f2f2;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+nav {
+	display: flex;
+	flex: 0;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+	display:flex;
+	position: sticky;
+	z-index: 9999;
+	top:0;
+}
+
+header div {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex:1;
+}
+
+header div input {
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin-right: 10px;
+	min-width: 50%;
+	border: 1px solid #ccc;
+	font-size: large;
+}
+
+.btn {
+	padding: 10px 20px;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	background-color: #222;
+	color: #fff;
+	font-size: small;
+	cursor: pointer;
+}
+
+body > nav > ul > li > button {
+	border-bottom: 0px !important;
+}
+.btn:hover {
+	background-color: #444;
+}
+
+.btn:active {
+	background-color: #666;
+	transform: translate(0, 1px);
+}
+
+.btn.active {
+	background-color: #444;
+}
+
+.content {
+	padding: 20px;
+	background-color: #444;
+	min-height: 50%;
+	display: flex;
+	flex: 1;
+}	
+
+.content > div {
+	flex: 1;
+}
+
+.content > div > p {
+	color: white;
+}
+
+.list-category-header {
+	display: flex;
+	flex-direction: row;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 25px;
+}
+.list-category-header > i {
+	display: block;
+	justify-self: center;
+	align-self: center;
+	width: 25px;
+	height: 25px;
+	color: white;
+	padding: 5px;
+	transition: transform 0.15s ease;
+}
+
+.list-category-header > i {
+	transform: translateX(14px);
+
+}
+.list-category-header > i.toggled {
+	transform: rotate(90deg);
+}
+
+
+
+.recipe.fade {
+	opacity: 0;
+	height: 0;
+	border-width: 0;
+	display: none !important;
+	transition: all 0.5s;
+}
+
+
+.list-category-header > h2 {
+	color: white;
+	margin:0;
+	flex: 1;
+}
+.recipe > div > div > p {
+	color: lightgray;
+	margin-left: 10px;
+}
+
+.recipe {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: lightgray 1px solid;
+	padding: 10px;
+	opacity: 1;
+
+}
+.recipe > div {
+	display: flex;
+	flex-direction: row;
+	flex:1;
+	min-width: 50%;
+	background-color: #555;
+	padding: 10px;
+	border-radius: 5px;
+}	
+
+@media (max-width: 768px) {
+	.recipe > div {
+		min-width: 90%
+	}
+}
+
+.recipe > h3 {
+	color: white;
+	align-self: flex-start;
+}
+
+.recipe a.ingredient {
+	text-decoration: none;
+	color: lightblue;
+	cursor: pointer;
+}
+.recipe a.ingredient:hover {
+	text-decoration: underline;
+	color: #f2f2f2;
+}
+
+.left-side, .middle-side, .right-side {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+}
+
+.hidden {
+	display: none;
+}
