@@ -1,137 +1,96 @@
 <!doctype html>
-<title>{% block title %}{% endblock %} - Flaskr</title>
+<title>{% block title %}{% endblock %}</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-<header>
+<header class="header">
 	<div>
 		<input id="search-bar" type="text" placeholder="Search..." oninput="onInputSearchBar()">
 		<button class="btn" onclick="clearSearchBar(this)">Clear</button>
 	</div>
+	<button class="btn" id="help-btn" onclick="openHelpModal()">Help</button>
 </header>
-<nav>
-	<ul class="horizontal-tab">
-		<li><button class="nav-btn btn active" onclick="changeContent('reactions')">Reactions</button></li>
-		<li><button class="nav-btn btn" onclick="changeContent('cooking')">Cooking</button></li>
-		<li><button class="nav-btn btn" onclick="changeContent('crafting')" disabled>Crafting</button></li>
-		<li><button class="nav-btn btn" onclick="changeContent('construction')" disabled>Construction</button></li>
-		<li><button class="nav-btn btn" onclick="changeContent('lathes')" disabled>Lathes</button></li>
-	</ul>
+<nav class="nav">
+	<div>
+
+		<ul class="horizontal-tab">
+			<li><button class="nav-btn btn active" onclick="changeContent('reactions')">Reactions</button></li>
+			<li><button class="nav-btn btn" onclick="changeContent('cooking')">Cooking</button></li>
+			<li><button class="nav-btn btn" onclick="changeContent('crafting')" >Crafting</button></li>
+			<li><button class="nav-btn btn" onclick="changeContent('construction')" >Construction</button></li>
+			<li><button class="nav-btn btn" onclick="changeContent('lathes')" >Lathes</button></li>
+		</ul>
+
+		<div>
+			<button id="list-view-btn" class="btn active" onclick="changeViewType('list')">List</button>
+			<button id ="grid-view-btn" class="btn" onclick="changeViewType('grid')">Grid</button>
+		</div>
+
+	</div>
 </nav>
 
 <section class="content">
 	{% block content %}
 	<div id="reactions" class="reactions">
 		{% for category, value in reaction_categories.items() %}
-		<div class="category-container">
-
-			<div class="list-category-header">
-				<i class="fa fa-chevron-right toggled" onclick="toggleCategory(this)" ></i>
-				<h2>{{ category }}</h2>
-			</div>
-
-			{% if value is iterable %}
-			{% for reaction in value %}
-			<div id={{reaction.id}} class="recipe" style="display:flex">
-				<h3>{{reaction.id}}:</h3>
-				<div>
-					<div class="left-side">
-
-						{% if reaction.reactants is iterable %}
-						{% for reactant, reactant_data in reaction.reactants.items() %}
-							{% if reactant_data.basic %}
-							<p>{{ reactant }} [{{reactant_data.amount}}]</p>
-							{% else %}
-							<p><a class="ingredient">{{ reactant }}</a> [<span class="ingredient-amount">{{reactant_data.amount}}</span>]</p>
-							{% endif %}
-						{% endfor %}
-						{% endif %}
-					</div>
-					<div class="middle-side">
-						<p>→</p>
-						<p>{{reaction.requiredMixerCategories}}</p>
-						{% if reaction.minTemp is defined %}
-						<p>Heat to {{reaction.minTemp}}K</p>
-						{% endif %}
-					</div>
-					<div class="right-side">
-
-						{% if reaction.products is defined and reaction.products is iterable %}
-						{% for product, product_data in reaction.products.items() %}
-						{% if product_data.basic %}
-							<p>{{ product }} [{{product_data.amount}}]</p>
-						{% else %}
-							<p><a class="ingredient">{{ product }}</a> [{{product_data.amount}}]</p>
-						{% endif %}
-						{% endfor %}
-						{% endif %}
-					</div>
-				</div>
-			</div>
-			{% endfor %}
-			{% endif %}
-		</div>
+		
+			{% include 'components/reactions_category.html' %}
 
 		{% endfor %}
 	</div>
 	<div id="cooking" class="cooking hidden">
 		{% for category, value in cooking_categories.items() %}
-		<div class="category-container">
-
-			<div class="list-category-header">
-				<i class="fa fa-chevron-right toggled" onclick="toggleCategory(this)" ></i>
-				<h2>{{ category }}</h2>
-			</div>
-
-
-			{% if value is iterable %}
-			{% for recipe in value %}
-			<div class="recipe" style="display:flex">
-				<h3>{{recipe.id}}:</h3>
-				<div>
-					
-					<div class="left-side">
-
-						{% if recipe.solids is defined %}
-						{% for solid, amount in recipe.solids.items() %}
-						<p>{{ solid }} [{{amount}}]</p>
-						{% endfor %}
-						{% endif %}
-					</div>
-					<div class="middle-side">
-						<p>→</p>
-						{% if recipe.time is defined %}
-						<p>{{recipe.time}}s</p>
-						{% endif %}
-						{% if recipe.minTemp is defined %}
-						<p>Heat to {{recipe.minTemp}}K</p>
-						{% endif %}
-					</div>
-					<div class="right-side">
-
-						{% if recipe.result is defined %}
-						<p>{{ recipe.result }}</p>
-						{% endif %}
-					</div>
-				</div>
-			</div>
-			{% endfor %}
-			{% endif %}
-		</div>
-
+		
+			{% include 'components/cooking_category.html' %}
 		{% endfor %}
+	</div>
+	<div id="crafting" class="crafting hidden">
+		<h2>Coming soon...</h2>
+	</div>
+	<div id="construction" class="construction hidden">
+		<h2>Coming soon...</h2>
+		
+	</div>
+	<div id="lathes" class="lathes hidden">
+		<h2>Coming soon...</h2>
+		
 	</div>
 	{% endblock %}
 </section>
 
-<footer>
+<footer class="footer">
 	<p>Current Commit: <a href="https://github.com/space-wizards/space-station-14/tree/master"current_commit">{{current_commit}}</a></p>
+	<p>&nbsp;|&nbsp;</p>
+
 	<p>Last updated: <span id="last_updated">{{last_updated}}</span></span>
+	<p>&nbsp;|&nbsp;</p>
+
 	<p>made with ❤️ by <a href="https://github.com/luizwritescode">luizwritescode</a></p>
 </footer>
 
+<!-- Modal -->
+ {% include 'components/help_modal.html' %}
 
+<script>
+	const reactionData = {{ reaction_categories | tojson | safe }};
+	const cookingData = {{ cooking_categories | tojson | safe }};
+	const allData = {
+		'reactions': reactionData,
+		'cooking': cookingData
+	}
+	let allDataArray = [];
+	for (let key in allData) {
+		for (let cat in allData[key]) {
+			for (let recipe in allData[key][cat]) {
+				let entry = allData[key][cat][recipe];
+				entry['category'] = cat;
+				entry['key'] = key;
+				allDataArray.push(allData[key][cat][recipe]);
+			}
+		}
+	}
+	console.log(allDataArray);
+</script>
 
 <script src="{{ url_for('static', filename='utils.js') }}"></script>

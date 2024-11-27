@@ -2,6 +2,7 @@ from git import Repo
 import subprocess
 import time
 import os
+import click
 
 
 class AutoUpdate:
@@ -9,7 +10,7 @@ class AutoUpdate:
 		self.repo_url = repo_url
 		self.repo_subfolder = repo_subfolder
 		self.branch = branch
-		self.project_dir = os.path.dirname(os.path.realpath(__file__))
+		self.project_dir = os.path.dirname(os.path.abspath(__file__))
 		self.repo_path_local = os.path.join(self.project_dir, "source")
 		self.logger = logger
 
@@ -19,23 +20,23 @@ class AutoUpdate:
 		if not os.path.exists(self.repo_path_local):
 			self.clone_and_checkout_repository()
 
-	# if first time running, clone the repo
 	def clone_and_checkout_repository(self):
 		self.logger.info("AutoUpdate: Cloning the repository...")
 		try:
 			# Clone the repository
-			
-			subprocess.run(["mkdir", self.repo_path_local], shell=True)
-			subprocess.run(["git", "init", self.repo_path_local],shell=True)
+			if not os.path.exists(self.repo_path_local):
+				os.mkdir(self.repo_path_local)
+
+			subprocess.run(["git", "init", self.repo_path_local],shell=False)
 			# print the current working directory
 			os.chdir(self.repo_path_local)
-			subprocess.run(["git", "remote", "add", "-f", "origin", self.repo_url])
+			subprocess.run(["git", "remote", "add", "origin", self.repo_url], shell=False)
 
-			subprocess.run(["git", "config", "core.sparseCheckout", "true"])
-
+			subprocess.run(["git", "config", "core.sparseCheckout", "true"], shell=False)
 			open(".git/info/sparse-checkout", "w").write(self.repo_subfolder)
+
 			# Fetch the latest changes
-			subprocess.run(["git", "pull", "--depth=3", "origin", self.branch], shell=True)
+			subprocess.run(["git", "pull", "--depth=3", "origin", self.branch], shell=False)
 
 			os.chdir(self.project_dir)
 
@@ -95,3 +96,15 @@ class AutoUpdate:
 		
 	def set_last_updated(self, last_updated):
 		self.last_updated = last_updated
+
+
+
+# @click.command("clone", help="Check for updates")
+# def clone_and_checkout_repository():
+# 	au = AutoUpdate()
+# 	au.clone_and_checkout_repository()
+
+# @click.command("update", help="Check for updates")
+# def check_for_updates():
+# 	au = AutoUpdate()
+# 	au.check_for_updates()

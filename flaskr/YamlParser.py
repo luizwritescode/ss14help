@@ -16,6 +16,7 @@ class YamlParser:
 		loader.add_constructor('!type:ExplosionReactionEffect', self.ExplosionReactionEffect_constructor)
 		loader.add_constructor('!type:AreaReactionEffect', self.AreaReactionEffect_constructor)
 		loader.add_constructor('!type:EmpReactionEffect', self.EmpReactionEffect_constructor)
+		loader.add_constructor('!type:FlashReactionEffect', self.FlashReactionEffect_constructor)
 		loader.add_constructor('!type:CreateEntityReactionEffect', self.CreateEntityReactionEffect_constructor)
 		loader.add_constructor('!type:CreateGas', self.CreateGas_constructor)
 		loader.add_constructor('!type:PopupMessage', self.PopupMessage_constructor)
@@ -34,6 +35,9 @@ class YamlParser:
 		values = loader.construct_mapping(node)
 		return ReactionEffects.EmpReactionEffect(**values)
 	
+	def FlashReactionEffect_constructor(self, loader, node):
+		return ReactionEffects.FlashReactionEffect()
+	
 	def CreateEntityReactionEffect_constructor(self, loader, node):
 		values = loader.construct_mapping(node)
 		return ReactionEffects.CreateEntityReactionEffect(**values)
@@ -41,12 +45,12 @@ class YamlParser:
 	def CreateGas_constructor(self, loader, node):
 		values = loader.construct_mapping(node)
 		return ReactionEffects.CreateGas(**values)
-	
 
 	def PopupMessage_constructor(self, loader, node):
 		values = loader.construct_mapping(node)
 		return ReactionEffects.PopupMessage(**values)
 	
+
 	
 	def parse(self, yaml_file):
 		with open(yaml_file, 'r') as stream:
@@ -72,9 +76,9 @@ class YamlParser:
 		reactions['drinks'] = self.parse( os.path.join(project_dir, 'flaskr', 'source', 'Resources', 'Prototypes', 'Recipes', 'Reactions', 'drinks.yml') )
 		reactions['food'] = self.parse( os.path.join(project_dir, 'flaskr', 'source', 'Resources', 'Prototypes', 'Recipes', 'Reactions', 'food.yml') )
 		reactions['fun'] = self.parse( os.path.join(project_dir, 'flaskr', 'source', 'Resources', 'Prototypes', 'Recipes', 'Reactions', 'fun.yml') )
-		reactions['gas'] = self.parse( os.path.join(project_dir, 'flaskr', 'source', 'Resources', 'Prototypes', 'Recipes', 'Reactions', 'gas2.yml') )
+		reactions['gas'] = self.parse( os.path.join(project_dir, 'flaskr', 'source', 'Resources', 'Prototypes', 'Recipes', 'Reactions', 'gas.yml') )
 		reactions['medicine'] = self.parse( os.path.join(project_dir, 'flaskr', 'source', 'Resources', 'Prototypes', 'Recipes', 'Reactions', 'medicine.yml') )
-		reactions['pyrotechnic'] = self.parse( os.path.join(project_dir, 'flaskr', 'source', 'Resources', 'Prototypes', 'Recipes', 'Reactions', 'pyrotechnic2.yml') )
+		reactions['pyrotechnic'] = self.parse( os.path.join(project_dir, 'flaskr', 'source', 'Resources', 'Prototypes', 'Recipes', 'Reactions', 'pyrotechnic.yml') )
 		reactions['single_reagent'] = self.parse( os.path.join(project_dir, 'flaskr', 'source', 'Resources', 'Prototypes', 'Recipes', 'Reactions', 'single_reagent.yml') )
 		
 		cooking = {}
@@ -112,7 +116,7 @@ class YamlParser:
 							recipe['products'][product]['basic'] = False
 						else:
 							recipe['products'][product]['basic'] = True
-		print(recipe['reactants'])
+		# print(recipe['reactants'])
 
 		return data
 

@@ -1,4 +1,18 @@
 /* styles.css */
+/* WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2c2c2c; /* Dark background */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555; /* Darker thumb */
+    border-radius: 10px;
+    border: 3px solid #2c2c2c; /* Match the track background */
+}
 
 /* Reset default styles */
 body, h1, p {
@@ -94,6 +108,17 @@ nav {
 	flex: 0;
 }
 
+.nav > div {
+	display: flex;
+	flex: 1;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav > div > div {
+	margin-right: 10px;
+}
+
 header {
 	background-color: #333;
 	color: #fff;
@@ -149,9 +174,9 @@ body > nav > ul > li > button {
 .content {
 	padding: 20px;
 	background-color: #444;
-	min-height: 50%;
 	display: flex;
 	flex: 1;
+	overflow-y: auto;
 }	
 
 .content > div {
@@ -162,13 +187,26 @@ body > nav > ul > li > button {
 	color: white;
 }
 
+.category-header {
+	display: block;
+}
+
 .list-category-header {
 	display: flex;
 	flex-direction: row;
-	border: 1px solid #ccc;
 	border-radius: 5px;
 	padding: 25px;
 }
+
+.list-category-header > h2 {
+	color: white;
+	margin:0;
+	flex: 1;
+	font-size: 1.5em;
+	font-family: 'Roboto', sans-serif;
+}
+
+
 .list-category-header > i {
 	display: block;
 	justify-self: center;
@@ -188,7 +226,21 @@ body > nav > ul > li > button {
 	transform: rotate(90deg);
 }
 
+.grid-view {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+	gap: 16px;
+	padding: 16px;
+}
 
+.grid-view p {
+	color: white;
+	font-size: 0.9em;
+}
+
+.grid-view .left-side, .grid-view .right-side {
+	flex:2;
+}
 
 .recipe.fade {
 	opacity: 0;
@@ -199,11 +251,6 @@ body > nav > ul > li > button {
 }
 
 
-.list-category-header > h2 {
-	color: white;
-	margin:0;
-	flex: 1;
-}
 .recipe > div > div > p {
 	color: lightgray;
 	margin-left: 10px;
@@ -214,8 +261,11 @@ body > nav > ul > li > button {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border: lightgray 1px solid;
-	padding: 10px;
+	background-color: #363636;
+	/* border: lightgray 1px solid; */
+	border-radius: 10px;
+	padding: 10px 10px 0px 10px;
+	margin-bottom: 10px;
 	opacity: 1;
 
 }
@@ -223,7 +273,7 @@ body > nav > ul > li > button {
 	display: flex;
 	flex-direction: row;
 	flex:1;
-	min-width: 50%;
+	min-width: 100%;
 	background-color: #555;
 	padding: 10px;
 	border-radius: 5px;
@@ -231,13 +281,19 @@ body > nav > ul > li > button {
 
 @media (max-width: 768px) {
 	.recipe > div {
-		min-width: 90%
+		min-width: 100%
 	}
 }
 
 .recipe > h3 {
 	color: white;
 	align-self: flex-start;
+}
+
+.recipe > h3 > a {
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 .recipe a.ingredient {
@@ -250,6 +306,41 @@ body > nav > ul > li > button {
 	color: #f2f2f2;
 }
 
+.recipe p {
+	color: white;
+}
+
+.suggestions {
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	border: 1px solid #ccc;
+	border-top: 0px;
+	border-radius: 10px;
+	
+}
+
+.suggestion {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	padding-top:8px;
+	padding-bottom: 8px;
+	border-radius: 10px;
+
+	cursor: pointer;
+	color: black
+}
+
+.suggestion:hover {
+	background-color: #f2f2f2;
+}
+
 .left-side, .middle-side, .right-side {
 	display: flex;
 	flex-direction: column;
@@ -258,6 +349,54 @@ body > nav > ul > li > button {
 	flex: 1;
 }
 
+.recipe-page {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.recipe-page > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.recipe-page > div > div {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+
 .hidden {
 	display: none;
+}
+
+
+.footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: #333;
+	color: white;
+	padding: 10px 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px; 
+    padding: 16px; 
+}
+
+.grid-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    padding: 16px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

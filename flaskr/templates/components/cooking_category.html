@@ -1,0 +1,69 @@
+<div class="category-header">
+    <div class="list-category-header">
+        <!-- <i class="fa fa-chevron-right toggled" onclick="toggleCategory(this)" ></i> -->
+        <h2>
+            {{ category|capitalize }}
+        </h2>
+                
+    </div>
+    <hr/>
+</div>
+
+<div class="category-container">
+
+
+
+    {% if value is iterable %}
+    {% for recipe in value %}
+    <div class="recipe" style="display:flex">
+        <h3>
+            <a class="recipe-link"> 
+                {{recipe.id}}
+            </a>	
+                
+            </h3>
+        <div>
+            
+            <div class="left-side">
+
+                {% if recipe.solids is defined %}
+                    {% for solid, amount in recipe.solids.items() %}
+                        <p>{{ solid }} [{{amount}}]</p>
+                    {% endfor %}
+
+                {% elif recipe.reagents is defined %}
+
+                    <div>
+                        <p>In a beaker </p>
+                    </div>
+                    <div>
+
+                        {% for reagent, amount in recipe.reagents.items() %}
+                            <p>{{ reagent }} [{{amount}}]</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            <div class="middle-side">
+                <p>→</p>
+                {% if recipe.time is defined %}
+                
+                <p>Microwave {{recipe.time}}s</p>
+                {% else %}
+                <p>Instant</p>
+                {% endif %}
+                {% if recipe.minTemp is defined %}
+                <p>Heat to {{recipe.minTemp}}K</p>
+                {% endif %}
+            </div>
+            <div class="right-side">
+
+                {% if recipe.result is defined %}
+                <p>{{ recipe.result }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>

@@ -1,0 +1,64 @@
+<div class="category-header">
+
+    <div class="list-category-header">
+        <!-- <i class="fa fa-chevron-right toggled" onclick="toggleCategory(this)" ></i> -->
+        <h2>
+            {{ category|capitalize }}
+        </h2>
+                
+    </div>
+    <hr/>
+</div>
+
+<div class="category-container">
+
+
+
+    {% if value is iterable %}
+    {% for reaction in value %}
+    <div id={{reaction.id}} class="recipe" style="display:flex">
+        <h3>
+        <a class="recipe-link"> 
+            {{reaction.id}}
+        </a>	
+            
+        </h3>
+        <div>
+            <div class="left-side">
+
+                {% if reaction.reactants is iterable %}
+                {% for reactant, reactant_data in reaction.reactants.items() %}
+                    {% if reactant_data.basic %}
+                    <p>{{ reactant }} [{{reactant_data.amount}}]</p>
+                    {% else %}
+                    <p><a class="ingredient">{{ reactant }}</a> [<span class="ingredient-amount">{{reactant_data.amount}}</span>]</p>
+                    {% endif %}
+                {% endfor %}
+                {% endif %}
+            </div>
+            <div class="middle-side">
+                <p>→</p>
+                {% for mixCategory in reaction.requiredMixerCategories %}
+                    <p>{{mixCategory}}</p>
+                {% endfor %}
+                {% if reaction.minTemp is defined %}
+                <p>Heat to {{reaction.minTemp}}K</p>
+                {% endif %}
+            </div>
+            <div class="right-side">
+
+                {% if reaction.products is defined and reaction.products is iterable %}
+                {% for product, product_data in reaction.products.items() %}
+                {% if product_data.basic %}
+                    <p>{{ product }} [{{product_data.amount}}]</p>
+                {% else %}
+                    <p><a class="ingredient">{{ product }}</a> [{{product_data.amount}}]</p>
+                {% endif %}
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
