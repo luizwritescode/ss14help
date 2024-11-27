@@ -73,8 +73,8 @@
  {% include 'components/help_modal.html' %}
 
 <script>
-	const reactionData = {{ reaction_categories | tojson | safe }};
-	const cookingData = {{ cooking_categories | tojson | safe }};
+	const reactionData = "{{ reaction_categories | tojson | safe }}";
+	const cookingData = "{{ cooking_categories | tojson | safe }}";
 	const allData = {
 		'reactions': reactionData,
 		'cooking': cookingData
