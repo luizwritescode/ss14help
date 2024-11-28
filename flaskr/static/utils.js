@@ -593,7 +593,7 @@ function setContentHeight() {
 	let nav = document.getElementsByClassName("nav")[0];
 	let footer = document.getElementsByClassName("footer")[0];
 	let header = document.getElementsByClassName("header")[0];
-	content.style.maxHeight = window.innerHeight - header.offsetHeight - nav.offsetHeight - footer.offsetHeight  + "px";
+	content.style.maxHeight = window.innerHeight - header.clientHeight - nav.clientHeight - footer.clientHeight + "px";
 }
 
 setContentHeight();
