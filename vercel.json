@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "flaskr/index.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "flaskr/index.py"
+        },
+        {
+            "source": "/static/(.*)",
+            "destination": "/public/$1"
+        }
+    ]
+}

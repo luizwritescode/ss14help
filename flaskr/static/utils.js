@@ -548,9 +548,7 @@ function bindAllRecipeLinks() {
 	let recipes = document.getElementsByClassName("recipe");
 	for (let recipe of recipes) {
 		recipe_link = recipe.getElementsByClassName("recipe-link")[0];
-		console.log(recipe)
 		recipe_link.addEventListener("click", function (event) {
-			debugger
 			let recipeName = event.target.innerText;
 			searchBar.value = recipeName;
 			onInputSearchBar();
@@ -595,7 +593,7 @@ function setContentHeight() {
 	let nav = document.getElementsByClassName("nav")[0];
 	let footer = document.getElementsByClassName("footer")[0];
 	let header = document.getElementsByClassName("header")[0];
-	content.style.maxHeight = window.innerHeight - header.offsetHeight - nav.offsetHeight - footer.offsetHeight - 41 + "px";
+	content.style.maxHeight = window.innerHeight - header.offsetHeight - nav.offsetHeight - footer.offsetHeight  + "px";
 }
 
 setContentHeight();
