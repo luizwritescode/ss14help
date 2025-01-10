@@ -1,4 +1,5 @@
 import os
+import sys
 import json
 import time
 import logging
@@ -15,8 +16,11 @@ yp = YamlParser()
 if not os.path.exists(au.repo_path_local):
     au.clone_and_checkout_repository()    
 
+try:
 # Check for updates
-au.check_for_updates()
+    au.check_for_updates()
+except Exception as e:
+    sys.exit(f"Error checking for updates: {e}")
 
 # Get the latest commit name
 current_commit = au.get_latest_commit_name()

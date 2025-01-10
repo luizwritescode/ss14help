@@ -29,15 +29,13 @@ class AutoUpdate:
             subprocess.run(["git", "init", self.repo_path_local],shell=False)
             # print the current working directory
             os.chdir(self.repo_path_local)
-            subprocess.run(["git", "remote", "add", "origin", self.repo_url], shell=False)
+            subprocess.run(["git", "remote", "add", "upstream", self.repo_url], shell=False)
 
             subprocess.run(["git", "config", "core.sparseCheckout", "true"], shell=False)
             open(".git/info/sparse-checkout", "w").write(self.repo_subfolder)
 
             # Fetch the latest changes
-            subprocess.run(["git", "pull", "--depth=3", "origin", self.branch], shell=False)
-
-            os.chdir(self.project_dir)
+            subprocess.run(["git", "pull", "--depth=3", "upstream", self.branch], shell=False)
 
         except Exception as e:
             self.logger.error(f"AutoUpdate: Error cloning the repository: {e}")
@@ -48,16 +46,20 @@ class AutoUpdate:
             # Open the repository
             repo = Repo(self.repo_path_local)
 
+            # add upstream remote
+            if 'upstream' not in repo.remotes:
+                repo.create_remote('upstream', self.repo_url)
+
             # Fetch the latest changes
-            repo.remotes.origin.fetch()
+            repo.remotes.upstream.fetch()
 
             # Get the number of commits ahead of the local repository
-            num_commits = len(list(repo.iter_commits(f"origin/{self.branch}..{self.branch}")))
+            # num_commits = len(list(repo.iter_commits(f"upstream/{self.branch}..{self.branch}")))
 
             # If there are new commits, pull the latest changes
 
-            if num_commits > 0:
-                self.logger.info(f"AutoUpdate: There are {num_commits} new commit(s) available. Pulling the latest changes...")
+            if repo.refs[self.branch].commit != repo.remotes.upstream.refs[self.branch].commit:
+                self.logger.info(f"AutoUpdate: There are new commit(s) available. Pulling the latest changes...")
                 self.pull_and_update()
             else:
                 self.logger.info("AutoUpdate: No new commits available.")
@@ -65,10 +67,11 @@ class AutoUpdate:
             
         except Exception as e:
             self.logger.error(f"AutoUpdate: Error checking for updates: {e}")
+            raise e
 
     def pull_and_update(self):
         try:
-            subprocess.run(["git", "pull", "origin", self.branch])
+            subprocess.run(["git", "pull", f"upstream/{self.branch}"], shell=False)
 
             self.last_updated = time.time()
             self.logger.info("AutoUdpate: Successfully pulled the latest changes.")
