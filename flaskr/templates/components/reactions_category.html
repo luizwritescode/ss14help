@@ -28,7 +28,7 @@
 
                 {% if reaction.reactants is iterable %}
                 {% for reactant, reactant_data in reaction.reactants.items() %}
-                    {% if reactant_data.basic %}
+                    {% if reactant_data.basic == 'true' %}
                     <p>{{ reactant }} [{{reactant_data.amount}}]</p>
                     {% else %}
                     <p><a class="ingredient">{{ reactant }}</a> [<span class="ingredient-amount">{{reactant_data.amount}}</span>]</p>
@@ -49,7 +49,7 @@
 
                 {% if reaction.products is defined and reaction.products is iterable %}
                 {% for product, product_data in reaction.products.items() %}
-                {% if product_data.basic %}
+                {% if product_data.basic == 'true' %}
                     <p>{{ product }} [{{product_data.amount}}]</p>
                 {% else %}
                     <p><a class="ingredient">{{ product }}</a> [{{product_data.amount}}]</p>

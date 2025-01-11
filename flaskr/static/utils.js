@@ -50,7 +50,7 @@ function showReactants(recipe, skippedRecipes = []) {
 
 function cloneRecipe(recipe, searchAmount) {
 	debugger
-	let amountOfProduct = searchAmount;
+	let amountOfProduct = parseFloat(searchAmount);
 	let recipeName = recipe.id;
 	let newRecipe = document.getElementById(recipeName).cloneNode(true)
 	newRecipe.id = amountOfProduct+ "u" + recipeName;
@@ -67,20 +67,24 @@ function cloneRecipe(recipe, searchAmount) {
 		rightside.appendChild(productP);
 	}
 
-	let totalAmountOfReactants = 0
-	for (let reactant in recipe.reactants) {
-		let reactantAmount = recipe.reactants[reactant]['amount'];
-		totalAmountOfReactants += reactantAmount;
-	}
 
 	for (let reactant in recipe.reactants) {
-		let newReactantAmount = Math.round((amountOfProduct * recipe.reactants[reactant]['amount']) / totalAmountOfReactants);
+		let reactantAmount = recipe.reactants[reactant]['amount'];
+        let productAmount = recipe.products[Object.keys(recipe.products)[0]]['amount']; // Assuming single product
+        let ratio = reactantAmount / productAmount;
+        let newReactantAmount = formatNumber(amountOfProduct * ratio);
 		//debugger
 		if (reactantHasRecipe(reactant))
 			{
 			let reactantP = document.createElement("a");
 			reactantP.textContent = reactant + " [" + newReactantAmount + "]";
 			reactantP.classList.add("ingredient");
+			reactantP.onclick = function () {
+				searchBar.value = newReactantAmount + " " + reactant;
+				onInputSearchBar();
+				hideSuggestions();
+			}
+
 			leftside.appendChild(reactantP);
 			cloneRecipe( lookupRecipe(reactant), newReactantAmount);
 		} else {
@@ -531,6 +535,11 @@ function closeHelpModal() {
 	modal.style.display = "none";
 }
 
+// format a number to a string with up to 2 decimal places
+function formatNumber(number) {
+    return number % 1 === 0 ? number.toString() : number.toFixed(2)
+}
+
 
 function bindAllIngredients() {
 	let ingredients = document.getElementsByClassName("ingredient");
@@ -593,13 +602,20 @@ function setContentHeight() {
 	let nav = document.getElementsByClassName("nav")[0];
 	let footer = document.getElementsByClassName("footer")[0];
 	let header = document.getElementsByClassName("header")[0];
-	content.style.maxHeight = window.innerHeight - header.clientHeight - nav.clientHeight - footer.clientHeight + "px";
+
+	// Calculate the available height for the content
+    let availableHeight = window.innerHeight - header.scrollHeight - nav.scrollHeight - footer.scrollHeight;
+
+	// Set the max height of the content
+    content.style.maxHeight = "76.2vh"; // availableHeight + "px";
+	content.style.minHeight = "76.2vh"; // availableHeight + "px";
 }
 
-setContentHeight();
 
 bindSearchBarHotkeys()
 
 bindAllIngredients();
 
 bindAllRecipeLinks();
+
+setContentHeight();

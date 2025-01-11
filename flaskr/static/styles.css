@@ -230,7 +230,6 @@ body > nav > ul > li > button {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
 	gap: 16px;
-	padding: 16px;
 }
 
 .grid-view p {
