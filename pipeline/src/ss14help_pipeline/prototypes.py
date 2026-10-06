@@ -2,8 +2,12 @@
 
 Mirrors RobustToolbox's PrototypeManager closely enough for recipe data:
 - Every ``*.yml`` under ``Resources/Prototypes`` is loaded, in sorted path order.
-- Custom tags (``!type:Foo``, ``!PartialOnly``, ...) never fail the load; they're kept as ``_type``.
+- Custom tags never fail the load: ``!type:Foo`` nodes are kept with ``_type: Foo``; partial
+  directives (``!Remove``, ``!Clear``, ``!Index:n``, ``!PartialOnly``, ...) become ``Directive``s.
 - A later prototype with the same (type, id) replaces the earlier one, with a warning.
+- Files in partial directories (``Resources/PartialPrototypes``) are applied afterwards as patches
+  to existing prototypes; see ``partials.py``. Elsewhere, directives are stripped to plain values,
+  because the engine ignores them there.
 - Inheritance (``SerializationManager.PushComposition``): a field the child sets replaces the
   parent's value entirely; fields it doesn't set come from the parent. With several parents, the
   first one listed wins. ``abstract`` is never inherited. Entity ``components`` are merged by
@@ -18,6 +22,13 @@ from typing import Any
 
 import yaml
 
+from ss14help_pipeline.partials import (
+    Directive,
+    apply_partial,
+    is_directive_tag,
+    partial_index,
+    strip,
+)
 from ss14help_pipeline.warnings import WarningLog
 
 _BaseLoader: type[yaml.SafeLoader] = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
@@ -27,16 +38,24 @@ class PrototypeLoader(_BaseLoader):  # type: ignore[valid-type,misc]
     """SafeLoader that accepts any ``!tag``. Uses libyaml when available (much faster)."""
 
 
-def _construct_tagged(loader: yaml.SafeLoader, suffix: str, node: yaml.Node) -> dict[str, Any]:
+def _construct_tagged(loader: yaml.SafeLoader, suffix: str, node: yaml.Node) -> Any:
     tag = node.tag
     name = tag[len("!type:") :] if tag.startswith("!type:") else tag.lstrip("!")
     if isinstance(node, yaml.MappingNode):
-        mapping = loader.construct_mapping(node, deep=True)
-        return {"_type": name, **{str(k): v for k, v in mapping.items()}}
-    if isinstance(node, yaml.SequenceNode):
-        return {"_type": name, "items": loader.construct_sequence(node, deep=True)}
-    value = loader.construct_scalar(node)  # type: ignore[arg-type]
-    return {"_type": name, "value": value} if value != "" else {"_type": name}
+        value: Any = loader.construct_mapping(node, deep=True)
+    elif isinstance(node, yaml.SequenceNode):
+        value = loader.construct_sequence(node, deep=True)
+    else:
+        scalar = loader.construct_scalar(node)  # type: ignore[arg-type]
+        value = scalar if scalar != "" else None
+
+    if is_directive_tag(name):
+        return Directive(name, value)
+    if isinstance(value, dict):
+        return {"_type": name, **{str(k): v for k, v in value.items()}}
+    if isinstance(value, list):
+        return {"_type": name, "items": value}
+    return {"_type": name, "value": value} if value is not None else {"_type": name}
 
 
 PrototypeLoader.add_multi_constructor("!", _construct_tagged)
@@ -80,44 +99,87 @@ class PrototypeIndex:
                 yield proto
 
 
-def load_prototypes(prototypes_dir: Path, log: WarningLog) -> PrototypeIndex:
-    """Parse and index every prototype; inheritance is not resolved yet."""
+def load_prototypes(
+    prototypes_dir: Path, log: WarningLog, partial_paths: list[str] | None = None
+) -> PrototypeIndex:
+    """Parse and index every prototype and apply partials; inheritance is not resolved yet.
+
+    ``partial_paths`` (relative to ``prototypes_dir``, in application order) come from
+    ``partials.read_partial_paths``.
+    """
+    partial_paths = partial_paths or []
     index = PrototypeIndex()
+    queued: list[tuple[int, int, str, dict[Any, Any]]] = []
     # Ordinal sort on the relative POSIX path: Path ordering is case-insensitive on Windows,
     # and load order decides which duplicate wins.
     paths = {p.relative_to(prototypes_dir).as_posix(): p for p in prototypes_dir.rglob("*.yml")}
-    for rel, path in sorted(paths.items()):
-        try:
-            documents = yaml.load(path.read_text(encoding="utf-8-sig"), Loader=PrototypeLoader)
-        except yaml.YAMLError as e:
-            log.add("yaml-error", f"could not parse: {str(e).splitlines()[0]}", rel)
-            continue
-        if documents is None:
-            continue
-        if not isinstance(documents, list):
-            log.add("yaml-not-a-list", "file is not a list of prototypes", rel)
-            continue
+    for order, (rel, path) in enumerate(sorted(paths.items())):
+        documents = _read(path, rel, log)
+        partial = partial_index(rel, partial_paths)
         templated = 0
         for doc in documents:
-            if not isinstance(doc, dict) or "type" not in doc or "id" not in doc:
+            if partial is not None:
+                queued.append((partial, order, rel, doc))
                 continue
-            if not isinstance(doc["id"], str | int):
+            proto_id = doc["id"]
+            if not isinstance(proto_id, str | int):
                 # e.g. `id: !type:CreateVariants` templates (atmos pipes); not recipe data.
                 templated += 1
                 continue
-            kind, proto_id = str(doc["type"]), str(doc["id"])
+            kind, data = str(strip(doc["type"])), strip(doc)
             of_kind = index.by_type.setdefault(kind, {})
-            if proto_id in of_kind:
+            if str(proto_id) in of_kind:
                 log.add(
                     "duplicate-id",
-                    f"{kind} {proto_id} also defined in {of_kind[proto_id].source_file}; "
+                    f"{kind} {proto_id} also defined in {of_kind[str(proto_id)].source_file}; "
                     "the later one wins",
                     rel,
                 )
-            of_kind[proto_id] = Prototype(kind, proto_id, doc, rel)
+            of_kind[str(proto_id)] = Prototype(kind, str(proto_id), data, rel)
         if templated:
             log.add("templated-id", f"{templated} prototypes with generated ids skipped", rel)
+
+    for _, _, rel, doc in sorted(queued, key=lambda q: (q[0], q[1])):
+        _apply_partial_doc(index, rel, doc)
     return index
+
+
+def _read(path: Path, rel: str, log: WarningLog) -> list[dict[Any, Any]]:
+    """The prototype mappings in one file (each with ``type`` and ``id``)."""
+    try:
+        documents = yaml.load(path.read_text(encoding="utf-8-sig"), Loader=PrototypeLoader)
+    except yaml.YAMLError as e:
+        log.add("yaml-error", f"could not parse: {str(e).splitlines()[0]}", rel)
+        return []
+    if documents is None:
+        return []
+    if not isinstance(documents, list):
+        log.add("yaml-not-a-list", "file is not a list of prototypes", rel)
+        return []
+    return [d for d in documents if isinstance(d, dict) and "type" in d and "id" in d]
+
+
+def _apply_partial_doc(index: PrototypeIndex, rel: str, doc: dict[Any, Any]) -> None:
+    type_node = doc["type"]
+    partial_only = isinstance(type_node, Directive) and type_node.tag == "PartialOnly"
+    kind = str(strip(type_node))
+    proto_id = doc["id"]
+    if isinstance(proto_id, dict) and proto_id.get("_type") == "CreateVariants":
+        # `values` may sit inside the tagged id node or next to it.
+        values = proto_id.get("values") or doc.get("values") or []
+        ids = [str(v) for v in values]
+        doc = {k: v for k, v in doc.items() if k != "values"}
+    else:
+        ids = [str(strip(proto_id))]
+
+    of_kind = index.by_type.setdefault(kind, {})
+    for pid in ids:
+        original = of_kind.get(pid)
+        if original is not None:
+            apply_partial(original.data, doc, entity=kind == "entity")
+        elif not partial_only:
+            data = strip({k: v for k, v in doc.items() if strip(k) != "id"})
+            of_kind[pid] = Prototype(kind, pid, {**data, "type": kind, "id": pid}, rel)
 
 
 def resolve_inheritance(index: PrototypeIndex, log: WarningLog) -> PrototypeIndex:
@@ -188,7 +250,12 @@ def _merge(child: dict[str, Any], parent: dict[str, Any], *, entity: bool) -> di
 
 
 def _merge_components(child: list[Any], parent: list[Any]) -> list[Any]:
-    by_type = {c.get("type"): i for i, c in enumerate(child) if isinstance(c, dict)}
+    """Merge component lists by ``type`` (``ComponentRegistrySerializer.PushInheritance``)."""
+    by_type = {
+        c["type"]: i
+        for i, c in enumerate(child)
+        if isinstance(c, dict) and isinstance(c.get("type"), str)
+    }
     merged = list(child)
     for comp in parent:
         if not isinstance(comp, dict):

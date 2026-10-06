@@ -23,7 +23,7 @@
    "sourceFile": "Reagents/misc.yml"
   },
   {
-   "color": "#22282b",
+   "color": "#111111",
    "desc": "A black, crystalline solid.",
    "dispensable": true,
    "group": "Elements",

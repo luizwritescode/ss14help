@@ -1,0 +1,6125 @@
+{
+ "sources": [
+  {
+   "entity": "AbyssiumOre",
+   "grind": {
+    "Iron": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "AbyssiumOre1",
+   "grind": {
+    "Iron": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "ArtifactFragment",
+   "grind": null,
+   "juice": {
+    "Artifexium": 10
+   }
+  },
+  {
+   "entity": "ArtifactFragment1",
+   "grind": null,
+   "juice": {
+    "Artifexium": 10
+   }
+  },
+  {
+   "entity": "Ash",
+   "grind": {
+    "Ash": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "BudgetCyberEyes",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "BudgetCyberKidneys",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "BudgetCyberLiver",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "BudgetCyberStomach",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "BudgetCyberTongue",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "CableApcStack",
+   "grind": {
+    "Copper": 2,
+    "Iron": 3
+   },
+   "juice": null
+  },
+  {
+   "entity": "CableApcStack1",
+   "grind": {
+    "Copper": 2,
+    "Iron": 3
+   },
+   "juice": null
+  },
+  {
+   "entity": "CableApcStack10",
+   "grind": {
+    "Copper": 2,
+    "Iron": 3
+   },
+   "juice": null
+  },
+  {
+   "entity": "CableDetStack",
+   "grind": {
+    "Charcoal": 2,
+    "Thermite": 3
+   },
+   "juice": null
+  },
+  {
+   "entity": "CableDetStack1",
+   "grind": {
+    "Charcoal": 2,
+    "Thermite": 3
+   },
+   "juice": null
+  },
+  {
+   "entity": "CableDetStack10",
+   "grind": {
+    "Charcoal": 2,
+    "Thermite": 3
+   },
+   "juice": null
+  },
+  {
+   "entity": "CableHVStack",
+   "grind": {
+    "Carbon": 0.5,
+    "Copper": 2,
+    "Iron": 2.5
+   },
+   "juice": null
+  },
+  {
+   "entity": "CableHVStack1",
+   "grind": {
+    "Carbon": 0.5,
+    "Copper": 2,
+    "Iron": 2.5
+   },
+   "juice": null
+  },
+  {
+   "entity": "CableHVStack10",
+   "grind": {
+    "Carbon": 0.5,
+    "Copper": 2,
+    "Iron": 2.5
+   },
+   "juice": null
+  },
+  {
+   "entity": "CableMVStack",
+   "grind": {
+    "Copper": 2,
+    "Iron": 3
+   },
+   "juice": null
+  },
+  {
+   "entity": "CableMVStack1",
+   "grind": {
+    "Copper": 2,
+    "Iron": 3
+   },
+   "juice": null
+  },
+  {
+   "entity": "CableMVStack10",
+   "grind": {
+    "Copper": 2,
+    "Iron": 3
+   },
+   "juice": null
+  },
+  {
+   "entity": "CascadChunk",
+   "grind": null,
+   "juice": {
+    "Plasma": 2,
+    "Tritium": 6
+   }
+  },
+  {
+   "entity": "ClothingShoeSlippersLizard",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 60
+   }
+  },
+  {
+   "entity": "Coal",
+   "grind": {
+    "Ammonia": 0.8,
+    "Carbon": 8.4,
+    "Hydrogen": 0.5,
+    "Mercury": 0.1,
+    "Sulfur": 0.2
+   },
+   "juice": null
+  },
+  {
+   "entity": "Coal1",
+   "grind": {
+    "Ammonia": 0.8,
+    "Carbon": 8.4,
+    "Hydrogen": 0.5,
+    "Mercury": 0.1,
+    "Sulfur": 0.2
+   },
+   "juice": null
+  },
+  {
+   "entity": "Coal10",
+   "grind": {
+    "Ammonia": 0.8,
+    "Carbon": 8.4,
+    "Hydrogen": 0.5,
+    "Mercury": 0.1,
+    "Sulfur": 0.2
+   },
+   "juice": null
+  },
+  {
+   "entity": "Coal15",
+   "grind": {
+    "Ammonia": 0.8,
+    "Carbon": 8.4,
+    "Hydrogen": 0.5,
+    "Mercury": 0.1,
+    "Sulfur": 0.2
+   },
+   "juice": null
+  },
+  {
+   "entity": "Coal5",
+   "grind": {
+    "Ammonia": 0.8,
+    "Carbon": 8.4,
+    "Hydrogen": 0.5,
+    "Mercury": 0.1,
+    "Sulfur": 0.2
+   },
+   "juice": null
+  },
+  {
+   "entity": "CottonBol",
+   "grind": {
+    "Cellulose": 10,
+    "Fiber": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "CyberEyeNightVision",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "CyberEyeThermal",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "CyberRebreather",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "DeathNettle",
+   "grind": {
+    "FluorosulfuricAcid": 7.5,
+    "SulfuricAcid": 7.5
+   },
+   "juice": null
+  },
+  {
+   "entity": "DehydratedSpaceCarp",
+   "grind": null,
+   "juice": {
+    "Glubotoxin": 30
+   }
+  },
+  {
+   "entity": "Ectoplasm",
+   "grind": {
+    "Arcryox": 25,
+    "Ash": 25
+   },
+   "juice": null
+  },
+  {
+   "entity": "FeetAnimal",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "Flare",
+   "grind": {
+    "Carbon": 2,
+    "Charcoal": 4,
+    "Iron": 10,
+    "Oxygen": 4,
+    "Phosphorus": 6,
+    "Sulfur": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodAloe",
+   "grind": {
+    "Aloe": 10,
+    "Dermaline": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodAmbrosiaDeus",
+   "grind": {
+    "Nutriment": 2,
+    "Omnizine": 3,
+    "SpaceDrugs": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodAmbrosiaVulgaris",
+   "grind": {
+    "Bicaridine": 5,
+    "Kelotane": 5,
+    "Nutriment": 3,
+    "Vitamin": 2
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodAnomalyBerry",
+   "grind": {
+    "Artifexium": 1,
+    "JuiceBerry": 20,
+    "Nutriment": 20,
+    "Vitamin": 20
+   },
+   "juice": {
+    "JuiceBerry": 30
+   }
+  },
+  {
+   "entity": "FoodApple",
+   "grind": {
+    "JuiceApple": 5,
+    "Nutriment": 5,
+    "Vitamin": 5
+   },
+   "juice": {
+    "JuiceApple": 10
+   }
+  },
+  {
+   "entity": "FoodBanana",
+   "grind": {
+    "JuiceBanana": 5,
+    "Nutriment": 8,
+    "Vitamin": 2
+   },
+   "juice": {
+    "JuiceBanana": 10
+   }
+  },
+  {
+   "entity": "FoodBerries",
+   "grind": {
+    "JuiceBerry": 5,
+    "Nutriment": 5,
+    "Vitamin": 5
+   },
+   "juice": {
+    "JuiceBerry": 10
+   }
+  },
+  {
+   "entity": "FoodBloodTomato",
+   "grind": {
+    "Blood": 10,
+    "Vitamin": 5
+   },
+   "juice": {
+    "Blood": 10
+   }
+  },
+  {
+   "entity": "FoodBloonion",
+   "grind": {
+    "Allicin": 5,
+    "Phosphorus": 1,
+    "Potassium": 1,
+    "Sugar": 3,
+    "Vitamin": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodBluePumpkin",
+   "grind": {
+    "Ammonia": 10,
+    "Chlorine": 10,
+    "Nutriment": 10,
+    "PumpkinFlesh": 20,
+    "Vitamin": 10
+   },
+   "juice": {
+    "JuiceBluePumpkin": 10
+   }
+  },
+  {
+   "entity": "FoodBlueTomato",
+   "grind": {
+    "Nutriment": 5,
+    "SpaceLube": 15,
+    "Vitamin": 5
+   },
+   "juice": {
+    "SpaceLube": 10
+   }
+  },
+  {
+   "entity": "FoodBungo",
+   "grind": {
+    "Enzyme": 10,
+    "Nutriment": 5
+   },
+   "juice": {
+    "JuiceBungo": 10
+   }
+  },
+  {
+   "entity": "FoodBungoPit",
+   "grind": {
+    "Bungotoxin": 5,
+    "Nutriment": 2
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodButter",
+   "grind": {
+    "Butter": 30
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodButterSlice",
+   "grind": {
+    "Butter": 2.5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodCabbage",
+   "grind": {
+    "Nutriment": 5,
+    "Vitamin": 5,
+    "Water": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodCannabisButter",
+   "grind": {
+    "Butter": 30,
+    "THC": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodCarrot",
+   "grind": {
+    "JuiceCarrot": 5,
+    "Oculine": 3,
+    "Vitamin": 7
+   },
+   "juice": {
+    "JuiceCarrot": 10,
+    "Oculine": 2
+   }
+  },
+  {
+   "entity": "FoodCherry",
+   "grind": {
+    "Nutriment": 3.5,
+    "Vitamin": 3.5
+   },
+   "juice": {
+    "JuiceCherry": 5
+   }
+  },
+  {
+   "entity": "FoodChiliPepper",
+   "grind": {
+    "CapsaicinOil": 10,
+    "Nutriment": 2,
+    "Vitamin": 3
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodChillyPepper",
+   "grind": {
+    "FrostOil": 10,
+    "Nutriment": 4,
+    "Vitamin": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodCinnamonStick",
+   "grind": {
+    "Cinnamon": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodCocoaBeans",
+   "grind": {
+    "CocoaPowder": 6,
+    "Nutriment": 6,
+    "Vitamin": 3
+   },
+   "juice": {
+    "CocoaPowder": 10
+   }
+  },
+  {
+   "entity": "FoodCocoaPod",
+   "grind": {
+    "CocoaPowder": 6,
+    "Nutriment": 6,
+    "Vitamin": 3
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodCorn",
+   "grind": {
+    "Cornmeal": 15,
+    "Nutriment": 5
+   },
+   "juice": {
+    "Cornoil": 3,
+    "Enzyme": 2
+   }
+  },
+  {
+   "entity": "FoodEvilApple",
+   "grind": {
+    "DevilJuice": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodExtradimensionalOrange",
+   "grind": {
+    "Haloperidol": 5,
+    "Nutriment": 5,
+    "Vitamin": 5
+   },
+   "juice": {
+    "JuiceOrange": 10
+   }
+  },
+  {
+   "entity": "FoodFakeCapfruit",
+   "grind": {
+    "Iron": 5,
+    "Nutriment": 5,
+    "Sulfur": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodFlyAmanita",
+   "grind": {
+    "Amatoxin": 10,
+    "Nutriment": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodGalaxythistle",
+   "grind": {
+    "Stellibinin": 30
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodGarlic",
+   "grind": {
+    "Allicin": 4,
+    "Nutriment": 6,
+    "Vitamin": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodGatfruit",
+   "grind": {
+    "Iron": 5,
+    "Nutriment": 5,
+    "Sulfur": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodGlasstle",
+   "grind": {
+    "Desoxyephedrine": 10,
+    "Razorium": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodGoldenApple",
+   "grind": {
+    "DoctorsDelight": 15,
+    "Nutriment": 10,
+    "Vitamin": 5
+   },
+   "juice": {
+    "Gold": 10,
+    "JuiceApple": 10
+   }
+  },
+  {
+   "entity": "FoodGrape",
+   "grind": {
+    "JuiceGrape": 5,
+    "Nutriment": 5,
+    "Vitamin": 5
+   },
+   "juice": {
+    "JuiceGrape": 10
+   }
+  },
+  {
+   "entity": "FoodHolymelon",
+   "grind": {
+    "Holywater": 48,
+    "Nutriment": 4,
+    "Sugar": 4,
+    "Vitamin": 4
+   },
+   "juice": {
+    "Wine": 20
+   }
+  },
+  {
+   "entity": "FoodHolymelonSlice",
+   "grind": {
+    "Holywater": 12,
+    "Nutriment": 1,
+    "Sugar": 1,
+    "Vitamin": 1
+   },
+   "juice": {
+    "Wine": 5
+   }
+  },
+  {
+   "entity": "FoodKoibean",
+   "grind": {
+    "CarpoToxin": 4,
+    "Nutriment": 4,
+    "Protein": 12
+   },
+   "juice": {
+    "CarpoToxin": 2
+   }
+  },
+  {
+   "entity": "FoodLaughinPeaPod",
+   "grind": {
+    "Laughter": 5,
+    "Nutriment": 5,
+    "Sugar": 5
+   },
+   "juice": {
+    "Hummus": 10,
+    "LaughinSyrup": 5
+   }
+  },
+  {
+   "entity": "FoodLemon",
+   "grind": {
+    "JuiceLemon": 5,
+    "Nutriment": 5,
+    "Vitamin": 5
+   },
+   "juice": {
+    "JuiceLemon": 10
+   }
+  },
+  {
+   "entity": "FoodLemoon",
+   "grind": {
+    "Milk": 10,
+    "Vitamin": 5
+   },
+   "juice": {
+    "Sake": 10
+   }
+  },
+  {
+   "entity": "FoodLily",
+   "grind": {
+    "Bicaridine": 10,
+    "Nutriment": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodLime",
+   "grind": {
+    "JuiceLime": 5,
+    "Nutriment": 5,
+    "Vitamin": 5
+   },
+   "juice": {
+    "JuiceLime": 10
+   }
+  },
+  {
+   "entity": "FoodLingzhi",
+   "grind": {
+    "Epinephrine": 20,
+    "Ultravasculine": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeat",
+   "grind": {
+    "Fat": 5,
+    "Nutriment": 5,
+    "UncookedAnimalProteins": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatAnomaly",
+   "grind": {
+    "Fat": 80,
+    "Nutriment": 80,
+    "UncookedAnimalProteins": 320
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatAnomalyCooked",
+   "grind": {
+    "Nutriment": 160,
+    "Protein": 80
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatBacon",
+   "grind": {
+    "Fat": 9,
+    "UncookedAnimalProteins": 6
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatBaconCooked",
+   "grind": {
+    "Nutriment": 5,
+    "Protein": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatBear",
+   "grind": {
+    "Fat": 5,
+    "Nutriment": 5,
+    "UncookedAnimalProteins": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatBearCooked",
+   "grind": {
+    "Nutriment": 20,
+    "Protein": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatBearCutlet",
+   "grind": {
+    "Fat": 1,
+    "Nutriment": 1,
+    "UncookedAnimalProteins": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatBearCutletCooked",
+   "grind": {
+    "Nutriment": 4,
+    "Protein": 2
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatChicken",
+   "grind": {
+    "Fat": 5,
+    "Nutriment": 5,
+    "UncookedAnimalProteins": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatChickenCooked",
+   "grind": {
+    "Nutriment": 20,
+    "Protein": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatChickenCutlet",
+   "grind": {
+    "Fat": 1,
+    "Nutriment": 1,
+    "UncookedAnimalProteins": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatChickenCutletCooked",
+   "grind": {
+    "Nutriment": 4,
+    "Protein": 2
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatChickenFried",
+   "grind": {
+    "Nutriment": 20,
+    "Protein": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatChickenFriedVox",
+   "grind": {
+    "Ammonia": 5,
+    "Nutriment": 15,
+    "Protein": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatClown",
+   "grind": {
+    "Fat": 5,
+    "Nutriment": 5,
+    "UncookedAnimalProteins": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatCooked",
+   "grind": {
+    "Nutriment": 20,
+    "Protein": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatCorgi",
+   "grind": {
+    "Bicaridine": 20,
+    "Nutriment": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatCrab",
+   "grind": {
+    "Fat": 5,
+    "Nutriment": 5,
+    "UncookedAnimalProteins": 20
+   },
+   "juice": {
+    "JuiceCrab": 30
+   }
+  },
+  {
+   "entity": "FoodMeatCrabCooked",
+   "grind": {
+    "Nutriment": 20,
+    "Protein": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatCutlet",
+   "grind": {
+    "Fat": 1,
+    "Nutriment": 1,
+    "UncookedAnimalProteins": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatCutletCooked",
+   "grind": {
+    "Nutriment": 4,
+    "Protein": 2
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatDragon",
+   "grind": {
+    "Ichor": 10,
+    "Protein": 20
+   },
+   "juice": {
+    "Ichor": 10
+   }
+  },
+  {
+   "entity": "FoodMeatDragonCooked",
+   "grind": {
+    "Ichor": 5,
+    "Nutriment": 15,
+    "Protein": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatDragonCutlet",
+   "grind": {
+    "Ichor": 2,
+    "Protein": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatDragonCutletCooked",
+   "grind": {
+    "Ichor": 1,
+    "Nutriment": 3,
+    "Protein": 3
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatDuck",
+   "grind": {
+    "Fat": 5,
+    "Nutriment": 5,
+    "UncookedAnimalProteins": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatDuckCooked",
+   "grind": {
+    "Nutriment": 20,
+    "Protein": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatDuckCutlet",
+   "grind": {
+    "Fat": 1,
+    "Nutriment": 1,
+    "UncookedAnimalProteins": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatDuckCutletCooked",
+   "grind": {
+    "Nutriment": 4,
+    "Protein": 2
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatFish",
+   "grind": {
+    "CarpoToxin": 5,
+    "Fat": 5,
+    "UncookedAnimalProteins": 20
+   },
+   "juice": {
+    "CarpoToxin": 5
+   }
+  },
+  {
+   "entity": "FoodMeatGoliath",
+   "grind": {
+    "Fat": 5,
+    "Nutriment": 5,
+    "UncookedAnimalProteins": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatGoliathCooked",
+   "grind": {
+    "Nutriment": 20,
+    "Protein": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatHuman",
+   "grind": {
+    "Fat": 5,
+    "Nutriment": 5,
+    "UncookedAnimalProteins": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatKoiFish",
+   "grind": {
+    "Fat": 5,
+    "Nutriment": 5,
+    "UncookedAnimalProteins": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatLizard",
+   "grind": {
+    "Fat": 5,
+    "Nutriment": 5,
+    "UncookedAnimalProteins": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatLizardCooked",
+   "grind": {
+    "Nutriment": 20,
+    "Protein": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatLizardCutlet",
+   "grind": {
+    "Fat": 1,
+    "Nutriment": 1,
+    "UncookedAnimalProteins": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatLizardCutletCooked",
+   "grind": {
+    "Nutriment": 4,
+    "Protein": 2
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatMeatball",
+   "grind": {
+    "Fat": 3,
+    "Nutriment": 7,
+    "UncookedAnimalProteins": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatMeatballCooked",
+   "grind": {
+    "Nutriment": 10,
+    "Protein": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatPatty",
+   "grind": {
+    "Fat": 2.5,
+    "Nutriment": 2.5,
+    "UncookedAnimalProteins": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatPattyCooked",
+   "grind": {
+    "Nutriment": 10,
+    "Protein": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatPenguin",
+   "grind": {
+    "Fat": 5,
+    "Nutriment": 5,
+    "UncookedAnimalProteins": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatPenguinCooked",
+   "grind": {
+    "Nutriment": 20,
+    "Protein": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatPenguinCutlet",
+   "grind": {
+    "Fat": 1,
+    "Nutriment": 1,
+    "UncookedAnimalProteins": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatPenguinCutletCooked",
+   "grind": {
+    "Nutriment": 4,
+    "Protein": 2
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatPlant",
+   "grind": {
+    "Fat": 5,
+    "Nutriment": 5,
+    "UncookedAnimalProteins": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatRat",
+   "grind": {
+    "Fat": 1,
+    "Nutriment": 1,
+    "UncookedAnimalProteins": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatRotten",
+   "grind": {
+    "Fat": 4,
+    "GastroToxin": 16,
+    "UncookedAnimalProteins": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatRouny",
+   "grind": {
+    "SulfuricAcid": 30
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatRounyCooked",
+   "grind": {
+    "Nutriment": 20,
+    "Protein": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatSalami",
+   "grind": {
+    "Fat": 5,
+    "Nutriment": 5,
+    "UncookedAnimalProteins": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatSalamiSlice",
+   "grind": {
+    "Fat": 1,
+    "Nutriment": 1,
+    "UncookedAnimalProteins": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatSlime",
+   "grind": {
+    "Fat": 5,
+    "Nutriment": 5,
+    "UncookedAnimalProteins": 20
+   },
+   "juice": {
+    "Slime": 10
+   }
+  },
+  {
+   "entity": "FoodMeatSnailCooked",
+   "grind": {
+    "Nutriment": 10,
+    "Protein": 5,
+    "Water": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatSnake",
+   "grind": {
+    "Fat": 3,
+    "Toxin": 2,
+    "UncookedAnimalProteins": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatSpider",
+   "grind": {
+    "Fat": 5,
+    "Nutriment": 5,
+    "UncookedAnimalProteins": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatSpiderCutlet",
+   "grind": {
+    "Fat": 1,
+    "Nutriment": 1,
+    "UncookedAnimalProteins": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatSpiderCutletCooked",
+   "grind": {
+    "Nutriment": 4,
+    "Protein": 2
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatSpiderLeg",
+   "grind": {
+    "Fat": 5,
+    "Nutriment": 5,
+    "UncookedAnimalProteins": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatSpiderlegCooked",
+   "grind": {
+    "Nutriment": 20,
+    "Protein": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatTomato",
+   "grind": {
+    "Fat": 5,
+    "Nutriment": 5,
+    "UncookedAnimalProteins": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatTomatoCutlet",
+   "grind": {
+    "Fat": 1,
+    "Nutriment": 1,
+    "UncookedAnimalProteins": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatWheat",
+   "grind": {
+    "UncookedAnimalProteins": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatXeno",
+   "grind": {
+    "SulfuricAcid": 30
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatXenoCutlet",
+   "grind": {
+    "SulfuricAcid": 6
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMeatXenoCutletCooked",
+   "grind": {
+    "Nutriment": 4,
+    "Protein": 2
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodMimana",
+   "grind": {
+    "MuteToxin": 5,
+    "Nutriment": 8,
+    "Vitamin": 2
+   },
+   "juice": {
+    "JuiceBanana": 5,
+    "Nothing": 5
+   }
+  },
+  {
+   "entity": "FoodMintLeaf",
+   "grind": {
+    "Nutriment": 5
+   },
+   "juice": {
+    "MintExtract": 10
+   }
+  },
+  {
+   "entity": "FoodMushroom",
+   "grind": {
+    "Nutriment": 12,
+    "Vitamin": 8
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodOnion",
+   "grind": {
+    "Allicin": 5,
+    "Nutriment": 5,
+    "Vitamin": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodOnionRed",
+   "grind": {
+    "Allicin": 5,
+    "Nutriment": 5,
+    "Vitamin": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodOnionRedSlice",
+   "grind": {
+    "Allicin": 1,
+    "Nutriment": 1,
+    "Vitamin": 1
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodOnionSlice",
+   "grind": {
+    "Allicin": 1,
+    "Nutriment": 1,
+    "Vitamin": 1
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodOrange",
+   "grind": {
+    "JuiceOrange": 5,
+    "Nutriment": 5,
+    "Vitamin": 5
+   },
+   "juice": {
+    "JuiceOrange": 10
+   }
+  },
+  {
+   "entity": "FoodOrganTree",
+   "grind": {
+    "Nutriment": 2,
+    "Vitamin": 2
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodPeaPod",
+   "grind": {
+    "Nutriment": 10,
+    "Vitamin": 5
+   },
+   "juice": {
+    "Hummus": 12
+   }
+  },
+  {
+   "entity": "FoodPineapple",
+   "grind": {
+    "JuicePineapple": 5,
+    "Nutriment": 8,
+    "Vitamin": 2
+   },
+   "juice": {
+    "JuicePineapple": 10
+   }
+  },
+  {
+   "entity": "FoodPineappleSlice",
+   "grind": {
+    "Nutriment": 2,
+    "Vitamin": 1
+   },
+   "juice": {
+    "JuicePineapple": 2
+   }
+  },
+  {
+   "entity": "FoodPoppy",
+   "grind": {
+    "Bicaridine": 10,
+    "Nutriment": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodPumpkin",
+   "grind": {
+    "Nutriment": 5,
+    "PumpkinFlesh": 20,
+    "Vitamin": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodRealCapfruit",
+   "grind": {
+    "Iron": 5,
+    "Nutriment": 5,
+    "Sulfur": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodResinfera",
+   "grind": {
+    "Acrileni": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodSausage",
+   "grind": {
+    "UncookedAnimalProteins": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodSausageCooked",
+   "grind": {
+    "Nutriment": 8,
+    "Protein": 9
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodSoybeans",
+   "grind": {
+    "Nutriment": 8,
+    "Protein": 12
+   },
+   "juice": {
+    "MilkSoy": 15
+   }
+  },
+  {
+   "entity": "FoodSpacemansTrumpet",
+   "grind": {
+    "Cellulose": 10,
+    "Nutriment": 2,
+    "PolypyryliumOligomers": 3
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodSpaceshroom",
+   "grind": {
+    "Nutriment": 12,
+    "Vitamin": 8
+   },
+   "juice": {
+    "SpaceDrugs": 10
+   }
+  },
+  {
+   "entity": "FoodSpaceshroomCooked",
+   "grind": {
+    "Nutriment": 20,
+    "Vitamin": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodThavenMeat",
+   "grind": {
+    "CarpoToxin": 5,
+    "Glubotoxin": 15
+   },
+   "juice": {
+    "CarpoToxin": 5,
+    "Glubotoxin": 15
+   }
+  },
+  {
+   "entity": "FoodTomato",
+   "grind": {
+    "Nutriment": 7,
+    "Vitamin": 3,
+    "Water": 5
+   },
+   "juice": {
+    "JuiceTomato": 10
+   }
+  },
+  {
+   "entity": "FoodWatermelon",
+   "grind": {
+    "JuiceWatermelon": 8,
+    "Nutriment": 4,
+    "Sugar": 4,
+    "Vitamin": 4,
+    "Water": 40
+   },
+   "juice": {
+    "JuiceWatermelon": 40
+   }
+  },
+  {
+   "entity": "FoodWatermelonSlice",
+   "grind": {
+    "JuiceWatermelon": 2,
+    "Nutriment": 1,
+    "Sugar": 1,
+    "Vitamin": 1,
+    "Water": 10
+   },
+   "juice": {
+    "JuiceWatermelon": 10
+   }
+  },
+  {
+   "entity": "FoodWorldPeas",
+   "grind": {
+    "Happiness": 5,
+    "Nutriment": 5,
+    "Pax": 5
+   },
+   "juice": {
+    "Hummus": 20
+   }
+  },
+  {
+   "entity": "HandsAnimal",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "HeadAbductor",
+   "grind": null,
+   "juice": {
+    "Nutriment": 5,
+    "Sugar": 10
+   }
+  },
+  {
+   "entity": "HeadAnimal",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "HeadArachnid",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 10,
+    "Fat": 5
+   }
+  },
+  {
+   "entity": "HeadAvali",
+   "grind": null,
+   "juice": {
+    "AvaliBlood": 10,
+    "Fat": 5
+   }
+  },
+  {
+   "entity": "HeadCyclorite",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 10,
+    "Fat": 5
+   }
+  },
+  {
+   "entity": "HeadDoll",
+   "grind": null,
+   "juice": {
+    "Blood": 20,
+    "Fat": 10,
+    "UncookedAnimalProteins": 10
+   }
+  },
+  {
+   "entity": "HeadElf",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 5
+   }
+  },
+  {
+   "entity": "HeadExperiment",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "HeadFelionoid",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "HeadGingerbread",
+   "grind": null,
+   "juice": {
+    "Nutriment": 5,
+    "Sugar": 10
+   }
+  },
+  {
+   "entity": "HeadHuman",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 5
+   }
+  },
+  {
+   "entity": "HeadIPC",
+   "grind": null,
+   "juice": {
+    "RefinedOil": 10
+   }
+  },
+  {
+   "entity": "HeadLagomorph",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 5
+   }
+  },
+  {
+   "entity": "HeadMoth",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 5
+   }
+  },
+  {
+   "entity": "HeadNeoVulpkanin",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 5,
+    "Blood": 10,
+    "Fat": 5
+   }
+  },
+  {
+   "entity": "HeadNeocyte",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 5,
+    "Blood": 10,
+    "Fat": 5
+   }
+  },
+  {
+   "entity": "HeadReptilian",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 5
+   }
+  },
+  {
+   "entity": "HeadResomi",
+   "grind": null,
+   "juice": {
+    "Fat": 5,
+    "ResomiBlood": 10
+   }
+  },
+  {
+   "entity": "HeadRodentia",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "HeadShadekin",
+   "grind": null,
+   "juice": {
+    "DarkBlood": 10,
+    "Fat": 5
+   }
+  },
+  {
+   "entity": "HeadThaven",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 5
+   }
+  },
+  {
+   "entity": "HeadVox",
+   "grind": null,
+   "juice": {
+    "AmmoniaBlood": 10,
+    "Fat": 5
+   }
+  },
+  {
+   "entity": "HeadVulpkanin",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 5
+   }
+  },
+  {
+   "entity": "ImmortalRoach",
+   "grind": {
+    "Slime": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "IngotGold",
+   "grind": {
+    "Gold": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "IngotGold1",
+   "grind": {
+    "Gold": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "IngotSilver",
+   "grind": {
+    "Silver": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "IngotSilver1",
+   "grind": {
+    "Silver": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "LeavesCannabis",
+   "grind": {
+    "THC": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "LeavesCannabisDried",
+   "grind": {
+    "Nutriment": 10,
+    "Vitamin": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "LeavesCannabisRainbow",
+   "grind": {
+    "Happiness": 2,
+    "Lipolicide": 3,
+    "MindbreakerToxin": 2,
+    "Psicodine": 1,
+    "SpaceDrugs": 6
+   },
+   "juice": null
+  },
+  {
+   "entity": "LeavesCannabisRainbowDried",
+   "grind": {
+    "Happiness": 2,
+    "Lipolicide": 3,
+    "MindbreakerToxin": 2,
+    "Psicodine": 1,
+    "SpaceDrugs": 6
+   },
+   "juice": null
+  },
+  {
+   "entity": "LeavesTea",
+   "grind": {
+    "Vitamin": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "LeavesTeaDried",
+   "grind": {
+    "TeaPowder": 5,
+    "Vitamin": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "LeavesTobacco",
+   "grind": {
+    "Nicotine": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "LeavesTobaccoDried",
+   "grind": {
+    "Nicotine": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "LeavesTobaccoDried5",
+   "grind": {
+    "Nicotine": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "LeftArmAbductor",
+   "grind": null,
+   "juice": {
+    "Nutriment": 3,
+    "Sugar": 10
+   }
+  },
+  {
+   "entity": "LeftArmArachnid",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftArmAvali",
+   "grind": null,
+   "juice": {
+    "AvaliBlood": 5,
+    "Fat": 1.5
+   }
+  },
+  {
+   "entity": "LeftArmCyber",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftArmCyberAngel",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftArmCyberBulwark",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftArmCyberEngineer",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftArmCyberGorilla",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftArmCyberHerakles",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftArmCyberInvestigator",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftArmCyberMantisBlade",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftArmCyberMechwright",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftArmCyberPersephone",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftArmCyberReaper",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftArmCyberRiplet",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftArmCyberRipper",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftArmCyberScribe",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftArmCyberSpacer",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftArmCyberZeus",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftArmCyclorite",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftArmDoll",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 10,
+    "UncookedAnimalProteins": 10
+   }
+  },
+  {
+   "entity": "LeftArmElf",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftArmExperiment",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "LeftArmFelionoid",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "LeftArmGingerbread",
+   "grind": null,
+   "juice": {
+    "Nutriment": 3,
+    "Sugar": 10
+   }
+  },
+  {
+   "entity": "LeftArmHuman",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftArmIPC",
+   "grind": null,
+   "juice": {
+    "RefinedOil": 10
+   }
+  },
+  {
+   "entity": "LeftArmLagomorph",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftArmMoth",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftArmNeoVulpkanin",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 5,
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftArmNeocyte",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 5,
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftArmReptilian",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftArmResomi",
+   "grind": null,
+   "juice": {
+    "Fat": 3,
+    "ResomiBlood": 10
+   }
+  },
+  {
+   "entity": "LeftArmRodentia",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "LeftArmShadekin",
+   "grind": null,
+   "juice": {
+    "DarkBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftArmThaven",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftArmVox",
+   "grind": null,
+   "juice": {
+    "AmmoniaBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftArmVulpkanin",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftArmWithHandHuman",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftFootAbductor",
+   "grind": null,
+   "juice": {
+    "Nutriment": 3,
+    "Sugar": 10
+   }
+  },
+  {
+   "entity": "LeftFootArachnid",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftFootAvali",
+   "grind": null,
+   "juice": {
+    "AvaliBlood": 5,
+    "Fat": 1.5
+   }
+  },
+  {
+   "entity": "LeftFootCyber",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftFootCyclorite",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftFootDoll",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 10,
+    "UncookedAnimalProteins": 10
+   }
+  },
+  {
+   "entity": "LeftFootElf",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftFootExperiment",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "LeftFootFelionoid",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "LeftFootGingerbread",
+   "grind": null,
+   "juice": {
+    "Nutriment": 3,
+    "Sugar": 10
+   }
+  },
+  {
+   "entity": "LeftFootHuman",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftFootIPC",
+   "grind": null,
+   "juice": {
+    "RefinedOil": 10
+   }
+  },
+  {
+   "entity": "LeftFootLagomorph",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftFootMoth",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftFootNeoVox",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 5,
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftFootNeocyte",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 5,
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftFootReptilian",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftFootResomi",
+   "grind": null,
+   "juice": {
+    "Fat": 3,
+    "ResomiBlood": 10
+   }
+  },
+  {
+   "entity": "LeftFootRodentia",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "LeftFootShadekin",
+   "grind": null,
+   "juice": {
+    "DarkBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftFootThaven",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftFootVox",
+   "grind": null,
+   "juice": {
+    "AmmoniaBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftFootVulpkanin",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftHandAbductor",
+   "grind": null,
+   "juice": {
+    "Nutriment": 3,
+    "Sugar": 10
+   }
+  },
+  {
+   "entity": "LeftHandAdmemeCorgi",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftHandAnimal",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftHandArachnid",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftHandAvali",
+   "grind": null,
+   "juice": {
+    "AvaliBlood": 5,
+    "Fat": 1.5
+   }
+  },
+  {
+   "entity": "LeftHandCyber",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftHandCyberAngel",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftHandCyberBulwark",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftHandCyberEngineer",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftHandCyberGorilla",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftHandCyberHerakles",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftHandCyberInvestigator",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftHandCyberMantisBlade",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftHandCyberMechwright",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftHandCyberPersephone",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftHandCyberReaper",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftHandCyberRiplet",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftHandCyberRipper",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftHandCyberScribe",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftHandCyberSpacer",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftHandCyberZeus",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftHandCyclorite",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftHandDoll",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 10,
+    "UncookedAnimalProteins": 10
+   }
+  },
+  {
+   "entity": "LeftHandElf",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftHandExperiment",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "LeftHandFelionoid",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "LeftHandGingerbread",
+   "grind": null,
+   "juice": {
+    "Nutriment": 3,
+    "Sugar": 10
+   }
+  },
+  {
+   "entity": "LeftHandHuman",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftHandIPC",
+   "grind": null,
+   "juice": {
+    "RefinedOil": 10
+   }
+  },
+  {
+   "entity": "LeftHandLagomorph",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftHandMoth",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftHandNeoVox",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 5,
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftHandNeoVulpkanin",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 5,
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftHandNeocyte",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 5,
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftHandReptilian",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftHandResomi",
+   "grind": null,
+   "juice": {
+    "Fat": 3,
+    "ResomiBlood": 10
+   }
+  },
+  {
+   "entity": "LeftHandRodentia",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "LeftHandShadekin",
+   "grind": null,
+   "juice": {
+    "DarkBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftHandSmartCorgi",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftHandThaven",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftHandVox",
+   "grind": null,
+   "juice": {
+    "AmmoniaBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftHandVulpkanin",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftLegAbductor",
+   "grind": null,
+   "juice": {
+    "Nutriment": 3,
+    "Sugar": 10
+   }
+  },
+  {
+   "entity": "LeftLegArachnid",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftLegAvali",
+   "grind": null,
+   "juice": {
+    "AvaliBlood": 5,
+    "Fat": 1.5
+   }
+  },
+  {
+   "entity": "LeftLegCyber",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftLegCyberBudget",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftLegCyberCargo",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftLegCyberHydraulic",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftLegCyberPilebunker",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftLegCyberSpeed",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "LeftLegCyclorite",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftLegDoll",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 10,
+    "UncookedAnimalProteins": 10
+   }
+  },
+  {
+   "entity": "LeftLegElf",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftLegExperiment",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "LeftLegFelionoid",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "LeftLegGingerbread",
+   "grind": null,
+   "juice": {
+    "Nutriment": 3,
+    "Sugar": 10
+   }
+  },
+  {
+   "entity": "LeftLegHuman",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftLegIPC",
+   "grind": null,
+   "juice": {
+    "RefinedOil": 10
+   }
+  },
+  {
+   "entity": "LeftLegLagomorph",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftLegMoth",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftLegNeocyte",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 5,
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftLegReptilian",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftLegResomi",
+   "grind": null,
+   "juice": {
+    "Fat": 3,
+    "ResomiBlood": 10
+   }
+  },
+  {
+   "entity": "LeftLegRodentia",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "LeftLegShadekin",
+   "grind": null,
+   "juice": {
+    "DarkBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftLegThaven",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftLegVox",
+   "grind": null,
+   "juice": {
+    "AmmoniaBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftLegVulpkanin",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LeftLegWithFootHuman",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "LegsAnimal",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "Log",
+   "grind": {
+    "Nutriment": 10,
+    "Vitamin": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialBananium",
+   "grind": {
+    "Honk": 4,
+    "Nutriment": 4,
+    "Vitamin": 2
+   },
+   "juice": {
+    "Honk": 5,
+    "JuiceBanana": 5
+   }
+  },
+  {
+   "entity": "MaterialBananium1",
+   "grind": {
+    "Honk": 4,
+    "Nutriment": 4,
+    "Vitamin": 2
+   },
+   "juice": {
+    "Honk": 5,
+    "JuiceBanana": 5
+   }
+  },
+  {
+   "entity": "MaterialBones",
+   "grind": {
+    "Carbon": 7,
+    "Vitamin": 3
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialBones1",
+   "grind": {
+    "Carbon": 7,
+    "Vitamin": 3
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialCardboard",
+   "grind": {
+    "Cellulose": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialCardboard1",
+   "grind": {
+    "Cellulose": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialCardboard10",
+   "grind": {
+    "Cellulose": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialCloth",
+   "grind": {
+    "Fiber": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialCloth1",
+   "grind": {
+    "Fiber": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialCloth10",
+   "grind": {
+    "Fiber": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialCosmicCultEntropy",
+   "grind": {
+    "Entropy": 1.5
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialCosmicCultEntropy1",
+   "grind": {
+    "Entropy": 1.5
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialCosmicCultEntropy2",
+   "grind": {
+    "Entropy": 1.5
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialCosmicCultEntropy3",
+   "grind": {
+    "Entropy": 1.5
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialCosmicCultEntropy4",
+   "grind": {
+    "Entropy": 1.5
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialCosmicCultEntropy5",
+   "grind": {
+    "Entropy": 1.5
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialCotton",
+   "grind": {
+    "Fiber": 2.5
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialCotton1",
+   "grind": {
+    "Fiber": 2.5
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialDiamond",
+   "grind": {
+    "Carbon": 30
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialDiamond1",
+   "grind": {
+    "Carbon": 30
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialDurathread",
+   "grind": {
+    "Fiber": 10,
+    "Oil": 5,
+    "Phosphorus": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialDurathread1",
+   "grind": {
+    "Fiber": 10,
+    "Oil": 5,
+    "Phosphorus": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialPyrotton",
+   "grind": {
+    "Fiber": 2.5,
+    "Phlogiston": 2.5
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialPyrotton1",
+   "grind": {
+    "Fiber": 2.5,
+    "Phlogiston": 2.5
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialSheetMeat",
+   "grind": {
+    "Fat": 3,
+    "Protein": 7
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialSheetMeat1",
+   "grind": {
+    "Fat": 3,
+    "Protein": 7
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialSmileExtract",
+   "grind": {
+    "Iron": 10,
+    "Nutriment": 10,
+    "Omnizine": 30
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialWebSilk",
+   "grind": {
+    "Fiber": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialWebSilk1",
+   "grind": {
+    "Fiber": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialWebSilk25",
+   "grind": {
+    "Fiber": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialWoodPlank",
+   "grind": {
+    "Cellulose": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialWoodPlank1",
+   "grind": {
+    "Cellulose": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MaterialWoodPlank10",
+   "grind": {
+    "Cellulose": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MeatwheatBushel",
+   "grind": {
+    "UncookedAnimalProteins": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "MechReactorAntique",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "MechReactorBurnout",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "MechReactorCavalier",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "MechReactorHigh",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "MechReactorHyper",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "MechReactorMicro",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "MechReactorShielded",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "MechReactorStandard",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "MetalHydrogen",
+   "grind": {
+    "Hydrogen": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MetalHydrogen1",
+   "grind": {
+    "Hydrogen": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MetalHydrogen10",
+   "grind": {
+    "Hydrogen": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobAngryBee",
+   "grind": {
+    "GroundBee": 1
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobBee",
+   "grind": {
+    "GroundBee": 1
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobButterfly",
+   "grind": {
+    "UncookedAnimalProteins": 1
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobCCMoproach",
+   "grind": {
+    "Slime": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobCCMoproachHat",
+   "grind": {
+    "Slime": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobCockroach",
+   "grind": {
+    "Slime": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobGlockroach",
+   "grind": {
+    "Slime": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobHamster",
+   "grind": {
+    "Blood": 55,
+    "Fat": 5,
+    "Nutriment": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobHamsterHamlet",
+   "grind": {
+    "Blood": 55,
+    "Fat": 5,
+    "Nutriment": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobHamsterHamletSlippery",
+   "grind": {
+    "Blood": 55,
+    "Fat": 5,
+    "Nutriment": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobMobroach",
+   "grind": {
+    "Slime": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobMoproach",
+   "grind": {
+    "Slime": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobMoproachHat",
+   "grind": {
+    "Slime": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobMothroach",
+   "grind": {
+    "Slime": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobMouse",
+   "grind": {
+    "UncookedAnimalProteins": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobMouse1",
+   "grind": {
+    "UncookedAnimalProteins": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobMouse2",
+   "grind": {
+    "UncookedAnimalProteins": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobMouseBlue",
+   "grind": {
+    "UncookedAnimalProteins": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobMouseBurnt",
+   "grind": {
+    "UncookedAnimalProteins": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobMouseCancer",
+   "grind": {
+    "UncookedAnimalProteins": 5,
+    "Uranium": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobMouseDead",
+   "grind": {
+    "UncookedAnimalProteins": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobMouseGreen",
+   "grind": {
+    "UncookedAnimalProteins": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobMouseOrange",
+   "grind": {
+    "UncookedAnimalProteins": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobMousePurple",
+   "grind": {
+    "UncookedAnimalProteins": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobMouseRGB",
+   "grind": {
+    "UncookedAnimalProteins": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobMouseRed",
+   "grind": {
+    "UncookedAnimalProteins": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobMouseRemy",
+   "grind": {
+    "UncookedAnimalProteins": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobMouseStealth",
+   "grind": {
+    "UncookedAnimalProteins": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobMouseYellow",
+   "grind": {
+    "UncookedAnimalProteins": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobSnail",
+   "grind": {
+    "Fat": 3,
+    "UncookedAnimalProteins": 8,
+    "Water": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobSnailInstantDeath",
+   "grind": {
+    "Fat": 3,
+    "UncookedAnimalProteins": 8,
+    "Water": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobSnailMoth",
+   "grind": {
+    "Fat": 3,
+    "UncookedAnimalProteins": 8,
+    "Water": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobSnailSpeed",
+   "grind": {
+    "Fat": 3,
+    "UncookedAnimalProteins": 8,
+    "Water": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "MobSnouse",
+   "grind": {
+    "Fat": 3,
+    "UncookedAnimalProteins": 8,
+    "Water": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "MoffDemonicEssence",
+   "grind": {
+    "Ash": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "Nettle",
+   "grind": {
+    "Histamine": 3
+   },
+   "juice": null
+  },
+  {
+   "entity": "OatBushel",
+   "grind": {
+    "Oats": 15
+   },
+   "juice": {
+    "MilkOat": 5
+   }
+  },
+  {
+   "entity": "Papercane",
+   "grind": {
+    "Nutriment": 10,
+    "Vitamin": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "PartRodMetal",
+   "grind": {
+    "Carbon": 0.5,
+    "Iron": 4.5
+   },
+   "juice": null
+  },
+  {
+   "entity": "PartRodMetal1",
+   "grind": {
+    "Carbon": 0.5,
+    "Iron": 4.5
+   },
+   "juice": null
+  },
+  {
+   "entity": "PartRodMetal10",
+   "grind": {
+    "Carbon": 0.5,
+    "Iron": 4.5
+   },
+   "juice": null
+  },
+  {
+   "entity": "PatchBrute",
+   "grind": {
+    "Bicaridine": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "PatchBurn",
+   "grind": {
+    "Omnizine": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "PatchBurnSmall",
+   "grind": {
+    "Dermaline": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "PatchClown",
+   "grind": {
+    "Bananadine": 5,
+    "Happiness": 5,
+    "MuteToxin": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "PatchMedical",
+   "grind": {
+    "Bicaridine": 10,
+    "Dermaline": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "PhenylpiperidineSolidified",
+   "grind": {
+    "Phenylpiperidine": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillAmbuzol",
+   "grind": {
+    "Ambuzol": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillAmbuzolPlus",
+   "grind": {
+    "AmbuzolPlus": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillBicaridine",
+   "grind": {
+    "Bicaridine": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillCharcoal",
+   "grind": {
+    "Charcoal": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillCopper",
+   "grind": {
+    "Copper": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillDermaline",
+   "grind": {
+    "Dermaline": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillDesoxyephedrine",
+   "grind": {
+    "Desoxyephedrine": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillDesoxyephedrine5",
+   "grind": {
+    "Desoxyephedrine": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillDexalin",
+   "grind": {
+    "Dexalin": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillDylovene",
+   "grind": {
+    "Dylovene": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillGold",
+   "grind": {
+    "Gold": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillGold5",
+   "grind": {
+    "Gold": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillHydrogen10",
+   "grind": {
+    "Hydrogen": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillHydrogen5",
+   "grind": {
+    "Hydrogen": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillHyronalin",
+   "grind": {
+    "Hyronalin": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillIron",
+   "grind": {
+    "Iron": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillKelotane",
+   "grind": {
+    "Kelotane": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillLead",
+   "grind": {
+    "Lead": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillLead5",
+   "grind": {
+    "Lead": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillNitrogen10",
+   "grind": {
+    "Nitrogen": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillNitrogen5",
+   "grind": {
+    "Nitrogen": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillPotassiumIodide",
+   "grind": {
+    "PotassiumIodide": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillPsicodine",
+   "grind": {
+    "Psicodine": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillRomerol",
+   "grind": {
+    "Romerol": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillSpaceDrugs",
+   "grind": {
+    "SpaceDrugs": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "PillTricordrazine",
+   "grind": {
+    "Tricordrazine": 20
+   },
+   "juice": null
+  },
+  {
+   "entity": "PlasticBanana",
+   "grind": {
+    "Nothing": 30
+   },
+   "juice": null
+  },
+  {
+   "entity": "PlushieBee",
+   "grind": {
+    "Fiber": 25,
+    "GroundBee": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "PlushieCarp",
+   "grind": null,
+   "juice": {
+    "Glubotoxin": 30
+   }
+  },
+  {
+   "entity": "PlushieDoxes",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieGalio",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieHolocarp",
+   "grind": null,
+   "juice": {
+    "Glubotoxin": 30
+   }
+  },
+  {
+   "entity": "PlushieLizard",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardInversed",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouHew": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobAssistant",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobAtmospherictechnician",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobBartender",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobBotanist",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobBoxer",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobCaptain",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobCargotechnician",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobChaplain",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobChef",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobChemist",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobChiefengineer",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobChiefmedicalofficer",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobClown",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobDetective",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobHeadofpersonnel",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobHeadofsecurity",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobJanitor",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobLawyer",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobLibrarian",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobMedicaldoctor",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobMedicalintern",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobMime",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobMultiweh",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobMusician",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobParamedic",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobPsychologist",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobQuartermaster",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobReporter",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobResearchassistant",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobResearchdirector",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobRoboticist",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobSalvagespecialist",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobScientist",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobSecuritycadet",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobSecurityofficer",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobServiceworker",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobStationengineer",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobTechnicalassistant",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobWarden",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardJobZookeeper",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieLizardMirrored",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieMagicarp",
+   "grind": null,
+   "juice": {
+    "Glubotoxin": 30
+   }
+  },
+  {
+   "entity": "PlushieRGBee",
+   "grind": {
+    "Fiber": 25,
+    "GroundBee": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "PlushieRainbowCarp",
+   "grind": null,
+   "juice": {
+    "Glubotoxin": 30
+   }
+  },
+  {
+   "entity": "PlushieRainbowLizard",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieSpaceLizard",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieSuperLizard",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 30
+   }
+  },
+  {
+   "entity": "PlushieVictor",
+   "grind": null,
+   "juice": {
+    "JuiceThatMakesYouWeh": 15,
+    "Saline": 15
+   }
+  },
+  {
+   "entity": "PowerCageHigh",
+   "grind": null,
+   "juice": {
+    "Zinc": 15
+   }
+  },
+  {
+   "entity": "PowerCageHighEmpty",
+   "grind": null,
+   "juice": {
+    "Zinc": 15
+   }
+  },
+  {
+   "entity": "PowerCageMedium",
+   "grind": null,
+   "juice": {
+    "Zinc": 15
+   }
+  },
+  {
+   "entity": "PowerCageMediumEmpty",
+   "grind": null,
+   "juice": {
+    "Zinc": 15
+   }
+  },
+  {
+   "entity": "PowerCageOmega",
+   "grind": null,
+   "juice": {
+    "Zinc": 15
+   }
+  },
+  {
+   "entity": "PowerCageOmegaEmpty",
+   "grind": null,
+   "juice": {
+    "Zinc": 15
+   }
+  },
+  {
+   "entity": "PowerCageSmall",
+   "grind": null,
+   "juice": {
+    "Zinc": 15
+   }
+  },
+  {
+   "entity": "PowerCageSmallEmpty",
+   "grind": null,
+   "juice": {
+    "Zinc": 15
+   }
+  },
+  {
+   "entity": "PowerCellAntiqueProto",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "PowerCellHigh",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "PowerCellHighPrinted",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "PowerCellHyper",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "PowerCellHyperPrinted",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "PowerCellMedium",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "PowerCellMediumPrinted",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "PowerCellMicroreactor",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "PowerCellMicroreactorPrinted",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "PowerCellPotato",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "PowerCellSmall",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "PowerCellSmallNuclear",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "PowerCellSmallPrinted",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "PowerCellTiny",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "PowerCellTinyCyber",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "PowerCellUltra",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  },
+  {
+   "entity": "PyrottonBol",
+   "grind": {
+    "Cellulose": 5,
+    "Fiber": 5,
+    "Phlogiston": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "RiceBushel",
+   "grind": {
+    "Rice": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "RightArmAbductor",
+   "grind": null,
+   "juice": {
+    "Nutriment": 3,
+    "Sugar": 10
+   }
+  },
+  {
+   "entity": "RightArmArachnid",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightArmAvali",
+   "grind": null,
+   "juice": {
+    "AvaliBlood": 5,
+    "Fat": 1.5
+   }
+  },
+  {
+   "entity": "RightArmCyber",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightArmCyberAngel",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightArmCyberBulwark",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightArmCyberEngineer",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightArmCyberGorilla",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightArmCyberHerakles",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightArmCyberInvestigator",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightArmCyberMantisBlade",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightArmCyberMechwright",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightArmCyberPersephone",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightArmCyberReaper",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightArmCyberRiplet",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightArmCyberRipper",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightArmCyberScribe",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightArmCyberSpacer",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightArmCyberZeus",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightArmCyclorite",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightArmDoll",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 10,
+    "UncookedAnimalProteins": 10
+   }
+  },
+  {
+   "entity": "RightArmElf",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightArmExperiment",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "RightArmFelionoid",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "RightArmGingerbread",
+   "grind": null,
+   "juice": {
+    "Nutriment": 3,
+    "Sugar": 10
+   }
+  },
+  {
+   "entity": "RightArmHuman",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightArmIPC",
+   "grind": null,
+   "juice": {
+    "RefinedOil": 10
+   }
+  },
+  {
+   "entity": "RightArmLagomorph",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightArmMoth",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightArmNeoVulpkanin",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 5,
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightArmNeocyte",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 5,
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightArmReptilian",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightArmResomi",
+   "grind": null,
+   "juice": {
+    "Fat": 3,
+    "ResomiBlood": 10
+   }
+  },
+  {
+   "entity": "RightArmRodentia",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "RightArmShadekin",
+   "grind": null,
+   "juice": {
+    "DarkBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightArmThaven",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightArmVox",
+   "grind": null,
+   "juice": {
+    "AmmoniaBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightArmVulpkanin",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightArmWithHandHuman",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightFootAbductor",
+   "grind": null,
+   "juice": {
+    "Nutriment": 3,
+    "Sugar": 10
+   }
+  },
+  {
+   "entity": "RightFootArachnid",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightFootAvali",
+   "grind": null,
+   "juice": {
+    "AvaliBlood": 5,
+    "Fat": 1.5
+   }
+  },
+  {
+   "entity": "RightFootCyber",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightFootCyclorite",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightFootDoll",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 10,
+    "UncookedAnimalProteins": 10
+   }
+  },
+  {
+   "entity": "RightFootElf",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightFootExperiment",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "RightFootFelionoid",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "RightFootGingerbread",
+   "grind": null,
+   "juice": {
+    "Nutriment": 3,
+    "Sugar": 10
+   }
+  },
+  {
+   "entity": "RightFootHuman",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightFootIPC",
+   "grind": null,
+   "juice": {
+    "RefinedOil": 10
+   }
+  },
+  {
+   "entity": "RightFootLagomorph",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightFootMoth",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightFootNeoVox",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 5,
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightFootNeocyte",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 5,
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightFootReptilian",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightFootResomi",
+   "grind": null,
+   "juice": {
+    "Fat": 3,
+    "ResomiBlood": 10
+   }
+  },
+  {
+   "entity": "RightFootRodentia",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "RightFootShadekin",
+   "grind": null,
+   "juice": {
+    "DarkBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightFootThaven",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightFootVox",
+   "grind": null,
+   "juice": {
+    "AmmoniaBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightFootVulpkanin",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightHandAbductor",
+   "grind": null,
+   "juice": {
+    "Nutriment": 3,
+    "Sugar": 10
+   }
+  },
+  {
+   "entity": "RightHandAdmemeCorgi",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightHandAnimal",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightHandArachnid",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightHandAvali",
+   "grind": null,
+   "juice": {
+    "AvaliBlood": 5,
+    "Fat": 1.5
+   }
+  },
+  {
+   "entity": "RightHandCyber",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightHandCyberAngel",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightHandCyberBulwark",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightHandCyberEngineer",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightHandCyberGorilla",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightHandCyberHerakles",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightHandCyberInvestigator",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightHandCyberMantisBlade",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightHandCyberMechwright",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightHandCyberPersephone",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightHandCyberReaper",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightHandCyberRiplet",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightHandCyberRipper",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightHandCyberScribe",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightHandCyberSpacer",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightHandCyberZeus",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightHandCyclorite",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightHandDoll",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 10,
+    "UncookedAnimalProteins": 10
+   }
+  },
+  {
+   "entity": "RightHandElf",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightHandExperiment",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "RightHandFelionoid",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "RightHandGingerbread",
+   "grind": null,
+   "juice": {
+    "Nutriment": 3,
+    "Sugar": 10
+   }
+  },
+  {
+   "entity": "RightHandHuman",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightHandIPC",
+   "grind": null,
+   "juice": {
+    "RefinedOil": 10
+   }
+  },
+  {
+   "entity": "RightHandLagomorph",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightHandMoth",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightHandNeoVox",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 5,
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightHandNeoVulpkanin",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 5,
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightHandNeocyte",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 5,
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightHandReptilian",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightHandResomi",
+   "grind": null,
+   "juice": {
+    "Fat": 3,
+    "ResomiBlood": 10
+   }
+  },
+  {
+   "entity": "RightHandRodentia",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "RightHandShadekin",
+   "grind": null,
+   "juice": {
+    "DarkBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightHandSmartCorgi",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightHandThaven",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightHandVox",
+   "grind": null,
+   "juice": {
+    "AmmoniaBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightHandVulpkanin",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightLegAbductor",
+   "grind": null,
+   "juice": {
+    "Nutriment": 3,
+    "Sugar": 10
+   }
+  },
+  {
+   "entity": "RightLegArachnid",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightLegAvali",
+   "grind": null,
+   "juice": {
+    "AvaliBlood": 5,
+    "Fat": 1.5
+   }
+  },
+  {
+   "entity": "RightLegCyber",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightLegCyberBudget",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightLegCyberCargo",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightLegCyberHydraulic",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightLegCyberPilebunker",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightLegCyberSpeed",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "RightLegCyclorite",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightLegDoll",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 10,
+    "UncookedAnimalProteins": 10
+   }
+  },
+  {
+   "entity": "RightLegElf",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightLegExperiment",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "RightLegFelionoid",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "RightLegGingerbread",
+   "grind": null,
+   "juice": {
+    "Nutriment": 3,
+    "Sugar": 10
+   }
+  },
+  {
+   "entity": "RightLegHuman",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightLegIPC",
+   "grind": null,
+   "juice": {
+    "RefinedOil": 10
+   }
+  },
+  {
+   "entity": "RightLegLagomorph",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightLegMoth",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightLegNeocyte",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 5,
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightLegReptilian",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightLegResomi",
+   "grind": null,
+   "juice": {
+    "Fat": 3,
+    "ResomiBlood": 10
+   }
+  },
+  {
+   "entity": "RightLegRodentia",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "RightLegShadekin",
+   "grind": null,
+   "juice": {
+    "DarkBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightLegThaven",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightLegVox",
+   "grind": null,
+   "juice": {
+    "AmmoniaBlood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightLegVulpkanin",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "RightLegWithFootHuman",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "Salt1",
+   "grind": {
+    "Iodine": 0.01,
+    "TableSalt": 9.99
+   },
+   "juice": null
+  },
+  {
+   "entity": "SaltOre",
+   "grind": {
+    "Iodine": 0.01,
+    "TableSalt": 9.99
+   },
+   "juice": null
+  },
+  {
+   "entity": "SaxophoneInstrument",
+   "grind": {
+    "Brass": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "ShardGlass",
+   "grind": {
+    "Silicon": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "ShardGlassClockwork",
+   "grind": {
+    "Copper": 3.35,
+    "Silicon": 5,
+    "Zinc": 1.65
+   },
+   "juice": null
+  },
+  {
+   "entity": "ShardGlassPlasma",
+   "grind": {
+    "Plasma": 5,
+    "Silicon": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "ShardGlassReinforced",
+   "grind": {
+    "Carbon": 0.25,
+    "Iron": 2.25,
+    "Silicon": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "ShardGlassUranium",
+   "grind": {
+    "Silicon": 5,
+    "Uranium": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetBrass",
+   "grind": {
+    "Copper": 6.7,
+    "Zinc": 3.3
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetBrass1",
+   "grind": {
+    "Copper": 6.7,
+    "Zinc": 3.3
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetBrass10",
+   "grind": {
+    "Copper": 6.7,
+    "Zinc": 3.3
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetClockworkGlass",
+   "grind": {
+    "Copper": 6.7,
+    "Silicon": 10,
+    "Zinc": 3.3
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetClockworkGlass1",
+   "grind": {
+    "Copper": 6.7,
+    "Silicon": 10,
+    "Zinc": 3.3
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetGlass",
+   "grind": {
+    "Silicon": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetGlass1",
+   "grind": {
+    "Silicon": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetGlass10",
+   "grind": {
+    "Silicon": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetGlass15",
+   "grind": {
+    "Silicon": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetPGlass",
+   "grind": {
+    "Plasma": 10,
+    "Silicon": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetPGlass1",
+   "grind": {
+    "Plasma": 10,
+    "Silicon": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetPaper",
+   "grind": {
+    "Cellulose": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetPaper1",
+   "grind": {
+    "Cellulose": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetPlasma",
+   "grind": {
+    "Plasma": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetPlasma1",
+   "grind": {
+    "Plasma": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetPlasma10",
+   "grind": {
+    "Plasma": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetPlasma3",
+   "grind": {
+    "Plasma": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetPlasteel",
+   "grind": {
+    "Carbon": 1,
+    "Iron": 9,
+    "Plasma": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetPlasteel1",
+   "grind": {
+    "Carbon": 1,
+    "Iron": 9,
+    "Plasma": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetPlasteel10",
+   "grind": {
+    "Carbon": 1,
+    "Iron": 9,
+    "Plasma": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetPlasteel5",
+   "grind": {
+    "Carbon": 1,
+    "Iron": 9,
+    "Plasma": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetPlastic",
+   "grind": {
+    "Oil": 5,
+    "Phosphorus": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetPlastic1",
+   "grind": {
+    "Oil": 5,
+    "Phosphorus": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetPlastic10",
+   "grind": {
+    "Oil": 5,
+    "Phosphorus": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetRGlass",
+   "grind": {
+    "Carbon": 0.5,
+    "Iron": 4.5,
+    "Silicon": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetRGlass1",
+   "grind": {
+    "Carbon": 0.5,
+    "Iron": 4.5,
+    "Silicon": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetRGlass5",
+   "grind": {
+    "Carbon": 0.5,
+    "Iron": 4.5,
+    "Silicon": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetRPGlass",
+   "grind": {
+    "Carbon": 0.5,
+    "Iron": 4.5,
+    "Plasma": 10,
+    "Silicon": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetRPGlass1",
+   "grind": {
+    "Carbon": 0.5,
+    "Iron": 4.5,
+    "Plasma": 10,
+    "Silicon": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetRUGlass",
+   "grind": {
+    "Carbon": 0.5,
+    "Iron": 4.5,
+    "Silicon": 10,
+    "Uranium": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetRUGlass1",
+   "grind": {
+    "Carbon": 0.5,
+    "Iron": 4.5,
+    "Silicon": 10,
+    "Uranium": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetSteel",
+   "grind": {
+    "Carbon": 1,
+    "Iron": 9
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetSteel1",
+   "grind": {
+    "Carbon": 1,
+    "Iron": 9
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetSteel10",
+   "grind": {
+    "Carbon": 1,
+    "Iron": 9
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetSteel15",
+   "grind": {
+    "Carbon": 1,
+    "Iron": 9
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetUGlass",
+   "grind": {
+    "Silicon": 10,
+    "Uranium": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetUGlass1",
+   "grind": {
+    "Silicon": 10,
+    "Uranium": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetUranium",
+   "grind": {
+    "Radium": 2,
+    "Uranium": 8
+   },
+   "juice": null
+  },
+  {
+   "entity": "SheetUranium1",
+   "grind": {
+    "Radium": 2,
+    "Uranium": 8
+   },
+   "juice": null
+  },
+  {
+   "entity": "SteelLog",
+   "grind": {
+    "Nutriment": 10,
+    "Vitamin": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "SugarCube",
+   "grind": {
+    "Sugar": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "SugarCube10",
+   "grind": {
+    "Sugar": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "SugarCube3",
+   "grind": {
+    "Sugar": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "SugarCube6",
+   "grind": {
+    "Sugar": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "Sugarcane",
+   "grind": {
+    "Sugar": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "TP14FoodMeatFishFingers",
+   "grind": {
+    "Nutriment": 5,
+    "Protein": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "TP14FoodMeatSausage",
+   "grind": {
+    "Fat": 2,
+    "UncookedAnimalProteins": 3
+   },
+   "juice": null
+  },
+  {
+   "entity": "TorsoAbductor",
+   "grind": null,
+   "juice": {
+    "Nutriment": 10,
+    "Sugar": 20
+   }
+  },
+  {
+   "entity": "TorsoAnimal",
+   "grind": null,
+   "juice": {
+    "Blood": 20,
+    "Fat": 10
+   }
+  },
+  {
+   "entity": "TorsoArachnid",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 20,
+    "Fat": 10
+   }
+  },
+  {
+   "entity": "TorsoAvali",
+   "grind": null,
+   "juice": {
+    "AvaliBlood": 10,
+    "Fat": 5
+   }
+  },
+  {
+   "entity": "TorsoCyclorite",
+   "grind": null,
+   "juice": {
+    "CopperBlood": 20,
+    "Fat": 10
+   }
+  },
+  {
+   "entity": "TorsoDoll",
+   "grind": null,
+   "juice": {
+    "Blood": 40,
+    "Fat": 20,
+    "UncookedAnimalProteins": 20
+   }
+  },
+  {
+   "entity": "TorsoElf",
+   "grind": null,
+   "juice": {
+    "Blood": 20,
+    "Fat": 10
+   }
+  },
+  {
+   "entity": "TorsoExperiment",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "TorsoFelionoid",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "TorsoGingerbread",
+   "grind": null,
+   "juice": {
+    "Nutriment": 10,
+    "Sugar": 20
+   }
+  },
+  {
+   "entity": "TorsoHuman",
+   "grind": null,
+   "juice": {
+    "Blood": 20,
+    "Fat": 10
+   }
+  },
+  {
+   "entity": "TorsoIPC",
+   "grind": null,
+   "juice": {
+    "RefinedOil": 20
+   }
+  },
+  {
+   "entity": "TorsoLagomorph",
+   "grind": null,
+   "juice": {
+    "Blood": 20,
+    "Fat": 10
+   }
+  },
+  {
+   "entity": "TorsoMoth",
+   "grind": null,
+   "juice": {
+    "Blood": 20,
+    "Fat": 10
+   }
+  },
+  {
+   "entity": "TorsoNeoVulpkanin",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 15,
+    "Blood": 20,
+    "Fat": 10
+   }
+  },
+  {
+   "entity": "TorsoNeocyte",
+   "grind": null,
+   "juice": {
+    "BatteryAcid": 15,
+    "Blood": 20,
+    "Fat": 10
+   }
+  },
+  {
+   "entity": "TorsoRat",
+   "grind": null,
+   "juice": {
+    "Blood": 10,
+    "Fat": 3
+   }
+  },
+  {
+   "entity": "TorsoReptilian",
+   "grind": null,
+   "juice": {
+    "Blood": 20,
+    "Fat": 10
+   }
+  },
+  {
+   "entity": "TorsoResomi",
+   "grind": null,
+   "juice": {
+    "Fat": 10,
+    "ResomiBlood": 20
+   }
+  },
+  {
+   "entity": "TorsoRodentia",
+   "grind": null,
+   "juice": {
+    "Blood": 5,
+    "Fat": 1
+   }
+  },
+  {
+   "entity": "TorsoShadekin",
+   "grind": null,
+   "juice": {
+    "DarkBlood": 20,
+    "Fat": 10
+   }
+  },
+  {
+   "entity": "TorsoThaven",
+   "grind": null,
+   "juice": {
+    "Blood": 20,
+    "Fat": 10
+   }
+  },
+  {
+   "entity": "TorsoVox",
+   "grind": null,
+   "juice": {
+    "AmmoniaBlood": 20,
+    "Fat": 10
+   }
+  },
+  {
+   "entity": "TorsoVulpkanin",
+   "grind": null,
+   "juice": {
+    "Blood": 20,
+    "Fat": 10
+   }
+  },
+  {
+   "entity": "TrashBakedBananaPeel",
+   "grind": {
+    "Bananadine": 1,
+    "Carbon": 2,
+    "PulpedBananaPeel": 1
+   },
+   "juice": null
+  },
+  {
+   "entity": "TrashBananaPeel",
+   "grind": {
+    "PulpedBananaPeel": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "TrashBananaPeelExplosive",
+   "grind": {
+    "PulpedBananaPeel": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "TrashBananaPeelGravityWell",
+   "grind": {
+    "PulpedBananaPeel": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "TrashBananiumPeel",
+   "grind": {
+    "PulpedBananaPeel": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "TrashCherryPit",
+   "grind": {
+    "Toxin": 1
+   },
+   "juice": null
+  },
+  {
+   "entity": "TrashMimanaPeel",
+   "grind": {
+    "PulpedBananaPeel": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "TrashMimanaPeelStealthy",
+   "grind": {
+    "PulpedBananaPeel": 4
+   },
+   "juice": null
+  },
+  {
+   "entity": "VocalCyberTongue",
+   "grind": null,
+   "juice": {
+    "Iron": 30
+   }
+  },
+  {
+   "entity": "WheatBushel",
+   "grind": {
+    "Flour": 15
+   },
+   "juice": null
+  },
+  {
+   "entity": "YellowSlimeExtractPowercell",
+   "grind": null,
+   "juice": {
+    "Zinc": 5
+   }
+  }
+ ]
+}

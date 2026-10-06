@@ -20,6 +20,7 @@ from ss14help_pipeline.models import (
     SourcesFile,
 )
 from ss14help_pipeline.normalize import Normalized, Normalizer, UpstreamIds
+from ss14help_pipeline.partials import read_partial_paths
 from ss14help_pipeline.prototypes import load_prototypes, resolve_inheritance
 from ss14help_pipeline.warnings import WarningLog
 
@@ -41,7 +42,8 @@ def build_snapshot(
     generated_at: datetime | None = None,
 ) -> BuildResult:
     log = WarningLog()
-    raw = load_prototypes(checkout.prototypes, log)
+    partial_paths = read_partial_paths(checkout.resources)
+    raw = load_prototypes(checkout.prototypes, log, partial_paths)
     index = resolve_inheritance(raw, log)
     loc = Localizer.load(checkout.locale, log)
     upstream = None if server.id == UPSTREAM_SERVER_ID else load_upstream_ids(data_dir)

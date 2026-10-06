@@ -24,8 +24,9 @@ docker run --rm -v "$PWD/data:/repo/data" ss14help-pipeline build upstream
 
 | Module | Stage |
 |---|---|
-| `fetch.py` | Shallow, sparse clone of `Resources/Prototypes` + `Resources/Locale/en-US` (blob-filtered, cached per server) |
+| `fetch.py` | Shallow, sparse clone of `Resources/Prototypes`, `Resources/Locale/en-US` and `Resources/PartialPrototypes` (blob-filtered, cached per server) |
 | `prototypes.py` | Parse every `*.yml` (libyaml, catch-all `!tag` constructor → `_type`), index by type/id (later file wins, warned), resolve `parent`/`abstract` inheritance like RobustToolbox |
+| `partials.py` | Partial prototypes (Starlight): files under paths listed in `Resources/PartialPrototypes/*.yml` patch existing prototypes after everything else loads (`!Remove`, `!Clear`, `!Index:n`, `!CombineIndex:n`, `!PartialOnly`, components by `type`). Elsewhere, those tags are stripped, as the engine ignores them |
 | `localize.py` | Fluent `.ftl` lookup (messages, terms, attributes, references) |
 | `normalize.py` | Prototypes → contract models: reagents (+ `dispensable` from filled dispensers), reactions, cooking, mixers, referenced entities, grind/juice sources |
 | `emit.py` | Validate every file against the contract and write canonical JSON (sorted keys, whole floats as ints) |

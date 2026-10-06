@@ -63,3 +63,15 @@
       reagents:
       - ReagentId: JuiceLemon
         Quantity: 10
+
+# Its Extractable component is removed by a partial in _Fork/Partials.
+- type: entity
+  parent: FoodBase
+  id: FoodLime
+  name: lime
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuiceLemon
+        Quantity: 5

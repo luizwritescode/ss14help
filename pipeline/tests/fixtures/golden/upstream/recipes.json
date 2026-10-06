@@ -21,7 +21,7 @@
    "id": "RecipeChickenSandwich",
    "name": "chicken sandwich recipe",
    "reagents": {
-    "Mayo": 5
+    "Sugar": 1
    },
    "result": "FoodBurgerChicken",
    "secret": false,
@@ -61,7 +61,7 @@
    "effects": [],
    "id": "Bicaridine",
    "maxTemp": null,
-   "minTemp": null,
+   "minTemp": 310,
    "mixers": [],
    "priority": 0,
    "products": {

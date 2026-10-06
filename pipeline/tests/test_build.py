@@ -107,7 +107,7 @@ def test_cooking_and_entities(snapshot: Path) -> None:
     cooking = by_id(recipes["cooking"])
     sandwich = cooking["RecipeChickenSandwich"]
     assert sandwich["solids"] == {"FoodBreadBun": 1, "FoodMeatChicken": 1}
-    assert sandwich["reagents"] == {"Mayo": 5}  # v1 lost these
+    assert sandwich["reagents"]  # v1 lost reagents when solids existed
     assert cooking["RecipeBun"]["name"] == "bun recipe"
     assert cooking["RecipeBun"]["time"] == 5  # default
     assert cooking["RecipeBun"]["device"] == "Microwave"
@@ -139,6 +139,20 @@ def test_manifest_and_warnings(snapshot: Path) -> None:
     assert manifest["counts"]["reactions"] == 7
     codes = sorted({w["code"] for w in manifest["warnings"]})
     assert codes == ["duplicate-id", "yaml-error"]
+
+
+def test_partials_are_applied(snapshot: Path) -> None:
+    recipes = load(snapshot / "recipes.json")
+    assert by_id(recipes["reactions"])["Bicaridine"]["minTemp"] == 310
+    sandwich = by_id(recipes["cooking"])["RecipeChickenSandwich"]
+    assert sandwich["reagents"] == {"Sugar": 1}  # Mayo removed, Sugar added
+    assert sandwich["solids"] == {"FoodBreadBun": 1, "FoodMeatChicken": 1}  # untouched
+    reagents = by_id(load(snapshot / "reagents.json")["reagents"])
+    assert reagents["Carbon"]["color"] == "#111111"
+    assert reagents["Carbon"]["name"] == "carbon"
+    assert "DoesNotExist" not in reagents  # PartialOnly without an original
+    sources = by_id(load(snapshot / "sources.json")["sources"], "entity")
+    assert "FoodLime" not in sources  # Extractable component removed
 
 
 def test_output_is_deterministic(snapshot: Path, tmp_path: Path) -> None:

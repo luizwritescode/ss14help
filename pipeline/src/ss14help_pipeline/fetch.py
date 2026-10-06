@@ -8,7 +8,11 @@ from pathlib import Path
 from ss14help_pipeline.config import REPO_ROOT, ServerConfig
 
 DEFAULT_CACHE_DIR = REPO_ROOT / "pipeline" / ".cache"
-SPARSE_PATHS = ("Resources/Prototypes", "Resources/Locale/en-US")
+SPARSE_PATHS = (
+    "Resources/Prototypes",
+    "Resources/Locale/en-US",
+    "Resources/PartialPrototypes",
+)
 
 
 @dataclass(frozen=True)
@@ -21,6 +25,10 @@ class Checkout:
     @property
     def prototypes(self) -> Path:
         return self.root / "Resources" / "Prototypes"
+
+    @property
+    def resources(self) -> Path:
+        return self.root / "Resources"
 
     @property
     def locale(self) -> Path:
@@ -55,10 +63,10 @@ def fetch(
         root.mkdir(parents=True, exist_ok=True)
         git("init", "--quiet", cwd=root)
         git("remote", "add", "origin", str(server.repo), cwd=root)
-        git("config", "core.sparseCheckout", "true", cwd=root)
-        git("sparse-checkout", "set", "--no-cone", *SPARSE_PATHS, cwd=root)
     else:
         git("remote", "set-url", "origin", str(server.repo), cwd=root)
+    # Every run, so caches created before a path was added pick it up.
+    git("sparse-checkout", "set", "--no-cone", *SPARSE_PATHS, cwd=root)
 
     target = sha or server.branch
     git("fetch", "--quiet", "--depth", "1", "--filter=blob:none", "origin", target, cwd=root)

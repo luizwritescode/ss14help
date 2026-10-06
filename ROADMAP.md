@@ -480,6 +480,12 @@ Verification:
 - `packages/calc/src/real-data.test.ts` plans 30u of every craftable reagent and 2 of every cooked item in `data/upstream/` and simulates each plan: all executable, none with warnings.
 - That run surfaced one engine rule change: a reagent only made as a side product of a split/breakdown reaction (e.g. Water from centrifuged blood) is now basic by default; the split stays available as a variant.
 
+Starlight check (`build starlight`, `97739a6`, 2026-10-06): 475 reagents (50 dispensable), 355 reactions, 328 cooking recipes (186 Microwave, 71 Oven, 46 IceCreamMaker, 25 Stove), 771 sources; serverOnly: 72 reagents, 45 reactions, 110 cooking recipes; ~21 s. It surfaced and drove:
+- **Partial prototypes** (`partials.py`), ported from Starlight's RobustToolbox fork (`PrototypeManager.YamlLoad.cs`, `CombineMapNode`/`CombineSeqNode`): paths listed in `Resources/PartialPrototypes/*.yml` (Starlight: `/Prototypes/_Starlight/Partials`, 180 files) are applied as patches after all other files, in listing order, before inheritance. Supports `!Remove` (keys, conditional values, sequence items, `- !Remove type: Component`), `!Clear`, `!Index:n` (also on a mapping's first key), `!CombineIndex:n`, `type: !PartialOnly kind`, and `CreateVariants` ids. Nodes compare as YAML text, like the engine. Outside partial files the tags are stripped to plain values, because RobustToolbox ignores them there (so `- type: !Remove X` in a normal file is just component X). This removed 36 bogus `duplicate-id`, 7 `unknown-parent` and 4 `yaml-error` warnings (tagged mapping keys); 10 warnings remain (3 real duplicate admin clothing ids, 7 Fluent UI strings).
+- `fetch` re-applies the sparse paths on every run so existing caches pick up new folders.
+- Zero dangling references on both servers (every reactant, product, mixer, solid, result resolves), and `real-data.test.ts` finds executable plans for every craftable reagent and dish on both.
+- Today's reagent partials only touch `metabolisms`, so they don't change site data yet; the golden fixture covers partials that do (reaction field, cooking reagents, reagent colour, component removal, `PartialOnly` without original).
+
 Known gaps (Phase 7 or later): composite solutions (`SolutionManager` lists of solution entities, used by a few grindables) aren't resolved; slicing (`SliceableFood`/`ToolRefinable`), `deepFryingRecipe`, `metamorphRecipe` and xenobiology `extractReaction` aren't modeled; `!Remove`/`!Clear`/`!PartialOnly` are kept as data but not applied as list operations.
 
 **Exit criteria:** the upstream snapshot is generated (`data/upstream/`), and a spot check of 20+ recipes against the game's files matches. ✅
@@ -584,7 +590,8 @@ Known simplifications (revisit with real data in Phase 3/7):
 
 **Goal:** a second server with its fork-specific content, and recipe trees that end in obtainable items.
 
-- [ ] Add Starlight to `servers.yaml`, and confirm the repo URL and branch.
+- [x] Add Starlight to `servers.yaml` (`ss14Starlight/space-station-14` @ `starlight-dev`); it builds cleanly, partial prototypes included (see Phase 3).
+- [ ] Starlight edits some upstream prototypes in place (e.g. `RecipeAmanitaPie` moved to the Oven): those keep `serverOnly: false`. Add a per-item "differs from upstream" flag or field diff for the UI.
 - [ ] Fork awareness:
   - Fork content lives in underscore folders (`_Starlight`, `_Mono`, `_FarHorizons`, `_Funkystation`, …, plus `DeltaV`) and in inline `# Starlight-Start/End` edits to upstream files.
   - The parser already loads everything. Additionally, set `serverOnly` by comparing ids with the upstream snapshot.

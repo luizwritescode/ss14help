@@ -1,0 +1,70 @@
+{
+ "branch": "starlight-dev",
+ "commitDate": "2026-10-06T23:18:05+03:00",
+ "counts": {
+  "cooking": 328,
+  "entities": 1159,
+  "mixers": 9,
+  "reactions": 355,
+  "reagents": 475,
+  "sources": 771
+ },
+ "generatedAt": "2026-10-06T23:29:15Z",
+ "repo": "https://github.com/ss14Starlight/space-station-14",
+ "schemaVersion": "1.1.0",
+ "server": "starlight",
+ "serverName": "Starlight",
+ "sha": "97739a669d1a943ffe5581b91b9a38fb209b8495",
+ "warnings": [
+  {
+   "code": "duplicate-id",
+   "message": "entity ClothingUniformJumpskirtCentcommAdminFormalWear also defined in _Starlight/Admeme/Entities/Clothing/Uniforms/jumpskirts.yml; the later one wins",
+   "sourceFile": "_Starlight/Entities/Clothing/Uniforms/jumpskirts.yml"
+  },
+  {
+   "code": "duplicate-id",
+   "message": "entity ClothingUniformJumpskirtFormalITG also defined in _Starlight/Admeme/Entities/Clothing/Uniforms/jumpskirts.yml; the later one wins",
+   "sourceFile": "_Starlight/Entities/Clothing/Uniforms/jumpskirts.yml"
+  },
+  {
+   "code": "duplicate-id",
+   "message": "entity ClothingUniformJumpsuitITGFormal also defined in _Starlight/Admeme/Entities/Clothing/Uniforms/jumpsuits.yml; the later one wins",
+   "sourceFile": "_Starlight/Entities/Clothing/Uniforms/jumpsuits.yml"
+  },
+  {
+   "code": "ftl-error",
+   "message": "2 unparseable Fluent entries skipped",
+   "sourceFile": "Locale/_Funkystation/xenoarchaeology/artifact-hints.ftl"
+  },
+  {
+   "code": "ftl-error",
+   "message": "3 unparseable Fluent entries skipped",
+   "sourceFile": "Locale/atmos/air-alarm-ui.ftl"
+  },
+  {
+   "code": "ftl-error",
+   "message": "2 unparseable Fluent entries skipped",
+   "sourceFile": "Locale/chemistry/solution/components/shared-solution-container-component.ftl"
+  },
+  {
+   "code": "ftl-error",
+   "message": "1 unparseable Fluent entries skipped",
+   "sourceFile": "Locale/damage/damage-popup-component.ftl"
+  },
+  {
+   "code": "ftl-error",
+   "message": "1 unparseable Fluent entries skipped",
+   "sourceFile": "Locale/game-ticking/set-game-preset-command.ftl"
+  },
+  {
+   "code": "ftl-error",
+   "message": "4 unparseable Fluent entries skipped",
+   "sourceFile": "Locale/nutrition/components/ingestion-system.ftl"
+  },
+  {
+   "code": "ftl-error",
+   "message": "2 unparseable Fluent entries skipped",
+   "sourceFile": "Locale/temperature/entity-heater.ftl"
+  }
+ ]
+}

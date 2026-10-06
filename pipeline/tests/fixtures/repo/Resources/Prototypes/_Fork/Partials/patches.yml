@@ -1,0 +1,24 @@
+# Partial prototypes: patches to prototypes defined elsewhere (see partials.py).
+
+- type: reaction
+  id: Bicaridine
+  minTemp: 310
+
+- type: !PartialOnly microwaveMealRecipe
+  id: RecipeChickenSandwich
+  reagents:
+    Mayo: !Remove
+    Sugar: 1
+
+- type: !PartialOnly entity
+  id: FoodLime
+  components:
+  - !Remove type: Extractable
+
+- type: !PartialOnly reagent
+  id: Carbon
+  color: "#111111"
+
+- type: !PartialOnly reagent
+  id: DoesNotExist
+  group: Nothing
