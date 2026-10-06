@@ -1,0 +1,18 @@
+{
+ "sources": [
+  {
+   "entity": "FoodLemon",
+   "grind": null,
+   "juice": {
+    "JuiceLemon": 10
+   }
+  },
+  {
+   "entity": "WheatBushel",
+   "grind": {
+    "Flour": 15
+   },
+   "juice": null
+  }
+ ]
+}

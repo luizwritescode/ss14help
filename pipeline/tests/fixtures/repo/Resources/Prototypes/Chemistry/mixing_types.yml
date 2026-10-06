@@ -1,0 +1,6 @@
+- type: mixingCategory
+  id: Centrifuge
+  verbText: mixing-verb-centrifuge
+  icon:
+    sprite: Structures/Machines/Medical/centrifuge.rsi
+    state: base

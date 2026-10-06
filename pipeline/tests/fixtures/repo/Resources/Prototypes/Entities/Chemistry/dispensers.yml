@@ -1,0 +1,66 @@
+- type: entity
+  id: Jug
+  abstract: true
+  name: jug
+  components:
+  - type: Solution
+    solution:
+      maxVol: 300
+
+- type: entity
+  parent: Jug
+  id: JugCarbon
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Carbon
+        Quantity: 240
+
+- type: entity
+  parent: Jug
+  id: JugOxygen
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Oxygen
+        Quantity: 240
+
+- type: entity
+  parent: Jug
+  id: JugSugar
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 240
+
+- type: entity
+  id: ChemDispenserEmpty
+  name: chemical dispenser
+  components:
+  - type: ReagentDispenser
+    beakerSlot:
+      whitelist:
+        components:
+        - FitsInDispenser
+
+- type: entity
+  id: ChemDispenser
+  parent: ChemDispenserEmpty
+  suffix: Filled
+  components:
+  - type: ReagentDispenser
+    generatableReagents:
+      Iron: 2
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: JugCarbon
+        - !type:GroupSelector
+          children:
+          - id: JugOxygen
+#        - id: JugSugar

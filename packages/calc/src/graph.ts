@@ -137,19 +137,20 @@ export class RecipeGraph {
   }
 
   /**
-   * The producer used unless the user picks another one. Dispensable reagents and things nothing
-   * produces have none: they are basic ingredients.
+   * The producer used unless the user picks another one. Basic ingredients have none:
+   * dispensable reagents, and things no recipe is *for* (a reagent only made as a side product of
+   * a split/breakdown reaction, like Water from centrifuged blood, is gathered by default; the
+   * split stays available as an explicit variant).
    *
-   * Ranking: recipes where `ref` is the primary product, then the fewest steps, then the highest
-   * priority, then the id.
+   * Ranking among primary-product recipes: fewest steps, then highest priority, then id.
    */
   defaultProducer(ref: NodeRef): Producer | undefined {
     if (ref.kind === "reagent" && this.isDispensable(ref.id)) return undefined;
     const ranked = this.producers(ref)
-      .map((p) => ({ p, primary: isPrimaryProduct(p, ref.id), steps: this.recipeSteps(p) }))
+      .filter((p) => isPrimaryProduct(p, ref.id))
+      .map((p) => ({ p, steps: this.recipeSteps(p) }))
       .sort(
         (a, b) =>
-          Number(b.primary) - Number(a.primary) ||
           a.steps - b.steps ||
           priority(b.p) - priority(a.p) ||
           a.p.recipe.id.localeCompare(b.p.recipe.id),
@@ -194,8 +195,9 @@ export class RecipeGraph {
 
     visiting.add(key);
     const options = this.producers(ref)
-      .map((p) => ({ primary: isPrimaryProduct(p, ref.id), ...this.countRecipe(p, visiting) }))
-      .sort((a, b) => Number(b.primary) - Number(a.primary) || a.steps - b.steps);
+      .filter((p) => isPrimaryProduct(p, ref.id))
+      .map((p) => this.countRecipe(p, visiting))
+      .sort((a, b) => a.steps - b.steps);
     visiting.delete(key);
 
     const best = options[0] ?? { steps: 0, cyclic: false };

@@ -1,0 +1,37 @@
+- type: reagent
+  id: Carbon
+  name: reagent-name-carbon
+  group: Elements
+  desc: reagent-desc-carbon
+  physicalDesc: reagent-physical-desc-crystalline
+  color: "#22282b"
+
+- type: reagent
+  id: Oxygen
+  name: reagent-name-oxygen
+  group: Elements
+  desc: reagent-desc-oxygen
+  physicalDesc: reagent-physical-desc-gaseous
+  color: "#808080"
+  metabolisms:
+    Gas:
+      effects:
+      - !type:Oxygenate
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Human ]
+
+- type: reagent
+  id: Plasma
+  name: reagent-name-plasma
+  group: Toxins
+  desc: reagent-desc-plasma
+  physicalDesc: reagent-physical-desc-gaseous
+  color: "#7e009e"
+
+- type: reagent
+  id: Sugar
+  name: reagent-name-sugar
+  group: Foods
+  physicalDesc: reagent-physical-desc-sweet
+  color: "#ffffff"

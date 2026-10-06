@@ -1,0 +1,31 @@
+- type: microwaveMealRecipe
+  id: RecipeBun
+  name: microwave-meal-recipe-bun-name
+  result: FoodBreadBun
+  group: Breads
+  solids:
+    FoodDoughSlice: 1
+
+# Both solids and reagents (v1 dropped the reagents of recipes like this).
+- type: microwaveMealRecipe
+  id: RecipeChickenSandwich
+  name: chicken sandwich recipe
+  result: FoodBurgerChicken
+  time: 10
+  group: Savory
+  reagents:
+    Mayo: 5
+  solids:
+    FoodBreadBun: 1
+    FoodMeatChicken: 1
+
+# Fork fields; the name isn't a known loc id, so it's kept as-is (like Loc.GetString).
+- type: microwaveMealRecipe
+  id: RecipeOvenBread
+  name: oven bread recipe
+  result: FoodBreadBun
+  deviceType: Oven
+  time: 30
+  secretRecipe: true
+  solids:
+    FoodDough: 1

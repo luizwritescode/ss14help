@@ -1,0 +1,14 @@
+- type: reagent
+  id: Frezon
+  name: reagent-name-frezon
+  group: Toxins
+  color: "#3a758c"
+
+# Generic file stem: the category falls back to the product's reagent group.
+- type: reaction
+  id: FrezonFromPlasma
+  reactants:
+    Plasma:
+      amount: 2
+  products:
+    Frezon: 1

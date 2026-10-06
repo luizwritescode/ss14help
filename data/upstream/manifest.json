@@ -1,0 +1,120 @@
+{
+ "branch": "master",
+ "commitDate": "2026-10-06T19:47:46Z",
+ "counts": {
+  "cooking": 218,
+  "entities": 621,
+  "mixers": 9,
+  "reactions": 326,
+  "reagents": 415,
+  "sources": 353
+ },
+ "generatedAt": "2026-10-06T23:06:13Z",
+ "repo": "https://github.com/space-wizards/space-station-14",
+ "schemaVersion": "1.1.0",
+ "server": "upstream",
+ "serverName": "Wizard's Den",
+ "sha": "9cf1e9e146c896cfb99256037d97e8b4b8cac3fa",
+ "warnings": [
+  {
+   "code": "ftl-error",
+   "message": "3 unparseable Fluent entries skipped",
+   "sourceFile": "Locale/atmos/air-alarm-ui.ftl"
+  },
+  {
+   "code": "ftl-error",
+   "message": "2 unparseable Fluent entries skipped",
+   "sourceFile": "Locale/chemistry/solution/components/shared-solution-container-component.ftl"
+  },
+  {
+   "code": "ftl-error",
+   "message": "1 unparseable Fluent entries skipped",
+   "sourceFile": "Locale/damage/damage-popup-component.ftl"
+  },
+  {
+   "code": "ftl-error",
+   "message": "1 unparseable Fluent entries skipped",
+   "sourceFile": "Locale/game-ticking/set-game-preset-command.ftl"
+  },
+  {
+   "code": "ftl-error",
+   "message": "4 unparseable Fluent entries skipped",
+   "sourceFile": "Locale/nutrition/components/ingestion-system.ftl"
+  },
+  {
+   "code": "ftl-error",
+   "message": "1 unparseable Fluent entries skipped",
+   "sourceFile": "Locale/preferences/ui/markings-picker.ftl"
+  },
+  {
+   "code": "ftl-error",
+   "message": "2 unparseable Fluent entries skipped",
+   "sourceFile": "Locale/temperature/entity-heater.ftl"
+  },
+  {
+   "code": "templated-id",
+   "message": "9 prototypes with generated ids skipped",
+   "sourceFile": "Entities/Structures/Piping/Atmospherics/binary.yml"
+  },
+  {
+   "code": "templated-id",
+   "message": "6 prototypes with generated ids skipped",
+   "sourceFile": "Entities/Structures/Piping/Atmospherics/gas_pipe_sensor.yml"
+  },
+  {
+   "code": "templated-id",
+   "message": "5 prototypes with generated ids skipped",
+   "sourceFile": "Entities/Structures/Piping/Atmospherics/pipes.yml"
+  },
+  {
+   "code": "templated-id",
+   "message": "5 prototypes with generated ids skipped",
+   "sourceFile": "Entities/Structures/Piping/Atmospherics/trinary.yml"
+  },
+  {
+   "code": "templated-id",
+   "message": "11 prototypes with generated ids skipped",
+   "sourceFile": "Entities/Structures/Piping/Atmospherics/unary.yml"
+  },
+  {
+   "code": "templated-id",
+   "message": "2 prototypes with generated ids skipped",
+   "sourceFile": "Entities/Structures/Specific/Atmospherics/freezer.yml"
+  },
+  {
+   "code": "templated-id",
+   "message": "2 prototypes with generated ids skipped",
+   "sourceFile": "Entities/Structures/Specific/Atmospherics/vox.yml"
+  },
+  {
+   "code": "templated-id",
+   "message": "1 prototypes with generated ids skipped",
+   "sourceFile": "Recipes/Construction/Graphs/atmospherics/atmos_binary.yml"
+  },
+  {
+   "code": "templated-id",
+   "message": "1 prototypes with generated ids skipped",
+   "sourceFile": "Recipes/Construction/Graphs/atmospherics/atmos_pipes.yml"
+  },
+  {
+   "code": "templated-id",
+   "message": "1 prototypes with generated ids skipped",
+   "sourceFile": "Recipes/Construction/Graphs/atmospherics/atmos_trinary.yml"
+  },
+  {
+   "code": "templated-id",
+   "message": "1 prototypes with generated ids skipped",
+   "sourceFile": "Recipes/Construction/Graphs/atmospherics/atmos_unary.yml"
+  },
+  {
+   "code": "templated-id",
+   "message": "1 prototypes with generated ids skipped",
+   "sourceFile": "Recipes/Construction/Graphs/atmospherics/gas_pipe_sensor.yml"
+  },
+  {
+   "code": "templated-id",
+   "message": "23 prototypes with generated ids skipped",
+   "sourceFile": "Recipes/Construction/atmospherics.yml"
+  }
+ ]
+}

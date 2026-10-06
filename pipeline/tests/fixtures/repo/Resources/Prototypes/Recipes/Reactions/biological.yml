@@ -1,0 +1,26 @@
+- type: reaction
+  id: BloodBreakdown
+  source: true
+  requiredMixerCategories:
+  - Centrifuge
+  reactants:
+    Blood:
+      amount: 20
+  products:
+    Water: 11
+    Iron: 0.5
+    Sugar: 2
+
+- type: reaction
+  id: CreateDough
+  impact: Low
+  quantized: true
+  conserveEnergy: false
+  reactants:
+    Flour:
+      amount: 15
+    Water:
+      amount: 10
+  effects:
+  - !type:SpawnEntity
+    entity: FoodDough

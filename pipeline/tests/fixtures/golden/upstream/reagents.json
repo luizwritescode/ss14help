@@ -1,0 +1,158 @@
+{
+ "reagents": [
+  {
+   "color": "#ffaa00",
+   "desc": "Treats brute damage.",
+   "dispensable": false,
+   "group": "Medicine",
+   "id": "Bicaridine",
+   "name": "bicaridine",
+   "physicalDesc": "translucent",
+   "serverOnly": false,
+   "sourceFile": "Reagents/medicine.yml"
+  },
+  {
+   "color": "#800000",
+   "desc": null,
+   "dispensable": false,
+   "group": "Biological",
+   "id": "Blood",
+   "name": "blood",
+   "physicalDesc": null,
+   "serverOnly": false,
+   "sourceFile": "Reagents/misc.yml"
+  },
+  {
+   "color": "#22282b",
+   "desc": "A black, crystalline solid.",
+   "dispensable": true,
+   "group": "Elements",
+   "id": "Carbon",
+   "name": "carbon",
+   "physicalDesc": "crystalline",
+   "serverOnly": false,
+   "sourceFile": "Reagents/elements.yml"
+  },
+  {
+   "color": null,
+   "desc": null,
+   "dispensable": false,
+   "group": "Medicine",
+   "id": "Dexalin",
+   "name": "dexalin",
+   "physicalDesc": "opaque",
+   "serverOnly": false,
+   "sourceFile": "Reagents/medicine.yml"
+  },
+  {
+   "color": null,
+   "desc": null,
+   "dispensable": false,
+   "group": "Foods",
+   "id": "Flour",
+   "name": "flour",
+   "physicalDesc": null,
+   "serverOnly": false,
+   "sourceFile": "Reagents/misc.yml"
+  },
+  {
+   "color": "#3a758c",
+   "desc": null,
+   "dispensable": false,
+   "group": "Toxins",
+   "id": "Frezon",
+   "name": "frezon",
+   "physicalDesc": null,
+   "serverOnly": false,
+   "sourceFile": "_Fork/Recipes/reactions.yml"
+  },
+  {
+   "color": "#731024",
+   "desc": "A medicine that stabilizes breathing.",
+   "dispensable": false,
+   "group": "Medicine",
+   "id": "Inaprovaline",
+   "name": "inaprovaline",
+   "physicalDesc": "opaque",
+   "serverOnly": false,
+   "sourceFile": "Reagents/medicine.yml"
+  },
+  {
+   "color": null,
+   "desc": null,
+   "dispensable": true,
+   "group": "Elements",
+   "id": "Iron",
+   "name": "iron",
+   "physicalDesc": null,
+   "serverOnly": false,
+   "sourceFile": "Reagents/misc.yml"
+  },
+  {
+   "color": null,
+   "desc": null,
+   "dispensable": false,
+   "group": "Drinks",
+   "id": "JuiceLemon",
+   "name": "lemon juice",
+   "physicalDesc": null,
+   "serverOnly": false,
+   "sourceFile": "Reagents/misc.yml"
+  },
+  {
+   "color": null,
+   "desc": null,
+   "dispensable": false,
+   "group": "Foods",
+   "id": "Mayo",
+   "name": "mayonnaise",
+   "physicalDesc": null,
+   "serverOnly": false,
+   "sourceFile": "Reagents/misc.yml"
+  },
+  {
+   "color": "#808080",
+   "desc": "An oxidizing, colorless gas.",
+   "dispensable": true,
+   "group": "Elements",
+   "id": "Oxygen",
+   "name": "oxygen",
+   "physicalDesc": "gaseous",
+   "serverOnly": false,
+   "sourceFile": "Reagents/elements.yml"
+  },
+  {
+   "color": "#7e009e",
+   "desc": "Funky, space-magic pixie dust.",
+   "dispensable": false,
+   "group": "Toxins",
+   "id": "Plasma",
+   "name": "plasma",
+   "physicalDesc": "gaseous",
+   "serverOnly": false,
+   "sourceFile": "Reagents/elements.yml"
+  },
+  {
+   "color": "#ffffff",
+   "desc": null,
+   "dispensable": false,
+   "group": "Foods",
+   "id": "Sugar",
+   "name": "sugar",
+   "physicalDesc": "sweet",
+   "serverOnly": false,
+   "sourceFile": "Reagents/elements.yml"
+  },
+  {
+   "color": "#75b1f0",
+   "desc": null,
+   "dispensable": false,
+   "group": "Drinks",
+   "id": "Water",
+   "name": "water",
+   "physicalDesc": null,
+   "serverOnly": false,
+   "sourceFile": "Reagents/misc.yml"
+  }
+ ]
+}

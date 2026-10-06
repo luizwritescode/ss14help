@@ -1,0 +1,37 @@
+- type: reagent
+  id: Water
+  name: reagent-name-water
+  group: Drinks
+  color: "#75b1f0"
+
+- type: reagent
+  id: Blood
+  name: reagent-name-blood
+  group: Biological
+  color: "#800000"
+
+- type: reagent
+  id: Iron
+  name: reagent-name-iron
+  group: Elements
+
+- type: reagent
+  id: Flour
+  name: reagent-name-flour
+  group: Foods
+
+- type: reagent
+  id: JuiceLemon
+  name: reagent-name-juice-lemon
+  group: Drinks
+
+- type: reagent
+  id: Mayo
+  name: reagent-name-mayo
+  group: Foods
+
+# Redefined in _Fork/Recipes/reactions.yml: the later file wins, with a duplicate-id warning.
+- type: reagent
+  id: Frezon
+  name: reagent-name-frezon
+  group: Gases

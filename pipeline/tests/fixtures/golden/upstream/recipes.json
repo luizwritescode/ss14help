@@ -1,0 +1,250 @@
+{
+ "cooking": [
+  {
+   "device": "Microwave",
+   "group": "Breads",
+   "id": "RecipeBun",
+   "name": "bun recipe",
+   "reagents": {},
+   "result": "FoodBreadBun",
+   "secret": false,
+   "serverOnly": false,
+   "solids": {
+    "FoodDoughSlice": 1
+   },
+   "sourceFile": "Recipes/Cooking/meal_recipes.yml",
+   "time": 5
+  },
+  {
+   "device": "Microwave",
+   "group": "Savory",
+   "id": "RecipeChickenSandwich",
+   "name": "chicken sandwich recipe",
+   "reagents": {
+    "Mayo": 5
+   },
+   "result": "FoodBurgerChicken",
+   "secret": false,
+   "serverOnly": false,
+   "solids": {
+    "FoodBreadBun": 1,
+    "FoodMeatChicken": 1
+   },
+   "sourceFile": "Recipes/Cooking/meal_recipes.yml",
+   "time": 10
+  },
+  {
+   "device": "Oven",
+   "group": "Other",
+   "id": "RecipeOvenBread",
+   "name": "oven bread recipe",
+   "reagents": {},
+   "result": "FoodBreadBun",
+   "secret": true,
+   "serverOnly": false,
+   "solids": {
+    "FoodDough": 1
+   },
+   "sourceFile": "Recipes/Cooking/meal_recipes.yml",
+   "time": 30
+  }
+ ],
+ "mixers": [
+  {
+   "id": "Centrifuge",
+   "name": "centrifugation"
+  }
+ ],
+ "reactions": [
+  {
+   "category": "medicine",
+   "effects": [],
+   "id": "Bicaridine",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Bicaridine": 2
+   },
+   "quantized": false,
+   "reactants": {
+    "Carbon": {
+     "amount": 1,
+     "catalyst": false
+    },
+    "Inaprovaline": {
+     "amount": 1,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/medicine.yml"
+  },
+  {
+   "category": "biological",
+   "effects": [],
+   "id": "BloodBreakdown",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [
+    "Centrifuge"
+   ],
+   "priority": 0,
+   "products": {
+    "Iron": 0.5,
+    "Sugar": 2,
+    "Water": 11
+   },
+   "quantized": false,
+   "reactants": {
+    "Blood": {
+     "amount": 20,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/biological.yml"
+  },
+  {
+   "category": "biological",
+   "effects": [
+    {
+     "_type": "SpawnEntity",
+     "entity": "FoodDough"
+    }
+   ],
+   "id": "CreateDough",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {},
+   "quantized": true,
+   "reactants": {
+    "Flour": {
+     "amount": 15,
+     "catalyst": false
+    },
+    "Water": {
+     "amount": 10,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/biological.yml"
+  },
+  {
+   "category": "medicine",
+   "effects": [],
+   "id": "Dexalin",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Dexalin": 3
+   },
+   "quantized": false,
+   "reactants": {
+    "Oxygen": {
+     "amount": 2,
+     "catalyst": false
+    },
+    "Plasma": {
+     "amount": 1,
+     "catalyst": true
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/medicine.yml"
+  },
+  {
+   "category": "fun",
+   "effects": [
+    {
+     "_type": "CreateGas",
+     "gas": "Nitrogen"
+    },
+    {
+     "_type": "ExplosionReactionEffect",
+     "explosionType": "Default",
+     "maxIntensity": 100
+    }
+   ],
+   "id": "FrezonBurst",
+   "maxTemp": 300,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 20,
+   "products": {},
+   "quantized": false,
+   "reactants": {
+    "Frezon": {
+     "amount": 3,
+     "catalyst": false
+    },
+    "Plasma": {
+     "amount": 1,
+     "catalyst": true
+    },
+    "Water": {
+     "amount": 1.5,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/fun.yml"
+  },
+  {
+   "category": "toxins",
+   "effects": [],
+   "id": "FrezonFromPlasma",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Frezon": 1
+   },
+   "quantized": false,
+   "reactants": {
+    "Plasma": {
+     "amount": 2,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "_Fork/Recipes/reactions.yml"
+  },
+  {
+   "category": "medicine",
+   "effects": [],
+   "id": "Inaprovaline",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Inaprovaline": 3
+   },
+   "quantized": false,
+   "reactants": {
+    "Carbon": {
+     "amount": 1,
+     "catalyst": false
+    },
+    "Oxygen": {
+     "amount": 1,
+     "catalyst": false
+    },
+    "Sugar": {
+     "amount": 1,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/medicine.yml"
+  }
+ ]
+}

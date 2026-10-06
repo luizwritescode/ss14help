@@ -1,0 +1,110 @@
+[
+ {
+  "category": "Oven",
+  "id": "FoodBreadBun",
+  "kind": "item",
+  "name": "bun"
+ },
+ {
+  "category": "Microwave",
+  "id": "FoodBurgerChicken",
+  "kind": "item",
+  "name": "chicken sandwich"
+ },
+ {
+  "category": "biological",
+  "id": "CreateDough",
+  "kind": "reaction",
+  "name": "CreateDough"
+ },
+ {
+  "category": "fun",
+  "id": "FrezonBurst",
+  "kind": "reaction",
+  "name": "FrezonBurst"
+ },
+ {
+  "category": "Medicine",
+  "id": "Bicaridine",
+  "kind": "reagent",
+  "name": "bicaridine"
+ },
+ {
+  "category": "Biological",
+  "id": "Blood",
+  "kind": "reagent",
+  "name": "blood"
+ },
+ {
+  "category": "Elements",
+  "id": "Carbon",
+  "kind": "reagent",
+  "name": "carbon"
+ },
+ {
+  "category": "Medicine",
+  "id": "Dexalin",
+  "kind": "reagent",
+  "name": "dexalin"
+ },
+ {
+  "category": "Foods",
+  "id": "Flour",
+  "kind": "reagent",
+  "name": "flour"
+ },
+ {
+  "category": "Toxins",
+  "id": "Frezon",
+  "kind": "reagent",
+  "name": "frezon"
+ },
+ {
+  "category": "Medicine",
+  "id": "Inaprovaline",
+  "kind": "reagent",
+  "name": "inaprovaline"
+ },
+ {
+  "category": "Elements",
+  "id": "Iron",
+  "kind": "reagent",
+  "name": "iron"
+ },
+ {
+  "category": "Drinks",
+  "id": "JuiceLemon",
+  "kind": "reagent",
+  "name": "lemon juice"
+ },
+ {
+  "category": "Foods",
+  "id": "Mayo",
+  "kind": "reagent",
+  "name": "mayonnaise"
+ },
+ {
+  "category": "Elements",
+  "id": "Oxygen",
+  "kind": "reagent",
+  "name": "oxygen"
+ },
+ {
+  "category": "Toxins",
+  "id": "Plasma",
+  "kind": "reagent",
+  "name": "plasma"
+ },
+ {
+  "category": "Foods",
+  "id": "Sugar",
+  "kind": "reagent",
+  "name": "sugar"
+ },
+ {
+  "category": "Drinks",
+  "id": "Water",
+  "kind": "reagent",
+  "name": "water"
+ }
+]

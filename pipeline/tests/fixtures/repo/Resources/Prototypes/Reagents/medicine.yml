@@ -1,0 +1,27 @@
+- type: reagent
+  abstract: true
+  id: BaseMedicine
+  group: Medicine
+  physicalDesc: reagent-physical-desc-opaque
+  flavor: medicine
+
+- type: reagent
+  id: Inaprovaline
+  parent: BaseMedicine
+  name: reagent-name-inaprovaline
+  desc: reagent-desc-inaprovaline
+  color: "#731024"
+
+- type: reagent
+  id: Bicaridine
+  parent: BaseMedicine
+  name: reagent-name-bicaridine
+  desc: reagent-desc-bicaridine
+  physicalDesc: reagent-physical-desc-translucent
+  color: "#ffaa00"
+
+- type: reagent
+  id: Dexalin
+  parent: [ BaseMedicine ]
+  name: reagent-name-dexalin
+  color: not-a-hex-color

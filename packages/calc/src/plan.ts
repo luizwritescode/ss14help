@@ -552,7 +552,8 @@ function stepText(step: Omit<Step, "text">, p: Producer, times: Q): string {
     const cats = step.catalysts.map((c) => `${formatAmount(c.amount)}u ${c.name}`).join(" + ");
     parts[0] += ` with ${cats} present (catalyst, not consumed)`;
   }
-  if (step.mixers.length > 0) parts.push(`in a ${step.mixers.map((m) => m.name).join(" + ")}`);
+  // Mixer names are the game's verbs ("stir", "centrifugation"); a mixer must support all of them.
+  if (step.mixers.length > 0) parts.push(`mixing: ${step.mixers.map((m) => m.name).join(" + ")}`);
   if (step.minTemp !== null) parts.push(`heat to ≥ ${formatAmount(step.minTemp)} K`);
   if (step.maxTemp !== null) parts.push(`keep at ≤ ${formatAmount(step.maxTemp)} K`);
   if (step.quantized) parts.push(`in whole batches (${times.toNumber()}×)`);

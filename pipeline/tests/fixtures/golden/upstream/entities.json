@@ -1,0 +1,53 @@
+{
+ "entities": [
+  {
+   "desc": "A hamburger bun. Round and convenient to hold.",
+   "id": "FoodBreadBun",
+   "name": "bun",
+   "serverOnly": false,
+   "sourceFile": "Entities/Food/food.yml"
+  },
+  {
+   "desc": "Some food.",
+   "id": "FoodBurgerChicken",
+   "name": "chicken sandwich",
+   "serverOnly": false,
+   "sourceFile": "Entities/Food/food.yml"
+  },
+  {
+   "desc": "Some food.",
+   "id": "FoodDough",
+   "name": "dough",
+   "serverOnly": false,
+   "sourceFile": "Entities/Food/food.yml"
+  },
+  {
+   "desc": "Some food.",
+   "id": "FoodDoughSlice",
+   "name": "dough slice",
+   "serverOnly": false,
+   "sourceFile": "Entities/Food/food.yml"
+  },
+  {
+   "desc": "Some food.",
+   "id": "FoodLemon",
+   "name": "lemon",
+   "serverOnly": false,
+   "sourceFile": "Entities/Food/food.yml"
+  },
+  {
+   "desc": "Some food.",
+   "id": "FoodMeatChicken",
+   "name": "raw chicken meat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Food/food.yml"
+  },
+  {
+   "desc": "Some food.",
+   "id": "WheatBushel",
+   "name": "wheat bushel",
+   "serverOnly": false,
+   "sourceFile": "Entities/Food/food.yml"
+  }
+ ]
+}

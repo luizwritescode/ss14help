@@ -1,0 +1,65 @@
+- type: entity
+  abstract: true
+  id: FoodBase
+  description: Some food.
+  components:
+  - type: Item
+    size: Small
+  - type: Solution
+    id: food
+    solution:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 1
+
+- type: entity
+  parent: FoodBase
+  id: FoodBreadBun
+  name: bun
+  description: A hamburger bun. Round and convenient to hold.
+
+- type: entity
+  parent: FoodBase
+  id: FoodBurgerChicken
+  name: chicken sandwich
+
+- type: entity
+  parent: FoodBase
+  id: FoodMeatChicken
+  name: raw chicken meat
+
+- type: entity
+  parent: FoodBase
+  id: FoodDoughSlice
+  name: dough slice
+
+- type: entity
+  parent: FoodBase
+  id: FoodDough
+  name: dough
+
+# Inherits the Solution's `id: food` from FoodBase but replaces its reagents (component fields
+# merge field by field; the child's `solution` wins).
+- type: entity
+  parent: FoodBase
+  id: WheatBushel
+  name: wheat bushel
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Flour
+        Quantity: 15
+  - type: Extractable
+    grindableSolutionName: food
+
+- type: entity
+  parent: FoodBase
+  id: FoodLemon
+  name: lemon
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuiceLemon
+        Quantity: 10

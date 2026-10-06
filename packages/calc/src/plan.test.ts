@@ -177,13 +177,16 @@ describe("plan: hand-verified real recipes", () => {
     expect(basics.Water).toBeCloseTo(3.944, 9);
   });
 
-  it("13. Protein 8u — scales by the right product of a split reaction (v1 bug)", () => {
-    // BloodBreakdown makes Protein 4 per 20 Blood. 8u = 2 batches = 40 Blood (v1 used Water's 11).
-    const p = plan(real, reagent("Protein"), 8);
+  it("13. Protein 8u — split reactions are opt-in, and scale by the right product (v1 bug)", () => {
+    // Protein is only a side product of BloodBreakdown, so by default it's gathered.
+    expect(real.isBasic(reagent("Protein"))).toBe(true);
+    expectAmounts(plan(real, reagent("Protein"), 8).basics, { Protein: 8 });
+    // Chosen explicitly: 4 Protein per 20 Blood → 2 batches = 40 Blood (v1 used Water's 11).
+    const p = plan(real, reagent("Protein"), 8, { variants: { Protein: "BloodBreakdown" } });
     expectAmounts(p.basics, { Blood: 40 });
     expectAmounts(p.leftovers, { Water: 22, Iron: 1, Sugar: 4, CarbonDioxide: 6 });
     expect(p.steps[0]?.text).toBe(
-      "Mix 40u blood, in a centrifuge → 8u protein (also makes 22u water + 1u iron + 4u sugar + 6u carbondioxide)",
+      "Mix 40u blood, mixing: centrifuge → 8u protein (also makes 22u water + 1u iron + 4u sugar + 6u carbondioxide)",
     );
   });
 
@@ -239,8 +242,8 @@ describe("plan: variants, credits, cycles, cooking", () => {
         { dispensable: ["A", "B", "C", "D"] },
       ),
     );
-    // "Slow" and "Split" don't name X as their primary product... "Slow" has a single product, so
-    // it is primary too; then fewest steps (both 1), then priority, then id: "Slow" < "X".
+    // "Split" isn't for X (two products, other id), so it's only used when chosen. "Slow" has a
+    // single product, so it is primary like "X"; both take 1 step, same priority: "Slow" < "X".
     expect(g.defaultProducer(reagent("X"))?.recipe.id).toBe("Slow");
     const p = plan(g, reagent("X"), 2, { variants: { X: "Split" } });
     expectAmounts(p.basics, { D: 2 });
@@ -277,7 +280,8 @@ describe("plan: variants, credits, cycles, cooking", () => {
         { dispensable: ["Ore", "C"] },
       ),
     );
-    const p = plan(g, reagent("T"), 1);
+    // Split products are only used when chosen.
+    const p = plan(g, reagent("T"), 1, { variants: { A: "Split", S: "Split" } });
     expectAmounts(p.basics, { Ore: 1, C: 1 });
     expect(p.credits).toHaveLength(1);
     expect(p.credits[0]).toMatchObject({ amount: 1, fromRecipe: "Split" });

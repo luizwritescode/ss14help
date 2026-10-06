@@ -157,8 +157,8 @@ The page never scrolls as a whole on desktop: each pane scrolls on its own. Mobi
 
 - Clicking a **reaction row** opens `reagent:<primary product>` with that reaction pre-selected (`via=<reactionId>`). The primary product is the product whose id equals the reaction id; otherwise it's the largest product amount, then the first id alphabetically.
 - Clicking a **cooking row** opens `item:<result>`. Cooking recipes are always shown inside their result item, never on their own.
-- **Variants:** a reagent can be produced by several reactions, and an item by several cooking recipes. The panel shows one at a time with a VariantSwitcher. The default variant follows the calc engine's rule (`RecipeGraph.defaultProducer`): recipes where it is the primary product first, then fewest steps, then highest priority, then id.
-- **Basic reagent:** a reagent that is dispensable (`Reagent.dispensable`) or that no reaction produces (`RecipeGraph.isBasic`). Its tree ends here, and its Recipe tab shows where to get it instead (sources).
+- **Variants:** a reagent can be produced by several reactions, and an item by several cooking recipes. The panel shows one at a time with a VariantSwitcher. The default variant follows the calc engine's rule (`RecipeGraph.defaultProducer`): only recipes where it is the primary product, then fewest steps, then highest priority, then id. Split/breakdown reactions are listed as alternatives but never the default.
+- **Basic reagent:** a reagent that is dispensable (`Reagent.dispensable`) or that no recipe is *for* (`RecipeGraph.isBasic`). Its tree ends here, and its Recipe tab shows where to get it instead (sources).
 
 **Categories (sidebar tree)** are derived from data, never hard-coded per server:
 
@@ -452,27 +452,37 @@ Notes for Phase 3:
 
 ## 5. Phase 3 — Pipeline MVP (upstream only, local)
 
-**Goal:** `docker run ss14help-pipeline upstream` produces a correct `data/upstream/`.
+**Goal:** `docker run ss14help-pipeline build upstream` produces a correct `data/upstream/`.
 
-- [ ] **fetch:** a shallow, sparse clone of `Resources/Prototypes` and `Resources/Locale/en-US` at a given SHA. Cache it between runs.
-- [ ] **parse:** walk *every* `*.yml`. The game loads the whole tree, so there's no hardcoded file list.
-  - Use a YAML SafeLoader with a **catch-all multi-constructor** for unknown tags (`!type:*`, `!PartialOnly`, `!Remove`, `!Clear`, `!Index`, `!CombineIndex`, …). It keeps the tag as `_type` (or `_tag`) and never crashes on a new tag.
-  - Record `sourceFile` on every prototype, so `_Starlight/…` and other fork folders can be detected.
-- [ ] **index:** a `{type: {id: prototype}}` index. Report duplicate ids as warnings, with last-loaded winning, which mirrors engine behaviour.
-- [ ] **resolve:** `parent` inheritance (single and multiple parents) and `abstract` handling, following the engine's merge semantics.
-- [ ] **localize:** parse `.ftl` with `fluent.syntax` and resolve `reagent-name-*` and `reagent-desc-*`. Entity names come straight from YAML `name:`.
-- [ ] **normalize:**
-  - Map prototypes to the models: `reaction` and `reagent`; `microwaveMealRecipe` → `CookingRecipe`; `mixingCategory` → mixer labels.
-  - Compute `hasRecipe` and `isBasic` (this replaces v1's `basic` flag).
-- [ ] **emit:** deterministic JSON (sorted keys and ids, stable float formatting) so git diffs stay readable, plus `search-index.json`.
-- [ ] Golden tests that use real YAML fixtures covering catalysts, `maxTemp`, multi-product reactions, `!type:` effects, inheritance and fluent names.
+- [x] **fetch** (`fetch.py`): `git init` + sparse checkout of `Resources/Prototypes` and `Resources/Locale/en-US`, `fetch --depth 1 --filter=blob:none` of the branch tip or a given `--sha`, cached in `pipeline/.cache/<server>`. Upstream takes ~9 s and ~27 MB. `--source PATH` builds from an existing checkout without network. `remote_head()` (ls-remote) is ready for Phase 4's "skip if unchanged".
+- [x] **parse** (`prototypes.py`): every `*.yml`, sorted by relative POSIX path (Windows `Path` ordering is case-insensitive and would change which duplicate wins). libyaml `CSafeLoader` with a catch-all `!` multi-constructor: `!type:Foo` mappings become `{_type: "Foo", ...}`, sequences `{_type, items}`, scalars `{_type, value}`. Unparseable files → `yaml-error` warning. Prototypes whose id is itself a template (`id: !type:CreateVariants`, atmos pipes) are skipped with one `templated-id` warning per file.
+- [x] **index:** `{type: {id: prototype}}`; later file wins with a `duplicate-id` warning.
+- [x] **resolve:** RobustToolbox semantics, checked against `SerializationManager.Composition.cs`: a field the child sets replaces the parent's; missing fields are copied from the parent; with several parents the **first** listed wins; `abstract` is never inherited; entity `components` merge by component `type`, field by field. Unknown parents → warning.
+- [x] **localize** (`localize.py`): `fluent.syntax`, messages, terms, attributes and references, select expressions render their default variant. `Localizer.text()` mirrors `Loc.GetString`: known id → text, otherwise the literal. Fluent entries using RobustToolbox extensions (term arguments with variables; UI strings only) are skipped with one `ftl-error` warning per file.
+- [x] **normalize** (`normalize.py`), defaults from the C# prototype classes:
+  - `reagent` → `Reagent` (localized name/desc/physicalDesc; colours that aren't hex are dropped). **`dispensable`**: every non-abstract entity with `ReagentDispenser` contributes its `generatableReagents` (Starlight), an old-style `pack` inventory, and the reagents in the jugs/bottles of its `EntityTableContainerFill`/`ContainerFill` (selectors walked recursively; commented-out jugs don't count).
+  - `reaction` → `Reaction`: `minTemp` 0 and `maxTemp` ∞ become `null`; `requiredMixerCategories` → `mixers`; `category` = file stem, or for generic stems (`reactions`, `recipes`, `misc`, …) the primary product's reagent group.
+  - `microwaveMealRecipe` → `CookingRecipe`: name via `Loc`, fallback the result's name; `time` default 5; `group` default `Other`; `deviceType` default `Microwave` (Starlight: Oven, Stove, IceCreamMaker); `secretRecipe`. Solids and reagents are both kept (v1 dropped reagents when solids existed).
+  - `mixingCategory` → `Mixer` (localized `verbText`).
+  - `Source`: entities with `Extractable`: `juiceSolution.reagents`, and `grindableSolutionName` → the inline `Solution` component when its `id` matches (or is unset).
+  - `Entity`: only entities referenced by cooking or sources; name/description from YAML (localized if they're ids), fallback `ent-<id>`.
+  - A prototype that fails model validation is skipped with an `invalid-prototype` warning (Phase 4 decides what halts).
+  - `hasRecipe`/`isBasic` live in the calc engine (`RecipeGraph.isBasic`), not in the data.
+- [x] **emit** (`emit.py`): every file is validated against its contract model, then written with sorted keys, whole floats as ints, one-space indent, LF. Two builds of the same input are byte-identical (tested). `search-index.json` holds `{kind, id, name, category}` documents for reagents, cooked items and effect-only reactions; the frontend builds its MiniSearch index from them (Phase 6).
+- [x] `serverOnly`: non-upstream builds compare ids with the committed `data/upstream/` snapshot.
+- [x] Tests: `tests/fixtures/repo` is a miniature game repo of real prototype snippets (catalysts, `maxTemp`, multi-product, `!type:` effects and metabolisms, single/list parents, abstract bases, component merging, Fluent terms, a filled dispenser with nested selectors and a commented-out jug, grind and juice sources, a duplicate id, a broken file). `test_build.py` compares against `tests/fixtures/golden/` (`UPDATE_GOLDEN=1` regenerates) plus targeted assertions; `test_localize.py` covers references, attributes, selectors and cycles.
+- [x] `make data` / `uv run ss14help-pipeline build upstream`; Docker usage in `pipeline/README.md`.
 
-Lessons from v1's `autoupdate/`:
-- Drop the `str(dict)` → JSON hack.
-- Drop the per-tag Python classes and the hardcoded file list.
-- Fix the cooking template bug where recipes with both solids *and* reagents lost their reagents.
+Results on upstream `9cf1e9e` (2026-10-06): 415 reagents (60 dispensable), 326 reactions, 218 cooking recipes, 9 mixers, 353 sources, 621 entities, 20 warnings (all `templated-id`/`ftl-error`), built in ~8 s. The roadmap's earlier "~350 / ~477 / ~320" were Starlight's numbers.
 
-**Exit criteria:** the upstream snapshot is generated. Counts are about 350 reactions, about 477 reagents and about 320 cooking recipes (the order of magnitude seen in today's tree). A spot check of 20 recipes against the game's files and the wiki matches.
+Verification:
+- 22 reactions cross-checked field by field against values copied by hand from the prototypes (`packages/calc/src/fixtures.ts`): all match. Cooking recipes spot-checked against the YAML (solids, reagents, time).
+- `packages/calc/src/real-data.test.ts` plans 30u of every craftable reagent and 2 of every cooked item in `data/upstream/` and simulates each plan: all executable, none with warnings.
+- That run surfaced one engine rule change: a reagent only made as a side product of a split/breakdown reaction (e.g. Water from centrifuged blood) is now basic by default; the split stays available as a variant.
+
+Known gaps (Phase 7 or later): composite solutions (`SolutionManager` lists of solution entities, used by a few grindables) aren't resolved; slicing (`SliceableFood`/`ToolRefinable`), `deepFryingRecipe`, `metamorphRecipe` and xenobiology `extractReaction` aren't modeled; `!Remove`/`!Clear`/`!PartialOnly` are kept as data but not applied as list operations.
+
+**Exit criteria:** the upstream snapshot is generated (`data/upstream/`), and a spot check of 20+ recipes against the game's files matches. ✅
 
 ---
 
@@ -530,7 +540,7 @@ Game rules it follows (verified in `Content.Shared/Chemistry/Reaction/ChemicalRe
 - [x] `RecipeGraph` (`src/graph.ts`): indexes one server's data once.
   - `producers`, `consumersOf` (ingredient / catalyst / cooking), `sourcesOf` (grind/juice hints), `stepCount` (for "Simplest first"), names.
   - A reaction that also consumes its product isn't counted as a way to make it.
-  - `defaultProducer`: none for dispensable reagents (they're basic even if a split reaction makes them, e.g. Water from `BloodBreakdown`); otherwise primary-product recipes first, then fewest steps, then highest priority, then id.
+  - `defaultProducer`: none for dispensable reagents, and none when no recipe is *for* the reagent (it's only a side product of split/breakdown reactions, e.g. Water from `BloodBreakdown`): those are basic, and the split is available as an explicit variant. Otherwise, among primary-product recipes: fewest steps, then highest priority, then id.
 - [x] `plan(graph, target, amount, { variants, owned })` (`src/plan.ts`), for reagents (u) and items (counts, via cooking recipes):
   - Resolves one producer per node (DFS; cycle-closing edges are cut and reported), then propagates demand consumers-first so shared intermediates are aggregated.
   - Scales by the yield of the **target product**, not the first product (v1 bug).

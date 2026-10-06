@@ -1,4 +1,4 @@
-.PHONY: install web pipeline schema test lint build docker
+.PHONY: install web pipeline data schema test lint build docker
 
 install:
 	pnpm install
@@ -9,6 +9,9 @@ web:
 
 pipeline:
 	cd pipeline && uv run ss14help-pipeline servers
+
+data:
+	cd pipeline && uv run ss14help-pipeline build upstream
 
 schema:
 	cd pipeline && uv run ss14help-pipeline schema

@@ -1,0 +1,4351 @@
+{
+ "entities": [
+  {
+   "desc": "A topical cream for burns.",
+   "id": "AloeCream",
+   "name": "aloe cream",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/healing.yml"
+  },
+  {
+   "desc": "The core of a destroyed flesh anomaly. Pulsates sickeningly, but might be a hearty meal if cooked.",
+   "id": "AnomalyCoreFlesh",
+   "name": "anomaly core",
+   "serverOnly": false,
+   "sourceFile": "Entities/Structures/Specific/Anomaly/cores.yml"
+  },
+  {
+   "desc": "The inert core of a destroyed flesh anomaly. Pulsates sickeningly, but might be good food in the right hands?",
+   "id": "AnomalyCoreFleshInert",
+   "name": "anomaly core",
+   "serverOnly": false,
+   "sourceFile": "Entities/Structures/Specific/Anomaly/cores.yml"
+  },
+  {
+   "desc": "A broken piece of an artifact. You could probably repair it if you had more.",
+   "id": "ArtifactFragment",
+   "name": "artifact fragment",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Xenoarchaeology/item_xenoartifacts.yml"
+  },
+  {
+   "desc": "A broken piece of an artifact. You could probably repair it if you had more.",
+   "id": "ArtifactFragment1",
+   "name": "artifact fragment",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Xenoarchaeology/item_xenoartifacts.yml"
+  },
+  {
+   "desc": "This used to be something, but now it's not.",
+   "id": "Ash",
+   "name": "ash",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/morgue.yml"
+  },
+  {
+   "desc": "A robust baseball bat.",
+   "id": "BaseBallBat",
+   "name": "baseball bat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Weapons/Melee/baseball_bat.yml"
+  },
+  {
+   "desc": "A horn off of a bicycle.",
+   "id": "BikeHorn",
+   "name": "bike horn",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/sound_maker.yml"
+  },
+  {
+   "desc": "Low-Voltage stack of wires for connecting APCs to machines and other purposes.",
+   "id": "CableApcStack",
+   "name": "LV cable coil",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Tools/cable_coils.yml"
+  },
+  {
+   "desc": "Low-Voltage stack of wires for connecting APCs to machines and other purposes.",
+   "id": "CableApcStack1",
+   "name": "LV cable coil",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Tools/cable_coils.yml"
+  },
+  {
+   "desc": "Low-Voltage stack of wires for connecting APCs to machines and other purposes.",
+   "id": "CableApcStack10",
+   "name": "LV cable coil",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Tools/cable_coils.yml"
+  },
+  {
+   "desc": "Explosive cord for removing whatever is in your way.",
+   "id": "CableDetStack",
+   "name": "explosive cord",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Weapons/Bombs/cord.yml"
+  },
+  {
+   "desc": "Explosive cord for removing whatever is in your way.",
+   "id": "CableDetStack1",
+   "name": "explosive cord",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Weapons/Bombs/cord.yml"
+  },
+  {
+   "desc": "Explosive cord for removing whatever is in your way.",
+   "id": "CableDetStack10",
+   "name": "explosive cord",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Weapons/Bombs/cord.yml"
+  },
+  {
+   "desc": "HV cables for connecting engines to heavy duty machinery, SMESes, and substations.",
+   "id": "CableHVStack",
+   "name": "HV cable coil",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Tools/cable_coils.yml"
+  },
+  {
+   "desc": "HV cables for connecting engines to heavy duty machinery, SMESes, and substations.",
+   "id": "CableHVStack1",
+   "name": "HV cable coil",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Tools/cable_coils.yml"
+  },
+  {
+   "desc": "HV cables for connecting engines to heavy duty machinery, SMESes, and substations.",
+   "id": "CableHVStack10",
+   "name": "HV cable coil",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Tools/cable_coils.yml"
+  },
+  {
+   "desc": "MV cables for connecting substations to APCs, and also powering a select few things like emitters.",
+   "id": "CableMVStack",
+   "name": "MV cable coil",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Tools/cable_coils.yml"
+  },
+  {
+   "desc": "MV cables for connecting substations to APCs, and also powering a select few things like emitters.",
+   "id": "CableMVStack1",
+   "name": "MV cable coil",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Tools/cable_coils.yml"
+  },
+  {
+   "desc": "MV cables for connecting substations to APCs, and also powering a select few things like emitters.",
+   "id": "CableMVStack10",
+   "name": "MV cable coil",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Tools/cable_coils.yml"
+  },
+  {
+   "desc": "NYAH!",
+   "id": "ClothingHeadHatCatEars",
+   "name": "cat ears",
+   "serverOnly": false,
+   "sourceFile": "Entities/Clothing/Head/misc.yml"
+  },
+  {
+   "desc": "A strange-looking blue hat that most certainly belongs to a powerful magic-user.",
+   "id": "ClothingHeadHatWizardBlue",
+   "name": "blue wizard hat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Clothing/Head/hats.yml"
+  },
+  {
+   "desc": "A clown mask featuring a foldable wig; a true prankster's attire.",
+   "id": "ClothingMaskClown",
+   "name": "clown wig and mask",
+   "serverOnly": false,
+   "sourceFile": "Entities/Clothing/Masks/masks.yml"
+  },
+  {
+   "desc": "The traditional mime's mask. It has an eerie facial posture.",
+   "id": "ClothingMaskMime",
+   "name": "mime mask",
+   "serverOnly": false,
+   "sourceFile": "Entities/Clothing/Masks/masks.yml"
+  },
+  {
+   "desc": "An adorable pair of slippers that resemble a lizardperson. Combine this with some other green clothing and you'll be the coolest crewmember on the station!",
+   "id": "ClothingShoeSlippersLizard",
+   "name": "lizard plushie slippers",
+   "serverOnly": false,
+   "sourceFile": "Entities/Clothing/Shoes/misc.yml"
+  },
+  {
+   "desc": "The prankster's standard-issue clowning shoes. Damn they're huge!",
+   "id": "ClothingShoesClown",
+   "name": "clown shoes",
+   "serverOnly": false,
+   "sourceFile": "Entities/Clothing/Shoes/specific.yml"
+  },
+  {
+   "desc": "A piece of unrefined ore.",
+   "id": "Coal",
+   "name": "coal",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/ore.yml"
+  },
+  {
+   "desc": "A piece of unrefined ore.",
+   "id": "Coal1",
+   "name": "coal",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/ore.yml"
+  },
+  {
+   "desc": "A piece of unrefined ore.",
+   "id": "Coal10",
+   "name": "coal",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/ore.yml"
+  },
+  {
+   "desc": "A piece of unrefined ore.",
+   "id": "Coal15",
+   "name": "coal",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/ore.yml"
+  },
+  {
+   "desc": "A piece of unrefined ore.",
+   "id": "Coal5",
+   "name": "coal",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/ore.yml"
+  },
+  {
+   "desc": "Moth people's favorite snack, and just as fluffy as them.",
+   "id": "CottonBol",
+   "name": "cotton boll",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A colourful crayon. Looks tasty. Mmmm...",
+   "id": "CrayonGreen",
+   "name": "green crayon",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/crayons.yml"
+  },
+  {
+   "desc": "This nettle's out for blood.",
+   "id": "DeathNettle",
+   "name": "death nettle",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Jesus christ.",
+   "id": "DisgustingSweptSoup",
+   "name": "salty sweet miso cola soup",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meals.yml"
+  },
+  {
+   "desc": "Much less deadly in this form.",
+   "id": "Ectoplasm",
+   "name": "ectoplasm",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/morgue.yml"
+  },
+  {
+   "desc": "A flare that produces a very bright light for a short while. Point the flame away from yourself.",
+   "id": "Flare",
+   "name": "emergency flare",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Tools/flare.yml"
+  },
+  {
+   "desc": "A fragrant plant with soothing properties.",
+   "id": "FoodAloe",
+   "name": "aloe",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "An extremely sought-after medicinal plant. May have some funky side effects.",
+   "id": "FoodAmbrosiaDeus",
+   "name": "ambrosia deus",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A medicinal plant. May make you feel a little funny.",
+   "id": "FoodAmbrosiaVulgaris",
+   "name": "ambrosia vulgaris",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A strange blue fruit. Something about it doesn't seem right.",
+   "id": "FoodAnomalyBerry",
+   "name": "anomaly berry",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "It's a little piece of Eden.",
+   "id": "FoodApple",
+   "name": "apple",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A delicious bagel.",
+   "id": "FoodBagel",
+   "name": "bagel",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bagel.yml"
+  },
+  {
+   "desc": "A delicious bagel made with cotton dough.",
+   "id": "FoodBagelCotton",
+   "name": "cotton bagel",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bagel.yml"
+  },
+  {
+   "desc": "A delicious bagel topped with bicaridine-infused poppy seeds.",
+   "id": "FoodBagelPoppy",
+   "name": "poppy seed bagel",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bagel.yml"
+  },
+  {
+   "desc": "A pan of brownies.",
+   "id": "FoodBakedBrownieBatch",
+   "name": "brownies",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "A pan of \"special\" brownies.",
+   "id": "FoodBakedCannabisBrownieBatch",
+   "name": "special brownies",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "A disk of slightly melted chèvre flopped on top of a crostini, and toasted all-round.",
+   "id": "FoodBakedChevreChaud",
+   "name": "chèvre chaud",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "A disk of slightly melted chèvre flopped on top of a... cotton crostini, and toasted all-round.",
+   "id": "FoodBakedChevreChaudCotton",
+   "name": "cotton chèvre chaud",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "COOKIE!!!",
+   "id": "FoodBakedCookie",
+   "name": "cookie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "The best of both cookie and oat.",
+   "id": "FoodBakedCookieOatmeal",
+   "name": "oatmeal cookie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "Why would you put raisins in a cookie?",
+   "id": "FoodBakedCookieRaisin",
+   "name": "raisin cookie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "Just like your mom used to make.",
+   "id": "FoodBakedCookieSugar",
+   "name": "sugar cookie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "Buttery, flaky goodness.",
+   "id": "FoodBakedCroissant",
+   "name": "croissant",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "Buttery, flaky, fibery goodness.",
+   "id": "FoodBakedCroissantCotton",
+   "name": "cotton croissant",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "Average recipe for meat in doughs.",
+   "id": "FoodBakedDumplings",
+   "name": "dumplings",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "Bread and cheese toasted with butter, perfect for a chilly day in space.",
+   "id": "FoodBakedGrilledCheeseSandwich",
+   "name": "grilled cheese sandwich",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "Cotton bread slightly burnt in butter, with melted cheese. Moths find it difficult to resist this combination.",
+   "id": "FoodBakedGrilledCheeseSandwichCotton",
+   "name": "cotton grilled cheese sandwich",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "A delicious and spongy little cake.",
+   "id": "FoodBakedMuffin",
+   "name": "muffin",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "A delicious and spongy banana muffin.",
+   "id": "FoodBakedMuffinBanana",
+   "name": "banana muffin",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "A delicious and spongy little cake, with berries.",
+   "id": "FoodBakedMuffinBerry",
+   "name": "berry muffin",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "A sweet muffin with cherry bits.",
+   "id": "FoodBakedMuffinCherry",
+   "name": "cherry muffin",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "A delicious and spongy chocolate muffin.",
+   "id": "FoodBakedMuffinChocolate",
+   "name": "chocolate muffin",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "A fluffy pancake. The softer, superior relative of the waffle.",
+   "id": "FoodBakedPancake",
+   "name": "pancake",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "A fluffy and delicious blueberry pancake.",
+   "id": "FoodBakedPancakeBb",
+   "name": "blueberry pancake",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "A fluffy and delicious chocolate chip pancake.",
+   "id": "FoodBakedPancakeCc",
+   "name": "chocolate chip pancake",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "Mmm, waffles.",
+   "id": "FoodBakedWaffle",
+   "name": "waffles",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "You feel healthier and - more feminine?",
+   "id": "FoodBakedWaffleSoy",
+   "name": "soy waffles",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "Rich in potassium.",
+   "id": "FoodBanana",
+   "name": "banana",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A handful of various types of berries.",
+   "id": "FoodBerries",
+   "name": "berries",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Wait, that's not ketchup...",
+   "id": "FoodBloodTomato",
+   "name": "blood tomato",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A strange floating bulb.. Nothing worth crying over.",
+   "id": "FoodBloonion",
+   "name": "bloonion bulb",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A large, blue... berry. Seriously.",
+   "id": "FoodBluePumpkin",
+   "name": "blue pumpkin",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "This one is blue.",
+   "id": "FoodBlueTomato",
+   "name": "blue tomato",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A simple bowl, used for soups and salads.",
+   "id": "FoodBowlBig",
+   "name": "bowl",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Containers/bowl.yml"
+  },
+  {
+   "desc": "Bon appétit!",
+   "id": "FoodBreadBaguette",
+   "name": "baguette",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "Bon azzétit!",
+   "id": "FoodBreadBaguetteCotton",
+   "name": "cotton baguette",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "Bon az-zétite!",
+   "id": "FoodBreadBaguetteCottonSlice",
+   "name": "cotton crostini",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "Bon ap-pétite!",
+   "id": "FoodBreadBaguetteSlice",
+   "name": "crostini",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "A heavenly and filling treat.",
+   "id": "FoodBreadBanana",
+   "name": "banana bread",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "A hamburger bun. Round and convenient to hold.",
+   "id": "FoodBreadBun",
+   "name": "bun",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "Crunchy.",
+   "id": "FoodBreadButteredToast",
+   "name": "buttered toast",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "Some good down-home country-style, rootin'-tootin', revolver-shootin', dad-gum yeehaw cornbread.",
+   "id": "FoodBreadCorn",
+   "name": "cornbread",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "Bread, but for moff.",
+   "id": "FoodBreadCotton",
+   "name": "cotton bread",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "A slice of (maybe) delicious cotton bread.",
+   "id": "FoodBreadCottonSlice",
+   "name": "cotton bread slice",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "Yum yum yum!",
+   "id": "FoodBreadCreamcheese",
+   "name": "cream cheese bread",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "A slice of bread soaked in a beaten egg mixture.",
+   "id": "FoodBreadFrenchToast",
+   "name": "french toast",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "Alas, it is limited.",
+   "id": "FoodBreadGarlicSlice",
+   "name": "garlic bread",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "As if science are gonna give up their slimes for toast!",
+   "id": "FoodBreadJellySlice",
+   "name": "jelly toast",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "The culinary base of every self-respecting eloquen/tg/entleman.",
+   "id": "FoodBreadMeat",
+   "name": "meat bread",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "Reassuringly green meatloaf made from spider meat.",
+   "id": "FoodBreadMeatSpider",
+   "name": "spider meat bread",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "A fitting, and filling, end to xeno scum.",
+   "id": "FoodBreadMeatXeno",
+   "name": "xeno meat bread",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "Best eaten in silence.",
+   "id": "FoodBreadMimana",
+   "name": "mimana bread",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "Entire stations have been ripped apart over arguing whether this is still good to eat.",
+   "id": "FoodBreadMoldySlice",
+   "name": "moldy bread slice",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "Some plain old earthen bread.",
+   "id": "FoodBreadPlain",
+   "name": "bread",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "A slice of home.",
+   "id": "FoodBreadPlainSlice",
+   "name": "bread slice",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "Dont think too much about it.",
+   "id": "FoodBreadSausage",
+   "name": "sausage bread",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "Like meatbread but for vegetarians. Brag to your crewmates about how much better it is.",
+   "id": "FoodBreadTofu",
+   "name": "tofu bread",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "Classy.",
+   "id": "FoodBreadTwoSlice",
+   "name": "two slice",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "A huge plate of protein and carbs, more likely to put you back in bed than get you out of it. Oh, what fresh hell is this?",
+   "id": "FoodBreakfastAmerican",
+   "name": "full american breakfast",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/breakfast.yml"
+  },
+  {
+   "desc": "A huge plate of protein and carbs, more likely to put you back in bed than get you out of it. Don't mention the war!",
+   "id": "FoodBreakfastEnglish",
+   "name": "full english breakfast",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/breakfast.yml"
+  },
+  {
+   "desc": "The humble bungo fruit.",
+   "id": "FoodBungo",
+   "name": "bungo fruit",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": null,
+   "id": "FoodBungoPit",
+   "name": "bungo pit",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Tastes like appendicitis.",
+   "id": "FoodBurgerAppendix",
+   "name": "appendix burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "The perfect combination of all things American.",
+   "id": "FoodBurgerBacon",
+   "name": "bacon burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "It's still warm. The steam coming off of it smells kinda sweaty.",
+   "id": "FoodBurgerBaseball",
+   "name": "baseball burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "Best served rawr.",
+   "id": "FoodBurgerBear",
+   "name": "bearger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "Forget the Big Mac. THIS is the future!",
+   "id": "FoodBurgerBig",
+   "name": "big bite burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "A strange looking burger. It looks almost sentient.",
+   "id": "FoodBurgerBrain",
+   "name": "brain burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "Almost like a carp is yelling somewhere...",
+   "id": "FoodBurgerCarp",
+   "name": "fillet-o-carp burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "Finally those cats and catpeople are worth something!",
+   "id": "FoodBurgerCat",
+   "name": "cat burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "This noble burger stands proudly clad in golden cheese.",
+   "id": "FoodBurgerCheese",
+   "name": "cheese burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "A delicious chicken sandwich, it is said the proceeds from this treat helps criminalize disarming people on the space frontier.",
+   "id": "FoodBurgerChicken",
+   "name": "chicken sandwich",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "This tastes funny...",
+   "id": "FoodBurgerClown",
+   "name": "clown burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "The Head of Personnel's favorite!",
+   "id": "FoodBurgerCorgi",
+   "name": "corger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "A delicious patty of the crabby kind, slapped in between a bun.",
+   "id": "FoodBurgerCrab",
+   "name": "crab burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "This looks like the sort of food that a demented clown in a trenchcoat would make.",
+   "id": "FoodBurgerCrazy",
+   "name": "crazy hamburger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "A duck sandwich, only the criminally insane would dare to eat the meat of such an adorable creature.",
+   "id": "FoodBurgerDuck",
+   "name": "duck sandwich",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "It's shockingly good, if you live off of electricity that is.",
+   "id": "FoodBurgerEmpowered",
+   "name": "empowered burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "HOT! HOT! HOT!",
+   "id": "FoodBurgerFive",
+   "name": "five alarm burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "Too spooky!",
+   "id": "FoodBurgerGhost",
+   "name": "ghost burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "You cant tell who this is made of...",
+   "id": "FoodBurgerHuman",
+   "name": "human burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "Culinary delight..?",
+   "id": "FoodBurgerJelly",
+   "name": "jelly burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "A cheap and greasy imitation of an eggs Benedict.",
+   "id": "FoodBurgerMcguffin",
+   "name": "McGuffin",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "An elusive rib shaped burger with limited availability across the galaxy. Not as good as you remember it.",
+   "id": "FoodBurgerMcrib",
+   "name": "BBQ Rib Sandwich",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "Its taste defies language.",
+   "id": "FoodBurgerMime",
+   "name": "mime burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "The last lamp it saw was the one inside the microwave.",
+   "id": "FoodBurgerMothRoach",
+   "name": "mothroachburger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "A boring, dry burger.",
+   "id": "FoodBurgerPlain",
+   "name": "plain burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "Pretty much what you'd expect...",
+   "id": "FoodBurgerRat",
+   "name": "rat burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "The lettuce is the only organic component. Beep.",
+   "id": "FoodBurgerRobot",
+   "name": "roburger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "After eating this you have the overwhelming urge to purchase overpriced figurines of superheroes.",
+   "id": "FoodBurgerSoy",
+   "name": "soylent burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "This is absolutely Ei Nath.",
+   "id": "FoodBurgerSpell",
+   "name": "spell burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "This is a mountain of a burger. FOOD!",
+   "id": "FoodBurgerSuper",
+   "name": "super bite burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "What... is that meat?",
+   "id": "FoodBurgerTofu",
+   "name": "tofu burger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "Smells caustic. Tastes like heresy.",
+   "id": "FoodBurgerXeno",
+   "name": "xenoburger",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/burger.yml"
+  },
+  {
+   "desc": "A stick of delicious, golden, fatty goodness.",
+   "id": "FoodButter",
+   "name": "stick of butter",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "A pat of delicious, golden, fatty goodness.",
+   "id": "FoodButterSlice",
+   "name": "butter slice",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "Ewwwwwwwwww. Cabbage.",
+   "id": "FoodCabbage",
+   "name": "cabbage",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A cake centred with apple.",
+   "id": "FoodCakeApple",
+   "name": "apple cake",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
+   "desc": "Cook it to get a cake.",
+   "id": "FoodCakeBatter",
+   "name": "cake batter",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "This is a cake that is approaching.",
+   "id": "FoodCakeBerryDelight",
+   "name": "berry delight",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
+   "desc": "Happy Birthday little clown...",
+   "id": "FoodCakeBirthday",
+   "name": "birthday cake",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
+   "desc": "Stains your teeth.",
+   "id": "FoodCakeBlueberry",
+   "name": "blueberry cake",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
+   "desc": "A squishy cake-thing.",
+   "id": "FoodCakeBrain",
+   "name": "brain cake",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
+   "desc": "A favorite desert of a certain wascally wabbit.",
+   "id": "FoodCakeCarrot",
+   "name": "carrot cake",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
+   "desc": "DANGEROUSLY cheesy.",
+   "id": "FoodCakeCheese",
+   "name": "cheese cake",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
+   "desc": "A cake with added chocolate.",
+   "id": "FoodCakeChocolate",
+   "name": "chocolate cake",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
+   "desc": "A funny cake with a clown face on it.",
+   "id": "FoodCakeClown",
+   "name": "clown cake",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
+   "desc": "A cake with a fiber frosting and a wad of cotton on top.",
+   "id": "FoodCakeCotton",
+   "name": "cotton cake",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
+   "desc": "A cake with added lemon.",
+   "id": "FoodCakeLemon",
+   "name": "lemon cake",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
+   "desc": "A cake that represents the moon of earth.",
+   "id": "FoodCakeLemoon",
+   "name": "lemoon cake",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
+   "desc": "A cake with added lime.",
+   "id": "FoodCakeLime",
+   "name": "lime cake",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
+   "desc": "A cake with added orange.",
+   "id": "FoodCakeOrange",
+   "name": "orange cake",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
+   "desc": "A plain cake, not a lie.",
+   "id": "FoodCakePlain",
+   "name": "cake",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
+   "desc": "A hollow cake with real pumpkin.",
+   "id": "FoodCakePumpkin",
+   "name": "pumpkin-spice cake",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
+   "desc": "A cake made of slimes. Probably not electrified.",
+   "id": "FoodCakeSlime",
+   "name": "slime cake",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
+   "desc": "Extremely dense and powerful food.",
+   "id": "FoodCakeSuppermatter",
+   "name": "suppermatter",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
+   "desc": "Add this to your favorite baked goods for an irie time.",
+   "id": "FoodCannabisButter",
+   "name": "stick of cannabis butter",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "It's good for the eyes!",
+   "id": "FoodCarrot",
+   "name": "carrot",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A wedge of delicious Cheddar. The cheese wheel it was cut from can't have gone far.",
+   "id": "FoodCheeseSlice",
+   "name": "cheese wedge",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "Juicy red cherry with a pit inside.",
+   "id": "FoodCherry",
+   "name": "cherry",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A small disk of creamy Chèvre. An ideal adornment for French side dishes.",
+   "id": "FoodChevreSlice",
+   "name": "chèvre disk",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "Spicy, best not touch your eyes.",
+   "id": "FoodChiliPepper",
+   "name": "chili pepper",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Icy hot.",
+   "id": "FoodChillyPepper",
+   "name": "chilly pepper",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "You can never have too much chocolate!",
+   "id": "FoodCocoaBeans",
+   "name": "cocoa beans",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "You can never have too much chocolate!",
+   "id": "FoodCocoaPod",
+   "name": "cocoa pod",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Needs some butter! And some cooking...",
+   "id": "FoodCorn",
+   "name": "ear of corn",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A cotton hamburger bun. Soft, round and convenient to hold.",
+   "id": "FoodCottonBun",
+   "name": "cotton bun",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/cottonburger.yml"
+  },
+  {
+   "desc": "Buttery, flaky goodness waiting to happen.",
+   "id": "FoodCroissantRaw",
+   "name": "raw croissant",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "Buttery, flaky, fibery goodness waiting to happen.",
+   "id": "FoodCroissantRawCotton",
+   "name": "raw cotton croissant",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "The food of choice for the seasoned traitor.",
+   "id": "FoodDonkpocket",
+   "name": "donk-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "A relentlessly sweet donk-pocket. Made with 100% artificial flavoring.",
+   "id": "FoodDonkpocketBerry",
+   "name": "berry-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "A relentlessly sweet donk-pocket, now warm and delicious.",
+   "id": "FoodDonkpocketBerryWarm",
+   "name": "warm berry-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "A long-lost edition of donk pocket, made specifically for hard-working salvagers.",
+   "id": "FoodDonkpocketCarp",
+   "name": "carp-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "A long-lost edition of donk pocket, made specifically for hard-working salvagers.",
+   "id": "FoodDonkpocketCarpWarm",
+   "name": "warm carp-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "The food of choice for the seasoned botanist.",
+   "id": "FoodDonkpocketDank",
+   "name": "dank-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "The heated food of choice for the seasoned botanist.",
+   "id": "FoodDonkpocketDankWarm",
+   "name": "warm dank-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "The award-winning donk-pocket that won the hearts of clowns and humans alike.",
+   "id": "FoodDonkpocketHonk",
+   "name": "honk-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "The award-winning donk-pocket, now warm and toasty.",
+   "id": "FoodDonkpocketHonkWarm",
+   "name": "warm honk-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "Buzzy edition of donk-pocket that was created during mass protests ab-... Actually who cares? Just donk-pockets for moths.",
+   "id": "FoodDonkpocketMoth",
+   "name": "moth-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "Buzzy edition of donk-pocket that was created during mass protests ab-... Actually who cares? Just donk-pockets for moths.",
+   "id": "FoodDonkpocketMothWarm",
+   "name": "warm moth-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "Delicious, cheesy and surprisingly filling.",
+   "id": "FoodDonkpocketPizza",
+   "name": "pizza-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "Cheese filling really hits the spot when warm.",
+   "id": "FoodDonkpocketPizzaWarm",
+   "name": "warm pizza-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "The classic snack food, now with a heat-activated spicy flair.",
+   "id": "FoodDonkpocketSpicy",
+   "name": "spicy-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "The classic snack food, now maybe a bit too spicy.",
+   "id": "FoodDonkpocketSpicyWarm",
+   "name": "warm spicy-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "Tasty, but a sad reminder of the great crash of '24.",
+   "id": "FoodDonkpocketStonk",
+   "name": "stonk-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "Tasty, but a sad reminder of the great crash of '24.",
+   "id": "FoodDonkpocketStonkWarm",
+   "name": "warm stonk-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "An East Asian take on the classic stationside snack.",
+   "id": "FoodDonkpocketTeriyaki",
+   "name": "teriyaki-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "An East Asian take on the classic stationside snack, now steamy and warm.",
+   "id": "FoodDonkpocketTeriyakiWarm",
+   "name": "warm teriyaki-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "The heated food of choice for the seasoned traitor.",
+   "id": "FoodDonkpocketWarm",
+   "name": "warm donk-pocket",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "A piece of dough.",
+   "id": "FoodDough",
+   "name": "dough",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "A piece of cornmeal dough.",
+   "id": "FoodDoughCornmeal",
+   "name": "cornmeal dough",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "A piece of fabric dough.",
+   "id": "FoodDoughCotton",
+   "name": "cotton dough",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "A flattened cotton dough.",
+   "id": "FoodDoughCottonFlat",
+   "name": "flat cotton dough",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "A thin noodle of cotton dough. Can be cooked into a cotton bagel.",
+   "id": "FoodDoughCottonRope",
+   "name": "cotton dough rope",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "A slice of cotton dough.",
+   "id": "FoodDoughCottonSlice",
+   "name": "cotton dough slice",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "A flattened dough.",
+   "id": "FoodDoughFlat",
+   "name": "flat dough",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "Cook it to get a pie.",
+   "id": "FoodDoughPie",
+   "name": "pie dough",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "A thin noodle of dough. Can be cooked into a bagel.",
+   "id": "FoodDoughRope",
+   "name": "dough rope",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "A slice of dough. Can be cooked into a bun.",
+   "id": "FoodDoughSlice",
+   "name": "dough slice",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "A flattened slice of tortilla dough, cook this to get a taco shell.",
+   "id": "FoodDoughTortillaFlat",
+   "name": "flattened tortilla dough",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "Maybe there's a chicken inside?",
+   "id": "FoodEggplant",
+   "name": "eggplant",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "You can hardly wrap your head around this thing.",
+   "id": "FoodExtradimensionalOrange",
+   "name": "extradimensional orange",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A soft but smooth gun-shaped fruit.",
+   "id": "FoodFakeCapfruit",
+   "name": "capfruit",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A delicious-looking mushroom like you see in those cartoons.",
+   "id": "FoodFlyAmanita",
+   "name": "fly amanita",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A medicinal plant used for its antitoxin.",
+   "id": "FoodGalaxythistle",
+   "name": "galaxythistle",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Delicious, but with a potentially overwhelming odor.",
+   "id": "FoodGarlic",
+   "name": "garlic",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A delicious, gun-shaped fruit with a thick wooden stem.",
+   "id": "FoodGatfruit",
+   "name": "gatfruit",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A fragile crystal plant with lot of spiky thorns.",
+   "id": "FoodGlasstle",
+   "name": "glasstle",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "It should be shaped like a cube, shouldn't it?",
+   "id": "FoodGoldenApple",
+   "name": "golden apple",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "The food of emperors, Space France inhabitants (usually as wine) and soccer moms. One day it could be used in wine production for the bartender if he ever runs out.",
+   "id": "FoodGrape",
+   "name": "grapes",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "The water within this melon has been blessed by some deity that's particularly fond of watermelon.",
+   "id": "FoodHolymelon",
+   "name": "holymelon",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Juicy golden and red slice.",
+   "id": "FoodHolymelonSlice",
+   "name": "holymelon slice",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "It's evil, don't touch it!",
+   "id": "FoodJellyAmanita",
+   "name": "amanita jelly",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "A thin rod of metal used to skewer just about anything and cook it.",
+   "id": "FoodKebabSkewer",
+   "name": "skewer",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/skewer.yml"
+  },
+  {
+   "desc": "These beans seem a little bit fishy.",
+   "id": "FoodKoibean",
+   "name": "koibean",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "The clown's favorite plant.",
+   "id": "FoodLaughinPeaPod",
+   "name": "laughin' pea pod",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "When life gives you lemons, be grateful they aren't limes.",
+   "id": "FoodLemon",
+   "name": "lemon",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "People says Moon is made out of cheese, but Moon is actually made out of milk and laurel!",
+   "id": "FoodLemoon",
+   "name": "lemoon",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A beautiful orange flower.",
+   "id": "FoodLily",
+   "name": "lily",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Cures Space Scurvy, allows you to act like a Space Pirate.",
+   "id": "FoodLime",
+   "name": "lime",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A potent medicinal mushroom. Don't go overboard.",
+   "id": "FoodLingzhi",
+   "name": "lingzhi",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Buttery.",
+   "id": "FoodMealCornInButter",
+   "name": "corn in butter",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meals.yml"
+  },
+  {
+   "desc": "A grifftastic sandwich that burns your tongue and then leaves it numb!",
+   "id": "FoodMealCubancarp",
+   "name": "Cuban carp",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meals.yml"
+  },
+  {
+   "desc": "Viva La Mexico!",
+   "id": "FoodMealEnchiladas",
+   "name": "enchiladas",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meals.yml"
+  },
+  {
+   "desc": "AKA, French Fries, Freedom Fries, etc.",
+   "id": "FoodMealFries",
+   "name": "space fries",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meals.yml"
+  },
+  {
+   "desc": "Tasty fries from fresh carrots.",
+   "id": "FoodMealFriesCarrot",
+   "name": "carrot fries",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meals.yml"
+  },
+  {
+   "desc": "Fries. Covered in cheese. Duh.",
+   "id": "FoodMealFriesCheesy",
+   "name": "cheesy fries",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meals.yml"
+  },
+  {
+   "desc": "Chips from Space Mexico.",
+   "id": "FoodMealNachos",
+   "name": "nachos",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meals.yml"
+  },
+  {
+   "desc": "The delicious combination of nachos and melting cheese.",
+   "id": "FoodMealNachosCheesy",
+   "name": "cheesy nachos",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meals.yml"
+  },
+  {
+   "desc": "That's some dangerously spicy nachos.",
+   "id": "FoodMealNachosCuban",
+   "name": "Cuban nachos",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meals.yml"
+  },
+  {
+   "desc": "Totally baked.",
+   "id": "FoodMealPotatoLoaded",
+   "name": "loaded baked potato",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meals.yml"
+  },
+  {
+   "desc": "A classic dipping sauce that you can't go wrong with.",
+   "id": "FoodMealQueso",
+   "name": "queso",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meals.yml"
+  },
+  {
+   "desc": "BBQ ribs, slathered in a healthy coating of BBQ sauce. The least vegan thing to ever exist.",
+   "id": "FoodMealRibs",
+   "name": "bbq ribs",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meals.yml"
+  },
+  {
+   "desc": "Its taste can only be described as \"Exotic\". The poisoning though? That's pretty common.",
+   "id": "FoodMealSashimi",
+   "name": "sashimi",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meals.yml"
+  },
+  {
+   "desc": "A slab of raw meat.",
+   "id": "FoodMeat",
+   "name": "raw meat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "An impossibly dense slab of meat. Just looking at it makes you uncomfortable.",
+   "id": "FoodMeatAnomaly",
+   "name": "anomalous meat mass",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A gigantic mass of cooked meat. A meal for a dinner party, or someone REALLY hungry.",
+   "id": "FoodMeatAnomalyCooked",
+   "name": "anomalous steak",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A raw piece of bacon.",
+   "id": "FoodMeatBacon",
+   "name": "raw bacon",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A delicious piece of cooked bacon.",
+   "id": "FoodMeatBaconCooked",
+   "name": "bacon",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A very manly slab of raw bear meat.",
+   "id": "FoodMeatBear",
+   "name": "raw bear meat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A well-cooked slab of bear meat. Tough, but tasty with the right sides.",
+   "id": "FoodMeatBearCooked",
+   "name": "cooked bear",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A very manly cutlet of raw bear meat.",
+   "id": "FoodMeatBearCutlet",
+   "name": "raw bear cutlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A very manly cutlet of cooked bear meat.",
+   "id": "FoodMeatBearCutletCooked",
+   "name": "bear cutlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A slab of raw chicken. Remember to wash your hands!",
+   "id": "FoodMeatChicken",
+   "name": "raw chicken meat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A cooked piece of chicken. Best used in other recipes.",
+   "id": "FoodMeatChickenCooked",
+   "name": "cooked chicken",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A cutlet of raw chicken. Remember to wash your hands!",
+   "id": "FoodMeatChickenCutlet",
+   "name": "raw chicken cutlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A cutlet of cooked chicken. Remember to wash your hands!",
+   "id": "FoodMeatChickenCutletCooked",
+   "name": "chicken cutlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A juicy hunk of chicken meat, fried to perfection.",
+   "id": "FoodMeatChickenFried",
+   "name": "fried chicken",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "“Eleven secret herbs and… oh no. That’s not chicken.\"",
+   "id": "FoodMeatChickenFriedVox",
+   "name": "mystery fried chicken",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A delicious, round piece of meat clown. How horrifying.",
+   "id": "FoodMeatClown",
+   "name": "meat clown",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A cooked slab of meat. Smells primal.",
+   "id": "FoodMeatCooked",
+   "name": "steak",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "The tainted gift of an evil crime. The meat may be delicious, but at what cost?",
+   "id": "FoodMeatCorgi",
+   "name": "prime-cut corgi meat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A pile of raw crab meat.",
+   "id": "FoodMeatCrab",
+   "name": "raw crab meat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "Some deliciously cooked crab meat.",
+   "id": "FoodMeatCrabCooked",
+   "name": "cooked crab",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A raw meat cutlet.",
+   "id": "FoodMeatCutlet",
+   "name": "raw cutlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A cooked meat cutlet. Needs some seasoning.",
+   "id": "FoodMeatCutletCooked",
+   "name": "cutlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "The dense meat of the space-era apex predator is oozing with its mythical ichor. Ironically, best eaten raw.",
+   "id": "FoodMeatDragon",
+   "name": "dragon flesh",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "Pouring ketchup on this is considered a capital crime on most stations.",
+   "id": "FoodMeatDragonCooked",
+   "name": "dragon steak",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A raw dragon meat cutlet.",
+   "id": "FoodMeatDragonCutlet",
+   "name": "raw dragon cutlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "It's a meal for kings!",
+   "id": "FoodMeatDragonCutletCooked",
+   "name": "dragon cutlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A slab of raw duck. Remember to wash your hands!",
+   "id": "FoodMeatDuck",
+   "name": "raw duck meat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A cooked piece of duck. Best used in other recipes.",
+   "id": "FoodMeatDuckCooked",
+   "name": "cooked duck",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A cutlet of raw duck. Remember to wash your hands!",
+   "id": "FoodMeatDuckCutlet",
+   "name": "raw duck cutlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A cutlet of cooked duck. Remember to wash your hands!",
+   "id": "FoodMeatDuckCutletCooked",
+   "name": "duck cutlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "Your last words being \"Wow, exotic!\" are not worth it. The taste itself though? Maybe.",
+   "id": "FoodMeatFish",
+   "name": "raw carp fillet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A slab of goliath meat. It's not very edible now, but it cooks great in lava.",
+   "id": "FoodMeatGoliath",
+   "name": "raw goliath meat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A delicious, lava cooked steak.",
+   "id": "FoodMeatGoliathCooked",
+   "name": "goliath steak",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "Gross.",
+   "id": "FoodMeatHuman",
+   "name": "raw human meat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "Delicious dino damage.",
+   "id": "FoodMeatLizard",
+   "name": "raw lizard meat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "Cooked, tough lizard meat.",
+   "id": "FoodMeatLizardCooked",
+   "name": "lizard steak",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "Delicious dino cutlet.",
+   "id": "FoodMeatLizardCutlet",
+   "name": "raw lizard cutlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "Delicious cooked dino cutlet.",
+   "id": "FoodMeatLizardCutletCooked",
+   "name": "lizard cutlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A raw ball of meat. Meat ball.",
+   "id": "FoodMeatMeatball",
+   "name": "meatball",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A cooked meatball. Perfect to add to other dishes... except fruity ones.",
+   "id": "FoodMeatMeatballCooked",
+   "name": "meatball",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A flat slab of ground meat. Ready for grillin'.",
+   "id": "FoodMeatPatty",
+   "name": "meat patty",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A cooked meat patty.",
+   "id": "FoodMeatPattyCooked",
+   "name": "cooked meat patty",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A slab of raw penguin meat. Can be used as a substitute for fish in recipes.",
+   "id": "FoodMeatPenguin",
+   "name": "raw penguin meat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A cooked filet of penguin. Can be used as a substitute for fish in recipes.",
+   "id": "FoodMeatPenguinCooked",
+   "name": "penguin filet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A cutlet of raw penguin meat. Can be used as a substitute for fish in recipes.",
+   "id": "FoodMeatPenguinCutlet",
+   "name": "raw penguin cutlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A cutlet of cooked penguin meat.",
+   "id": "FoodMeatPenguinCutletCooked",
+   "name": "penguin cutlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "All the joys of healthy eating with all the fun of cannibalism.",
+   "id": "FoodMeatPlant",
+   "name": "raw plant meat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "Prime meat from maintenance!",
+   "id": "FoodMeatRat",
+   "name": "raw rat meat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "Halfway to becoming fertilizer for your garden.",
+   "id": "FoodMeatRotten",
+   "name": "rotten meat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A slab of meat from an innocent red friend.",
+   "id": "FoodMeatRouny",
+   "name": "raw rouny meat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "Some kill to survive. You on the other hand, kill for fun.",
+   "id": "FoodMeatRounyCooked",
+   "name": "rouny steak",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A large tube of salami. Best not to ask what went into it.",
+   "id": "FoodMeatSalami",
+   "name": "salami",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A slice of cured salami.",
+   "id": "FoodMeatSalamiSlice",
+   "name": "salami slice",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A gelatinous shaping of slime jelly.",
+   "id": "FoodMeatSlime",
+   "name": "slimeball",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "Improved with salt.",
+   "id": "FoodMeatSnailCooked",
+   "name": "boiled snail",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A long piece of snake meat, hopefully not poisonous.",
+   "id": "FoodMeatSnake",
+   "name": "raw snake meat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A slab of spider meat. That's so Kafkaesque.",
+   "id": "FoodMeatSpider",
+   "name": "raw spider meat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A cutlet of raw spider meat. So Kafkaesque.",
+   "id": "FoodMeatSpiderCutlet",
+   "name": "raw spider cutlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A cutlet of cooked spider meat. Finally edible.",
+   "id": "FoodMeatSpiderCutletCooked",
+   "name": "spider cutlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A still twitching leg of a giant spider... you don't really want to eat this, do you?",
+   "id": "FoodMeatSpiderLeg",
+   "name": "raw spider leg",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A giant spider's leg that's still twitching after being cooked. Gross!",
+   "id": "FoodMeatSpiderlegCooked",
+   "name": "boiled spider leg",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A slice from a huge tomato.",
+   "id": "FoodMeatTomato",
+   "name": "killer tomato meat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A cutlet from a slab of tomato.",
+   "id": "FoodMeatTomatoCutlet",
+   "name": "raw killer tomato cutlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "This doesn't look like meat, but your standards aren't that high to begin with.",
+   "id": "FoodMeatWheat",
+   "name": "meatwheat clump",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A slab of xeno meat, dripping with acid.",
+   "id": "FoodMeatXeno",
+   "name": "raw xeno meat",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A slab of raw xeno meat, dripping with acid.",
+   "id": "FoodMeatXenoCutlet",
+   "name": "raw xeno cutlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A cutlet of cooked xeno, dripping with... tastiness?",
+   "id": "FoodMeatXenoCutletCooked",
+   "name": "xeno cutlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "Mime's favorite.",
+   "id": "FoodMimana",
+   "name": "mimana",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Cantharellus Cibarius: These jolly yellow little shrooms sure look tasty!",
+   "id": "FoodMushroom",
+   "name": "chanterelle cluster",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Spaghetti and crushed tomatoes. Just like your abusive father used to make!",
+   "id": "FoodNoodles",
+   "name": "spaghetti",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/noodles.yml"
+  },
+  {
+   "desc": "A plain dish of noodles, this needs more ingredients.",
+   "id": "FoodNoodlesBoiled",
+   "name": "boiled spaghetti",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/noodles.yml"
+  },
+  {
+   "desc": "Noodles covered in savory butter. Simple and slippery, but delicious.",
+   "id": "FoodNoodlesButter",
+   "name": "butter noodles",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/noodles.yml"
+  },
+  {
+   "desc": "A nice mix of noodles and fried vegetables.",
+   "id": "FoodNoodlesChowmein",
+   "name": "chow mein",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/noodles.yml"
+  },
+  {
+   "desc": "You probably shouldn't try this, you always hear people talking about how bad it is...",
+   "id": "FoodNoodlesCopy",
+   "name": "copypasta",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/noodles.yml"
+  },
+  {
+   "desc": "Now that's a nice-a meatball!",
+   "id": "FoodNoodlesMeatball",
+   "name": "spaghetti and meatballs",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/noodles.yml"
+  },
+  {
+   "desc": "A nice bowl of oatmeal.",
+   "id": "FoodOatmeal",
+   "name": "oatmeal",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "Nothing to cry over.",
+   "id": "FoodOnion",
+   "name": "onion",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Purple despite the name.",
+   "id": "FoodOnionRed",
+   "name": "red onion",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Purple despite the name.",
+   "id": "FoodOnionRedSlice",
+   "name": "red onion slice",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "You can eat it or propose to your loved ones.",
+   "id": "FoodOnionRings",
+   "name": "onion rings",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/misc.yml"
+  },
+  {
+   "desc": "Nothing to cry over.",
+   "id": "FoodOnionSlice",
+   "name": "onion slice",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Healthy, very orange.",
+   "id": "FoodOrange",
+   "name": "orange",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A duck's favorite treat!",
+   "id": "FoodPeaPod",
+   "name": "pea pod",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Sweet and tasty poison pie.",
+   "id": "FoodPieAmanita",
+   "name": "amanita pie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pie.yml"
+  },
+  {
+   "desc": "A pie containing sweet, sweet love... or apple.",
+   "id": "FoodPieApple",
+   "name": "apple pie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pie.yml"
+  },
+  {
+   "desc": "A delightful healthy snack made of nut layers with thin bread.",
+   "id": "FoodPieBaklava",
+   "name": "baklava",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pie.yml"
+  },
+  {
+   "desc": "Just like back home, on clown planet! HONK!",
+   "id": "FoodPieBananaCream",
+   "name": "banana cream pie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pie.yml"
+  },
+  {
+   "desc": "Tastes good enough to make a grown man cry.",
+   "id": "FoodPieCherry",
+   "name": "cherry pie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pie.yml"
+  },
+  {
+   "desc": "No black birds, this is a good sign.",
+   "id": "FoodPieClafoutis",
+   "name": "berry clafoutis",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pie.yml"
+  },
+  {
+   "desc": "Tastes like blue and cold.",
+   "id": "FoodPieFrosty",
+   "name": "frosty pie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pie.yml"
+  },
+  {
+   "desc": "An old barber recipe, very delicious!",
+   "id": "FoodPieMeat",
+   "name": "meat pie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pie.yml"
+  },
+  {
+   "desc": "Someone should turn this into a latte!",
+   "id": "FoodPiePumpkin",
+   "name": "pumpkin pie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pie.yml"
+  },
+  {
+   "desc": null,
+   "id": "FoodPieXeno",
+   "name": "xeno pie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pie.yml"
+  },
+  {
+   "desc": "Mmm, tropical.",
+   "id": "FoodPineapple",
+   "name": "pineapple",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Mmm, tropical.",
+   "id": "FoodPineappleSlice",
+   "name": "pineapple slice",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Flat fabric cotton dough with cotton topping. Incredible.",
+   "id": "FoodPizzaCotton",
+   "name": "cotton pizza",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pizza.yml"
+  },
+  {
+   "desc": "The hippie's pizza of choice.",
+   "id": "FoodPizzaDank",
+   "name": "dank pizza",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pizza.yml"
+  },
+  {
+   "desc": "Who thought this would be a good idea?",
+   "id": "FoodPizzaDonkpocket",
+   "name": "donk-pocket pizza",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pizza.yml"
+  },
+  {
+   "desc": "The flavor of Italy.",
+   "id": "FoodPizzaMargherita",
+   "name": "margherita pizza",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pizza.yml"
+  },
+  {
+   "desc": "Greasy pizza with delicious meat.",
+   "id": "FoodPizzaMeat",
+   "name": "meat pizza",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pizza.yml"
+  },
+  {
+   "desc": "Very special pizza.",
+   "id": "FoodPizzaMushroom",
+   "name": "mushroom pizza",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pizza.yml"
+  },
+  {
+   "desc": "Makes people burst into tears. Tears of joy or sadness depends on the person's fondness for pineapple.",
+   "id": "FoodPizzaPineapple",
+   "name": "Hawaiian pizza",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pizza.yml"
+  },
+  {
+   "desc": "Spicy pizza covered in peppers and uranium.",
+   "id": "FoodPizzaUranium",
+   "name": "spicy rock pizza",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pizza.yml"
+  },
+  {
+   "desc": "The station's vegetarians will thank you for making this.",
+   "id": "FoodPizzaVegetable",
+   "name": "vegetable pizza",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pizza.yml"
+  },
+  {
+   "desc": "Modern diplomacy in the shape of a disc.",
+   "id": "FoodPizzaWorldpeas",
+   "name": "world peazza",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pizza.yml"
+  },
+  {
+   "desc": "A large plate, excellent for bread.",
+   "id": "FoodPlate",
+   "name": "large plate",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Containers/plate.yml"
+  },
+  {
+   "desc": "A cheap foil tin for muffins.",
+   "id": "FoodPlateMuffinTin",
+   "name": "muffin tin",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Containers/plate.yml"
+  },
+  {
+   "desc": "A small plate. Delicate.",
+   "id": "FoodPlateSmall",
+   "name": "small plate",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Containers/plate.yml"
+  },
+  {
+   "desc": "A cheap foil tin for pies.",
+   "id": "FoodPlateTin",
+   "name": "pie tin",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Containers/plate.yml"
+  },
+  {
+   "desc": "A flower with extracts often used in the production of medicine.",
+   "id": "FoodPoppy",
+   "name": "poppy",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "The space Irish starved to death after their potato crops died. Sadly they were unable to fish for space carp due to it being the queen's space. Bringing this up to any space IRA member will drive them insane with anger.",
+   "id": "FoodPotato",
+   "name": "potato",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A large, orange... berry. Seriously.",
+   "id": "FoodPumpkin",
+   "name": "pumpkin",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A soft but smooth gun-shaped fruit.",
+   "id": "FoodRealCapfruit",
+   "name": "capfruit",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A warm bowl of rice.",
+   "id": "FoodRiceBoiled",
+   "name": "boiled rice",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "A bowl of rice with a fried egg.",
+   "id": "FoodRiceEgg",
+   "name": "egg-fried rice",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "A spicy and savory meat and rice dish.",
+   "id": "FoodRiceGumbo",
+   "name": "black-eyed gumbo",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "Well, it looks like pork...",
+   "id": "FoodRicePork",
+   "name": "rice and pork",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "Everybody loves rice pudding!",
+   "id": "FoodRicePudding",
+   "name": "rice pudding",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "A simple yet flavorful salad of onions, lettuce, croutons, and shreds of cheese dressed in oil. Comes with a slice of pita bread!",
+   "id": "FoodSaladCaesar",
+   "name": "caesar salad",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "Citrus overload!",
+   "id": "FoodSaladCitrus",
+   "name": "citrus salad",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "Shredded cabbage and red onions dressed with a vinaigrette.",
+   "id": "FoodSaladColeslaw",
+   "name": "coleslaw",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "Your standard fruit salad.",
+   "id": "FoodSaladFruit",
+   "name": "fruit salad",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "A tasty salad with apples on top.",
+   "id": "FoodSaladHerb",
+   "name": "herb salad",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "Exotic fruits in a bowl.",
+   "id": "FoodSaladJungle",
+   "name": "jungle salad",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "It really is just a spicy salad.",
+   "id": "FoodSaladKimchi",
+   "name": "kimchi salad",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "It's just an herb salad with meatballs and fried potato slices. Nothing suspicious about it.",
+   "id": "FoodSaladValid",
+   "name": "valid salad",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "The only salad where you can eat the bowl.",
+   "id": "FoodSaladWatermelonFruitBowl",
+   "name": "melon fruit bowl",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meals.yml"
+  },
+  {
+   "desc": "Tastes like cardboard.",
+   "id": "FoodSnackChocolateBar",
+   "name": "chocolate bar",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/snacks.yml"
+  },
+  {
+   "desc": "Sweeties's name-brand pistachios. Probably won't give you diseases. Probably.",
+   "id": "FoodSnackPistachios",
+   "name": "Sweetie's pistachios",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/snacks.yml"
+  },
+  {
+   "desc": "Grown on an unknown planet, by an unknown farmer, popped by some jerk on a space station.",
+   "id": "FoodSnackPopcorn",
+   "name": "popcorn",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/snacks.yml"
+  },
+  {
+   "desc": "Best raisins in the universe. Not sure why.",
+   "id": "FoodSnackRaisins",
+   "name": "4no raisins",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/snacks.yml"
+  },
+  {
+   "desc": "A classic entrée from Space France.",
+   "id": "FoodSoupBisque",
+   "name": "bisque",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "A spicy vegetable curry made with the humble bungo fruit, Exotic!",
+   "id": "FoodSoupBungo",
+   "name": "bungo curry",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "A delicious stew of meat, chilies, and salty, salty clown tears.",
+   "id": "FoodSoupChiliClown",
+   "name": "chili con carnival",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "This slush is barely a liquid!",
+   "id": "FoodSoupChiliCold",
+   "name": "cold chili",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "A Texan five-alarm chili!",
+   "id": "FoodSoupChiliHot",
+   "name": "bowl of hot chili",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "Not very funny.",
+   "id": "FoodSoupClown",
+   "name": "clown's tears",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "A creamy and rich bowl of snails, bon appetit!",
+   "id": "FoodSoupEscargot",
+   "name": "escargot",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "It's looking back at you...",
+   "id": "FoodSoupEyeball",
+   "name": "eyeball soup",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "You've got balls kid, BALLS!",
+   "id": "FoodSoupMeatball",
+   "name": "meatball soup",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "Salty, fishy soup, best had with ramen.",
+   "id": "FoodSoupMiso",
+   "name": "miso soup",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "A delicious soup with hunks of monkey meat simmered to perfection, in a broth that tastes faintly of bananas.",
+   "id": "FoodSoupMonkey",
+   "name": "monkey's delight",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "A delicious and hearty mushroom soup.",
+   "id": "FoodSoupMushroom",
+   "name": "mushroom soup",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "To think, the botanist would've beat you to death with one of these.",
+   "id": "FoodSoupNettle",
+   "name": "nettle soup",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "Good enough to make a grown mime cry.",
+   "id": "FoodSoupOnion",
+   "name": "french onion soup",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "A humble split pea soup.",
+   "id": "FoodSoupPea",
+   "name": "pea soup",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "A nice and warm stew. Healthy and strong.",
+   "id": "FoodSoupStew",
+   "name": "stew",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "Drinking this feels like being a vampire! A tomato vampire...",
+   "id": "FoodSoupTomato",
+   "name": "tomato soup",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "Smells like copper... is that a bone?",
+   "id": "FoodSoupTomatoBlood",
+   "name": "tomato soup",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "A true vegan meal.",
+   "id": "FoodSoupVegetable",
+   "name": "vegetable soup",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "A savory dish of alien wing wang in soy.",
+   "id": "FoodSoupWingFangChu",
+   "name": "wing fang chu",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
+  },
+  {
+   "desc": "For those who can't stand seeing good old meat.",
+   "id": "FoodSoybeans",
+   "name": "soybeans",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A vivid flower that smells faintly of freshly cut grass. Touching the flower seems to stain the skin some time after contact, yet most other surfaces seem to be unaffected by this phenomenon.",
+   "id": "FoodSpacemansTrumpet",
+   "name": "spaceman's trumpet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A wild mushroom. There's no telling what effect it could have...",
+   "id": "FoodSpaceshroom",
+   "name": "spaceshroom",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Misc/spaceshroom.yml"
+  },
+  {
+   "desc": "A wild mushroom that has been cooked through. It seems the heat has removed its chemical effects.",
+   "id": "FoodSpaceshroomCooked",
+   "name": "cooked spaceshroom",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Misc/spaceshroom.yml"
+  },
+  {
+   "desc": "A very basic and run of the mill beef taco, now with cheese!",
+   "id": "FoodTacoBeef",
+   "name": "beef taco",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/taco.yml"
+  },
+  {
+   "desc": "It's like a regular beef taco, but supreme!",
+   "id": "FoodTacoBeefSupreme",
+   "name": "beef taco supreme",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/taco.yml"
+  },
+  {
+   "desc": "A very basic and run of the mill chicken taco, now with cheese!",
+   "id": "FoodTacoChicken",
+   "name": "chicken taco",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/taco.yml"
+  },
+  {
+   "desc": "It's like a regular chicken taco, but supreme!",
+   "id": "FoodTacoChickenSupreme",
+   "name": "chicken taco supreme",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/taco.yml"
+  },
+  {
+   "desc": "A dragon taco, which is technically also a fish taco.",
+   "id": "FoodTacoDragon",
+   "name": "draco",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/taco.yml"
+  },
+  {
+   "desc": "Sounds kinda gross, but it's actually not that bad.",
+   "id": "FoodTacoFish",
+   "name": "fish taco",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/taco.yml"
+  },
+  {
+   "desc": "Yeah, that looks about right...",
+   "id": "FoodTacoRat",
+   "name": "rat taco",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/taco.yml"
+  },
+  {
+   "desc": "A taco shell, easy to hold, but falls on its side when put down.",
+   "id": "FoodTacoShell",
+   "name": "taco shell",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/taco.yml"
+  },
+  {
+   "desc": "A tasty dessert made of chocolate, with a liquid core.",
+   "id": "FoodTartCoco",
+   "name": "chocolate lava tart",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pie.yml"
+  },
+  {
+   "desc": "A tasty dessert that won't make it through a metal detector.",
+   "id": "FoodTartGapple",
+   "name": "golden apple streusel tart",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pie.yml"
+  },
+  {
+   "desc": "A tasty dessert that reminds you of the wine you didn't make.",
+   "id": "FoodTartGrape",
+   "name": "grape tart",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pie.yml"
+  },
+  {
+   "desc": "\"      \"",
+   "id": "FoodTartMime",
+   "name": "mime tart",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/pie.yml"
+  },
+  {
+   "desc": "A slice of tofu. Ingredient of various vegetarian dishes.",
+   "id": "FoodTofuSlice",
+   "name": "tofu slice",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "I say to-mah-to, you say tom-mae-to.",
+   "id": "FoodTomato",
+   "name": "tomato",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Round green object that you can slice and eat.",
+   "id": "FoodWatermelon",
+   "name": "watermelon",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Juicy green and red slice.",
+   "id": "FoodWatermelonSlice",
+   "name": "watermelon slice",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "It's rumored to bring peace to any who consume it.",
+   "id": "FoodWorldPeas",
+   "name": "cluster of world peas",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A heavy metal ingot stamped with the Nanotrasen logo.",
+   "id": "IngotGold",
+   "name": "gold bar",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/ingots.yml"
+  },
+  {
+   "desc": "A heavy metal ingot stamped with the Nanotrasen logo.",
+   "id": "IngotGold1",
+   "name": "gold bar",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/ingots.yml"
+  },
+  {
+   "desc": "A heavy metal ingot stamped with the Nanotrasen logo.",
+   "id": "IngotSilver",
+   "name": "silver bar",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/ingots.yml"
+  },
+  {
+   "desc": "A heavy metal ingot stamped with the Nanotrasen logo.",
+   "id": "IngotSilver1",
+   "name": "silver bar",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/ingots.yml"
+  },
+  {
+   "desc": "Recently legalized in most galaxies.",
+   "id": "LeavesCannabis",
+   "name": "cannabis leaves",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Hydroponics/leaves.yml"
+  },
+  {
+   "desc": "Dried cannabis leaves, ready to be ground.",
+   "id": "LeavesCannabisDried",
+   "name": "dried cannabis leaves",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Hydroponics/leaves.yml"
+  },
+  {
+   "desc": "Is it supposed to be glowing like that...?",
+   "id": "LeavesCannabisRainbow",
+   "name": "rainbow cannabis leaves",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Hydroponics/leaves.yml"
+  },
+  {
+   "desc": "Dried rainbow cannabis leaves, ready to be ground.",
+   "id": "LeavesCannabisRainbowDried",
+   "name": "dried rainbow cannabis leaves",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Hydroponics/leaves.yml"
+  },
+  {
+   "desc": "Can be dried out to make tea.",
+   "id": "LeavesTea",
+   "name": "tea leaves",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Hydroponics/leaves.yml"
+  },
+  {
+   "desc": "Dried tea leaves, ready to be ground.",
+   "id": "LeavesTeaDried",
+   "name": "dried tea leaves",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Hydroponics/leaves.yml"
+  },
+  {
+   "desc": "Dry them out to make some smokes.",
+   "id": "LeavesTobacco",
+   "name": "tobacco leaves",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Hydroponics/leaves.yml"
+  },
+  {
+   "desc": "Dried tobacco leaves, ready to be ground.",
+   "id": "LeavesTobaccoDried",
+   "name": "dried tobacco leaves",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Hydroponics/leaves.yml"
+  },
+  {
+   "desc": "It's better than bad, it's good!",
+   "id": "Log",
+   "name": "tower-cap log",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialBananium",
+   "name": "bananium",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialBananium1",
+   "name": "bananium",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialBones",
+   "name": "bones",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialBones1",
+   "name": "bones",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialCardboard",
+   "name": "cardboard",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialCardboard1",
+   "name": "cardboard",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialCardboard10",
+   "name": "cardboard",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialCloth",
+   "name": "cloth",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialCloth1",
+   "name": "cloth",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialCloth10",
+   "name": "cloth",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialCotton",
+   "name": "cotton",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialCotton1",
+   "name": "cotton",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialDiamond",
+   "name": "refined diamond",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialDiamond1",
+   "name": "refined diamond",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialDurathread",
+   "name": "durathread",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialDurathread1",
+   "name": "durathread",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialPyrotton",
+   "name": "pyrotton",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialPyrotton1",
+   "name": "pyrotton",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A sheet of material, used often on the station in various applications.",
+   "id": "MaterialSheetMeat",
+   "name": "meat sheet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/other.yml"
+  },
+  {
+   "desc": "A sheet of material, used often on the station in various applications.",
+   "id": "MaterialSheetMeat1",
+   "name": "meat sheet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/other.yml"
+  },
+  {
+   "desc": "It's a real panacea. But at what cost?",
+   "id": "MaterialSmileExtract",
+   "name": "smile extract",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/meat.yml"
+  },
+  {
+   "desc": "A webby material.",
+   "id": "MaterialWebSilk",
+   "name": "silk",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A webby material.",
+   "id": "MaterialWebSilk1",
+   "name": "silk",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A webby material.",
+   "id": "MaterialWebSilk25",
+   "name": "silk",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialWoodPlank",
+   "name": "wood",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialWoodPlank1",
+   "name": "wood",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "MaterialWoodPlank10",
+   "name": "wood",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/materials.yml"
+  },
+  {
+   "desc": "Some blood-drenched wheat stalks. You can crush them into what passes for meat if you squint hard enough.",
+   "id": "MeatwheatBushel",
+   "name": "meatwheat bushel",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A suture soaked in medicine, treats blunt-force trauma effectively and closes wounds.",
+   "id": "MedicatedSuture",
+   "name": "medicated suture",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/healing.yml"
+  },
+  {
+   "desc": "A basic machine part used in the construction of a variety of devices.",
+   "id": "MicroManipulatorStockPart",
+   "name": "modular machine part",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Misc/machine_parts.yml"
+  },
+  {
+   "desc": "How nice a bee. Oh no, it looks angry and wants my pizza.",
+   "id": "MobAngryBee",
+   "name": "bee",
+   "serverOnly": false,
+   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+  },
+  {
+   "desc": "Nice to have, but you can't build a civilization on a foundation of honey alone.",
+   "id": "MobBee",
+   "name": "bee",
+   "serverOnly": false,
+   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+  },
+  {
+   "desc": "It's a bread. It's a dog. It's a... breaddog?",
+   "id": "MobBreadDog",
+   "name": "bread dog",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/bread.yml"
+  },
+  {
+   "desc": "Despite popular misconceptions, it's not actually made of butter.",
+   "id": "MobButterfly",
+   "name": "butterfly",
+   "serverOnly": false,
+   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+  },
+  {
+   "desc": "It's a cake. It's a cat. It's a cak.",
+   "id": "MobCatCake",
+   "name": "cak",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
+   "desc": "This station is just crawling with bugs.",
+   "id": "MobCockroach",
+   "name": "cockroach",
+   "serverOnly": false,
+   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+  },
+  {
+   "desc": "This station is just crawling with bu- OH GOD THAT COCKROACH HAS A GUN!!!",
+   "id": "MobGlockroach",
+   "name": "glockroach",
+   "serverOnly": false,
+   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+  },
+  {
+   "desc": "A cute, fluffy, robust hamster.",
+   "id": "MobHamster",
+   "name": "hamster",
+   "serverOnly": false,
+   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+  },
+  {
+   "desc": "A grumpy, cute and fluffy hamster.",
+   "id": "MobHamsterHamlet",
+   "name": "Hamlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Mobs/NPCs/pets.yml"
+  },
+  {
+   "desc": "A grumpy, cute and fluffy hamster.",
+   "id": "MobHamsterHamletSlippery",
+   "name": "Hamlet",
+   "serverOnly": false,
+   "sourceFile": "Entities/Mobs/NPCs/pets.yml"
+  },
+  {
+   "desc": "This little mothroach has mopshoes on its feet! How adorable!",
+   "id": "MobMoproach",
+   "name": "moproach",
+   "serverOnly": false,
+   "sourceFile": "Entities/Mobs/NPCs/moproach.yml"
+  },
+  {
+   "desc": "This is the adorable by-product of multiple attempts at genetically mixing mothpeople with cockroaches.",
+   "id": "MobMothroach",
+   "name": "mothroach",
+   "serverOnly": false,
+   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+  },
+  {
+   "desc": "Squeak!",
+   "id": "MobMouse",
+   "name": "mouse",
+   "serverOnly": false,
+   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+  },
+  {
+   "desc": "Squeak!",
+   "id": "MobMouse1",
+   "name": "mouse",
+   "serverOnly": false,
+   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+  },
+  {
+   "desc": "Squeak!",
+   "id": "MobMouse2",
+   "name": "mouse",
+   "serverOnly": false,
+   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+  },
+  {
+   "desc": "Toxic. Squeak!",
+   "id": "MobMouseCancer",
+   "name": "cancer mouse",
+   "serverOnly": false,
+   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+  },
+  {
+   "desc": "Squeak!",
+   "id": "MobMouseDead",
+   "name": "mouse",
+   "serverOnly": false,
+   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+  },
+  {
+   "desc": "Revolting unless you're french.",
+   "id": "MobSnail",
+   "name": "snail",
+   "serverOnly": false,
+   "sourceFile": "Entities/Mobs/NPCs/space.yml"
+  },
+  {
+   "desc": "Revolting unless you're french.",
+   "id": "MobSnailInstantDeath",
+   "name": "snail",
+   "serverOnly": false,
+   "sourceFile": "Entities/Mobs/NPCs/space.yml"
+  },
+  {
+   "desc": "Revolting unless you're french.",
+   "id": "MobSnailMoth",
+   "name": "snoth",
+   "serverOnly": false,
+   "sourceFile": "Entities/Mobs/NPCs/space.yml"
+  },
+  {
+   "desc": "Revolting unless you're french.",
+   "id": "MobSnailSpeed",
+   "name": "snail",
+   "serverOnly": false,
+   "sourceFile": "Entities/Mobs/NPCs/space.yml"
+  },
+  {
+   "desc": "Just add water!",
+   "id": "MonkeyCube",
+   "name": "monkey cube",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/rehydrateable.yml"
+  },
+  {
+   "desc": "Three pairs of tiny mopshoes, perfectly fit for a moproach.",
+   "id": "MoproachShoes",
+   "name": "moproach shoes",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Misc/intermediate_parts.yml"
+  },
+  {
+   "desc": "Stingy little prick.",
+   "id": "Nettle",
+   "name": "nettle",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Eat oats, do squats.",
+   "id": "OatBushel",
+   "name": "oat bushel",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": null,
+   "id": "OrganAnimalHeart",
+   "name": "heart",
+   "serverOnly": false,
+   "sourceFile": "Body/Animals/animal.yml"
+  },
+  {
+   "desc": null,
+   "id": "OrganHumanAppendix",
+   "name": "appendix",
+   "serverOnly": false,
+   "sourceFile": "Body/Species/human.yml"
+  },
+  {
+   "desc": null,
+   "id": "OrganHumanBrain",
+   "name": "brain",
+   "serverOnly": false,
+   "sourceFile": "Body/Species/human.yml"
+  },
+  {
+   "desc": null,
+   "id": "OrganHumanEyes",
+   "name": "eyes",
+   "serverOnly": false,
+   "sourceFile": "Body/Species/human.yml"
+  },
+  {
+   "desc": "Why do we even need to grow paper?",
+   "id": "Papercane",
+   "name": "papercane roll",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "PartRodMetal",
+   "name": "metal rod",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/parts.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "PartRodMetal1",
+   "name": "metal rod",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/parts.yml"
+  },
+  {
+   "desc": "A raw material.",
+   "id": "PartRodMetal10",
+   "name": "metal rod",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/parts.yml"
+  },
+  {
+   "desc": "It's not a suppository.",
+   "id": "PillAmbuzol",
+   "name": "ambuzol pill",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/healing.yml"
+  },
+  {
+   "desc": "It's not a suppository.",
+   "id": "PillAmbuzolPlus",
+   "name": "ambuzol plus pill",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/healing.yml"
+  },
+  {
+   "desc": "It's not a suppository.",
+   "id": "PillBicaridine",
+   "name": "pill",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/healing.yml"
+  },
+  {
+   "desc": "It's not a suppository.",
+   "id": "PillCharcoal",
+   "name": "pill",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/healing.yml"
+  },
+  {
+   "desc": "It's not a suppository.",
+   "id": "PillCopper",
+   "name": "pill",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/healing.yml"
+  },
+  {
+   "desc": "It's not a suppository.",
+   "id": "PillDermaline",
+   "name": "pill",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/healing.yml"
+  },
+  {
+   "desc": "It's not a suppository.",
+   "id": "PillDexalin",
+   "name": "pill",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/healing.yml"
+  },
+  {
+   "desc": "It's not a suppository.",
+   "id": "PillDylovene",
+   "name": "pill",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/healing.yml"
+  },
+  {
+   "desc": "It's not a suppository.",
+   "id": "PillHyronalin",
+   "name": "pill",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/healing.yml"
+  },
+  {
+   "desc": "It's not a suppository.",
+   "id": "PillIron",
+   "name": "pill",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/healing.yml"
+  },
+  {
+   "desc": "It's not a suppository.",
+   "id": "PillKelotane",
+   "name": "pill",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/healing.yml"
+  },
+  {
+   "desc": "It's not a suppository.",
+   "id": "PillPotassiumIodide",
+   "name": "pill",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/healing.yml"
+  },
+  {
+   "desc": "It's not a suppository.",
+   "id": "PillRomerol",
+   "name": "romerol pill",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/healing.yml"
+  },
+  {
+   "desc": "It's not a suppository.",
+   "id": "PillSpaceDrugs",
+   "name": "space mirage",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/healing.yml"
+  },
+  {
+   "desc": "It's not a suppository.",
+   "id": "PillTricordrazine",
+   "name": "pill",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/healing.yml"
+  },
+  {
+   "desc": "A plastic banana.",
+   "id": "PlasticBanana",
+   "name": "banana",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/toys.yml"
+  },
+  {
+   "desc": "A cute toy that resembles an even cuter programmer. You'd have to be a monster to grind this up.",
+   "id": "PlushieBee",
+   "name": "bee plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushies.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson. Made by CentComm as a token initiative to combat speciesism in work environments. \"Welcome your new colleagues as you do this plush, with open arms!\"",
+   "id": "PlushieLizard",
+   "name": "lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushies.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson from an inversed dimension. Hew!",
+   "id": "PlushieLizardInversed",
+   "name": "drazil plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushies.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as an atmospheric technician. Smells faintly of frezon.",
+   "id": "PlushieLizardJobAtmospherictechnician",
+   "name": "atmospheric technician lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a bartender. Its tongue has alcohol stains on it.",
+   "id": "PlushieLizardJobBartender",
+   "name": "bartender lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a botanist. There's prickly bits on its feet and it smells faintly of plant fertilizer.",
+   "id": "PlushieLizardJobBotanist",
+   "name": "botanist lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a boxer. The threads on its gloves are starting to come loose.",
+   "id": "PlushieLizardJobBoxer",
+   "name": "boxer lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as the captain. There's bits of pie on its face.",
+   "id": "PlushieLizardJobCaptain",
+   "name": "captain lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a cargo technician. Crumbs of packing peanuts are stuck to its scales.",
+   "id": "PlushieLizardJobCargotechnician",
+   "name": "cargo technician lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a chaplain. It smells faintly of incense.",
+   "id": "PlushieLizardJobChaplain",
+   "name": "chaplain lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a chef. It smells faintly of spices, with spots of oil on its apron.",
+   "id": "PlushieLizardJobChef",
+   "name": "chef lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a chemist. Parts of the plushie are stained with chemicals.",
+   "id": "PlushieLizardJobChemist",
+   "name": "chemist lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as the chief engineer. It's covered in metal shavings and welding splatter.",
+   "id": "PlushieLizardJobChiefengineer",
+   "name": "chief engineer lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as the chief medical officer. The plushie's tail has been sewn off and on again, probably from practicing surgery.",
+   "id": "PlushieLizardJobChiefmedicalofficer",
+   "name": "chief medical officer lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a clown. Its nose squeaks when you press it.",
+   "id": "PlushieLizardJobClown",
+   "name": "clown lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a detective. Seems ready for a mystery.",
+   "id": "PlushieLizardJobDetective",
+   "name": "detective lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as the head of personnel. While it seems thrilled on the outside, it's probably just as bored as you are.",
+   "id": "PlushieLizardJobHeadofpersonnel",
+   "name": "head of personnel lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as the head of security. It seems to have been ripped and re-stitched a few times.",
+   "id": "PlushieLizardJobHeadofsecurity",
+   "name": "head of security lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a janitor. It smells faintly of cleaning supplies.",
+   "id": "PlushieLizardJobJanitor",
+   "name": "janitor lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a lawyer. Its lawyer pin is barely hanging on from hours of fidgeting.",
+   "id": "PlushieLizardJobLawyer",
+   "name": "lawyer lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a librarian. The color of the plushie has faded from years of desk-watching.",
+   "id": "PlushieLizardJobLibrarian",
+   "name": "librarian lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a medical doctor. Seems to be well-washed.",
+   "id": "PlushieLizardJobMedicaldoctor",
+   "name": "medical doctor lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a medical intern. It smells faintly of antiseptic.",
+   "id": "PlushieLizardJobMedicalintern",
+   "name": "medical intern lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a mime. It stares at you silently, its motives unknown.",
+   "id": "PlushieLizardJobMime",
+   "name": "mime lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as every job! It's a plushie of many talents. You can hear a HoP crying in the distance.",
+   "id": "PlushieLizardJobMultiweh",
+   "name": "multiweh lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a musician. It smells faintly of sweat and has a few strings coming loose.",
+   "id": "PlushieLizardJobMusician",
+   "name": "musician lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a paramedic. The plushie has a few little bandages sewn on it.",
+   "id": "PlushieLizardJobParamedic",
+   "name": "paramedic lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a passenger. Its eyes look at you, a little bit more beady than the rest.",
+   "id": "PlushieLizardJobPassenger",
+   "name": "passenger lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a psychologist. It seems to like to quietly listen to you.",
+   "id": "PlushieLizardJobPsychologist",
+   "name": "psychologist lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as the quartermaster. Its covered in sticky residue left behind from thousands of shipment invoices.",
+   "id": "PlushieLizardJobQuartermaster",
+   "name": "quartermaster lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a reporter. It smells faintly of ink.",
+   "id": "PlushieLizardJobReporter",
+   "name": "reporter lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a research assistant. It smells faintly of burnt paper.",
+   "id": "PlushieLizardJobResearchassistant",
+   "name": "research assistant lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as the research director. There's a few burn marks on the plushie.",
+   "id": "PlushieLizardJobResearchdirector",
+   "name": "research director lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a salvage specialist. Seems like it's seen the coldness of space for a while.",
+   "id": "PlushieLizardJobSalvagespecialist",
+   "name": "salvage specialist lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a scientist. There's a few bite marks on the plushie, probably from a curious monkey.",
+   "id": "PlushieLizardJobScientist",
+   "name": "scientist lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a security cadet. Seems to have shock marks across the plushie.",
+   "id": "PlushieLizardJobSecuritycadet",
+   "name": "security cadet lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a security officer. The stuffing has been padded down from a lot of punching.",
+   "id": "PlushieLizardJobSecurityofficer",
+   "name": "security officer lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a service worker. Smells like a mix of cleaning supplies and food.",
+   "id": "PlushieLizardJobServiceworker",
+   "name": "service worker lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a station engineer. It has oil stains on its hands.",
+   "id": "PlushieLizardJobStationengineer",
+   "name": "station engineer lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a technical assistant. It smells faintly of burnt wires.",
+   "id": "PlushieLizardJobTechnicalassistant",
+   "name": "technical assistant lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a warden. Smells like black powder and gun oil.",
+   "id": "PlushieLizardJobWarden",
+   "name": "warden lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson as a zookeeper. It has some gorilla fur stuck to it.",
+   "id": "PlushieLizardJobZookeeper",
+   "name": "zookeeper lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushielizard_jobs.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson. Made by CentComm as a token initiative to combat speciesism in work environments. \"Welcome your new colleagues as you do this plush, with open arms!\"",
+   "id": "PlushieLizardMirrored",
+   "name": "lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushies.yml"
+  },
+  {
+   "desc": "A cute toy that resembles a bee plushie while you're on LSD.",
+   "id": "PlushieRGBee",
+   "name": "RGBee plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushies.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson of every color. You just might trip while staring at it...",
+   "id": "PlushieRainbowLizard",
+   "name": "rainbow lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushies.yml"
+  },
+  {
+   "desc": "An adorable stuffed toy that resembles a lizardperson in an EVA suit. Made by CentComm as a token initiative to combat speciesism in space environments. \"Welcome your new colleagues as you do this plush, with open arms!\"",
+   "id": "PlushieSpaceLizard",
+   "name": "space lizard plushie",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Plushies/plushies.yml"
+  },
+  {
+   "desc": "Do not eat within 72 hours of a drug test.",
+   "id": "PoppySeeds",
+   "name": "packet of poppy seeds",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Hydroponics/seeds.yml"
+  },
+  {
+   "desc": "A rechargeable power cage for big devices. Increased capacity for increased power levels.",
+   "id": "PowerCageHigh",
+   "name": "high-capacity power cage",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Power/powercells.yml"
+  },
+  {
+   "desc": "A rechargeable power cage for big devices. Increased capacity for increased power levels.",
+   "id": "PowerCageHighEmpty",
+   "name": "high-capacity power cage",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Power/powercells.yml"
+  },
+  {
+   "desc": "A rechargeable power cage for big devices. The gold standard of capacity and cost.",
+   "id": "PowerCageMedium",
+   "name": "medium-capacity power cage",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Power/powercells.yml"
+  },
+  {
+   "desc": "A rechargeable power cage for big devices. The gold standard of capacity and cost.",
+   "id": "PowerCageMediumEmpty",
+   "name": "medium-capacity power cage",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Power/powercells.yml"
+  },
+  {
+   "desc": "A rechargeable power cage for big devices. This is the cheapest kind you can find.",
+   "id": "PowerCageSmall",
+   "name": "small-capacity power cage",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Power/powercells.yml"
+  },
+  {
+   "desc": "A rechargeable power cage for big devices. This is the cheapest kind you can find.",
+   "id": "PowerCageSmallEmpty",
+   "name": "small-capacity power cage",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Power/powercells.yml"
+  },
+  {
+   "desc": "A small cell that self recharges. Used in old laser arms research.",
+   "id": "PowerCellAntiqueProto",
+   "name": "antique power cell prototype",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Power/powercells.yml"
+  },
+  {
+   "desc": "A rechargeable standardized power cell. This premium brand stores up to 50% more energy than the competition.",
+   "id": "PowerCellHigh",
+   "name": "high-capacity power cell",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Power/powercells.yml"
+  },
+  {
+   "desc": "A rechargeable standardized power cell. This premium brand stores up to 50% more energy than the competition.",
+   "id": "PowerCellHighPrinted",
+   "name": "high-capacity power cell",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Power/powercells.yml"
+  },
+  {
+   "desc": "A rechargeable standardized power cell. This iteration pushes the upper limits of portable power storage, boasting 66% more capacity than its predecessor.",
+   "id": "PowerCellHyper",
+   "name": "hyper-capacity power cell",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Power/powercells.yml"
+  },
+  {
+   "desc": "A rechargeable standardized power cell. This iteration pushes the upper limits of portable power storage, boasting 66% more capacity than its predecessor.",
+   "id": "PowerCellHyperPrinted",
+   "name": "hyper-capacity power cell",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Power/powercells.yml"
+  },
+  {
+   "desc": "A rechargeable power cell. This is the popular and reliable version.",
+   "id": "PowerCellMedium",
+   "name": "medium-capacity power cell",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Power/powercells.yml"
+  },
+  {
+   "desc": "A rechargeable power cell. This is the popular and reliable version.",
+   "id": "PowerCellMediumPrinted",
+   "name": "medium-capacity power cell",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Power/powercells.yml"
+  },
+  {
+   "desc": "A rechargeable standardized microreactor cell. Has lower capacity but slowly recharges by itself.",
+   "id": "PowerCellMicroreactor",
+   "name": "microreactor power cell",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Power/powercells.yml"
+  },
+  {
+   "desc": "A rechargeable standardized microreactor cell. Has lower capacity but slowly recharges by itself.",
+   "id": "PowerCellMicroreactorPrinted",
+   "name": "microreactor power cell",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Power/powercells.yml"
+  },
+  {
+   "desc": "Someone's stuck two nails and some wire in a large potato. Somehow it provides a little charge.",
+   "id": "PowerCellPotato",
+   "name": "potato battery",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Power/powercells.yml"
+  },
+  {
+   "desc": "A rechargeable power cell. This is the cheapest kind you can find.",
+   "id": "PowerCellSmall",
+   "name": "small-capacity power cell",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Power/powercells.yml"
+  },
+  {
+   "desc": "A self rechargeable power cell, designed for fast recharge rate at the expense of capacity.",
+   "id": "PowerCellSmallNuclear",
+   "name": "small-capacity nuclear power cell",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Power/powercells.yml"
+  },
+  {
+   "desc": "A rechargeable power cell. This is the cheapest kind you can find.",
+   "id": "PowerCellSmallPrinted",
+   "name": "small-capacity power cell",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Power/powercells.yml"
+  },
+  {
+   "desc": "This will probably set you on fire.",
+   "id": "PyrottonBol",
+   "name": "pyrotton boll",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Used to treat even the nastiest burns. Also effective against caustic burns.",
+   "id": "RegenerativeMesh",
+   "name": "regenerative mesh",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Specific/Medical/healing.yml"
+  },
+  {
+   "desc": "Can be ground into rice, perfect for pudding or sake.",
+   "id": "RiceBushel",
+   "name": "rice bushel",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "A piece of unrefined ore.",
+   "id": "Salt1",
+   "name": "salt",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/ore.yml"
+  },
+  {
+   "desc": "A piece of unrefined ore.",
+   "id": "SaltOre",
+   "name": "salt",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/ore.yml"
+  },
+  {
+   "desc": "An instrument. You could probably grind this into raw jazz.",
+   "id": "SaxophoneInstrument",
+   "name": "saxophone",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Fun/Instruments/instruments_wind.yml"
+  },
+  {
+   "desc": "A small piece of glass.",
+   "id": "ShardGlass",
+   "name": "glass shard",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/shards.yml"
+  },
+  {
+   "desc": "A small piece of brass-infused glass.",
+   "id": "ShardGlassClockwork",
+   "name": "clockwork glass shard",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/shards.yml"
+  },
+  {
+   "desc": "A small piece of plasma glass.",
+   "id": "ShardGlassPlasma",
+   "name": "plasma glass shard",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/shards.yml"
+  },
+  {
+   "desc": "A small piece of reinforced glass.",
+   "id": "ShardGlassReinforced",
+   "name": "reinforced glass shard",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/shards.yml"
+  },
+  {
+   "desc": "A small piece of uranium glass.",
+   "id": "ShardGlassUranium",
+   "name": "uranium glass shard",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/shards.yml"
+  },
+  {
+   "desc": "A sheet of brass, primarily used by clockwork enthusiasts and the remnants of Ratvarian cults.",
+   "id": "SheetBrass",
+   "name": "brass",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/metal.yml"
+  },
+  {
+   "desc": "A sheet of brass, primarily used by clockwork enthusiasts and the remnants of Ratvarian cults.",
+   "id": "SheetBrass1",
+   "name": "brass",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/metal.yml"
+  },
+  {
+   "desc": "A sheet of brass, primarily used by clockwork enthusiasts and the remnants of Ratvarian cults.",
+   "id": "SheetBrass10",
+   "name": "brass",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/metal.yml"
+  },
+  {
+   "desc": "A sheet of brass-hardened glass, primarily used by clockwork enthusiasts and remnants of Ratvarian cults.",
+   "id": "SheetClockworkGlass",
+   "name": "clockwork glass",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/glass.yml"
+  },
+  {
+   "desc": "A sheet of brass-hardened glass, primarily used by clockwork enthusiasts and remnants of Ratvarian cults.",
+   "id": "SheetClockworkGlass1",
+   "name": "clockwork glass",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/glass.yml"
+  },
+  {
+   "desc": "A sheet of glass, used often on the station in various applications.",
+   "id": "SheetGlass",
+   "name": "glass",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/glass.yml"
+  },
+  {
+   "desc": "A sheet of glass, used often on the station in various applications.",
+   "id": "SheetGlass1",
+   "name": "glass",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/glass.yml"
+  },
+  {
+   "desc": "A sheet of glass, used often on the station in various applications.",
+   "id": "SheetGlass10",
+   "name": "glass",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/glass.yml"
+  },
+  {
+   "desc": "A sheet of translucent plasma.",
+   "id": "SheetPGlass",
+   "name": "plasma glass",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/glass.yml"
+  },
+  {
+   "desc": "A sheet of translucent plasma.",
+   "id": "SheetPGlass1",
+   "name": "plasma glass",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/glass.yml"
+  },
+  {
+   "desc": "A sheet of material, used often on the station in various applications.",
+   "id": "SheetPaper",
+   "name": "paper",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/other.yml"
+  },
+  {
+   "desc": "A sheet of material, used often on the station in various applications.",
+   "id": "SheetPaper1",
+   "name": "paper",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/other.yml"
+  },
+  {
+   "desc": "A sheet of material, used often on the station in various applications.",
+   "id": "SheetPlasma",
+   "name": "plasma",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/other.yml"
+  },
+  {
+   "desc": "A sheet of material, used often on the station in various applications.",
+   "id": "SheetPlasma1",
+   "name": "plasma",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/other.yml"
+  },
+  {
+   "desc": "A sheet of material, used often on the station in various applications.",
+   "id": "SheetPlasma10",
+   "name": "plasma",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/other.yml"
+  },
+  {
+   "desc": "A sheet of metal, used often on the station in various applications.",
+   "id": "SheetPlasteel",
+   "name": "plasteel",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/metal.yml"
+  },
+  {
+   "desc": "A sheet of metal, used often on the station in various applications.",
+   "id": "SheetPlasteel1",
+   "name": "plasteel",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/metal.yml"
+  },
+  {
+   "desc": "A sheet of metal, used often on the station in various applications.",
+   "id": "SheetPlasteel10",
+   "name": "plasteel",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/metal.yml"
+  },
+  {
+   "desc": "A sheet of material, used often on the station in various applications.",
+   "id": "SheetPlastic",
+   "name": "plastic",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/other.yml"
+  },
+  {
+   "desc": "A sheet of material, used often on the station in various applications.",
+   "id": "SheetPlastic1",
+   "name": "plastic",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/other.yml"
+  },
+  {
+   "desc": "A sheet of material, used often on the station in various applications.",
+   "id": "SheetPlastic10",
+   "name": "plastic",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/other.yml"
+  },
+  {
+   "desc": "A reinforced sheet of glass.",
+   "id": "SheetRGlass",
+   "name": "reinforced glass",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/glass.yml"
+  },
+  {
+   "desc": "A reinforced sheet of glass.",
+   "id": "SheetRGlass1",
+   "name": "reinforced glass",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/glass.yml"
+  },
+  {
+   "desc": "A reinforced sheet of translucent plasma.",
+   "id": "SheetRPGlass",
+   "name": "reinforced plasma glass",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/glass.yml"
+  },
+  {
+   "desc": "A reinforced sheet of translucent plasma.",
+   "id": "SheetRPGlass1",
+   "name": "reinforced plasma glass",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/glass.yml"
+  },
+  {
+   "desc": "A reinforced sheet of uranium.",
+   "id": "SheetRUGlass",
+   "name": "reinforced uranium glass",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/glass.yml"
+  },
+  {
+   "desc": "A reinforced sheet of uranium.",
+   "id": "SheetRUGlass1",
+   "name": "reinforced uranium glass",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/glass.yml"
+  },
+  {
+   "desc": "A sheet of metal, used often on the station in various applications.",
+   "id": "SheetSteel",
+   "name": "steel",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/metal.yml"
+  },
+  {
+   "desc": "A sheet of metal, used often on the station in various applications.",
+   "id": "SheetSteel1",
+   "name": "steel",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/metal.yml"
+  },
+  {
+   "desc": "A sheet of metal, used often on the station in various applications.",
+   "id": "SheetSteel10",
+   "name": "steel",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/metal.yml"
+  },
+  {
+   "desc": "A sheet of uranium glass.",
+   "id": "SheetUGlass",
+   "name": "uranium glass",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/glass.yml"
+  },
+  {
+   "desc": "A sheet of uranium glass.",
+   "id": "SheetUGlass1",
+   "name": "uranium glass",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/glass.yml"
+  },
+  {
+   "desc": "A sheet of material, used often on the station in various applications.",
+   "id": "SheetUranium",
+   "name": "uranium",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/other.yml"
+  },
+  {
+   "desc": "A sheet of material, used often on the station in various applications.",
+   "id": "SheetUranium1",
+   "name": "uranium",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Materials/Sheets/other.yml"
+  },
+  {
+   "desc": "Steel doesn't grow on trees! It grows on mushrooms, of course.",
+   "id": "SteelLog",
+   "name": "steel-cap log",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Sickly sweet.",
+   "id": "Sugarcane",
+   "name": "sugarcane",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": null,
+   "id": "TrashBakedBananaPeel",
+   "name": "baked banana peel",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": null,
+   "id": "TrashBananaPeel",
+   "name": "banana peel",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": null,
+   "id": "TrashBananaPeelExplosive",
+   "name": "banana peel",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Weapons/Bombs/funny.yml"
+  },
+  {
+   "desc": null,
+   "id": "TrashBananiumPeel",
+   "name": "bananium peel",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": null,
+   "id": "TrashCherryPit",
+   "name": "cherry pit",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": null,
+   "id": "TrashMimanaPeel",
+   "name": "mimana peel",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
+   "desc": "Bon appétit!",
+   "id": "WeaponBaguette",
+   "name": "baguette",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Weapons/Melee/baguette.yml"
+  },
+  {
+   "desc": "Buttery, flaky goodness.",
+   "id": "WeaponCroissant",
+   "name": "croissant",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Weapons/Throwable/croissant.yml"
+  },
+  {
+   "desc": "Sigh... wheat... a-grain?",
+   "id": "WheatBushel",
+   "name": "wheat bushel",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  }
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "branch": "master",
+ "commitDate": "2026-01-02T03:04:05Z",
+ "counts": {
+  "cooking": 3,
+  "entities": 7,
+  "mixers": 1,
+  "reactions": 7,
+  "reagents": 14,
+  "sources": 2
+ },
+ "generatedAt": "2026-01-02T06:00:00Z",
+ "repo": "https://example.com/space-station-14",
+ "schemaVersion": "1.1.0",
+ "server": "upstream",
+ "serverName": "Test Upstream",
+ "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+ "warnings": [
+  {
+   "code": "duplicate-id",
+   "message": "reagent Frezon also defined in Reagents/misc.yml; the later one wins",
+   "sourceFile": "_Fork/Recipes/reactions.yml"
+  },
+  {
+   "code": "yaml-error",
+   "message": "could not parse: while parsing a flow sequence",
+   "sourceFile": "Recipes/Reactions/broken.yml"
+  }
+ ]
+}
