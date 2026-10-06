@@ -8,14 +8,16 @@ app (tagged `v1-legacy`).
 
 ## Layout
 
-| Path            | What                                                     |
-| --------------- | -------------------------------------------------------- |
-| `apps/web`      | Next.js frontend (deployed on Vercel)                    |
-| `packages/calc` | Calculator engine, pure TypeScript                       |
-| `pipeline`      | Python data pipeline (uv, Pydantic), plus its Dockerfile |
-| `data/<server>` | Generated, validated data snapshots                      |
-| `servers.yaml`  | Supported servers                                        |
-| `docs/`         | Operational notes (Vercel setup, etc.)                   |
+| Path              | What                                                                                |
+| ----------------- | ----------------------------------------------------------------------------------- |
+| `apps/web`        | Next.js frontend (deployed on Vercel)                                               |
+| `packages/schema` | Data contract types, generated from the pipeline models, plus schema version checks |
+| `packages/calc`   | Calculator engine, pure TypeScript                                                  |
+| `pipeline`        | Python data pipeline (uv, Pydantic), plus its Dockerfile                            |
+| `schema/`         | JSON Schema exported from the pipeline models, and hand-written example data        |
+| `data/<server>`   | Generated, validated data snapshots                                                 |
+| `servers.yaml`    | Supported servers                                                                   |
+| `docs/`           | Operational notes (Vercel setup, etc.)                                              |
 
 ## Requirements
 

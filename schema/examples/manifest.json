@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "server": "upstream",
+  "serverName": "Wizard's Den",
+  "repo": "https://github.com/space-wizards/space-station-14",
+  "branch": "master",
+  "sha": "0123456789abcdef0123456789abcdef01234567",
+  "commitDate": "2026-10-01T12:00:00Z",
+  "generatedAt": "2026-10-01T18:00:00Z",
+  "counts": {
+    "reagents": 7,
+    "entities": 5,
+    "reactions": 3,
+    "cooking": 1,
+    "mixers": 1,
+    "sources": 1
+  },
+  "warnings": [
+    {
+      "code": "unknown-tag",
+      "message": "New YAML tag !type:SomeNewEffect kept as _type",
+      "sourceFile": "Recipes/Reactions/fun.yml"
+    }
+  ]
+}

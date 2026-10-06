@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Builds validated ss14help data snapshots from SS14 server repositories"
 readme = "README.md"
 authors = [
-    { name = "Luiz Henrique Costa", email = "luizwritescode@gmail.com" }
+    { name = "Luiz Henrique Costa", email = "luiz.h10@hotmail.com" }
 ]
 requires-python = ">=3.12"
 dependencies = [

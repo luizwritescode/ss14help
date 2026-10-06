@@ -1,0 +1,114 @@
+{
+  "reactions": [
+    {
+      "sourceFile": "Recipes/Reactions/medicine.yml",
+      "serverOnly": false,
+      "id": "Inaprovaline",
+      "category": "medicine",
+      "reactants": {
+        "Oxygen": {
+          "amount": 1,
+          "catalyst": false
+        },
+        "Sugar": {
+          "amount": 1,
+          "catalyst": false
+        },
+        "Carbon": {
+          "amount": 1,
+          "catalyst": false
+        }
+      },
+      "products": {
+        "Inaprovaline": 3
+      },
+      "minTemp": null,
+      "maxTemp": null,
+      "mixers": [],
+      "quantized": false,
+      "priority": 0,
+      "effects": []
+    },
+    {
+      "sourceFile": "Recipes/Reactions/medicine.yml",
+      "serverOnly": false,
+      "id": "Bicaridine",
+      "category": "medicine",
+      "reactants": {
+        "Inaprovaline": {
+          "amount": 1,
+          "catalyst": false
+        },
+        "Carbon": {
+          "amount": 1,
+          "catalyst": false
+        },
+        "Plasma": {
+          "amount": 1,
+          "catalyst": true
+        }
+      },
+      "products": {
+        "Bicaridine": 2
+      },
+      "minTemp": 370,
+      "maxTemp": null,
+      "mixers": [
+        "Centrifuge"
+      ],
+      "quantized": false,
+      "priority": 0,
+      "effects": []
+    },
+    {
+      "sourceFile": "Recipes/Reactions/pyrotechnic.yml",
+      "serverOnly": false,
+      "id": "PlasmaFlash",
+      "category": "pyrotechnic",
+      "reactants": {
+        "Plasma": {
+          "amount": 5,
+          "catalyst": false
+        }
+      },
+      "products": {},
+      "minTemp": null,
+      "maxTemp": 300,
+      "mixers": [],
+      "quantized": true,
+      "priority": 20,
+      "effects": [
+        {
+          "_type": "FlashReactionEffect",
+          "duration": 4
+        }
+      ]
+    }
+  ],
+  "cooking": [
+    {
+      "sourceFile": "Recipes/Cooking/meal_recipes.yml",
+      "serverOnly": false,
+      "id": "RecipeChickenSandwich",
+      "name": "chicken sandwich recipe",
+      "device": "Microwave",
+      "time": 10,
+      "solids": {
+        "FoodBreadBun": 1,
+        "FoodMeatChicken": 1
+      },
+      "reagents": {
+        "Sugar": 2
+      },
+      "result": "FoodBurgerChicken",
+      "group": "Savory",
+      "secret": false
+    }
+  ],
+  "mixers": [
+    {
+      "id": "Centrifuge",
+      "name": "centrifuge"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "reagents": [
+    {
+      "sourceFile": "Reagents/elements.yml",
+      "serverOnly": false,
+      "id": "Carbon",
+      "name": "carbon",
+      "desc": "A black, crystalline solid.",
+      "physicalDesc": "crystalline",
+      "group": "Elements",
+      "color": "#22282b"
+    },
+    {
+      "sourceFile": "Reagents/elements.yml",
+      "serverOnly": false,
+      "id": "Oxygen",
+      "name": "oxygen",
+      "desc": "An oxidizing, colorless gas.",
+      "physicalDesc": "gaseous",
+      "group": "Elements",
+      "color": "#808080"
+    },
+    {
+      "sourceFile": "Reagents/Consumable/Food/ingredients.yml",
+      "serverOnly": false,
+      "id": "Sugar",
+      "name": "sugar",
+      "desc": "Tasty spacey sugar!",
+      "physicalDesc": "crystalline",
+      "group": "Foods",
+      "color": "#ffffff"
+    },
+    {
+      "sourceFile": "Reagents/elements.yml",
+      "serverOnly": false,
+      "id": "Plasma",
+      "name": "plasma",
+      "desc": "Funky, space-magic pixie dust.",
+      "physicalDesc": "gaseous",
+      "group": "Elements",
+      "color": "#7e009e"
+    },
+    {
+      "sourceFile": "Reagents/medicine.yml",
+      "serverOnly": false,
+      "id": "Inaprovaline",
+      "name": "inaprovaline",
+      "desc": "Stabilizes breathing in critical patients.",
+      "physicalDesc": "opaque",
+      "group": "Medicine",
+      "color": "#731024"
+    },
+    {
+      "sourceFile": "Reagents/medicine.yml",
+      "serverOnly": false,
+      "id": "Bicaridine",
+      "name": "bicaridine",
+      "desc": "Treats moderate brute damage.",
+      "physicalDesc": "opaque",
+      "group": "Medicine",
+      "color": "#ffaa00"
+    },
+    {
+      "sourceFile": "Reagents/Consumable/Food/ingredients.yml",
+      "serverOnly": false,
+      "id": "Flour",
+      "name": "flour",
+      "desc": "Used for baking.",
+      "physicalDesc": "powdery",
+      "group": "Foods",
+      "color": "#ffffff"
+    }
+  ]
+}

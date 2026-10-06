@@ -1,0 +1,613 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ss14help/schema/1.0.0",
+  "title": "DataFiles",
+  "description": "ss14help data snapshot contract, schema version 1.0.0.",
+  "type": "object",
+  "properties": {
+    "manifest.json": {
+      "$ref": "#/$defs/Manifest"
+    },
+    "reagents.json": {
+      "$ref": "#/$defs/ReagentsFile"
+    },
+    "entities.json": {
+      "$ref": "#/$defs/EntitiesFile"
+    },
+    "recipes.json": {
+      "$ref": "#/$defs/RecipesFile"
+    },
+    "sources.json": {
+      "$ref": "#/$defs/SourcesFile"
+    }
+  },
+  "required": [
+    "manifest.json",
+    "reagents.json",
+    "entities.json",
+    "recipes.json",
+    "sources.json"
+  ],
+  "additionalProperties": false,
+  "x-schemaVersion": "1.0.0",
+  "$defs": {
+    "CookingRecipe": {
+      "additionalProperties": false,
+      "properties": {
+        "sourceFile": {
+          "description": "Path relative to Resources/Prototypes, e.g. 'Recipes/Reactions/medicine.yml'.",
+          "type": "string"
+        },
+        "serverOnly": {
+          "default": false,
+          "description": "True when the id doesn't exist in the upstream (Wizard's Den) snapshot.",
+          "type": "boolean"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "^\\S+$",
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "device": {
+          "default": "Microwave",
+          "description": "Cooking device, e.g. 'Microwave'.",
+          "type": "string"
+        },
+        "time": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Seconds; null for instant."
+        },
+        "solids": {
+          "additionalProperties": {
+            "exclusiveMinimum": 0,
+            "type": "integer"
+          },
+          "description": "Entity id → count.",
+          "type": "object"
+        },
+        "reagents": {
+          "additionalProperties": {
+            "exclusiveMinimum": 0,
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "result": {
+          "description": "Entity id of the cooked item.",
+          "minLength": 1,
+          "pattern": "^\\S+$",
+          "type": "string"
+        },
+        "group": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "secret": {
+          "default": false,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "sourceFile",
+        "serverOnly",
+        "id",
+        "name",
+        "device",
+        "time",
+        "solids",
+        "reagents",
+        "result",
+        "group",
+        "secret"
+      ],
+      "title": "CookingRecipe",
+      "type": "object"
+    },
+    "EntitiesFile": {
+      "additionalProperties": false,
+      "properties": {
+        "entities": {
+          "items": {
+            "$ref": "#/$defs/Entity"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "entities"
+      ],
+      "title": "EntitiesFile",
+      "type": "object"
+    },
+    "Entity": {
+      "additionalProperties": false,
+      "description": "A game entity referenced by a recipe or source (cooking ingredients, results, produce).",
+      "properties": {
+        "sourceFile": {
+          "description": "Path relative to Resources/Prototypes, e.g. 'Recipes/Reactions/medicine.yml'.",
+          "type": "string"
+        },
+        "serverOnly": {
+          "default": false,
+          "description": "True when the id doesn't exist in the upstream (Wizard's Den) snapshot.",
+          "type": "boolean"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "^\\S+$",
+          "type": "string"
+        },
+        "name": {
+          "description": "Display name; falls back to the id.",
+          "type": "string"
+        },
+        "desc": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "sourceFile",
+        "serverOnly",
+        "id",
+        "name",
+        "desc"
+      ],
+      "title": "Entity",
+      "type": "object"
+    },
+    "Manifest": {
+      "additionalProperties": false,
+      "properties": {
+        "schemaVersion": {
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "type": "string"
+        },
+        "server": {
+          "description": "Server id from servers.yaml.",
+          "type": "string"
+        },
+        "serverName": {
+          "type": "string"
+        },
+        "repo": {
+          "type": "string"
+        },
+        "branch": {
+          "type": "string"
+        },
+        "sha": {
+          "pattern": "^[0-9a-f]{40}$",
+          "type": "string"
+        },
+        "commitDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "generatedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "counts": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "description": "File/collection name → number of items.",
+          "type": "object"
+        },
+        "warnings": {
+          "items": {
+            "$ref": "#/$defs/PipelineWarning"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "server",
+        "serverName",
+        "repo",
+        "branch",
+        "sha",
+        "commitDate",
+        "generatedAt",
+        "counts",
+        "warnings"
+      ],
+      "title": "Manifest",
+      "type": "object"
+    },
+    "Mixer": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "pattern": "^\\S+$",
+          "type": "string"
+        },
+        "name": {
+          "description": "Localized verb or name, e.g. 'centrifuge'.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "title": "Mixer",
+      "type": "object"
+    },
+    "PipelineWarning": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "description": "Machine-readable, e.g. 'duplicate-id', 'unknown-tag'.",
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "sourceFile": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "code",
+        "message",
+        "sourceFile"
+      ],
+      "title": "PipelineWarning",
+      "type": "object"
+    },
+    "Reactant": {
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "exclusiveMinimum": 0,
+          "type": "number"
+        },
+        "catalyst": {
+          "default": false,
+          "description": "Must be present for the reaction but isn't consumed.",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "amount",
+        "catalyst"
+      ],
+      "title": "Reactant",
+      "type": "object"
+    },
+    "Reaction": {
+      "additionalProperties": false,
+      "properties": {
+        "sourceFile": {
+          "description": "Path relative to Resources/Prototypes, e.g. 'Recipes/Reactions/medicine.yml'.",
+          "type": "string"
+        },
+        "serverOnly": {
+          "default": false,
+          "description": "True when the id doesn't exist in the upstream (Wizard's Den) snapshot.",
+          "type": "boolean"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "^\\S+$",
+          "type": "string"
+        },
+        "category": {
+          "description": "Grouping for navigation, from the source file name, e.g. 'medicine', 'drinks'.",
+          "type": "string"
+        },
+        "reactants": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Reactant"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "products": {
+          "additionalProperties": {
+            "exclusiveMinimum": 0,
+            "type": "number"
+          },
+          "description": "Empty for reactions that only have effects (e.g. explosions).",
+          "type": "object"
+        },
+        "minTemp": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Kelvin."
+        },
+        "maxTemp": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Kelvin."
+        },
+        "mixers": {
+          "description": "mixingCategory ids; any one of them works.",
+          "items": {
+            "minLength": 1,
+            "pattern": "^\\S+$",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "quantized": {
+          "default": false,
+          "description": "Only runs in whole multiples.",
+          "type": "boolean"
+        },
+        "priority": {
+          "default": 0,
+          "type": "integer"
+        },
+        "effects": {
+          "description": "Raw reaction effects, tag kept as '_type'. Displayed as text only.",
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "sourceFile",
+        "serverOnly",
+        "id",
+        "category",
+        "reactants",
+        "products",
+        "minTemp",
+        "maxTemp",
+        "mixers",
+        "quantized",
+        "priority",
+        "effects"
+      ],
+      "title": "Reaction",
+      "type": "object"
+    },
+    "Reagent": {
+      "additionalProperties": false,
+      "properties": {
+        "sourceFile": {
+          "description": "Path relative to Resources/Prototypes, e.g. 'Recipes/Reactions/medicine.yml'.",
+          "type": "string"
+        },
+        "serverOnly": {
+          "default": false,
+          "description": "True when the id doesn't exist in the upstream (Wizard's Den) snapshot.",
+          "type": "boolean"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "^\\S+$",
+          "type": "string"
+        },
+        "name": {
+          "description": "Localized display name; falls back to the id.",
+          "type": "string"
+        },
+        "desc": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "physicalDesc": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "group": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Reagent group, e.g. 'Medicine', 'Foods'."
+        },
+        "color": {
+          "anyOf": [
+            {
+              "pattern": "^#[0-9a-fA-F]{6}([0-9a-fA-F]{2})?$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "sourceFile",
+        "serverOnly",
+        "id",
+        "name",
+        "desc",
+        "physicalDesc",
+        "group",
+        "color"
+      ],
+      "title": "Reagent",
+      "type": "object"
+    },
+    "ReagentsFile": {
+      "additionalProperties": false,
+      "properties": {
+        "reagents": {
+          "items": {
+            "$ref": "#/$defs/Reagent"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "reagents"
+      ],
+      "title": "ReagentsFile",
+      "type": "object"
+    },
+    "RecipesFile": {
+      "additionalProperties": false,
+      "properties": {
+        "reactions": {
+          "items": {
+            "$ref": "#/$defs/Reaction"
+          },
+          "type": "array"
+        },
+        "cooking": {
+          "items": {
+            "$ref": "#/$defs/CookingRecipe"
+          },
+          "type": "array"
+        },
+        "mixers": {
+          "items": {
+            "$ref": "#/$defs/Mixer"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "reactions",
+        "cooking",
+        "mixers"
+      ],
+      "title": "RecipesFile",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "description": "Reagents obtainable from an entity by grinding or juicing it.",
+      "properties": {
+        "entity": {
+          "description": "Entity id; its name is in entities.json.",
+          "minLength": 1,
+          "pattern": "^\\S+$",
+          "type": "string"
+        },
+        "grind": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "exclusiveMinimum": 0,
+                "type": "number"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "juice": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "exclusiveMinimum": 0,
+                "type": "number"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "entity",
+        "grind",
+        "juice"
+      ],
+      "title": "Source",
+      "type": "object"
+    },
+    "SourcesFile": {
+      "additionalProperties": false,
+      "properties": {
+        "sources": {
+          "items": {
+            "$ref": "#/$defs/Source"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "sources"
+      ],
+      "title": "SourcesFile",
+      "type": "object"
+    }
+  }
+}

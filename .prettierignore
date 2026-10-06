@@ -4,3 +4,5 @@ pipeline/
 .next/
 dist/
 ROADMAP.md
+schema/
+packages/schema/src/generated/

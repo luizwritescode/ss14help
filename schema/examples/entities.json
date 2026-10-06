@@ -1,0 +1,39 @@
+{
+  "entities": [
+    {
+      "sourceFile": "Entities/Objects/Consumable/Food/burger.yml",
+      "serverOnly": false,
+      "id": "FoodBreadBun",
+      "name": "bun",
+      "desc": "A hearty roll."
+    },
+    {
+      "sourceFile": "Entities/Objects/Consumable/Food/meat.yml",
+      "serverOnly": false,
+      "id": "FoodMeatChicken",
+      "name": "raw chicken meat",
+      "desc": null
+    },
+    {
+      "sourceFile": "Entities/Objects/Consumable/Food/burger.yml",
+      "serverOnly": false,
+      "id": "FoodBurgerChicken",
+      "name": "chicken sandwich",
+      "desc": null
+    },
+    {
+      "sourceFile": "Entities/Objects/Consumable/Food/produce.yml",
+      "serverOnly": false,
+      "id": "WheatBushel",
+      "name": "wheat bushel",
+      "desc": "Sigh... wheat... a-grain?"
+    },
+    {
+      "sourceFile": "Entities/Objects/Consumable/Food/meat.yml",
+      "serverOnly": false,
+      "id": "FoodMeatChickenCooked",
+      "name": "cooked chicken",
+      "desc": null
+    }
+  ]
+}

@@ -40,6 +40,22 @@ jobs:
       - run: uv run mypy src tests
       - run: uv run pytest
 
+  contract:
+    # Fails when models.py changed without re-exporting the schema and regenerating the TS types.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: uv run --project pipeline ss14help-pipeline schema
+      - run: pnpm --filter @ss14help/schema generate
+      - run: git diff --exit-code -- schema packages/schema/src/generated
+
   pipeline-image:
     runs-on: ubuntu-latest
     steps:
