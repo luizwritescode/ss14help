@@ -1,0 +1,30 @@
+# deps
+node_modules/
+.pnpm-store/
+
+# builds
+.next/
+out/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# pipeline working copies of game repos
+pipeline/.cache/
+
+# env / editors / os
+.env*
+!.env.example
+.vercel
+.idea/
+.DS_Store
+Thumbs.db
+coverage/

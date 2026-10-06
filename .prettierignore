@@ -1,0 +1,6 @@
+pnpm-lock.yaml
+data/
+pipeline/
+.next/
+dist/
+ROADMAP.md

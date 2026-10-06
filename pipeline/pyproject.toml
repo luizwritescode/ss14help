@@ -1,0 +1,43 @@
+[project]
+name = "ss14help-pipeline"
+version = "0.1.0"
+description = "Builds validated ss14help data snapshots from SS14 server repositories"
+readme = "README.md"
+authors = [
+    { name = "Luiz Henrique Costa", email = "luizwritescode@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fluent-syntax>=0.19.0",
+    "pydantic>=2.13.5",
+    "pyyaml>=6.0.3",
+]
+
+[project.scripts]
+ss14help-pipeline = "ss14help_pipeline.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.11.28,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.0",
+    "pytest>=9.1.1",
+    "ruff>=0.16.10",
+    "types-pyyaml>=6.0.12.20260906",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+
+[tool.mypy]
+strict = true
+plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

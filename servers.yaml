@@ -1,0 +1,13 @@
+# One entry per supported server. The pipeline syncs each one independently.
+# Adding a server should only need a new entry here (see ROADMAP.md, section 0).
+servers:
+  - id: upstream
+    name: Wizard's Den
+    repo: https://github.com/space-wizards/space-station-14
+    branch: master
+
+  - id: starlight
+    name: Starlight
+    repo: https://github.com/ss14Starlight/space-station-14
+    branch: starlight-dev
+    features: [deviceType, deepFrying, metamorph]
