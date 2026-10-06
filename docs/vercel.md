@@ -1,27 +1,23 @@
 # Vercel setup
 
-Vercel's _Root Directory_ is a per-project setting, not a per-branch one. So v2 can't share the
-v1 project's settings while v1 is still live from `main`. Until launch (ROADMAP Phase 8), v2 runs
-as a **second project** on the same Hobby account, connected to the same GitHub repo.
+v2 replaces v1 on the **existing** Vercel project. v1 is retired; its code stays on `main` (tagged
+`v1-legacy`) for reference.
 
-## v1 project (existing)
+## Project settings (one-time, in the dashboard)
 
-No dashboard changes are needed. The repo-root [`vercel.json`](../vercel.json) on the `v2` branch
-sets `git.deploymentEnabled: false`, so the v1 project ignores pushes to `v2` instead of trying to
-build them as Flask previews. `main` keeps deploying to production as before.
+1. **Settings → Build and Deployment → Root Directory:** `apps/web`. Keep "Include files outside
+   the root directory" enabled (the default), which pnpm workspaces need.
+2. **Framework Preset:** Next.js. Leave the install and build commands at their defaults; Vercel
+   detects pnpm from `pnpm-lock.yaml`.
+3. Clear any **Build Command** or **Output Directory** overrides left over from the Flask setup.
+4. **Settings → Environments → Production → Branch Tracking:** `v2`.
+5. Redeploy. [`apps/web/vercel.json`](../apps/web/vercel.json) has an `ignoreCommand` that skips a
+   build unless `apps/web`, `packages/`, `data/` or the pnpm workspace files changed.
 
-## v2 project (new)
+v1 had a single route (`/`), so no redirects are needed.
 
-1. Vercel → Add New → Project → import `luizwritescode/ss14help`.
-2. **Root Directory:** `apps/web`. Turn on "Include files outside the root directory" (it's on by
-   default), which pnpm workspaces need.
-3. **Framework:** Next.js, detected automatically. Leave the install and build commands at their
-   defaults; Vercel detects pnpm from `pnpm-lock.yaml`.
-4. Settings → Git → **Production Branch:** `v2`.
-5. Deploy. [`apps/web/vercel.json`](../apps/web/vercel.json) has an `ignoreCommand` that skips a
-   build unless `apps/web`, `packages/`, `data/` or the lockfile changed.
+## GitHub
 
-## At launch (Phase 8)
-
-Move the production domain from the v1 project to the v2 project, make `v2` the default GitHub
-branch, and tag `main` as `v1-legacy`. Then archive or delete the v1 project.
+- Make `v2` the default branch (Settings → General → Default branch). The scheduled data sync
+  only runs on the default branch.
+- Tag the old code: `git tag v1-legacy main && git push origin v1-legacy`.

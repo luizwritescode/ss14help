@@ -3,8 +3,8 @@
 A multi-server crafting and chemistry guide for Space Station 14, kept up to date automatically
 from each server's game repository. The plan is in [ROADMAP.md](ROADMAP.md).
 
-This is the `v2` branch. Its history is separate from `main`, which still holds the live v1 Flask
-app.
+This is the `v2` branch. Its history is separate from `main`, which holds the retired v1 Flask
+app (tagged `v1-legacy`).
 
 ## Layout
 
