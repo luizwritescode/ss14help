@@ -8,7 +8,8 @@
       "desc": "A black, crystalline solid.",
       "physicalDesc": "crystalline",
       "group": "Elements",
-      "color": "#22282b"
+      "color": "#22282b",
+      "dispensable": true
     },
     {
       "sourceFile": "Reagents/elements.yml",
@@ -18,7 +19,8 @@
       "desc": "An oxidizing, colorless gas.",
       "physicalDesc": "gaseous",
       "group": "Elements",
-      "color": "#808080"
+      "color": "#808080",
+      "dispensable": true
     },
     {
       "sourceFile": "Reagents/Consumable/Food/ingredients.yml",
@@ -28,7 +30,8 @@
       "desc": "Tasty spacey sugar!",
       "physicalDesc": "crystalline",
       "group": "Foods",
-      "color": "#ffffff"
+      "color": "#ffffff",
+      "dispensable": true
     },
     {
       "sourceFile": "Reagents/elements.yml",
@@ -38,7 +41,8 @@
       "desc": "Funky, space-magic pixie dust.",
       "physicalDesc": "gaseous",
       "group": "Elements",
-      "color": "#7e009e"
+      "color": "#7e009e",
+      "dispensable": false
     },
     {
       "sourceFile": "Reagents/medicine.yml",
@@ -48,7 +52,8 @@
       "desc": "Stabilizes breathing in critical patients.",
       "physicalDesc": "opaque",
       "group": "Medicine",
-      "color": "#731024"
+      "color": "#731024",
+      "dispensable": false
     },
     {
       "sourceFile": "Reagents/medicine.yml",
@@ -58,7 +63,8 @@
       "desc": "Treats moderate brute damage.",
       "physicalDesc": "opaque",
       "group": "Medicine",
-      "color": "#ffaa00"
+      "color": "#ffaa00",
+      "dispensable": false
     },
     {
       "sourceFile": "Reagents/Consumable/Food/ingredients.yml",
@@ -68,7 +74,8 @@
       "desc": "Used for baking.",
       "physicalDesc": "powdery",
       "group": "Foods",
-      "color": "#ffffff"
+      "color": "#ffffff",
+      "dispensable": false
     }
   ]
 }

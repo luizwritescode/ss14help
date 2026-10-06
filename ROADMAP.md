@@ -157,8 +157,8 @@ The page never scrolls as a whole on desktop: each pane scrolls on its own. Mobi
 
 - Clicking a **reaction row** opens `reagent:<primary product>` with that reaction pre-selected (`via=<reactionId>`). The primary product is the product whose id equals the reaction id; otherwise it's the largest product amount, then the first id alphabetically.
 - Clicking a **cooking row** opens `item:<result>`. Cooking recipes are always shown inside their result item, never on their own.
-- **Variants:** a reagent can be produced by several reactions, and an item by several cooking recipes. The panel shows one at a time with a VariantSwitcher. The default variant follows the calc engine's rule (fewest steps, then highest priority, then id).
-- **Basic reagent:** a reagent no reaction produces. Its tree ends here, and its Recipe tab shows where to get it instead (sources).
+- **Variants:** a reagent can be produced by several reactions, and an item by several cooking recipes. The panel shows one at a time with a VariantSwitcher. The default variant follows the calc engine's rule (`RecipeGraph.defaultProducer`): recipes where it is the primary product first, then fewest steps, then highest priority, then id.
+- **Basic reagent:** a reagent that is dispensable (`Reagent.dispensable`) or that no reaction produces (`RecipeGraph.isBasic`). Its tree ends here, and its Recipe tab shows where to get it instead (sources).
 
 **Categories (sidebar tree)** are derived from data, never hard-coded per server:
 
@@ -353,7 +353,7 @@ Suggested layout: `apps/web/src/components/{shell,sidebar,list,panel,calc,primit
 | **ReagentSwatch** | A 12px circle (16px in headers) filled with `color`. It has a 1px border at 30% foreground so light colours stay visible. When `color` is null, show a diagonal-hatch pattern. Decorative: `aria-hidden`. |
 | **ReagentLink / EntityLink** | A button styled as a link: swatch (or item icon) and name. Click pushes onto the stack. A HoverCard after 400ms (desktop only) shows the name, desc, and a one-line recipe summary. Unknown ids render as plain monospace text with the tooltip "Not in data" and no link. |
 | **AmountText** | Formats a number as described above and adds the unit (`u`, `×`, `s`, `K`) after a thin space. Uses `tabular-nums` so amounts align in columns. |
-| **ConditionChip** | Variants: `heat` "≥ 370 K" (tooltip "97 °C"), `cold` "≤ 300 K", `mixer` "Centrifuge" (several mixers: "Centrifuge or Electrolysis"), `catalyst`, `device` "Microwave", `time` "10 s" or "instant", `quantized` "whole batches", `secret`, and `priority` (only when > 0, with a tooltip explaining reaction order). Each has an icon, text and tooltip. Colour is never the only signal. |
+| **ConditionChip** | Variants: `heat` "≥ 370 K" (tooltip "97 °C"), `cold` "≤ 300 K", `mixer` "Centrifuge" (several mixers: "Centrifuge + Electrolysis" — the mixer must support all of them), `catalyst`, `device` "Microwave", `time` "10 s" or "instant", `quantized` "whole batches", `secret`, and `priority` (only when > 0, with a tooltip explaining reaction order). Each has an icon, text and tooltip. Colour is never the only signal. |
 | **ServerOnlyBadge** | "Starlight only", using the server's name. Rendered only when `serverOnly` is set. |
 | **PinButton** | A ★ toggle with `aria-pressed`, shortcut `p`, and a toast "Pinned" / "Unpinned". |
 | **CopyRecipeButton** | Copies plain text such as `Bicaridine: 1u Inaprovaline + 1u Carbon (catalyst: 1u Plasma), ≥370K, centrifuge → 2u`. |
@@ -424,7 +424,7 @@ Shortcuts are ignored while typing in an input, except `Esc` and `⌘K`.
 **Goal:** one source of truth for the data shape, shared by the Python and TS code.
 
 - [x] Pydantic v2 models in `pipeline/src/ss14help_pipeline/models.py`. JSON keys are camelCase, and every field is always written (`null` rather than missing):
-  - `Reagent`: `id`, `name`, `desc`, `physicalDesc`, `group`, `color`, `sourceFile`, `serverOnly`.
+  - `Reagent`: `id`, `name`, `desc`, `physicalDesc`, `group`, `color`, `dispensable` (added in 1.1.0), `sourceFile`, `serverOnly`.
   - `Entity` (added): `id`, `name`, `desc`, `sourceFile`, `serverOnly`. It gives display names for cooking solids, results and source items, which are entities, not reagents.
   - `Reaction`:
     - `id`, `category` (added, for the sidebar tree), `reactants: {id: {amount, catalyst}}`, `products: {id: amount}`
@@ -443,6 +443,8 @@ Shortcuts are ignored while typing in an input, except `Esc` and `⌘K`.
 Notes for Phase 3:
 - `category` is the reaction file's stem. Generic stems (e.g. Starlight's `_Starlight/Recipes/reactions.yml`) need a fallback: use the primary product's reagent `group`, lower-cased.
 - `serverOnly` is set by comparing ids with the upstream snapshot. Upstream items are always `false`.
+- `dispensable`: walk entities with a `ReagentDispenser` component (chem, booze, soda, and fork dispensers such as `_Starlight/.../coffee_dispenser.yml`). Their `EntityTableContainerFill` lists jug/bottle entities (e.g. `JugCarbon`); each jug's solution names the reagent. Note that commented-out jugs (`# - id: JugCarbon`) are not in the dispenser.
+- `Reaction.mixers`: the engine requires a mixer that supports *all* listed categories (`ChemicalReactionSystem.CanReact`).
 
 **Exit criteria:** hand-written sample data validates in Python *and* type-checks in TS. ✅
 
@@ -519,26 +521,35 @@ Warnings (duplicates, new unknown tags, new prototype types) don't fail the run.
 
 **Goal:** exact, explainable amounts. This is a pure TS library with no UI.
 
-- [ ] Build a bipartite graph of reagent nodes and reaction nodes from `recipes.json`, plus cooking recipes and sources.
-- [ ] `plan(target, amountU, options)`:
-  - Scale each reaction by `amountU / productAmount(target)`.
-  - **Catalysts** are reported as *required present, not consumed* and are not multiplied by depth.
-  - **Multi-product reactions:** report the other products as byproducts or leftovers. If a byproduct is consumed later in the tree, credit it.
-  - **`quantized` reactions:** round up to whole batches and report the overshoot.
-  - **Several recipes for the same reagent:** pick deterministically by default (the fewest steps, then the priority), and let the user override each node.
-  - **"Treat as owned":** stop expanding at chosen intermediates.
-  - **Cycle detection:** stop and mark the cycle instead of recursing forever.
-- [ ] Outputs:
-  - `basics`: aggregated basic ingredients, plus the grind/juice sources for each one.
-  - `catalysts`, `byproducts`, `tree`.
-  - `steps[]`: ordered, human-readable instructions with conditions, e.g. "Mix 10u Oxygen + 10u Potassium, heat to ≥ 370K, then add …".
-- [ ] Use exact arithmetic (rationals or integer milli-units) internally, and format to 2 decimals only when displaying, since SS14 uses fixed-point 0.01u.
-- [ ] Vitest:
-  - Unit tests.
-  - Property tests (fast-check): scaling is linear, and catalysts never scale.
-  - Fixtures from real upstream data, including the v1 calculator's known failure cases (first-product-only, scaled catalysts).
+Game rules it follows (verified in `Content.Shared/Chemistry/Reaction/ChemicalReactionSystem.cs`):
+- A reaction runs `min(reactant / coefficient)` times over its **non-catalyst** reactants, consumes `times × coefficient` of each and makes `times × amount` of every product.
+- **Catalysts** never limit or get consumed. They only need to be present; for **quantized** reactions at least their coefficient.
+- **Quantized** reactions run a whole number of times (rounded down in game, so the planner rounds batches **up** to make enough).
+- A mixer must support **all** of a reaction's `mixers` categories.
 
-**Exit criteria:** for 15 hand-verified recipes, including 3 or more levels deep, catalysts, multi-product and quantized ones, the engine's output matches manual calculation.
+- [x] `RecipeGraph` (`src/graph.ts`): indexes one server's data once.
+  - `producers`, `consumersOf` (ingredient / catalyst / cooking), `sourcesOf` (grind/juice hints), `stepCount` (for "Simplest first"), names.
+  - A reaction that also consumes its product isn't counted as a way to make it.
+  - `defaultProducer`: none for dispensable reagents (they're basic even if a split reaction makes them, e.g. Water from `BloodBreakdown`); otherwise primary-product recipes first, then fewest steps, then highest priority, then id.
+- [x] `plan(graph, target, amount, { variants, owned })` (`src/plan.ts`), for reagents (u) and items (counts, via cooking recipes):
+  - Resolves one producer per node (DFS; cycle-closing edges are cut and reported), then propagates demand consumers-first so shared intermediates are aggregated.
+  - Scales by the yield of the **target product**, not the first product (v1 bug).
+  - **Catalysts:** listed once with their coefficient, never scaled (v1 bug); `strict` when a quantized reaction needs them.
+  - **Multi-product reactions:** other products go to a surplus pool. Surplus is **credited** to a later need only if its step can run before every consumer of that need (ordering edges are added); otherwise it's reported in `leftovers`.
+  - **Quantized reactions and cooking:** whole batches, overshoot reported (`produced`, `overshoot`, leftovers).
+  - **Variants:** `variants: { [id]: recipeId }` overrides per node (unknown ids → warning, default used). **Owned:** `owned: [ids]` stops expansion (never the target).
+- [x] Outputs: `basics` (aggregated, with `reason` dispensable/basic/owned/cycle and grind/juice `sources`), `catalysts`, `leftovers`, `credits`, `steps[]` (topologically ordered, structured fields plus `text` such as "Mix 11.25u hydrogen + 3.75u nitrogen, heat to ≥ 370 K → 15u ammonia"), `tree` (per-path amounts, catalysts as leaves, `alternatives` for variant pickers), `warnings`.
+- [x] Exact arithmetic: bigint rationals (`Q`) internally; inputs rounded to 0.01u like FixedPoint2; `formatAmount` rounds to 2 decimals only for display.
+- [x] Vitest (`pnpm --filter @ss14help/calc test`):
+  - 16 hand-verified plans on real reactions copied from the prototypes (`src/fixtures.ts`), each with the arithmetic in a comment: up to 4 levels deep (Sedin, Desoxyephedrine), catalysts (Dexalin, Leporazine, RobustHarvest), multi-product (BloodBreakdown), quantized (FlashFreezeIce), owned, dispensable; plus synthetic cases for variants, credits, cycles, strict catalysts and cooking.
+  - Property tests (fast-check) on random recipe graphs: every plan is **executable** (simulating its steps from only its basics and catalysts always works and yields at least the request), scaling is linear without quantized/byproducts, catalysts never scale. A mutation check confirmed the executability property catches bad credit ordering.
+
+Known simplifications (revisit with real data in Phase 3/7):
+- Surplus is pooled per reagent, so a byproduct can't be offered to some consumers of a reagent but not others; it is then just reported as leftover.
+- The plan doesn't model reactions that would fire unintentionally when ingredients are mixed together (e.g. a basic pair that reacts on its own); steps are per recipe.
+- Game-side rounding of fractional reactions to 0.01u per step isn't simulated; exact values are shown rounded.
+
+**Exit criteria:** for 15 hand-verified recipes, including 3 or more levels deep, catalysts, multi-product and quantized ones, the engine's output matches manual calculation. ✅
 
 ---
 

@@ -21,7 +21,7 @@ from typing import Annotated, Any
 from pydantic import BaseModel, ConfigDict, Field
 from pydantic.alias_generators import to_camel
 
-SCHEMA_VERSION = "1.0.0"
+SCHEMA_VERSION = "1.1.0"
 
 PrototypeId = Annotated[str, Field(min_length=1, pattern=r"^\S+$")]
 """An SS14 prototype id. Ids never contain whitespace."""
@@ -66,6 +66,11 @@ class Reagent(Origin):
     physical_desc: str | None = None
     group: str | None = Field(default=None, description="Reagent group, e.g. 'Medicine', 'Foods'.")
     color: HexColor | None = None
+    dispensable: bool = Field(
+        default=False,
+        description="Stocked in a reagent dispenser (chem, booze or soda), so it counts as a basic "
+        "ingredient even when some reaction also produces it.",
+    )
 
 
 class ReagentsFile(ContractModel):
@@ -109,7 +114,8 @@ class Reaction(Origin):
     min_temp: float | None = Field(default=None, description="Kelvin.")
     max_temp: float | None = Field(default=None, description="Kelvin.")
     mixers: list[PrototypeId] = Field(
-        default_factory=list, description="mixingCategory ids; any one of them works."
+        default_factory=list,
+        description="mixingCategory ids. The mixer must support all of them (empty = no mixer).",
     )
     quantized: bool = Field(default=False, description="Only runs in whole multiples.")
     priority: int = 0

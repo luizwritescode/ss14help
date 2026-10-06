@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "server": "upstream",
   "serverName": "Wizard's Den",
   "repo": "https://github.com/space-wizards/space-station-14",
