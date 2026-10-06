@@ -2,7 +2,7 @@
 
 > A multi-server crafting and chemistry guide for Space Station 14, kept up to date automatically from each server's game repository.
 
-v2 is being built on the `v2` branch, which starts with its own history and shares none with v1. The `main` branch still holds the v1 Flask app, and that app stays live on Vercel until Phase 8.
+v2 is being built on the `v2` branch, which starts with its own history and shares none with v1. v1 (the Flask app on `main`) is retired: v2 takes over the existing Vercel project from Phase 0, and `main` is kept only for reference, tagged `v1-legacy`.
 
 ---
 
@@ -39,7 +39,7 @@ ss14help (branch v2)
 │   └── tests/fixtures/      real YAML snippets for golden tests
 ├── schema/              JSON Schema exported from the Pydantic models (the contract)
 ├── data/
-│   ├── upstream/        manifest.json · reagents.json · recipes.json · sources.json · search-index.json · CHANGELOG.md
+│   ├── upstream/        manifest.json · reagents.json · entities.json · recipes.json · sources.json · search-index.json · CHANGELOG.md
 │   └── starlight/       (same files)
 ├── servers.yaml         One entry per supported server
 └── .github/workflows/   sync.yml (cron) · ci.yml (PRs)
@@ -55,8 +55,8 @@ servers:
     branch: master
   - id: starlight
     name: Starlight
-    repo: https://github.com/ss14Starlight/space-station-14   # confirm the URL
-    branch: Starlight                                        # confirm the branch
+    repo: https://github.com/ss14Starlight/space-station-14
+    branch: starlight-dev
     features: [deviceType, deepFrying, metamorph]
 ```
 
@@ -94,16 +94,17 @@ servers:
 
 **Goal:** an empty, working skeleton that deploys.
 
-- [ ] Set up the orphan `v2` branch (done) and push it with `git push -u origin v2`.
-- [ ] Set up the monorepo: pnpm workspaces for `apps/*` and `packages/*`, and uv for `pipeline/`.
-- [ ] Add shared tooling: ESLint, Prettier, TypeScript strict mode, Ruff and mypy (or pyright), `.editorconfig`, and a `Makefile` or `justfile` with `pipeline`, `web` and `test` targets.
-- [ ] Add `LICENSE` and an `ATTRIBUTION.md`: data comes from SS14 and fork repos; check each repo's license (upstream code is MIT, assets are mostly CC-BY-SA).
-- [ ] Vercel:
-  - On the existing project, set the root directory to `apps/web` *for preview deploys of `v2`*, and leave `main` as production.
-  - Add an `ignoreCommand` so a commit only triggers a build when `apps/`, `packages/` or `data/` changed.
-- [ ] Add a minimal `apps/web` page that deploys as a Vercel preview.
+- [x] Set up the orphan `v2` branch.
+- [ ] Push it with `git push -u origin v2`.
+- [x] Set up the monorepo: pnpm workspaces for `apps/*` and `packages/*`, and uv for `pipeline/`.
+- [x] Add shared tooling: ESLint, Prettier, TypeScript strict mode, Ruff and mypy, `.editorconfig`, and a `Makefile` (`install`, `web`, `pipeline`, `test`, `lint`, `build`, `docker`). Also added `ci.yml`.
+- [x] Add `LICENSE` (MIT) and `ATTRIBUTION.md`. Starlight's legacy license requires attribution with a link to its repo.
+- [x] Vercel config in the repo: `apps/web/vercel.json` has an `ignoreCommand` so a commit only triggers a build when `apps/web`, `packages/`, `data/` or the lockfile changed.
+- [ ] Retire v1 and point the **existing** Vercel project at v2: Root Directory `apps/web`, production branch `v2` (manual, steps in [docs/vercel.md](docs/vercel.md)).
+- [ ] Make `v2` the GitHub default branch and tag `main` as `v1-legacy`.
+- [x] Add a minimal `apps/web` placeholder page that imports `@ss14help/calc`, to prove the workspace wiring.
 
-**Exit criteria:** `pnpm build` and `uv run pytest` both pass locally. A `v2` preview URL exists, and production (v1) is unaffected.
+**Exit criteria:** `pnpm build` and `uv run pytest` both pass locally. The production URL serves the v2 placeholder.
 
 ---
 
@@ -111,57 +112,310 @@ servers:
 
 **Goal:** a layout that holds hundreds of recipes per server and keeps the user on one page.
 
-### Layout: a three-pane workspace
+**Deliverable:** this section. It is the spec for the UI pass (Phase 6). Each component lists its job, contents, behaviour, states and acceptance checks. Data field names refer to the contract in Phase 2 (`schema/ss14help.schema.json`; TS types from `@ss14help/schema`).
+
+### 3.1 Layout: a three-pane workspace
 
 ```
-┌───────────────────────────────────────────────────────────────────────────┐
-│ [ss14help]  [Server: Starlight ▾]   [ 🔍 Search recipes, reagents… ⌘K ]  data @a1b2c3 · 2d ago │
-├──────────────┬──────────────────────────────┬─────────────────────────────┤
-│ ★ PINNED     │ Medicine            [filter] │ ← Chemistry › Bicaridine     │
-│  Bicaridine  │ ─────────────────────────────│ ■ Bicaridine          ★ pin  │
-│  Tricord.    │ ■ Bicaridine    Inaprov.+Carb│ [Recipe][Tree][Calc][Used in]│
-│ ⟲ RECENT     │ ■ Dexalin       O2+Plasma*   │ 1u Inaprovaline              │
-│  Dexalin     │ ■ Dylovene      Si+K+N       │ 1u Carbon                    │
-│ ▾ CHEMISTRY  │ ■ Kelotane      Si+C         │ → 2u Bicaridine              │
-│   Medicine   │ …(virtualized list)          │ chips: [≥370K] [Centrifuge]  │
-│   Drinks     │                              │       [catalyst: Plasma]     │
-│   Chemicals  │                              │ ─ Calculator ─               │
-│ ▾ COOKING    │                              │ Make [ 30 ]u → basic ingr.   │
-│   Microwave  │                              │                              │
-│   Oven …     │                              │                              │
-│ ▸ SOURCES    │                              │                              │
-└──────────────┴──────────────────────────────┴─────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────────────────┐
+│ [ss14help] [Starlight ▾]        [ 🔍 Search recipes, reagents…  ⌘K ]   @a1b2c3d · 2d ago ☾ ? │  TopBar (48px)
+├──────────────┬───────────────────────────────────┬───────────────────────────────────────┤
+│ ★ PINNED     │ Medicine · 57           [⌕ filter]│ ‹ Bicaridine › Inaprovaline        ✕  │  PanelHeader
+│  ■ Bicaridine│ [🔥 Heat] [⚗ Mixer ▾] [◇ Catalyst] │ ■ Inaprovaline             ⧉  ★  ⎘   │
+│  ■ Tricord.  │ ───────────────────────────────────│ [Recipe] [Tree] [Calculator] [Used in 4]│  Tabs
+│ ⟲ RECENT     │ ■ Bicaridine  Inaprov. + Carbon 🔥⚗│ 1u ■ Oxygen                           │
+│  ■ Dexalin   │▌■ Inaprovaline Oxygen + Sugar + 1  │ 1u ■ Sugar                            │
+│ ▾ CHEMISTRY  │ ■ Dylovene    Silicon + Potas… ◇   │ 1u ■ Carbon                           │
+│   Medicine 57│ ■ Kelotane    Silicon + Carbon     │ ─────────────── ▼ ───────────────     │
+│   Drinks  127│ … (virtualized)                    │ 3u ■ Inaprovaline                     │
+│ ▸ COOKING    │                                    │ [≥ 370 K] [Centrifuge] [◇ catalyst]   │  ConditionChips
+│ ▸ REAGENTS   │                                    │ Stabilizes breathing in critical …    │
+│ ▸ SOURCES    │                                    │                                       │
+└──────────────┴───────────────────────────────────┴───────────────────────────────────────┘
+   Sidebar 240px      RecipeList (flex, min 360px)        DetailPanel (440px, resizable 360–720)
 ```
 
-- **Top bar**
-  - Server switcher, which remembers the last server.
-  - Global search as a command palette (⌘K or `/`). It searches names *and* ids and shows the category and server-only badges.
-  - Data-version badge: commit SHA and age, linked to the per-server changelog.
-- **Left sidebar**
-  - Pinned favourites, then Recent, then a category tree (Chemistry › group, Cooking › device › group, Sources).
-  - Collapsible, and becomes a drawer on mobile.
-- **Center list**
-  - Dense rows: colour swatch, name, a one-line ingredient summary, and condition icons.
-  - Virtualized and filterable: by text, by "has heat requirement", by mixer type, by "server-only".
-- **Right detail panel** (the core interaction)
-  - Clicking a row opens the panel in place, with no navigation. The URL becomes `?r=<id>` so the view can be shared and works with Back.
-  - Clicking an ingredient *pushes* it onto a panel stack, shown as breadcrumbs, so you can drill into the tree and come back.
-  - Tabs:
-    - **Recipe:** reactants, products, and condition chips for temperature, mixer, catalyst, device, time and secret recipe.
-    - **Tree:** the expandable ingredient tree down to basic reagents and grind/juice sources.
-    - **Calculator:** "Make **N**u of X". It outputs the basic-ingredient list, catalysts needed (not consumed), byproducts, and ordered steps.
-    - **Used in:** reverse lookup.
-  - On mobile the panel becomes a bottom sheet.
-- **Keyboard:** `⌘K` search, `j/k` move in the list, `Enter` open, `Esc` close the panel or pop the stack, `p` pin, `1–4` switch tabs.
+Breakpoints (Tailwind defaults):
 
-### Deliverables
+| Width | Sidebar | List | Panel |
+|---|---|---|---|
+| ≥ 1280px (`xl`) | Docked, collapsible to a 48px icon rail | Visible | Docked, resizable; width persisted |
+| 768–1279px (`md`) | Drawer from the left (hamburger in TopBar) | Visible | Sheet over the list from the right, 480px, with a dimmed backdrop |
+| < 768px | Drawer | Full width | Bottom sheet with snap points at 50% and 100% height; swipe down or `Esc` closes |
 
-- [ ] Low-fidelity wireframes (Excalidraw or Figma) for desktop, tablet and mobile.
-- [ ] High-fidelity mockups for the list, the detail panel and its 4 tabs, the command palette and the calculator.
-- [ ] Design tokens: dark theme first and a light theme, with reagent colours as accents (contrast-checked).
-- [ ] Keyboard map and accessibility checklist: focus order, ARIA for the tree and tabs, `prefers-reduced-motion`.
+The page never scrolls as a whole on desktop: each pane scrolls on its own. Mobile uses a 16px side gutter, and nothing may cause horizontal scroll.
 
-**Exit criteria:** you'd be comfortable using the mockups yourself. The calculator flow is answered with a real example (e.g. "30u of a 3-level-deep drink") on paper.
+### 3.2 Concepts the UI is built on
+
+**Subject.** What the detail panel shows. There are three kinds, written `kind:id` in URLs and storage:
+
+| Kind | Source in data | Opened from | Panel tabs |
+|---|---|---|---|
+| `reagent` | `reagents.json` | Reaction rows, reagent rows, any reagent link | Recipe · Tree · Calculator · Used in |
+| `item` | `entities.json` | Cooking rows, source rows, any solid ingredient | Recipe · Tree · Calculator · Used in · Sources (only if it has grind/juice output) |
+| `reaction` | Reactions in `recipes.json` with **no products** (effect-only, e.g. explosions) | Their reaction rows | Recipe only |
+
+- Clicking a **reaction row** opens `reagent:<primary product>` with that reaction pre-selected (`via=<reactionId>`). The primary product is the product whose id equals the reaction id; otherwise it's the largest product amount, then the first id alphabetically.
+- Clicking a **cooking row** opens `item:<result>`. Cooking recipes are always shown inside their result item, never on their own.
+- **Variants:** a reagent can be produced by several reactions, and an item by several cooking recipes. The panel shows one at a time with a VariantSwitcher. The default variant follows the calc engine's rule (fewest steps, then highest priority, then id).
+- **Basic reagent:** a reagent no reaction produces. Its tree ends here, and its Recipe tab shows where to get it instead (sources).
+
+**Categories (sidebar tree)** are derived from data, never hard-coded per server:
+
+| Top level | Children | List shows |
+|---|---|---|
+| Chemistry | One node per `Reaction.category` (label map below; unknown categories are title-cased) | Reaction rows |
+| Cooking | One node per `CookingRecipe.device`, then per `group` (null → "Other") | Cooking rows |
+| Reagents | One node per `Reagent.group` (null → "Other") | Reagent rows |
+| Sources | "Grindable", "Juiceable" | Source rows |
+
+The category label map lives in `apps/web/src/lib/categories.ts`, e.g. `single_reagent → "Single reagent"` and `pyrotechnic → "Pyrotechnics"`. Order: Chemistry categories by count, descending; everything else alphabetically.
+
+### 3.3 URL and persisted state
+
+The URL is the source of truth for what is on screen, so every view can be shared and Back/Forward work.
+
+| Route | Rendering | Purpose |
+|---|---|---|
+| `/` | Redirect | To the last-used server (localStorage), else `upstream` |
+| `/[server]` | SSG shell, client workspace | The app |
+| `/[server]/reagent/[id]`, `/[server]/item/[id]` | SSG (`generateStaticParams`) | SEO and link previews. Renders the workspace with the panel open, plus `<title>`/meta description and `rel=canonical` to itself |
+
+| Query param | Example | Meaning |
+|---|---|---|
+| `open` | `reagent:Bicaridine,reagent:Inaprovaline` | Panel stack, bottom → top. The last entry is visible. Absent = panel closed |
+| `via` | `Bicaridine` | Selected variant (reaction or cooking recipe id) for the top subject |
+| `v.<id>` | `v.Inaprovaline=InaprovalineAlt` | Variant choices for intermediates, shared by the Tree and Calculator tabs |
+| `tab` | `recipe` \| `tree` \| `calc` \| `used` \| `sources` | Active panel tab (default `recipe`) |
+| `amt` | `30` | Calculator target amount (u for reagents, count for items) |
+| `cat` | `chemistry/medicine` | Selected sidebar node / list contents. Default `chemistry` (all reactions) |
+| `q` | `bica` | List filter text |
+| `f` | `heat,catalyst,mixer:Centrifuge,serverOnly` | Active list filter chips |
+
+Navigation rules:
+- Opening a subject from the list, palette or sidebar → `router.push` with `open=<subject>`, which resets the stack.
+- Clicking a link inside the panel → `router.push`, appending to `open` (max depth 12; deeper pushes drop the bottom entry).
+- Back pops naturally through browser history. Breadcrumb clicks truncate the stack (`push`, not history back).
+- Changing `q`, `f`, `amt` → `router.replace`, debounced 250ms, so typing doesn't flood history.
+- Use shallow client navigation only. Nothing re-fetches: all server data is loaded once per server page.
+
+localStorage (all access wrapped in try/catch; the app must work with storage unavailable):
+
+| Key | Value |
+|---|---|
+| `ss14help:lastServer` | Server id |
+| `ss14help:pins:<server>` | `string[]` of `kind:id`, in pin order |
+| `ss14help:recent:<server>` | `string[]` of `kind:id`, most recent first, max 20 (sidebar shows 8) |
+| `ss14help:theme` | `system` \| `dark` \| `light` |
+| `ss14help:ui` | `{ sidebarCollapsed, panelWidth, expandedNodes: string[] }` |
+
+Pins or recents whose id no longer exists in the current data stay listed, greyed, with the note "Not in current data" and a remove button. They are never removed silently.
+
+### 3.4 Components
+
+Suggested layout: `apps/web/src/components/{shell,sidebar,list,panel,calc,primitives}/`. Build on shadcn/ui (Radix) for Dialog, Sheet, Tabs, Tooltip, HoverCard, DropdownMenu and Toast; cmdk for the palette; TanStack Virtual for long lists; lucide-react for icons.
+
+#### Shell
+
+**AppShell**: the CSS grid of TopBar, Sidebar, RecipeList and DetailPanel with the breakpoints from 3.1. It owns the data context: one `ServerData` object per page (reagents, entities, recipes, sources, manifest, plus prebuilt lookup maps `reagentById`, `entityById`, `producersOf`, `consumersOf`, `sourcesOf`). The maps are built once with `useMemo`.
+- Acceptance: resizing the window across the breakpoints never loses the open subject, list scroll position or calculator input.
+
+**TopBar**, left to right:
+1. Logo/wordmark, linking to `/[server]`.
+2. ServerSwitcher.
+3. SearchTrigger: a fake input showing the "⌘K" hint (`Ctrl K` on non-Mac). Click opens CommandPalette. It is a centred, max 560px wide input on desktop and an icon button on mobile.
+4. DataVersionBadge.
+5. Theme toggle (system → dark → light).
+6. `?` button that opens the KeyboardHelp dialog.
+
+**ServerSwitcher**: a DropdownMenu listing the servers (from a build-time constant generated from `servers.yaml`), each with its name and data age.
+- Switching navigates to `/[newServer]` and keeps `open`/`tab`/`amt` when the top subject's id exists on the new server. Otherwise it drops the stack and shows the toast "Bicaridine isn't on Starlight".
+- Stores `ss14help:lastServer`.
+
+**DataVersionBadge**: `@a1b2c3d · 2d ago` (short sha and relative `commitDate`).
+- Tooltip: full sha, commit date, generated-at, server repo/branch, and the number of pipeline warnings.
+- Clicking opens the GitHub commit URL in a new tab.
+- Turns amber, with the text "Data may be outdated", when `generatedAt` is more than 14 days old.
+
+#### Search
+
+**CommandPalette** (cmdk inside a Dialog). This is the main way to find anything.
+- **Index:** MiniSearch, loaded from `search-index.json` (Phase 6), with fields `name` (boost 3), `id` (boost 2) and `aliases`. Uses `prefix: true` and `fuzzy: 0.2`, and returns at most 50 results.
+- **Result groups:** Reagents, Items, Reactions (effect-only), Actions.
+- **Result row:** swatch or icon, name, id in muted monospace (only when it differs from the name), category label, and ServerOnlyBadge.
+- **Empty query:** shows Pinned, then Recent, then Actions (switch server, toggle theme, keyboard help).
+- **Calculator shortcut** (kept from v1): a query matching `^(\d+(\.\d+)?)\s*u?\s+(.+)$` (e.g. `30u bica`, `30 bicaridine`) puts the action "Calculate 30u of Bicaridine" first. It opens the subject with `tab=calc&amt=30`.
+- **Keys:** `Enter` opens, `Shift+Enter` pins without opening, `Esc` closes. Arrow keys are handled by cmdk.
+- **Acceptance:**
+  - `bica` → Bicaridine is the first result.
+  - `Bicaridine` matches by id even if the localized name differs.
+  - `30u bica` → the calculate action is the first result.
+
+#### Sidebar
+
+**Sidebar**: three stacked sections. Pinned and Recent each collapse; Browse fills the remaining height and scrolls.
+
+**PinnedList / RecentList**: rows show the swatch (or item icon) and the name. The active subject is highlighted.
+- Hover or focus reveals an ✕ (unpin, or remove from recent).
+- Pinned empty state: "Pin recipes with ★ or `p`."
+- Recent records a subject each time it becomes the top of the panel stack.
+
+**CategoryTree**: an ARIA `tree` with nodes from 3.2 and an item count per node (with filters applied: show "12 / 57" when filtered).
+- Clicking a node sets `cat` and scrolls the list to the top.
+- Expanded nodes persist in `ss14help:ui.expandedNodes`.
+- Keyboard: arrow keys follow the WAI-ARIA tree pattern.
+
+#### List
+
+**RecipeList**: the center pane.
+- **ListToolbar:**
+  - Category title and count.
+  - Filter input (`q`, filters the current category only; it is not the global search).
+  - FilterChips: "Heat" (`minTemp` set), "Cold" (`maxTemp` set), "Mixer ▾" (any or a specific mixer), "Catalyst", and "Server-only" (hidden on upstream). Chips that would give 0 results are disabled.
+  - Sort: Name A–Z (default) or "Simplest first" (by tree depth from the calc engine).
+- **Rows** are 40px tall (52px on touch), virtualized with TanStack Virtual, and have one visual language per kind:
+  - **ReactionRow:** swatch (primary product colour), product name, an ingredient summary of up to 3 reactant names joined by " + " plus "+N", then condition icons (🔥 heat, ❄ cold, ⚗ mixer, ◇ catalyst) and ServerOnlyBadge. Catalysts are excluded from the summary.
+  - **CookingRow:** device icon, result item name, a summary of solids and reagents, and the time ("10 s" or "instant").
+  - **ReagentRow:** swatch, name, group, and a "basic" tag when no reaction produces it.
+  - **SourceRow:** item name, then "→" and the reagents it yields with amounts, plus a grind/juice icon.
+- The row matching the top subject is highlighted, and the list scrolls it into view when the subject was opened from elsewhere.
+- Keyboard: `j`/`k` or arrows move a roving focus, `Enter` opens, `p` pins.
+- Empty state: "Nothing matches these filters", with a "Clear filters" button.
+
+#### Detail panel
+
+**DetailPanel**: shows the top of the `open` stack. The close button and `Esc` (when nothing nested is open) clear `open`.
+
+**PanelHeader**:
+1. **Breadcrumbs:** one per stack entry. Show the last 3 and put earlier ones in an overflow "…" menu. A back arrow pops one entry.
+2. **Title row:** swatch, name (h2), id in monospace with a copy button (shown when it differs from the name), and ServerOnlyBadge. Actions on the right: PinButton, CopyRecipeButton and close.
+3. **Meta line:** group or category, and for reagents the physical description ("translucent") in muted text.
+4. A 3px accent bar in the reagent's colour along the top edge.
+
+**Tabs** (Radix Tabs, synced to `tab`):
+- Labels carry counts where useful ("Used in 4").
+- `1`–`5` switch tabs while the panel has focus.
+- A tab with no content is hidden, not shown empty: no Calculator for `reaction` subjects, no Sources unless the item has grind or juice output.
+
+**RecipeTab**:
+- **VariantSwitcher**, shown when there are several producers: a segmented control labelled "Recipe 1 of 2", with each option named after its reaction id or device. It syncs to `via`.
+- **ReactionCard:**
+  - Reactant lines: AmountText, ReagentLink. Catalyst lines get a dashed outline and the label "catalyst · not consumed".
+  - A divider with ▼, then the products: the primary product in bold, and other products under the label "also makes".
+  - ConditionChips row.
+  - Effects (only when `effects` is non-empty): a collapsible "Effects" list with one line per effect: its `_type` in human form ("Flash reaction effect"), then its other keys as `key: value`.
+- **CookingCard:**
+  - Device and time chips.
+  - "Solids" lines: "1×", EntityLink.
+  - "Reagents" lines: AmountText, ReagentLink.
+  - The result item.
+  - A "secret recipe" chip when `secret` is set.
+- **Basic reagent (no producer):** a callout "Basic reagent — not made by any reaction". Below it, a "Where to get it" list from `sourcesOf` ("Grind a wheat bushel → 10u flour"). With no sources, the line "No known source in this data".
+- **Description:** `desc` in a muted paragraph.
+
+**TreeTab** (IngredientTree): an ARIA tree.
+- **Root:** the subject at one batch of its selected variant, or at the calculator amount when `amt` is set (the header shows "for 30u").
+- **Nodes:** AmountText, link, and a kind icon. Children are the reactants (or solids and reagents) of the node's selected variant.
+- **Node markers:**
+  - Catalyst nodes are marked and collapsed by default.
+  - Basic leaves show a source hint ("grind: wheat bushel").
+  - A node that would repeat an ancestor shows "↻ cycle" and has no children.
+  - Nodes with several producers show a small variant picker. The choice is shared with the calculator through `v.<id>`.
+- **Controls:** expand all and collapse all. The tree is expanded 2 levels by default, and deeper nodes render lazily. Indentation guides are 16px per level.
+- **Acceptance:** a 3-level drink renders every level; the cycle marker stops infinite expansion.
+
+**CalculatorTab**: a UI over `plan()` from `@ss14help/calc` (Phase 5). No arithmetic happens in components.
+- **Input row:** an AmountInput (number, min 0.01, step 1, unit suffix "u", or "×" for items) plus preset buttons 10 / 30 / 50 / 100. It syncs to `amt`. Invalid input shows an inline error and keeps the last valid result.
+- **Options:**
+  - "Treat as owned": a multi-select of the intermediates in the current plan. Selected ones become leaves.
+  - Variant pickers: the same as the tree.
+- **Results**, in this order:
+  1. **Shopping list:** a table of basic reagents, solids and catalysts with total amounts and source hints, and a "Copy as text" button.
+  2. **Catalysts:** "keep at least 1u Plasma in the beaker".
+  3. **Byproducts / leftovers.**
+  4. **Steps:** a numbered list of instructions. Each step has its ConditionChips and a checkbox for ticking it off in game; tick state is not persisted.
+  5. A notice for quantized overshoot ("makes 32u, 2u extra").
+- **Number format:** at most 2 decimals with trailing zeros trimmed (`1.5u`, `10u`), matching the game's 0.01u fixed point.
+- **Acceptance:**
+  - With `schema/examples`, 30u Bicaridine → 15 batches: 15u Inaprovaline (5 batches of its own recipe) and 15u Carbon. Shopping list: 5u Oxygen, 5u Sugar, 20u Carbon, and 1u Plasma listed as a catalyst, not scaled. Steps also say "heat to ≥ 370 K" and "centrifuge".
+  - Changing `amt` updates the results within one frame for typical recipes.
+
+**UsedInTab**: everything that consumes the subject.
+- Groups: "Ingredient in" (reactions), "Catalyst for" and "Used in cooking", each sorted by name. Rows reuse ReactionRow and CookingRow.
+- Clicking a row pushes that product or item onto the stack.
+
+**SourcesTab** (items only): what grinding or juicing this item yields, as AmountText and ReagentLink lines under "Grind" and "Juice" headings.
+
+#### Primitives
+
+| Component | Spec |
+|---|---|
+| **ReagentSwatch** | A 12px circle (16px in headers) filled with `color`. It has a 1px border at 30% foreground so light colours stay visible. When `color` is null, show a diagonal-hatch pattern. Decorative: `aria-hidden`. |
+| **ReagentLink / EntityLink** | A button styled as a link: swatch (or item icon) and name. Click pushes onto the stack. A HoverCard after 400ms (desktop only) shows the name, desc, and a one-line recipe summary. Unknown ids render as plain monospace text with the tooltip "Not in data" and no link. |
+| **AmountText** | Formats a number as described above and adds the unit (`u`, `×`, `s`, `K`) after a thin space. Uses `tabular-nums` so amounts align in columns. |
+| **ConditionChip** | Variants: `heat` "≥ 370 K" (tooltip "97 °C"), `cold` "≤ 300 K", `mixer` "Centrifuge" (several mixers: "Centrifuge or Electrolysis"), `catalyst`, `device` "Microwave", `time` "10 s" or "instant", `quantized` "whole batches", `secret`, and `priority` (only when > 0, with a tooltip explaining reaction order). Each has an icon, text and tooltip. Colour is never the only signal. |
+| **ServerOnlyBadge** | "Starlight only", using the server's name. Rendered only when `serverOnly` is set. |
+| **PinButton** | A ★ toggle with `aria-pressed`, shortcut `p`, and a toast "Pinned" / "Unpinned". |
+| **CopyRecipeButton** | Copies plain text such as `Bicaridine: 1u Inaprovaline + 1u Carbon (catalyst: 1u Plasma), ≥370K, centrifuge → 2u`. |
+| **Kbd** | Renders shortcut hints, switching `⌘` and `Ctrl` by platform. |
+| **KeyboardHelp** | A dialog listing the keyboard map below. |
+
+### 3.5 Keyboard map
+
+| Key | Scope | Action |
+|---|---|---|
+| `⌘K` / `Ctrl K` / `/` | Global | Open the command palette |
+| `j` / `k`, `↓` / `↑` | List | Move focus |
+| `Enter` | List / palette | Open the subject |
+| `p` | List row, panel | Pin or unpin |
+| `1`–`5` | Panel | Switch tabs |
+| `Backspace` / `Alt ←` | Panel | Pop the stack |
+| `Esc` | Any | Close the palette, then the hover card, then pop the stack, then close the panel |
+| `g` then `s` | Global | Focus the sidebar tree |
+| `?` | Global | Keyboard help |
+
+Shortcuts are ignored while typing in an input, except `Esc` and `⌘K`.
+
+### 3.6 Visual design
+
+- **Theme:** dark first, plus light and system. Tokens are CSS variables on `:root` and are redefined for dark mode, mapped into Tailwind with `@theme`:
+  - `--bg`, `--bg-elevated`, `--bg-muted`, `--fg`, `--fg-muted`, `--border`, `--accent` (one brand hue, e.g. a chem-lab teal), `--warning`, `--danger`
+  - chip tints: `--heat`, `--cold`, `--catalyst`, `--server-only`
+- **Type:** Geist Sans for UI and Geist Mono for ids and amounts (both already in the scaffold). Base size 14px with dense line height. Panel titles are 18px/600.
+- **Reagent colours:** used only in swatches and the panel-header accent bar. They are never used as text or background colour for content, because they are arbitrary and often low contrast.
+- **Density:** 8px spacing grid. Rows are 40px. The panel has 16px padding.
+- **Motion:** sheet and drawer slides of 150–200ms. Everything respects `prefers-reduced-motion` (no slides, instant tab changes).
+- **Contrast:** all text meets WCAG AA in both themes. Chips meet 3:1 against their background.
+
+### 3.7 Accessibility checklist
+
+- [ ] Landmarks: `header` (TopBar), `nav` (Sidebar), `main` (list), `aside` (panel, labelled with the subject name).
+- [ ] The sidebar tree and ingredient tree follow the WAI-ARIA tree pattern. The panel tabs follow the tabs pattern.
+- [ ] Focus is moved to the panel title on open and returned to the originating row on close. Dialogs and sheets trap focus.
+- [ ] Every icon-only button has an `aria-label`. Condition icons in rows have screen-reader text.
+- [ ] Virtualized list rows expose `aria-setsize` and `aria-posinset`.
+- [ ] A visible focus ring on everything (`:focus-visible`), with no outline removal.
+- [ ] Usable at 200% zoom and at 320px width.
+- [ ] `prefers-reduced-motion` and `prefers-color-scheme` are respected.
+
+### 3.8 States
+
+- **Unknown subject in URL** (removed or wrong server): the panel shows "Not found on Starlight", with up to 5 search suggestions for the id and a button to switch to a server where it exists.
+- **Snapshot older than 14 days:** DataVersionBadge turns amber, plus a dismissible banner under the TopBar.
+- **Storage unavailable:** pins and recents work for the session only, and a one-time toast says so.
+- **No JS:** the SSG subject pages still render the recipe content (Recipe tab only) for crawlers and link previews.
+
+### 3.9 UI acceptance scenarios (become Playwright tests in Phase 6)
+
+1. Open `/upstream`, press `⌘K`, type `bica`, press `Enter` → the panel shows Bicaridine; the URL has `open=reagent:Bicaridine`.
+2. In the panel, click Inaprovaline → the breadcrumbs show "Bicaridine › Inaprovaline". Browser Back → Bicaridine again.
+3. Calculator tab, type `30` → the shopping list matches the calc engine's fixture. Reloading the URL restores the same view.
+4. Press `p` → Bicaridine appears under Pinned. Reload → it is still pinned.
+5. Switch to Starlight while viewing a reagent that exists there → the same reagent stays open. One that doesn't exist → toast, and the panel closes.
+6. At 375px width: the list fills the screen, tapping a row opens the bottom sheet, and swiping down closes it.
+7. Chemistry › Medicine with the "Heat" filter → only reactions with `minTemp` are shown, and the count reads "n / 57".
+
+**Exit criteria:** this spec is accepted as the reference for Phase 6, with no open layout questions. The calculator flow is worked through on paper for one real 3-level recipe.
 
 ---
 
@@ -169,19 +423,28 @@ servers:
 
 **Goal:** one source of truth for the data shape, shared by the Python and TS code.
 
-- [ ] Pydantic v2 models in `pipeline/ss14help_pipeline/models.py`:
+- [x] Pydantic v2 models in `pipeline/src/ss14help_pipeline/models.py`. JSON keys are camelCase, and every field is always written (`null` rather than missing):
   - `Reagent`: `id`, `name`, `desc`, `physicalDesc`, `group`, `color`, `sourceFile`, `serverOnly`.
+  - `Entity` (added): `id`, `name`, `desc`, `sourceFile`, `serverOnly`. It gives display names for cooking solids, results and source items, which are entities, not reagents.
   - `Reaction`:
-    - `id`, `reactants: {id: {amount, catalyst}}`, `products: {id: amount}`
+    - `id`, `category` (added, for the sidebar tree), `reactants: {id: {amount, catalyst}}`, `products: {id: amount}`
     - `minTemp`, `maxTemp`, `mixers[]`, `quantized`, `priority`
     - `effects[]`, kept as an opaque `{_type, ...}` and shown as text only.
   - `CookingRecipe`: `id`, `name`, `device` (default `Microwave`), `time`, `solids{}`, `reagents{}`, `result`, `group`, `secret`.
-  - `Source`: an entity id with its name and its grind/juice reagents and amounts.
-  - `Manifest`: `server`, `repo`, `sha`, `commitDate`, `generatedAt`, `schemaVersion` (semver), `counts{}`, `warnings[]`.
-- [ ] Export the models to `schema/*.json` and generate `packages/schema` TS types with `json-schema-to-typescript`. CI fails if the generated files are stale.
-- [ ] Schema versioning: a major bump means the frontend must change. The web build refuses data whose major version doesn't match.
+  - `Mixer` (added): `id`, `name`, used for the mixer chip labels.
+  - `Source`: `entity` (its name lives in `entities.json`), `grind{}`, `juice{}`.
+  - `Manifest`: `schemaVersion`, `server`, `serverName`, `repo`, `branch`, `sha`, `commitDate`, `generatedAt`, `counts{}`, `warnings[]` (`{code, message, sourceFile}`).
+  - Snapshot files: `manifest.json`, `reagents.json`, `entities.json`, `recipes.json` (`reactions`, `cooking`, `mixers`), `sources.json`.
+- [x] `uv run ss14help-pipeline schema` exports `schema/ss14help.schema.json`. `pnpm --filter @ss14help/schema generate` writes the TS types (`json-schema-to-typescript`). `make schema` runs both. The CI `contract` job fails if either output is stale.
+- [x] Schema versioning: `SCHEMA_VERSION` (semver) is in `models.py` and is exported to TS. `@ss14help/schema` provides `isCompatibleSchemaVersion` and `assertCompatibleSchemaVersion`, which reject a different major version.
+  - [ ] Call `assertCompatibleSchemaVersion` from the web build's data loader once it exists (Phase 6).
+- [x] Hand-written examples are in `schema/examples/`. pytest checks that they validate and round-trip unchanged (so they're canonical) and that their references resolve. `tsc` type-checks them against the generated types (`packages/schema/src/examples.check.ts`).
 
-**Exit criteria:** hand-written sample data validates in Python *and* type-checks in TS.
+Notes for Phase 3:
+- `category` is the reaction file's stem. Generic stems (e.g. Starlight's `_Starlight/Recipes/reactions.yml`) need a fallback: use the primary product's reagent `group`, lower-cased.
+- `serverOnly` is set by comparing ids with the upstream snapshot. Upstream items are always `false`.
+
+**Exit criteria:** hand-written sample data validates in Python *and* type-checks in TS. ✅
 
 ---
 
@@ -283,22 +546,16 @@ Warnings (duplicates, new unknown tags, new prototype types) don't fail the run.
 
 **Goal:** implement the Phase 1 design on top of the data and the calc engine.
 
-- [ ] Routing and rendering:
-  - `/` → redirect to the last-used or default server.
-  - `/[server]`: the workspace (client-side), with its shell statically generated.
-  - `/[server]/r/[id]`: statically generated (`generateStaticParams`) for SEO and deep links. It renders the same workspace with the panel open.
+- [ ] Routing, URL state and storage exactly as specified in Phase 1 §3.3. `/[server]/reagent/[id]` and `/[server]/item/[id]` are statically generated (`generateStaticParams`) for SEO and deep links.
+- [ ] Components as specified in Phase 1 §3.4; acceptance scenarios §3.9 become the Playwright suite.
 - [ ] Load data at build time from `data/<server>/`, and check `schemaVersion` there.
 - [ ] Search: MiniSearch from the prebuilt `search-index.json`, with fuzzy and prefix matching over names, ids and aliases.
-- [ ] State:
-  - URL holds the server, the open recipe, the tab and the calc amount.
-  - localStorage holds pins, recent items and the last server, keyed by server and wrapped in try/catch.
-- [ ] Components: virtualized list (TanStack Virtual), command palette (cmdk), detail-panel stack, tree view, calculator form and results, condition chips.
 - [ ] Extras: a copy-as-text recipe button, a server-only badge, a stale-data banner when the snapshot is more than 14 days old, and a data-version footer that links to the changelog.
 - [ ] Quality:
   - Lighthouse ≥ 90 for performance and accessibility.
   - Playwright smoke tests: search, open the panel, drill into an ingredient, calculate, pin, switch server.
 
-**Exit criteria:** the full flow works on the upstream data in a Vercel preview, on desktop and on mobile.
+**Exit criteria:** the full flow works on the upstream data in production, on desktop and on mobile.
 
 ---
 
@@ -328,8 +585,6 @@ Warnings (duplicates, new unknown tags, new prototype types) don't fail the run.
 ## 10. Phase 8 — Launch
 
 - [ ] Final QA pass, and get feedback from a few players on each server.
-- [ ] Make `v2` the GitHub default branch and set the Vercel production branch to `v2`. Tag the old `main` as `v1-legacy` and keep it.
-- [ ] Redirect old v1 URLs to the new routes.
 - [ ] Check free-tier headroom:
   - Vercel Hobby allows 100 deploys a day; expect fewer than 10 data commits a day across both servers.
   - The `ignoreCommand` skips unrelated commits.

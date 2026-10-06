@@ -29,6 +29,7 @@ and GNU Make.
 ```sh
 make install   # pnpm install + uv sync
 make web       # Next.js dev server
+make schema    # re-export JSON Schema + regenerate TS types (after editing models.py)
 make test      # Vitest + pytest
 make lint      # ESLint, tsc, Prettier, Ruff, mypy
 make build     # production build of the web app
