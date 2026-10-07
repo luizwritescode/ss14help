@@ -34,15 +34,25 @@ export async function subjectMetadata(
   };
 }
 
-export async function SubjectPage({
+type SubjectParams = Promise<{ server: string; id: string }>;
+
+/** `params` is read inside Suspense so navigations stay instant (prerendered HTML is still full). */
+export function SubjectPage({ kind, params }: { kind: "reagent" | "item"; params: SubjectParams }) {
+  return (
+    <Suspense>
+      <SubjectContent kind={kind} params={params} />
+    </Suspense>
+  );
+}
+
+async function SubjectContent({
   kind,
-  serverId,
-  rawId,
+  params,
 }: {
   kind: "reagent" | "item";
-  serverId: string;
-  rawId: string;
+  params: SubjectParams;
 }) {
+  const { server: serverId, id: rawId } = await params;
   const server = findServer(serverId);
   if (!server) notFound();
   const id = decodeURIComponent(rawId);

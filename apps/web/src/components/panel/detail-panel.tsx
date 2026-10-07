@@ -120,7 +120,7 @@ export function DetailPanel({ subject }: { subject: Subject }) {
       >
         <Tabs.List
           aria-label="Details"
-          className="flex shrink-0 gap-1 overflow-x-auto border-b border-line px-3"
+          className="flex shrink-0 gap-1 overflow-x-auto overflow-y-hidden border-b border-line px-3"
         >
           {tabs.map((t, i) => {
             const count = t === "used" ? usedInCount(model, subject) : null;
@@ -129,7 +129,7 @@ export function DetailPanel({ subject }: { subject: Subject }) {
                 key={t}
                 value={t}
                 title={`${TAB_LABEL[t]} (${i + 1})`}
-                className="relative whitespace-nowrap px-2 py-2.5 text-sm text-fg-muted transition-colors hover:text-fg data-[state=active]:text-fg data-[state=active]:after:absolute data-[state=active]:after:inset-x-1 data-[state=active]:after:-bottom-px data-[state=active]:after:h-0.5 data-[state=active]:after:rounded-full data-[state=active]:after:bg-accent"
+                className="relative whitespace-nowrap px-2 py-2.5 text-sm text-fg-muted transition-colors hover:text-fg data-[state=active]:text-fg data-[state=active]:after:absolute data-[state=active]:after:inset-x-1 data-[state=active]:after:bottom-0 data-[state=active]:after:h-0.5 data-[state=active]:after:rounded-full data-[state=active]:after:bg-accent"
               >
                 {TAB_LABEL[t]}
                 {count ? <span className="ml-1 text-xs text-fg-faint">{count}</span> : null}

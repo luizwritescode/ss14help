@@ -9,7 +9,6 @@ export async function generateMetadata({ params }: PageProps<"/[server]/item/[id
   return subjectMetadata("item", server, id);
 }
 
-export default async function Page({ params }: PageProps<"/[server]/item/[id]">) {
-  const { server, id } = await params;
-  return <SubjectPage kind="item" serverId={server} rawId={id} />;
+export default function Page({ params }: PageProps<"/[server]/item/[id]">) {
+  return <SubjectPage kind="item" params={params} />;
 }

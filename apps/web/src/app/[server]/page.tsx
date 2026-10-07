@@ -21,7 +21,17 @@ export async function generateMetadata({ params }: PageProps<"/[server]">): Prom
     : {};
 }
 
-export default async function ServerPage({ params }: PageProps<"/[server]">) {
+// `params` is read inside Suspense so navigations stay instant; with
+// generateStaticParams the prerendered HTML still contains the full page.
+export default function ServerPage({ params }: PageProps<"/[server]">) {
+  return (
+    <Suspense>
+      <ServerContent params={params} />
+    </Suspense>
+  );
+}
+
+async function ServerContent({ params }: { params: PageProps<"/[server]">["params"] }) {
   const { server: id } = await params;
   const server = findServer(id);
   if (!server) notFound();
