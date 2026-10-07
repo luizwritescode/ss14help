@@ -14,7 +14,7 @@ import {
 import { RecipeList } from "@/components/list/recipe-list";
 import { DetailPanel } from "@/components/panel/detail-panel";
 import { CommandPalette } from "@/components/search/command-palette";
-import { KeyboardHelp, Toaster, useToast } from "@/components/shell/dialogs";
+import { AboutDialog, KeyboardHelp, Toaster, useToast } from "@/components/shell/dialogs";
 import { TopBar } from "@/components/shell/top-bar";
 import { Sidebar } from "@/components/sidebar/sidebar";
 import { IconButton } from "@/components/ui/primitives";
@@ -100,6 +100,7 @@ function Loaded({
   const toast = useToast();
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [helpOpen, setHelpOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [ui, setUi] = useStored<UiPrefs>(keys.ui, DEFAULT_UI);
   const top = params.open.at(-1) ?? null;
@@ -155,7 +156,7 @@ function Loaded({
         setPaletteOpen((o) => !o);
         return;
       }
-      if (paletteOpen || helpOpen) return;
+      if (paletteOpen || helpOpen || aboutOpen) return;
       if (e.key === "Escape") {
         if (document.querySelector("[data-radix-popper-content-wrapper]")) return;
         if (isXl && params.open.length) {
@@ -190,7 +191,7 @@ function Loaded({
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [paletteOpen, helpOpen, isXl, params.open.length, escape, top, togglePin]);
+  }, [paletteOpen, helpOpen, aboutOpen, isXl, params.open.length, escape, top, togglePin]);
 
   const value = useMemo<WorkspaceContextValue>(
     () => ({
@@ -208,6 +209,7 @@ function Loaded({
       toast,
       openPalette: () => setPaletteOpen(true),
       openHelp: () => setHelpOpen(true),
+      openAbout: () => setAboutOpen(true),
     }),
     [server, model, params, actions, top, pins, togglePin, removePin, recent, removeRecent, toast],
   );
@@ -273,6 +275,7 @@ function Loaded({
       )}
       <CommandPalette open={paletteOpen} onOpenChange={setPaletteOpen} />
       <KeyboardHelp open={helpOpen} onOpenChange={setHelpOpen} />
+      <AboutDialog open={aboutOpen} onOpenChange={setAboutOpen} />
     </WorkspaceContext.Provider>
   );
 }

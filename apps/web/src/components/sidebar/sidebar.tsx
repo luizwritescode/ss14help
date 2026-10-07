@@ -57,7 +57,30 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
         onNavigate={onNavigate}
       />
       <CategoryTree onNavigate={onNavigate} />
+      <AttributionFooter />
     </nav>
+  );
+}
+
+/** Always-visible credit line: unofficial project, data source, and the About dialog. */
+function AttributionFooter() {
+  const { server, openAbout } = useWorkspace();
+  return (
+    <div className="shrink-0 border-t border-line px-3 py-2 text-[11px] leading-snug text-fg-faint">
+      Unofficial fan project. Data from{" "}
+      <a
+        href={server.repo}
+        target="_blank"
+        rel="noreferrer"
+        className="hover:text-fg-muted hover:underline"
+      >
+        {server.name}
+      </a>
+      , under its own license.{" "}
+      <button type="button" onClick={openAbout} className="text-accent hover:underline">
+        About & licenses
+      </button>
+    </div>
   );
 }
 

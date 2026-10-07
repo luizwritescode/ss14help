@@ -23,6 +23,7 @@ export interface WorkspaceContextValue {
   toast(message: string): void;
   openPalette(): void;
   openHelp(): void;
+  openAbout(): void;
 }
 
 export const WorkspaceContext = createContext<WorkspaceContextValue | null>(null);

@@ -5,6 +5,7 @@ import {
   ChevronDown,
   CircleHelp,
   GitCommitHorizontal,
+  Info,
   Menu,
   Monitor,
   Moon,
@@ -15,8 +16,9 @@ import {
 import Link from "next/link";
 import { DropdownMenu } from "radix-ui";
 import { useSyncExternalStore } from "react";
-import { cn, IconButton, Kbd, Tip } from "@/components/ui/primitives";
+import { cn, GitHubMark, IconButton, Kbd, Tip } from "@/components/ui/primitives";
 import { useWorkspace } from "@/components/workspace/context";
+import { REPO_URL } from "@/lib/about";
 import { commitUrl, isStale, type ServerInfo } from "@/lib/servers";
 import { keys, type ThemePreference, useStored } from "@/lib/storage";
 import { subjectKey } from "@/lib/subjects";
@@ -25,7 +27,7 @@ import { setFlash } from "@/lib/flash";
 import { useRouter } from "next/navigation";
 
 export function TopBar({ onMenu }: { onMenu: () => void }) {
-  const { openPalette, openHelp } = useWorkspace();
+  const { openPalette, openHelp, openAbout } = useWorkspace();
   return (
     <header className="flex h-12 shrink-0 items-center gap-2 border-b border-line bg-elevated/70 px-2 backdrop-blur sm:px-3">
       <IconButton label="Open navigation" className="xl:hidden" onClick={onMenu}>
@@ -51,6 +53,20 @@ export function TopBar({ onMenu }: { onMenu: () => void }) {
         <IconButton label="Keyboard shortcuts (?)" onClick={openHelp}>
           <CircleHelp aria-hidden className="size-4" />
         </IconButton>
+        <IconButton label="About & licenses" className="max-sm:hidden" onClick={openAbout}>
+          <Info aria-hidden className="size-4" />
+        </IconButton>
+        <a
+          href={REPO_URL}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Source code on GitHub"
+          title="Source code on GitHub"
+          className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-md text-sm text-fg-muted transition-colors hover:bg-hover hover:text-fg max-lg:w-8 max-lg:justify-center lg:border lg:border-line lg:px-2.5"
+        >
+          <GitHubMark className="size-4" />
+          <span className="hidden lg:inline">GitHub</span>
+        </a>
       </div>
     </header>
   );

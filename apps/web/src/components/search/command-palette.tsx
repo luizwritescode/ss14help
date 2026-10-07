@@ -6,6 +6,7 @@ import {
   CircleHelp,
   FlaskConical,
   History,
+  Info,
   Monitor,
   Package,
   Server,
@@ -34,7 +35,8 @@ export function CommandPalette({
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }) {
-  const { model, actions, pins, recent, togglePin, server, servers, openHelp } = useWorkspace();
+  const { model, actions, pins, recent, togglePin, server, servers, openHelp, openAbout } =
+    useWorkspace();
   const router = useRouter();
   const [query, setQuery] = useState("");
   const [shift, setShift] = useState(false);
@@ -73,6 +75,7 @@ export function CommandPalette({
         run: () => router.push(`/${s.id}`),
       })),
     { id: "help", label: "Keyboard shortcuts", icon: CircleHelp, run: openHelp },
+    { id: "about", label: "About & licenses", icon: Info, run: openAbout },
     {
       id: "theme",
       label: "Toggle theme",
