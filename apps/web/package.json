@@ -3,26 +3,41 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "sync-data": "node scripts/sync-data.mjs",
+    "predev": "node scripts/sync-data.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/sync-data.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "typecheck": "next typegen && tsc --noEmit"
+    "typecheck": "node scripts/sync-data.mjs && next typegen && tsc --noEmit",
+    "test": "node scripts/sync-data.mjs && vitest run",
+    "e2e": "playwright test"
   },
   "dependencies": {
+    "@ss14help/calc": "workspace:*",
+    "@ss14help/schema": "workspace:*",
+    "@tanstack/react-virtual": "^3.14.13",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.1.1",
+    "lucide-react": "^1.52.0",
+    "minisearch": "^7.2.0",
     "next": "16.4.0",
+    "radix-ui": "^1.7.0",
     "react": "19.3.0",
-    "react-dom": "19.3.0",
-    "@ss14help/calc": "workspace:*"
+    "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "@tailwindcss/turbopack": "^4",
-    "@types/node": "^20",
+    "@types/node": "^22.20.5",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^5.0.3",
+    "yaml": "^2.9.1"
   }
 }

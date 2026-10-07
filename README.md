@@ -34,6 +34,7 @@ make schema    # re-export JSON Schema + regenerate TS types (after editing mode
 make test      # Vitest + pytest
 make lint      # ESLint, tsc, Prettier, Ruff, mypy
 make build     # production build of the web app
+pnpm --filter web e2e   # Playwright acceptance tests (after make build)
 make docker    # build the pipeline image
 ```
 

@@ -1,26 +1,171 @@
 @import "tailwindcss";
 
+/*
+ * Design tokens (ROADMAP §3.6). Dark first; light and system are supported.
+ * The space theme is kept minimal: a deep navy base, a faint static starfield behind the panes,
+ * one cool accent. Reagent colours only ever appear in swatches and the panel accent bar.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #f6f7fb;
+  --bg-elevated: #ffffff;
+  --bg-muted: #eef0f6;
+  --bg-hover: #e7eaf3;
+  --fg: #141a2b;
+  --fg-muted: #586079;
+  --fg-faint: #8a91a8;
+  --border: #dde1ec;
+  --accent: #0e8f86;
+  --accent-fg: #ffffff;
+  --accent-soft: color-mix(in oklab, var(--accent) 12%, transparent);
+  --warning: #a16207;
+  --danger: #b42318;
+  --heat: #c2410c;
+  --cold: #0369a1;
+  --catalyst: #7c3aed;
+  --server-only: #a21caf;
+  --stars-opacity: 0;
+  --shadow: 0 8px 30px rgb(20 26 43 / 0.12);
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root[data-theme="dark"] {
+  --bg: #070a13;
+  --bg-elevated: #0d1220;
+  --bg-muted: #131a2b;
+  --bg-hover: #182033;
+  --fg: #e6e9f2;
+  --fg-muted: #9aa3ba;
+  --fg-faint: #677089;
+  --border: #1d2538;
+  --accent: #5eead4;
+  --accent-fg: #04231f;
+  --warning: #fbbf24;
+  --danger: #f87171;
+  --heat: #fb923c;
+  --cold: #7dd3fc;
+  --catalyst: #c4b5fd;
+  --server-only: #f0abfc;
+  --stars-opacity: 1;
+  --shadow: 0 12px 40px rgb(0 0 0 / 0.5);
+  color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not([data-theme="light"]) {
+    --bg: #070a13;
+    --bg-elevated: #0d1220;
+    --bg-muted: #131a2b;
+    --bg-hover: #182033;
+    --fg: #e6e9f2;
+    --fg-muted: #9aa3ba;
+    --fg-faint: #677089;
+    --border: #1d2538;
+    --accent: #5eead4;
+    --accent-fg: #04231f;
+    --warning: #fbbf24;
+    --danger: #f87171;
+    --heat: #fb923c;
+    --cold: #7dd3fc;
+    --catalyst: #c4b5fd;
+    --server-only: #f0abfc;
+    --stars-opacity: 1;
+    --shadow: 0 12px 40px rgb(0 0 0 / 0.5);
+    color-scheme: dark;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme inline {
+  --color-bg: var(--bg);
+  --color-elevated: var(--bg-elevated);
+  --color-muted: var(--bg-muted);
+  --color-hover: var(--bg-hover);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-faint: var(--fg-faint);
+  --color-line: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-soft: var(--accent-soft);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-heat: var(--heat);
+  --color-cold: var(--cold);
+  --color-catalyst: var(--catalyst);
+  --color-server-only: var(--server-only);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --shadow-panel: var(--shadow);
+}
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-size: 14px;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* In the base layer so utilities like outline-none can override it. */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--accent-soft);
+  }
+}
+
+/* A faint, static starfield: three layers of tiny dots, only in dark mode. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: var(--stars-opacity);
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, rgb(255 255 255 / 0.35), transparent 60%),
+    radial-gradient(1px 1px at 140px 90px, rgb(255 255 255 / 0.22), transparent 60%),
+    radial-gradient(1.5px 1.5px at 260px 200px, rgb(180 220 255 / 0.3), transparent 60%),
+    radial-gradient(1px 1px at 330px 40px, rgb(255 255 255 / 0.18), transparent 60%),
+    radial-gradient(1200px 600px at 85% -10%, rgb(94 234 212 / 0.06), transparent 70%),
+    radial-gradient(900px 500px at -10% 110%, rgb(167 139 250 / 0.06), transparent 70%);
+  background-size:
+    360px 260px,
+    360px 260px,
+    360px 260px,
+    360px 260px,
+    100% 100%,
+    100% 100%;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Diagonal hatch for reagents without a colour. */
+.hatch {
+  background: repeating-linear-gradient(45deg, var(--fg-faint) 0 1.5px, transparent 1.5px 4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
 }

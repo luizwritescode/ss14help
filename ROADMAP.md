@@ -573,16 +573,23 @@ Known simplifications (revisit with real data in Phase 3/7):
 
 **Goal:** implement the Phase 1 design on top of the data and the calc engine.
 
-- [ ] Routing, URL state and storage exactly as specified in Phase 1 §3.3. `/[server]/reagent/[id]` and `/[server]/item/[id]` are statically generated (`generateStaticParams`) for SEO and deep links.
-- [ ] Components as specified in Phase 1 §3.4; acceptance scenarios §3.9 become the Playwright suite.
-- [ ] Load data at build time from `data/<server>/`, and check `schemaVersion` there.
-- [ ] Search: MiniSearch from the prebuilt `search-index.json`, with fuzzy and prefix matching over names, ids and aliases.
-- [ ] Extras: a copy-as-text recipe button, a server-only badge, a stale-data banner when the snapshot is more than 14 days old, and a data-version footer that links to the changelog.
-- [ ] Quality:
-  - Lighthouse ≥ 90 for performance and accessibility.
-  - Playwright smoke tests: search, open the panel, drill into an ingredient, calculate, pin, switch server.
+- [x] **Data:** `apps/web/scripts/sync-data.mjs` (runs before dev/build/typecheck/test) copies `data/<server>/` to `public/data/` and writes `src/generated/servers.json` from `servers.yaml` + manifests (both gitignored). The browser fetches a server's six files once and builds a `ServerModel` (`src/lib/model.ts`: lookups, `RecipeGraph`, category tree, list items, MiniSearch). Server components read the same files with `'use cache'` (`src/lib/server-data.ts`); both paths call `assertCompatibleSchemaVersion`, so a build with incompatible data fails.
+- [x] **Routing & state** as in §3.3: `/` redirects to the last server; `/[server]` and `/[server]/reagent/[id]`, `/[server]/item/[id]` are statically generated (1,438 pages, ~25 s). URL params (`open`, `via`, `v.<id>`, `tab`, `amt`, `own`, `cat`, `q`, `f`) are parsed/serialized in `src/lib/url-state.ts`; `use-workspace.ts` writes them with `history.pushState`/`replaceState` (Next 16 syncs these into `useSearchParams`), pushing for panel navigation and replacing for typing, tabs and amounts. localStorage (`src/lib/storage.ts`) holds pins, recents, last server, theme and UI prefs, with an in-memory fallback and a one-time toast when storage is unavailable.
+- [x] **Components** as in §3.4: TopBar (server switcher keeping the subject when it exists on the other server, ⌘K trigger, data badge with sha/age/warnings and amber when stale, theme toggle, help), Sidebar (Pinned, Recent, ARIA category tree with persisted expansion), RecipeList (filter text, Heat/Cold/Catalyst/mixer/server-only chips that hide when empty, sort by name or simplest-first, TanStack-virtualized rows, roving focus with j/k), DetailPanel (breadcrumb stack with overflow menu, pin/copy/close, tabs Recipe / Tree / Calculator / Used in / Sources hidden when empty, 1–5 and Backspace), RecipeTab (variant switcher, reaction and cooking cards, condition chips, effects, basic-reagent callout with grind/juice sources and opt-in split reactions), TreeTab (ARIA tree, two levels open, per-node variant pickers shared with the calculator), CalculatorTab (amount + presets, shopping list with sources, catalysts, leftovers, ordered steps with checkboxes, overshoot notice, treat-as-owned, copy plan), UsedInTab, SourcesTab, CommandPalette (cmdk + MiniSearch, Pinned/Recent/Actions when empty, `30u bica` calculator shortcut, ⇧↵ to pin), KeyboardHelp, toasts.
+- [x] **Layout** (§3.1): docked, resizable panel (360–720 px, persisted) at ≥ 1280 px; right sheet at 768–1279 px; bottom sheet with drag-to-close on phones; sidebar as a drawer below 1280 px. No-JS and loading state: the server-rendered article (recipe lines, description) is the `Suspense` fallback and stays visible until the data loads.
+- [x] **Theme:** dark first (light and system too), minimal space look: deep navy base, faint static starfield and two soft nebula glows behind the panes (dark only), one teal accent; reagent colours only in swatches and the panel accent bar. Tokens in `globals.css`, mapped into Tailwind with `@theme`.
+- [x] **Tests:** Vitest for `src/lib` (URL state round-trips, subjects, category tree, search, filters, calc shortcut) on the real upstream snapshot; Playwright (`e2e/acceptance.spec.ts`) runs all seven §3.9 scenarios plus a no-JS check against the production build — all pass locally. CI job `web-e2e` builds and runs them.
+- [ ] Lighthouse ≥ 90 for performance and accessibility (not measured yet).
 
-**Exit criteria:** the full flow works on the upstream data in production, on desktop and on mobile.
+Deviations from the Phase 1 spec, to revisit:
+- The sidebar collapses fully at ≥ 1280 px (menu button) instead of to a 48 px icon rail.
+- The phone bottom sheet has one height (88 %) with drag-to-close, not 50 %/100 % snap points.
+- Category-tree counts don't show "filtered / total" (the list header does).
+- Names are shown with a capitalized first letter (game data is mostly lower case); effect-only reactions use a humanized id ("Aluminium metal foam").
+- No changelog page yet, so the data badge links to the source commit.
+- Next 16 keeps the previous route mounted but hidden (`<Activity>`) for instant back navigation; effects are unmounted there, so hidden workspaces don't react to keys.
+
+**Exit criteria:** the full flow works on the upstream data in production, on desktop and on mobile. Locally ✅ (production build + acceptance suite); production deploy waits for Phase 8.
 
 ---
 

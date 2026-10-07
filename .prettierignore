@@ -6,3 +6,7 @@ dist/
 ROADMAP.md
 schema/
 packages/schema/src/generated/
+apps/web/public/data/
+apps/web/src/generated/
+apps/web/test-results/
+apps/web/playwright-report/
