@@ -3334,6 +3334,17 @@
    "sourceFile": "Reagents/medicine.yml"
   },
   {
+   "color": "#EE35FF",
+   "desc": "A biological mash of foreign brain matter that has misfolded from the trauma of digestion. Slow acting, but can become lethal if medical treatment is not sought.",
+   "dispensable": false,
+   "group": "Toxins",
+   "id": "NeuralPrion",
+   "name": "neural prion",
+   "physicalDesc": "neural",
+   "serverOnly": true,
+   "sourceFile": "_Starlight/Reagents/toxins.yml"
+  },
+  {
    "color": "#2E2E61",
    "desc": "A strong neurotoxin that puts the subject into a death-like state.",
    "dispensable": false,

@@ -701,6 +701,13 @@
    "sourceFile": "Entities/Objects/Consumable/Food/Containers/bowl.yml"
   },
   {
+   "desc": "A shallow wooden bowl for a hearty meal.",
+   "id": "FoodBowlWooden",
+   "name": "wooden bowl",
+   "serverOnly": true,
+   "sourceFile": "_Starlight/Entities/Objects/Consumable/Food/Containers/bowl.yml"
+  },
+  {
    "desc": "Bon appétit!",
    "id": "FoodBreadBaguette",
    "name": "baguette",
@@ -888,6 +895,13 @@
    "name": "full english breakfast",
    "serverOnly": false,
    "sourceFile": "Entities/Objects/Consumable/Food/breakfast.yml"
+  },
+  {
+   "desc": "Plump brown button mushrooms with a mild, earthy flavor.",
+   "id": "FoodBrownMushroom",
+   "name": "brown mushrooms",
+   "serverOnly": true,
+   "sourceFile": "_Starlight/Entities/Objects/Consumable/Food/produce.yml"
   },
   {
    "desc": "The humble bungo fruit.",
@@ -1387,14 +1401,14 @@
    "sourceFile": "_Starlight/Entities/Objects/Consumable/Food/icecream.yml"
   },
   {
-   "desc": "An art piece showing the demise of a forest",
+   "desc": "An art piece showing the demise of a forest.",
    "id": "FoodCookedLizardPlate",
    "name": "Volcanic explosion",
    "serverOnly": true,
    "sourceFile": "_Starlight/Entities/Objects/Consumable/Food/meals.yml"
   },
   {
-   "desc": "An edible representation of your victory",
+   "desc": "An edible representation of your victory.",
    "id": "FoodCookedShadekinCore",
    "name": "core spaghetti",
    "serverOnly": true,
@@ -1835,7 +1849,7 @@
    "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
   },
   {
-   "desc": "Just like mama used to make",
+   "desc": "Just like mama used to make.",
    "id": "FoodEmpanadas",
    "name": "empanadas",
    "serverOnly": true,
@@ -1926,7 +1940,7 @@
    "sourceFile": "_Starlight/Entities/Objects/Consumable/Food/meals.yml"
   },
   {
-   "desc": "An old dish modernized to fit new trends",
+   "desc": "An old dish modernized to fit new trends.",
    "id": "FoodFriedfelionoid",
    "name": "Kentucky fried felionoid",
    "serverOnly": true,
@@ -2045,7 +2059,7 @@
    "sourceFile": "Entities/Objects/Consumable/Food/soup.yml"
   },
   {
-   "desc": "Actually named karjalanpiirakka, a traditional food from old world Finland. Kind of odd, but filling and delicious",
+   "desc": "Actually named karjalanpiirakka, a traditional food from old world Finland. Kind of odd, but filling and delicious.",
    "id": "FoodKarelianPastries",
    "name": "karelian pastries",
    "serverOnly": true,
@@ -2913,7 +2927,7 @@
    "sourceFile": "_Starlight/Entities/Objects/Consumable/Food/icecream.yml"
   },
   {
-   "desc": "A delicious Russian Dumpling, made with love",
+   "desc": "A delicious Russian Dumpling, made with love.",
    "id": "FoodPelmeni",
    "name": "pelmeni",
    "serverOnly": true,
@@ -3604,6 +3618,13 @@
    "name": "strawberry ice cream",
    "serverOnly": true,
    "sourceFile": "_Starlight/Entities/Objects/Consumable/Food/icecream.yml"
+  },
+  {
+   "desc": "Tender beef cutlets and brown mushrooms in a rich, creamy onion sauce, served in a wooden bowl.",
+   "id": "FoodStroganoff",
+   "name": "beef stroganoff",
+   "serverOnly": true,
+   "sourceFile": "_Starlight/Entities/Objects/Consumable/Food/meals.yml"
   },
   {
    "desc": "This goes in the turkey, not your mouth.",
@@ -5956,6 +5977,13 @@
    "name": "banana",
    "serverOnly": false,
    "sourceFile": "Entities/Objects/Fun/toys.yml"
+  },
+  {
+   "desc": "Soft, cuddly, and suspiciously up to something! This talking Barfo plushie has lots to say!",
+   "id": "PlushieBarfo",
+   "name": "barfo plushie",
+   "serverOnly": true,
+   "sourceFile": "_Starlight/Entities/Objects/Fun/plushies.yml"
   },
   {
    "desc": "A cute toy that resembles an even cuter programmer. You'd have to be a monster to grind this up.",

@@ -1698,6 +1698,12 @@
   "name": "strawberry ice cream"
  },
  {
+  "category": "Microwave",
+  "id": "FoodStroganoff",
+  "kind": "item",
+  "name": "beef stroganoff"
+ },
+ {
   "category": "Oven",
   "id": "FoodStuffing",
   "kind": "item",
@@ -3994,6 +4000,12 @@
   "id": "Necrosol",
   "kind": "reagent",
   "name": "necrosol"
+ },
+ {
+  "category": "Toxins",
+  "id": "NeuralPrion",
+  "kind": "reagent",
+  "name": "neural prion"
  },
  {
   "category": "Drinks",

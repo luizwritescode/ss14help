@@ -408,6 +408,52 @@
    "time": 10
   },
   {
+   "device": "Microwave",
+   "group": "Savory",
+   "id": "RecipeBeefStroganoff",
+   "name": "beef stroganoff recipe",
+   "reagents": {
+    "Blackpepper": 1,
+    "Cream": 5,
+    "TableSalt": 1
+   },
+   "result": "FoodStroganoff",
+   "secret": false,
+   "serverOnly": true,
+   "solids": {
+    "FoodBowlWooden": 1,
+    "FoodBrownMushroom": 1,
+    "FoodButterSlice": 1,
+    "FoodMeatCutlet": 2,
+    "FoodOnionSlice": 1
+   },
+   "sourceFile": "_Starlight/Recipes/Cooking/meal_recipes.yml",
+   "time": 20
+  },
+  {
+   "device": "Microwave",
+   "group": "Savory",
+   "id": "RecipeBeefStroganoffCookedCutlets",
+   "name": "beef stroganoff with cooked cutlets recipe",
+   "reagents": {
+    "Blackpepper": 1,
+    "Cream": 5,
+    "TableSalt": 1
+   },
+   "result": "FoodStroganoff",
+   "secret": false,
+   "serverOnly": true,
+   "solids": {
+    "FoodBowlWooden": 1,
+    "FoodBrownMushroom": 1,
+    "FoodButterSlice": 1,
+    "FoodMeatCutletCooked": 2,
+    "FoodOnionSlice": 1
+   },
+   "sourceFile": "_Starlight/Recipes/Cooking/meal_recipes.yml",
+   "time": 20
+  },
+  {
    "device": "Oven",
    "group": "Pie",
    "id": "RecipeBerryClafoutis",

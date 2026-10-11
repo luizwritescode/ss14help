@@ -1,36 +1,21 @@
 {
  "branch": "starlight-dev",
- "commitDate": "2026-10-06T23:18:05+03:00",
+ "commitDate": "2026-10-11T13:10:54Z",
  "counts": {
-  "cooking": 328,
-  "entities": 1159,
+  "cooking": 330,
+  "entities": 1163,
   "mixers": 9,
   "reactions": 355,
-  "reagents": 475,
-  "sources": 771
+  "reagents": 476,
+  "sources": 773
  },
- "generatedAt": "2026-10-06T23:29:15Z",
+ "generatedAt": "2026-10-11T13:46:51Z",
  "repo": "https://github.com/ss14Starlight/space-station-14",
  "schemaVersion": "1.1.0",
  "server": "starlight",
  "serverName": "Starlight",
- "sha": "97739a669d1a943ffe5581b91b9a38fb209b8495",
+ "sha": "a98d8e4762d6bb352941c4d1c239b42e079a58c3",
  "warnings": [
-  {
-   "code": "duplicate-id",
-   "message": "entity ClothingUniformJumpskirtCentcommAdminFormalWear also defined in _Starlight/Admeme/Entities/Clothing/Uniforms/jumpskirts.yml; the later one wins",
-   "sourceFile": "_Starlight/Entities/Clothing/Uniforms/jumpskirts.yml"
-  },
-  {
-   "code": "duplicate-id",
-   "message": "entity ClothingUniformJumpskirtFormalITG also defined in _Starlight/Admeme/Entities/Clothing/Uniforms/jumpskirts.yml; the later one wins",
-   "sourceFile": "_Starlight/Entities/Clothing/Uniforms/jumpskirts.yml"
-  },
-  {
-   "code": "duplicate-id",
-   "message": "entity ClothingUniformJumpsuitITGFormal also defined in _Starlight/Admeme/Entities/Clothing/Uniforms/jumpsuits.yml; the later one wins",
-   "sourceFile": "_Starlight/Entities/Clothing/Uniforms/jumpsuits.yml"
-  },
   {
    "code": "ftl-error",
    "message": "2 unparseable Fluent entries skipped",

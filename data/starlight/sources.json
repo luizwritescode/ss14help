@@ -429,6 +429,14 @@
    }
   },
   {
+   "entity": "FoodBrownMushroom",
+   "grind": {
+    "Nutriment": 12,
+    "Vitamin": 8
+   },
+   "juice": null
+  },
+  {
    "entity": "FoodBungo",
    "grind": {
     "Enzyme": 10,
@@ -3808,6 +3816,13 @@
     "Nothing": 30
    },
    "juice": null
+  },
+  {
+   "entity": "PlushieBarfo",
+   "grind": null,
+   "juice": {
+    "Laughter": 30
+   }
   },
   {
    "entity": "PlushieBee",
