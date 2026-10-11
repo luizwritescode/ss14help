@@ -1707,7 +1707,7 @@
   },
   {
    "color": "#96424f",
-   "desc": "A toxin that causes severe damage to blood vessels, causing rapid bleeding.",
+   "desc": "A close cousin of Lexorin. Specifically targets and destroys blood cells, causing rapid blood loss.",
    "dispensable": false,
    "group": "Toxins",
    "id": "Hemorrhinol",
