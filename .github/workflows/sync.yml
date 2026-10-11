@@ -1,0 +1,176 @@
+name: Sync data
+
+# Rebuilds data/<server>/ whenever a server's branch moves, validates it, and commits the result.
+# A validation failure publishes nothing and opens a "Pipeline halted: <server>" issue; that
+# server is skipped until the issue is closed. See ROADMAP.md, Phase 4.
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      server:
+        description: Server id from servers.yaml (empty = all)
+        required: false
+        default: ""
+      force:
+        description: Rebuild even if the SHA is unchanged, and accept count drops past the regression guard
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      servers: ${{ steps.servers.outputs.servers }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - id: servers
+        env:
+          ONLY: ${{ inputs.server }}
+        run: |
+          servers=$(uv run --project pipeline --frozen --no-dev ss14help-pipeline servers --json \
+            | jq -c --arg only "$ONLY" 'map(select($only == "" or .id == $only))')
+          if [ "$servers" = "[]" ]; then
+            echo "::error::no server matches '$ONLY'"
+            exit 1
+          fi
+          echo "servers=$servers" >> "$GITHUB_OUTPUT"
+
+  sync:
+    needs: plan
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        server: ${{ fromJSON(needs.plan.outputs.servers) }}
+    name: sync (${{ matrix.server.id }})
+    concurrency:
+      group: sync-${{ matrix.server.id }}
+      cancel-in-progress: false
+    env:
+      SERVER: ${{ matrix.server.id }}
+      SERVER_NAME: ${{ matrix.server.name }}
+      GH_TOKEN: ${{ github.token }}
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Halt check
+        id: halt
+        run: |
+          open=$(gh issue list --state open --label pipeline-halt --label "server:$SERVER" \
+            --json number --jq 'map(.number) | first // empty')
+          if [ -n "$open" ]; then
+            echo "::notice::$SERVER is halted by issue #$open; close it to resume"
+            echo "halted=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: SHA check
+        id: sha
+        if: steps.halt.outputs.halted != 'true'
+        env:
+          REPO: ${{ matrix.server.repo }}
+          BRANCH: ${{ matrix.server.branch }}
+          FORCE: ${{ inputs.force || false }}
+        run: |
+          remote=$(git ls-remote "$REPO" "refs/heads/$BRANCH" | cut -f1)
+          [ -n "$remote" ] || { echo "::error::$BRANCH not found in $REPO"; exit 1; }
+          published=$(jq -r '.sha // empty' "data/$SERVER/manifest.json" 2>/dev/null || true)
+          echo "sha=$remote" >> "$GITHUB_OUTPUT"
+          if [ "$remote" = "$published" ] && [ "$FORCE" != "true" ]; then
+            echo "::notice::$SERVER is up to date at ${remote:0:7}"
+          else
+            echo "build=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build pipeline image
+        if: steps.sha.outputs.build == 'true'
+        run: docker build -f pipeline/Dockerfile -t ss14help-pipeline .
+
+      - name: Run pipeline
+        id: build
+        if: steps.sha.outputs.build == 'true'
+        env:
+          SHA: ${{ steps.sha.outputs.sha }}
+          FORCE: ${{ inputs.force || false }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/out"
+          args=(build "$SERVER" --sha "$SHA" --report /out/report.md --commit-message /out/message.txt)
+          [ "$FORCE" = "true" ] && args+=(--allow-regression)
+          set +e
+          docker run --rm -v "$PWD/data:/repo/data" -v "$RUNNER_TEMP/out:/out" \
+            ss14help-pipeline "${args[@]}"
+          code=$?
+          set -e
+          # The container runs as root; hand its output back to the runner user for git.
+          sudo chown -R "$(id -u):$(id -g)" data "$RUNNER_TEMP/out"
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          # 3 = validation failed (halt). Anything else non-zero is a crash or network error:
+          # fail the job without halting, so a flaky run doesn't block future ones.
+          [ "$code" = 0 ] || [ "$code" = 3 ]
+
+      - name: Commit and push
+        if: steps.build.outputs.code == '0'
+        run: |
+          if [ -z "$(git status --porcelain -- "data/$SERVER")" ]; then
+            echo "::notice::no changes in data/$SERVER"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "data/$SERVER"
+          git commit --quiet -F "$RUNNER_TEMP/out/message.txt"
+          # Other servers' jobs push to the same branch; they only touch their own folder.
+          for attempt in 1 2 3 4 5; do
+            git pull --quiet --rebase origin "$GITHUB_REF_NAME" && git push --quiet origin "HEAD:$GITHUB_REF_NAME" && break
+            [ "$attempt" = 5 ] && exit 1
+            sleep $((attempt * 5))
+          done
+          echo "::notice::$(cat "$RUNNER_TEMP/out/message.txt")"
+
+      - name: Open or update halt issue
+        if: steps.build.outputs.code == '3'
+        env:
+          SHA: ${{ steps.sha.outputs.sha }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh label create pipeline-halt --color B60205 --description "Sync halted by a validation failure" --force
+          gh label create "server:$SERVER" --color 1D76DB --description "Data for $SERVER_NAME" --force
+          body="$RUNNER_TEMP/out/issue.md"
+          {
+            cat "$RUNNER_TEMP/out/report.md"
+            echo
+            echo "Run: $RUN_URL"
+            echo
+            echo "Syncing **$SERVER** is paused while this issue is open. Fix the pipeline (or add"
+            echo "the ids to \`pipeline/allowlist.yaml\`), then close the issue to resume. If a count"
+            echo "drop is real, close the issue and run *Sync data* manually with **force**."
+          } > "$body"
+          existing=$(gh issue list --state open --label pipeline-halt --label "server:$SERVER" \
+            --json number --jq 'map(.number) | first // empty')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body-file "$body"
+          else
+            gh issue create --title "Pipeline halted: $SERVER" \
+              --label pipeline-halt --label "server:$SERVER" --body-file "$body"
+          fi
+
+      - name: Notify Discord
+        if: steps.build.outputs.code == '3' && env.DISCORD_WEBHOOK_URL != ''
+        env:
+          SHA: ${{ steps.sha.outputs.sha }}
+        run: |
+          jq -n --arg c "Pipeline halted: **$SERVER** at \`${SHA:0:7}\`. ${{ github.server_url }}/${{ github.repository }}/issues?q=is%3Aopen+label%3Apipeline-halt" \
+            '{content: $c}' | curl -fsS -H "Content-Type: application/json" -d @- "$DISCORD_WEBHOOK_URL"
+
+      - name: Fail on halt
+        if: steps.build.outputs.code == '3'
+        run: |
+          echo "::error::validation failed for $SERVER; see the pipeline-halt issue"
+          exit 1
