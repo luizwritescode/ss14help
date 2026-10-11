@@ -33,6 +33,12 @@ class BuildResult:
     out_dir: Path
     manifest: Manifest
     data: Normalized
+    files: dict[str, BaseModel]
+    """Every contract file, ``manifest.json`` included, keyed by file name."""
+    search_index: list[dict[str, str]]
+
+    def write(self) -> list[Path]:
+        return write_snapshot(self.out_dir, self.files, self.search_index)
 
 
 def build_snapshot(
@@ -41,6 +47,19 @@ def build_snapshot(
     data_dir: Path = DEFAULT_DATA_DIR,
     generated_at: datetime | None = None,
 ) -> BuildResult:
+    """Assemble the snapshot and write it to ``data_dir / server.id``."""
+    result = assemble_snapshot(server, checkout, data_dir, generated_at)
+    result.write()
+    return result
+
+
+def assemble_snapshot(
+    server: ServerConfig,
+    checkout: Checkout,
+    data_dir: Path = DEFAULT_DATA_DIR,
+    generated_at: datetime | None = None,
+) -> BuildResult:
+    """Build the snapshot in memory, so it can be validated before anything is written."""
     log = WarningLog()
     partial_paths = read_partial_paths(checkout.resources)
     raw = load_prototypes(checkout.prototypes, log, partial_paths)
@@ -76,9 +95,13 @@ def build_snapshot(
         },
         warnings=log.items(),
     )
-    out_dir = data_dir / server.id
-    write_snapshot(out_dir, {"manifest.json": manifest, **files}, search_index(data))
-    return BuildResult(out_dir=out_dir, manifest=manifest, data=data)
+    return BuildResult(
+        out_dir=data_dir / server.id,
+        manifest=manifest,
+        data=data,
+        files={"manifest.json": manifest, **files},
+        search_index=search_index(data),
+    )
 
 
 def search_index(data: Normalized) -> list[dict[str, str]]:

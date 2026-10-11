@@ -14,6 +14,7 @@ RUN uv sync --frozen --no-install-project
 COPY pipeline/src ./src
 RUN uv sync --frozen
 
+COPY pipeline/allowlist.yaml ./allowlist.yaml
 COPY servers.yaml /repo/servers.yaml
 
 ENTRYPOINT ["uv", "run", "--frozen", "ss14help-pipeline"]

@@ -1,0 +1,4 @@
+# Ids that recipes may reference without resolving to a reagent, entity or mixer.
+# Anything else that doesn't resolve halts publishing (see validate.py). Add an id here only
+# after checking that the game really references something that doesn't exist.
+unresolved: []
