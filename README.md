@@ -116,9 +116,6 @@ pnpm dev
 
 Then open <http://localhost:3000>. `pnpm dev` copies `data/` into the web app before it starts.
 
-> Development currently happens on the `v2` branch. If it isn't the default branch yet, run
-> `git checkout v2` after cloning.
-
 ### Rebuilding the data
 
 To regenerate a snapshot from the latest commit of a server's game repository:
