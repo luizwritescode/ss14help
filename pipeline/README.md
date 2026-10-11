@@ -31,10 +31,17 @@ docker run --rm -v "$PWD/data:/repo/data" ss14help-pipeline build upstream
 | `normalize.py` | Prototypes → contract models: reagents (+ `dispensable` from filled dispensers), reactions, cooking, mixers, referenced entities, grind/juice sources |
 | `emit.py` | Validate every file against the contract and write canonical JSON (sorted keys, whole floats as ints) |
 | `build.py` | Orchestration, manifest, `search-index.json`, `serverOnly` vs `data/upstream` |
+| `validate.py` | Publish gate: contract, references (with `allowlist.yaml`), sanity, and a regression guard (>10% count drop vs the published snapshot). Any problem → exit code 3, nothing written |
+| `diff.py` | Added/removed/changed ids vs the published snapshot → commit message and `CHANGELOG.md` entry |
 
 Problems that don't stop a build (unparseable files, duplicate ids, unknown parents, prototypes
-that fail validation) are recorded in `manifest.json` → `warnings`. Phase 4 decides which of them
-halt publishing.
+that fail validation) are recorded in `manifest.json` → `warnings`. Only `validate.py` halts
+publishing. `.github/workflows/sync.yml` runs the container every 6 hours; on exit code 3 it opens
+a `Pipeline halted: <server>` issue.
+
+`build` options for the sync job: `--report PATH` (Markdown validation report on a halt),
+`--commit-message PATH`, `--allow-regression`. `servers --json` prints the server list for the job
+matrix.
 
 ## Tests
 

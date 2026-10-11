@@ -510,9 +510,9 @@ Warnings (duplicates, new unknown tags, new prototype types) don't fail the run.
 
 ### GitHub Actions: `sync.yml`
 
-- [ ] Triggers: `schedule: "0 */6 * * *"` and `workflow_dispatch` (with an optional `server` and a `force` flag).
-- [ ] `strategy.matrix.server` comes from `servers.yaml`, with `fail-fast: false` so servers stay isolated. Use `concurrency` per server.
-- [ ] Steps:
+- [x] Triggers: `schedule: "0 */6 * * *"` and `workflow_dispatch` (with an optional `server` and a `force` flag).
+- [x] `strategy.matrix.server` comes from `servers.yaml`, with `fail-fast: false` so servers stay isolated. Use `concurrency` per server.
+- [x] Steps:
   1. halt check
   2. `ls-remote` SHA check
   3. run the pipeline container
@@ -520,11 +520,18 @@ Warnings (duplicates, new unknown tags, new prototype types) don't fail the run.
   5. diff
   6. commit `data/<server>/` with a message like `data(starlight): a1b2c3 → d4e5f6 (+3 reactions, ~5 changed)`
   7. push
-- [ ] **Halt and alert:**
+- [x] **Halt and alert:**
   - On validation failure: commit nothing, and open (or comment on) an issue titled `Pipeline halted: <server>`, labelled `pipeline-halt` and `server:<server>`. The body holds the validation report, the offending SHA and links to the files.
   - The job fails, so GitHub emails you. Optionally, also post to a Discord webhook secret.
   - Later runs skip that server while the issue is **open**. **Closing the issue resumes** updates.
-- [ ] `ci.yml` for PRs and pushes to `v2`: lint, type-check, pipeline tests, calc tests, schema-staleness check and the web build.
+- [x] `ci.yml` for PRs and pushes to `v2`: lint, type-check, pipeline tests, calc tests, schema-staleness check and the web build.
+
+Implementation notes:
+- `force` means: rebuild even if the SHA is unchanged, and pass `--allow-regression` (for a real count drop, after closing the halt issue).
+- `build` exits **3** only on a validation failure; that alone opens the halt issue. Crashes and network errors fail the job without halting, so a flaky run doesn't block future ones.
+- `data/<server>/CHANGELOG.md` gets an entry (added/removed/changed ids per collection, warning-count changes) whenever the data changes. A SHA bump with identical data still commits the manifest, with `(no data changes)`.
+- Commits pushed with `GITHUB_TOKEN` don't trigger `ci.yml`. Vercel deploys from the push regardless.
+- Verified locally: pytest covers each layer, the halt leaving files byte-identical, and the changelog. The container ran against live upstream (`ac7a32e`): success exited 0 (`~219 changed`, upstream renamed cooking recipes); an inflated published count exited 3 with data untouched.
 
 **Exit criteria:**
 - A deliberately broken fixture causes a halt with an issue, and real data is untouched.

@@ -52,6 +52,31 @@ Resources/Locale/en-US/*.ftl     normalize · validate · emit                  
 Each snapshot records the exact commit it was built from in `manifest.json`, and the site shows that
 commit and its age in the top bar.
 
+### Automatic updates
+
+The [Sync data](.github/workflows/sync.yml) workflow runs every 6 hours, with one job per server. For
+each server it:
+
+1. skips the server if it has an open `pipeline-halt` issue,
+2. skips the server if its branch tip (`git ls-remote`) is the commit already in `manifest.json`,
+3. otherwise builds a new snapshot in the pipeline container and validates it: contract, references,
+   sanity, and a regression guard that rejects any drop of more than 10% in reactions, reagents,
+   cooking recipes or sources,
+4. if it passes, commits `data/<server>/` with a summary such as
+   `data(starlight): a1b2c3d → d4e5f6a (+3 reactions, ~5 changed)` and adds an entry to
+   `data/<server>/CHANGELOG.md`. The commit triggers a Vercel deploy.
+
+If validation fails, nothing is committed. The job fails, so GitHub emails you, and it opens (or
+comments on) an issue titled `Pipeline halted: <server>` with the report and links to the offending
+files. Other servers keep syncing. If the `DISCORD_WEBHOOK_URL` secret is set, a message is also
+posted to Discord.
+
+**Resuming after a halt:** fix the pipeline, or add genuinely missing ids to
+[pipeline/allowlist.yaml](pipeline/allowlist.yaml), then close the issue. The next scheduled run picks
+the server up again. If a count drop is real (the game removed content), close the issue and run
+_Sync data_ manually with **force** checked. That rebuilds even when the commit hasn't changed and
+accepts the drop. You can also run the workflow manually for a single server.
+
 ## Repository layout
 
 | Path              | What                                                                           |
@@ -108,6 +133,10 @@ uv run ss14help-pipeline build upstream     # or: build starlight
 The pipeline does a shallow, sparse clone of only the folders it needs (about 30 MB per server,
 cached in `pipeline/.cache/`) and takes around 10 to 20 seconds. Build `upstream` before other
 servers: fork snapshots are compared against it to mark server-only content.
+
+A build is validated before anything is written, exactly as in the sync job. If validation fails, it
+prints the report and exits with code 3, leaving `data/` untouched. Pass `--allow-regression` to
+accept an intended count drop.
 
 Other options:
 
