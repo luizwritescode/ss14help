@@ -1,6 +1,6 @@
 {
  "branch": "starlight-dev",
- "commitDate": "2026-10-11T13:10:54Z",
+ "commitDate": "2026-10-11T18:40:00Z",
  "counts": {
   "cooking": 330,
   "entities": 1163,
@@ -9,12 +9,12 @@
   "reagents": 476,
   "sources": 773
  },
- "generatedAt": "2026-10-11T13:46:51Z",
+ "generatedAt": "2026-10-11T21:08:51Z",
  "repo": "https://github.com/ss14Starlight/space-station-14",
  "schemaVersion": "1.1.0",
  "server": "starlight",
  "serverName": "Starlight",
- "sha": "a98d8e4762d6bb352941c4d1c239b42e079a58c3",
+ "sha": "3edb8b1f4b41316d8d32dec1c2074c5524f41f48",
  "warnings": [
   {
    "code": "ftl-error",
