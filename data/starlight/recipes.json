@@ -4867,6 +4867,22 @@
    "time": 5
   },
   {
+   "device": "Oven",
+   "group": "Cake",
+   "id": "RecipeSpacemanCake",
+   "name": "spaceman's cake recipe",
+   "reagents": {},
+   "result": "FoodCakeSpaceman",
+   "secret": false,
+   "serverOnly": true,
+   "solids": {
+    "FoodCakePlain": 1,
+    "FoodSpacemansTrumpet": 4
+   },
+   "sourceFile": "_Starlight/Recipes/Cooking/meal_recipes.yml",
+   "time": 5
+  },
+  {
    "device": "Microwave",
    "group": "Savory",
    "id": "RecipeSpellBurger",
@@ -14828,6 +14844,33 @@
    },
    "serverOnly": false,
    "sourceFile": "Recipes/Reactions/drinks.yml"
+  },
+  {
+   "category": "food",
+   "effects": [],
+   "id": "StellibininSyrup",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [
+    "Stir"
+   ],
+   "priority": 0,
+   "products": {
+    "StellibininSyrup": 1
+   },
+   "quantized": false,
+   "reactants": {
+    "Stellibinin": {
+     "amount": 1,
+     "catalyst": false
+    },
+    "Sugar": {
+     "amount": 2,
+     "catalyst": false
+    }
+   },
+   "serverOnly": true,
+   "sourceFile": "_Starlight/Recipes/Reactions/food.yml"
   },
   {
    "category": "chemicals",

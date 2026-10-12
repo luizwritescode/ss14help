@@ -636,6 +636,12 @@
   "name": "slime cake"
  },
  {
+  "category": "Oven",
+  "id": "FoodCakeSpaceman",
+  "kind": "item",
+  "name": "spaceman's cake"
+ },
+ {
   "category": "Microwave",
   "id": "FoodCakeSuppermatter",
   "kind": "item",
@@ -4624,6 +4630,12 @@
   "id": "Stellibinin",
   "kind": "reagent",
   "name": "stellibinin"
+ },
+ {
+  "category": "Foods",
+  "id": "StellibininSyrup",
+  "kind": "reagent",
+  "name": "stellibinin syrup"
  },
  {
   "category": "Narcotics",

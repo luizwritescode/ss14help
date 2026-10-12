@@ -1282,6 +1282,13 @@
    "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
   },
   {
+   "desc": "A spaceman's trumpet frosted cake.",
+   "id": "FoodCakeSpaceman",
+   "name": "spaceman's cake",
+   "serverOnly": true,
+   "sourceFile": "Entities/Objects/Consumable/Food/Baked/cake.yml"
+  },
+  {
    "desc": "Extremely dense and powerful food.",
    "id": "FoodCakeSuppermatter",
    "name": "suppermatter",

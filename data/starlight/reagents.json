@@ -4478,6 +4478,17 @@
    "sourceFile": "Reagents/medicine.yml"
   },
   {
+   "color": "#616283",
+   "desc": "Worse as a medicine, but when added to food, can prevent theobromine and allicin poisoning. Metabolizes slowly.",
+   "dispensable": false,
+   "group": "Foods",
+   "id": "StellibininSyrup",
+   "name": "stellibinin syrup",
+   "physicalDesc": "thick and starry",
+   "serverOnly": true,
+   "sourceFile": "_Starlight/Reagents/Consumable/Food/food.yml"
+  },
+  {
    "color": "#9A040E",
    "desc": "A chemical cocktail developed by Donk Co. that allows agents to recover from stuns faster, move more quickly, and grants a small heal when you're more dead than alive. Due to the complex nature of the chemical, it is much harder for the body to purge naturally.",
    "dispensable": false,
