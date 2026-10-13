@@ -1,20 +1,20 @@
 {
  "branch": "starlight-dev",
- "commitDate": "2026-10-12T21:24:29Z",
+ "commitDate": "2026-10-13T11:37:07Z",
  "counts": {
   "cooking": 331,
-  "entities": 1164,
+  "entities": 1162,
   "mixers": 9,
   "reactions": 356,
-  "reagents": 477,
-  "sources": 773
+  "reagents": 476,
+  "sources": 771
  },
- "generatedAt": "2026-10-12T23:53:09Z",
+ "generatedAt": "2026-10-13T13:02:59Z",
  "repo": "https://github.com/ss14Starlight/space-station-14",
  "schemaVersion": "1.1.0",
  "server": "starlight",
  "serverName": "Starlight",
- "sha": "2e3c9fd13bf885a64d887e6b578604068d7993a3",
+ "sha": "6d3e83eb7eb273bbd4e3c2f73c36ddc24592df6f",
  "warnings": [
   {
    "code": "ftl-error",
@@ -45,6 +45,11 @@
    "code": "ftl-error",
    "message": "4 unparseable Fluent entries skipped",
    "sourceFile": "Locale/nutrition/components/ingestion-system.ftl"
+  },
+  {
+   "code": "ftl-error",
+   "message": "1 unparseable Fluent entries skipped",
+   "sourceFile": "Locale/store/uplink-catalog.ftl"
   },
   {
    "code": "ftl-error",

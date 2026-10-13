@@ -2663,17 +2663,6 @@
    "sourceFile": "Reagents/Consumable/Drink/juice.yml"
   },
   {
-   "color": "#302000",
-   "desc": "Juice of the potato. Bleh.",
-   "dispensable": false,
-   "group": "Drinks",
-   "id": "JuicePotato",
-   "name": "potato juice",
-   "physicalDesc": "starchy",
-   "serverOnly": true,
-   "sourceFile": "Reagents/Consumable/Drink/juice.yml"
-  },
-  {
    "color": "#a64dc5",
    "desc": "Pure essence of inversed lizard plush. Makes you Hew!",
    "dispensable": false,

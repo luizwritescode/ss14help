@@ -3642,12 +3642,6 @@
   "name": "pineapple juice"
  },
  {
-  "category": "Drinks",
-  "id": "JuicePotato",
-  "kind": "reagent",
-  "name": "potato juice"
- },
- {
   "category": "Toxins",
   "id": "JuiceThatMakesYouHew",
   "kind": "reagent",

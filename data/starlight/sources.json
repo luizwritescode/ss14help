@@ -5510,24 +5510,6 @@
    "juice": null
   },
   {
-   "entity": "SheetClockworkGlass",
-   "grind": {
-    "Copper": 6.7,
-    "Silicon": 10,
-    "Zinc": 3.3
-   },
-   "juice": null
-  },
-  {
-   "entity": "SheetClockworkGlass1",
-   "grind": {
-    "Copper": 6.7,
-    "Silicon": 10,
-    "Zinc": 3.3
-   },
-   "juice": null
-  },
-  {
    "entity": "SheetGlass",
    "grind": {
     "Silicon": 10

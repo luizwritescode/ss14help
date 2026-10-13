@@ -7575,20 +7575,6 @@
    "sourceFile": "Entities/Objects/Materials/Sheets/metal.yml"
   },
   {
-   "desc": "A sheet of brass-hardened glass, primarily used by clockwork enthusiasts and remnants of Ratvarian cults.",
-   "id": "SheetClockworkGlass",
-   "name": "clockwork glass",
-   "serverOnly": false,
-   "sourceFile": "Entities/Objects/Materials/Sheets/glass.yml"
-  },
-  {
-   "desc": "A sheet of brass-hardened glass, primarily used by clockwork enthusiasts and remnants of Ratvarian cults.",
-   "id": "SheetClockworkGlass1",
-   "name": "clockwork glass",
-   "serverOnly": false,
-   "sourceFile": "Entities/Objects/Materials/Sheets/glass.yml"
-  },
-  {
    "desc": "A sheet of glass, used often on the station in various applications.",
    "id": "SheetGlass",
    "name": "glass",
