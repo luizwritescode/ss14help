@@ -2751,6 +2751,17 @@
    "sourceFile": "Reagents/toxins.yml"
   },
   {
+   "color": "#d44e99",
+   "desc": "An experimental modification to cognizine that sacrifices many of the higher faculties in exchange for undying loyalty.",
+   "dispensable": false,
+   "group": "Medicine",
+   "id": "Miniozine",
+   "name": "miniozine",
+   "physicalDesc": "enigmatic",
+   "serverOnly": false,
+   "sourceFile": "Reagents/biological.yml"
+  },
+  {
    "color": "#3ea99888",
    "desc": "If it's good enough for Spesscuba, it's good enough for you.",
    "dispensable": false,
@@ -3365,6 +3376,17 @@
    "physicalDesc": "citric",
    "serverOnly": false,
    "sourceFile": "Reagents/Consumable/Drink/alcohol.yml"
+  },
+  {
+   "color": "#b32e35",
+   "desc": "An experimental chemical which drives nonsentient life into a killing frenzy.",
+   "dispensable": false,
+   "group": "Toxins",
+   "id": "Ragorium",
+   "name": "ragorium",
+   "physicalDesc": "enigmatic",
+   "serverOnly": false,
+   "sourceFile": "Reagents/biological.yml"
   },
   {
    "color": "#e3fffb",

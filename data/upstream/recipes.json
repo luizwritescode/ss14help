@@ -9769,6 +9769,209 @@
    "sourceFile": "Recipes/Reactions/medicine.yml"
   },
   {
+   "category": "biological",
+   "effects": [],
+   "id": "Miniozine",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Miniozine": 5
+   },
+   "quantized": false,
+   "reactants": {
+    "Blood": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Cognizine": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Vestine": {
+     "amount": 5,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/biological.yml"
+  },
+  {
+   "category": "biological",
+   "effects": [],
+   "id": "MiniozineAmmoniaBlood",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Miniozine": 5
+   },
+   "quantized": false,
+   "reactants": {
+    "AmmoniaBlood": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Cognizine": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Vestine": {
+     "amount": 5,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/biological.yml"
+  },
+  {
+   "category": "biological",
+   "effects": [],
+   "id": "MiniozineCopperBlood",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Miniozine": 5
+   },
+   "quantized": false,
+   "reactants": {
+    "Cognizine": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "CopperBlood": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Vestine": {
+     "amount": 5,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/biological.yml"
+  },
+  {
+   "category": "biological",
+   "effects": [],
+   "id": "MiniozineInsectBlood",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Miniozine": 5
+   },
+   "quantized": false,
+   "reactants": {
+    "Cognizine": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "InsectBlood": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Vestine": {
+     "amount": 5,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/biological.yml"
+  },
+  {
+   "category": "biological",
+   "effects": [],
+   "id": "MiniozineSap",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Miniozine": 5
+   },
+   "quantized": false,
+   "reactants": {
+    "Cognizine": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Sap": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Vestine": {
+     "amount": 5,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/biological.yml"
+  },
+  {
+   "category": "biological",
+   "effects": [],
+   "id": "MiniozineSlime",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Miniozine": 5
+   },
+   "quantized": false,
+   "reactants": {
+    "Cognizine": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Slime": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Vestine": {
+     "amount": 5,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/biological.yml"
+  },
+  {
+   "category": "biological",
+   "effects": [],
+   "id": "MiniozineSulfurBlood",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Miniozine": 5
+   },
+   "quantized": false,
+   "reactants": {
+    "Cognizine": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "SulfurBlood": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Vestine": {
+     "amount": 5,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/biological.yml"
+  },
+  {
    "category": "drinks",
    "effects": [],
    "id": "Mojito",
@@ -10982,6 +11185,209 @@
    },
    "serverOnly": false,
    "sourceFile": "Recipes/Reactions/drinks.yml"
+  },
+  {
+   "category": "biological",
+   "effects": [],
+   "id": "Ragorium",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Ragorium": 5
+   },
+   "quantized": false,
+   "reactants": {
+    "Blood": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Lipozine": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Plasma": {
+     "amount": 5,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/biological.yml"
+  },
+  {
+   "category": "biological",
+   "effects": [],
+   "id": "RagoriumAmmoniaBlood",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Ragorium": 5
+   },
+   "quantized": false,
+   "reactants": {
+    "AmmoniaBlood": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Lipozine": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Plasma": {
+     "amount": 5,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/biological.yml"
+  },
+  {
+   "category": "biological",
+   "effects": [],
+   "id": "RagoriumCopperBlood",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Ragorium": 5
+   },
+   "quantized": false,
+   "reactants": {
+    "CopperBlood": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Lipozine": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Plasma": {
+     "amount": 5,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/biological.yml"
+  },
+  {
+   "category": "biological",
+   "effects": [],
+   "id": "RagoriumInsectBlood",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Ragorium": 5
+   },
+   "quantized": false,
+   "reactants": {
+    "InsectBlood": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Lipozine": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Plasma": {
+     "amount": 5,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/biological.yml"
+  },
+  {
+   "category": "biological",
+   "effects": [],
+   "id": "RagoriumSap",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Ragorium": 5
+   },
+   "quantized": false,
+   "reactants": {
+    "Lipozine": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Plasma": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Sap": {
+     "amount": 5,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/biological.yml"
+  },
+  {
+   "category": "biological",
+   "effects": [],
+   "id": "RagoriumSlime",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Ragorium": 5
+   },
+   "quantized": false,
+   "reactants": {
+    "Lipozine": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Plasma": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Slime": {
+     "amount": 5,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/biological.yml"
+  },
+  {
+   "category": "biological",
+   "effects": [],
+   "id": "RagoriumSulfurBlood",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Ragorium": 5
+   },
+   "quantized": false,
+   "reactants": {
+    "Lipozine": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Plasma": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "SulfurBlood": {
+     "amount": 5,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/biological.yml"
   },
   {
    "category": "drinks",

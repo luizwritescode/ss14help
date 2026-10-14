@@ -2994,6 +2994,12 @@
   "name": "mindbreaker toxin"
  },
  {
+  "category": "Medicine",
+  "id": "Miniozine",
+  "kind": "reagent",
+  "name": "miniozine"
+ },
+ {
   "category": "Drinks",
   "id": "Mojito",
   "kind": "reagent",
@@ -3328,6 +3334,12 @@
   "id": "Radler",
   "kind": "reagent",
   "name": "radler"
+ },
+ {
+  "category": "Toxins",
+  "id": "Ragorium",
+  "kind": "reagent",
+  "name": "ragorium"
  },
  {
   "category": "Toxins",
