@@ -3720,7 +3720,7 @@
   },
   {
    "color": "#9423FF",
-   "desc": "A purple mixture of short polyelectrolyte chains not easily synthesized in the laboratory. Heals asphyxiation and brute damage. Stops bleeding over time.",
+   "desc": "A purple mixture of short polyelectrolyte chains not easily synthesized in the laboratory. Heals airloss and brute damage. Stops bleeding over time.",
    "dispensable": false,
    "group": "Medicine",
    "id": "PolypyryliumOligomers",
