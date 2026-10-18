@@ -3155,14 +3155,14 @@
    "id": "MobAngryBee",
    "name": "bee",
    "serverOnly": false,
-   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+   "sourceFile": "Entities/Mobs/NPCs/Insects/bee.yml"
   },
   {
    "desc": "Nice to have, but you can't build a civilization on a foundation of honey alone.",
    "id": "MobBee",
    "name": "bee",
    "serverOnly": false,
-   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+   "sourceFile": "Entities/Mobs/NPCs/Insects/bee.yml"
   },
   {
    "desc": "It's a bread. It's a dog. It's a... breaddog?",
@@ -3176,7 +3176,7 @@
    "id": "MobButterfly",
    "name": "butterfly",
    "serverOnly": false,
-   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+   "sourceFile": "Entities/Mobs/NPCs/Insects/butterfly.yml"
   },
   {
    "desc": "It's a cake. It's a cat. It's a cak.",
@@ -3190,14 +3190,14 @@
    "id": "MobCockroach",
    "name": "cockroach",
    "serverOnly": false,
-   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+   "sourceFile": "Entities/Mobs/NPCs/Insects/cockroach.yml"
   },
   {
    "desc": "This station is just crawling with bu- OH GOD THAT COCKROACH HAS A GUN!!!",
    "id": "MobGlockroach",
    "name": "glockroach",
    "serverOnly": false,
-   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+   "sourceFile": "Entities/Mobs/NPCs/Insects/cockroach.yml"
   },
   {
    "desc": "A cute, fluffy, robust hamster.",
@@ -3225,14 +3225,14 @@
    "id": "MobMoproach",
    "name": "moproach",
    "serverOnly": false,
-   "sourceFile": "Entities/Mobs/NPCs/moproach.yml"
+   "sourceFile": "Entities/Mobs/NPCs/Insects/moproach.yml"
   },
   {
    "desc": "This is the adorable by-product of multiple attempts at genetically mixing mothpeople with cockroaches.",
    "id": "MobMothroach",
    "name": "mothroach",
    "serverOnly": false,
-   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+   "sourceFile": "Entities/Mobs/NPCs/Insects/mothroach.yml"
   },
   {
    "desc": "Squeak!",
