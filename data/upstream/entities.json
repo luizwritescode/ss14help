@@ -3204,7 +3204,7 @@
    "id": "MobHamster",
    "name": "hamster",
    "serverOnly": false,
-   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+   "sourceFile": "Entities/Mobs/NPCs/Rodents/hamster.yml"
   },
   {
    "desc": "A grumpy, cute and fluffy hamster.",
@@ -3239,35 +3239,35 @@
    "id": "MobMouse",
    "name": "mouse",
    "serverOnly": false,
-   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+   "sourceFile": "Entities/Mobs/NPCs/Rodents/mouse.yml"
   },
   {
    "desc": "Squeak!",
    "id": "MobMouse1",
    "name": "mouse",
    "serverOnly": false,
-   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+   "sourceFile": "Entities/Mobs/NPCs/Rodents/mouse.yml"
   },
   {
    "desc": "Squeak!",
    "id": "MobMouse2",
    "name": "mouse",
    "serverOnly": false,
-   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+   "sourceFile": "Entities/Mobs/NPCs/Rodents/mouse.yml"
   },
   {
    "desc": "Toxic. Squeak!",
    "id": "MobMouseCancer",
    "name": "cancer mouse",
    "serverOnly": false,
-   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+   "sourceFile": "Entities/Mobs/NPCs/Rodents/mouse.yml"
   },
   {
    "desc": "Squeak!",
    "id": "MobMouseDead",
    "name": "mouse",
    "serverOnly": false,
-   "sourceFile": "Entities/Mobs/NPCs/animals.yml"
+   "sourceFile": "Entities/Mobs/NPCs/Rodents/mouse.yml"
   },
   {
    "desc": "Revolting unless you're french.",
