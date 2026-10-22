@@ -1,6 +1,6 @@
 {
  "branch": "starlight-dev",
- "commitDate": "2026-10-21T17:37:22Z",
+ "commitDate": "2026-10-22T15:54:30Z",
  "counts": {
   "cooking": 331,
   "entities": 1162,
@@ -9,12 +9,12 @@
   "reagents": 476,
   "sources": 771
  },
- "generatedAt": "2026-10-21T20:57:37Z",
+ "generatedAt": "2026-10-22T16:10:15Z",
  "repo": "https://github.com/ss14Starlight/space-station-14",
  "schemaVersion": "1.1.0",
  "server": "starlight",
  "serverName": "Starlight",
- "sha": "1874244863e45059c0c81c394093ac4031e511ea",
+ "sha": "c2fdedb1606fd7e692afad01ae0e79d93a619989",
  "warnings": [
   {
    "code": "ftl-error",
@@ -55,6 +55,11 @@
    "code": "ftl-error",
    "message": "2 unparseable Fluent entries skipped",
    "sourceFile": "Locale/temperature/entity-heater.ftl"
+  },
+  {
+   "code": "templated-id",
+   "message": "2 prototypes with generated ids skipped",
+   "sourceFile": "_Starlight/Entities/Objects/Devices/dog_collars_pda.yml"
   }
  ]
 }
