@@ -1762,7 +1762,7 @@
   },
   {
    "color": "#91C3F7",
-   "desc": "The cleanest and purest of waters straight from the hands of god, is known to magically heal wounds.",
+   "desc": "Water that has been blessed and purified by divine power. Able to cleanse the body, heal minor injuries, and harm unholy creatures.",
    "dispensable": false,
    "group": "Medicine",
    "id": "Holywater",
