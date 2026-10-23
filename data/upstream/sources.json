@@ -228,8 +228,8 @@
   {
    "entity": "FoodAmbrosiaDeus",
    "grind": {
+    "ApotheosoticEnzymes": 3,
     "Nutriment": 2,
-    "Omnizine": 3,
     "SpaceDrugs": 10
    },
    "juice": null

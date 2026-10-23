@@ -199,6 +199,28 @@
    "sourceFile": "Reagents/Consumable/Drink/alcohol.yml"
   },
   {
+   "color": "#faf5ef",
+   "desc": "An abrasive sickly-white extract, though it can shut any wound, it's indiscriminate in what it \"fixes\" attacking even the genetic coding of the body.",
+   "dispensable": false,
+   "group": "Medicine",
+   "id": "ApotheosoticEnzymes",
+   "name": "apotheosotic enzymes",
+   "physicalDesc": "sticky",
+   "serverOnly": false,
+   "sourceFile": "Reagents/medicine.yml"
+  },
+  {
+   "color": "#fffff0",
+   "desc": "A clumpy powder synthesized from apotheosotic enzymes, highly useful in manufacturing advanced medicines.",
+   "dispensable": false,
+   "group": "Medicine",
+   "id": "ApotheosoticExtract",
+   "name": "apotheosotic extract",
+   "physicalDesc": "chalky",
+   "serverOnly": false,
+   "sourceFile": "Reagents/medicine.yml"
+  },
+  {
    "color": "#0cbfe9",
    "desc": "A sickeningly blue cryogenics chemical that is able to heal extreme wounds even on the dead. It has trouble stabilizing patients however.",
    "dispensable": false,

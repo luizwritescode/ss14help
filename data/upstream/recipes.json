@@ -4240,6 +4240,33 @@
   {
    "category": "medicine",
    "effects": [],
+   "id": "ApotheosoticExtract",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [
+    "Electrolysis"
+   ],
+   "priority": 0,
+   "products": {
+    "ApotheosoticExtract": 5
+   },
+   "quantized": false,
+   "reactants": {
+    "ApotheosoticEnzymes": {
+     "amount": 4,
+     "catalyst": false
+    },
+    "Phalanximine": {
+     "amount": 1,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/medicine.yml"
+  },
+  {
+   "category": "medicine",
+   "effects": [],
    "id": "Arcryox",
    "maxTemp": null,
    "minTemp": 370,
@@ -10445,6 +10472,35 @@
    },
    "serverOnly": false,
    "sourceFile": "Recipes/Reactions/food.yml"
+  },
+  {
+   "category": "medicine",
+   "effects": [],
+   "id": "Omnizine",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Omnizine": 4
+   },
+   "quantized": false,
+   "reactants": {
+    "ApotheosoticExtract": {
+     "amount": 5,
+     "catalyst": false
+    },
+    "Diphenhydramine": {
+     "amount": 1,
+     "catalyst": false
+    },
+    "Sigynate": {
+     "amount": 1,
+     "catalyst": false
+    }
+   },
+   "serverOnly": false,
+   "sourceFile": "Recipes/Reactions/medicine.yml"
   },
   {
    "category": "medicine",

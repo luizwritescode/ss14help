@@ -1603,6 +1603,18 @@
  },
  {
   "category": "Medicine",
+  "id": "ApotheosoticEnzymes",
+  "kind": "reagent",
+  "name": "apotheosotic enzymes"
+ },
+ {
+  "category": "Medicine",
+  "id": "ApotheosoticExtract",
+  "kind": "reagent",
+  "name": "apotheosotic extract"
+ },
+ {
+  "category": "Medicine",
   "id": "Arcryox",
   "kind": "reagent",
   "name": "arcryox"
