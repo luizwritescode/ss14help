@@ -757,6 +757,12 @@
  },
  {
   "category": "Microwave",
+  "id": "FoodDonkpocketMimeWarm",
+  "kind": "item",
+  "name": "warm mime-pocket"
+ },
+ {
+  "category": "Microwave",
   "id": "FoodDonkpocketMothWarm",
   "kind": "item",
   "name": "warm moth-pocket"
@@ -790,6 +796,12 @@
   "id": "FoodDonkpocketWarm",
   "kind": "item",
   "name": "warm donk-pocket"
+ },
+ {
+  "category": "Microwave",
+  "id": "FoodDonkpocketWonkWarm",
+  "kind": "item",
+  "name": "warm wonk-pocket"
  },
  {
   "category": "Microwave",

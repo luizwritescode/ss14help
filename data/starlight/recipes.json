@@ -1918,6 +1918,21 @@
   {
    "device": "Microwave",
    "group": "Other",
+   "id": "RecipeDonkpocketMime",
+   "name": "warm mime-pocket recipe",
+   "reagents": {},
+   "result": "FoodDonkpocketMimeWarm",
+   "secret": false,
+   "serverOnly": true,
+   "solids": {
+    "FoodDonkpocketMime": 1
+   },
+   "sourceFile": "_Blimpuf/Recipes/Cooking/meal_recipes.yml",
+   "time": 5
+  },
+  {
+   "device": "Microwave",
+   "group": "Other",
    "id": "RecipeDonkpocketMoth",
    "name": "warm moth-pocket recipe",
    "reagents": {},
@@ -1961,6 +1976,21 @@
     "FoodDonkpocketStonk": 1
    },
    "sourceFile": "Recipes/Cooking/meal_recipes.yml",
+   "time": 5
+  },
+  {
+   "device": "Microwave",
+   "group": "Other",
+   "id": "RecipeDonkpocketWonk",
+   "name": "warm wonk-pocket recipe",
+   "reagents": {},
+   "result": "FoodDonkpocketWonkWarm",
+   "secret": false,
+   "serverOnly": true,
+   "solids": {
+    "FoodDonkpocketWonk": 1
+   },
+   "sourceFile": "_Blimpuf/Recipes/Cooking/meal_recipes.yml",
    "time": 5
   },
   {

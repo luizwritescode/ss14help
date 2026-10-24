@@ -1541,6 +1541,20 @@
    "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
   },
   {
+   "desc": "A desaturated donk-pocket that will leave you speechless.",
+   "id": "FoodDonkpocketMime",
+   "name": "mime-pocket",
+   "serverOnly": true,
+   "sourceFile": "_Blimpuf/Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "A desaturated donk-pocket that will leave you speechless.",
+   "id": "FoodDonkpocketMimeWarm",
+   "name": "warm mime-pocket",
+   "serverOnly": true,
+   "sourceFile": "_Blimpuf/Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
    "desc": "Buzzy edition of donk-pocket that was created during mass protests ab-... Actually who cares? Just donk-pockets for moths.",
    "id": "FoodDonkpocketMoth",
    "name": "moth-pocket",
@@ -1616,6 +1630,20 @@
    "name": "warm donk-pocket",
    "serverOnly": false,
    "sourceFile": "Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "It smells and looks... breathtaking. Breathtakingly bad.",
+   "id": "FoodDonkpocketWonk",
+   "name": "wonk-pocket",
+   "serverOnly": true,
+   "sourceFile": "_Blimpuf/Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
+  },
+  {
+   "desc": "It smells and looks... breathtaking. Breathtakingly bad.",
+   "id": "FoodDonkpocketWonkWarm",
+   "name": "warm wonk-pocket",
+   "serverOnly": true,
+   "sourceFile": "_Blimpuf/Entities/Objects/Consumable/Food/Baked/donkpocket.yml"
   },
   {
    "desc": "Goes great with a shot of cinnamon schnapps.",
