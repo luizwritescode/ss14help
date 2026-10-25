@@ -2670,6 +2670,12 @@
   "name": "carpotoxin"
  },
  {
+  "category": "Medicine",
+  "id": "CellCultureMedium",
+  "kind": "reagent",
+  "name": "cell culture medium"
+ },
+ {
   "category": "Biological",
   "id": "Cellulose",
   "kind": "reagent",
@@ -3976,6 +3982,12 @@
   "id": "Mopwata",
   "kind": "reagent",
   "name": "mopwata"
+ },
+ {
+  "category": "Medicine",
+  "id": "Mortizol",
+  "kind": "reagent",
+  "name": "mortizol"
  },
  {
   "category": "Drinks",

@@ -859,6 +859,17 @@
    "sourceFile": "Reagents/toxins.yml"
   },
   {
+   "color": "#ddc874",
+   "desc": "Branded and sold as Cell Grow™. Used to regrow and replace dead cells in old cadavers. Apply liberally",
+   "dispensable": false,
+   "group": "Medicine",
+   "id": "CellCultureMedium",
+   "name": "cell culture medium",
+   "physicalDesc": "translucent",
+   "serverOnly": true,
+   "sourceFile": "_Starlight/Reagents/medicine.yml"
+  },
+  {
    "color": "#E6E6DA",
    "desc": "A crystaline polydextrose polymer, plants swear by this stuff.",
    "dispensable": false,
@@ -3255,6 +3266,17 @@
    "physicalDesc": "murky",
    "serverOnly": false,
    "sourceFile": "Reagents/Consumable/Drink/drinks.yml"
+  },
+  {
+   "color": "#1b0330",
+   "desc": "Looks like Death, smells like Death. Clears the rot and rigor mortis from frozen corpses. Its use comes at a cost. Living bodies hate this stuff.",
+   "dispensable": false,
+   "group": "Medicine",
+   "id": "Mortizol",
+   "name": "mortizol",
+   "physicalDesc": "thick",
+   "serverOnly": true,
+   "sourceFile": "_Starlight/Reagents/medicine.yml"
   },
   {
    "color": "#CECBAD",

@@ -7742,6 +7742,41 @@
    "sourceFile": "Recipes/Reactions/fun.yml"
   },
   {
+   "category": "medicine",
+   "effects": [],
+   "id": "CellCultureMedium",
+   "maxTemp": null,
+   "minTemp": null,
+   "mixers": [
+    "Stir"
+   ],
+   "priority": 0,
+   "products": {
+    "CellCultureMedium": 6
+   },
+   "quantized": false,
+   "reactants": {
+    "Blood": {
+     "amount": 1,
+     "catalyst": false
+    },
+    "Carbon": {
+     "amount": 1,
+     "catalyst": false
+    },
+    "Cryoxadone": {
+     "amount": 1,
+     "catalyst": false
+    },
+    "Fat": {
+     "amount": 3,
+     "catalyst": false
+    }
+   },
+   "serverOnly": true,
+   "sourceFile": "_Starlight/Recipes/Reactions/medicine.yml"
+  },
+  {
    "category": "chemicals",
    "effects": [],
    "id": "CelluloseBreakdown",
@@ -12692,6 +12727,43 @@
    },
    "serverOnly": false,
    "sourceFile": "Recipes/Reactions/drinks.yml"
+  },
+  {
+   "category": "medicine",
+   "effects": [],
+   "id": "Mortizol",
+   "maxTemp": null,
+   "minTemp": 370,
+   "mixers": [],
+   "priority": 0,
+   "products": {
+    "Mortizol": 1
+   },
+   "quantized": false,
+   "reactants": {
+    "CellCultureMedium": {
+     "amount": 1,
+     "catalyst": false
+    },
+    "Diphenhydramine": {
+     "amount": 1,
+     "catalyst": false
+    },
+    "Doxarubixadone": {
+     "amount": 1,
+     "catalyst": false
+    },
+    "Mannitol": {
+     "amount": 1,
+     "catalyst": false
+    },
+    "Ultravasculine": {
+     "amount": 1,
+     "catalyst": false
+    }
+   },
+   "serverOnly": true,
+   "sourceFile": "_Starlight/Recipes/Reactions/medicine.yml"
   },
   {
    "category": "drinks",
