@@ -1981,6 +1981,17 @@
    "sourceFile": "Reagents/biological.yml"
   },
   {
+   "color": "#F9863F",
+   "desc": "A volatile medicinal extract that treats frostbite by rapidly raising body temperature. Highly flammable and can cause overheating when overdosed.",
+   "dispensable": false,
+   "group": "Medicine",
+   "id": "Ignisol",
+   "name": "ignisol",
+   "physicalDesc": "oily",
+   "serverOnly": false,
+   "sourceFile": "Reagents/medicine.yml"
+  },
+  {
    "color": "#215263",
    "desc": "A narcotic that impedes one's ability by slowing down the higher brain cell functions.",
    "dispensable": false,

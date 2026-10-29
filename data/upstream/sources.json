@@ -226,6 +226,14 @@
    "juice": null
   },
   {
+   "entity": "FoodAloeIgnis",
+   "grind": {
+    "Carbon": 4,
+    "Ignisol": 8
+   },
+   "juice": null
+  },
+  {
    "entity": "FoodAmbrosiaDeus",
    "grind": {
     "ApotheosoticEnzymes": 3,
@@ -439,6 +447,13 @@
     "Cornoil": 3,
     "Enzyme": 2
    }
+  },
+  {
+   "entity": "FoodDragonTail",
+   "grind": {
+    "Ignisol": 10
+   },
+   "juice": null
   },
   {
    "entity": "FoodExtradimensionalOrange",

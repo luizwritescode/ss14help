@@ -2574,6 +2574,12 @@
   "name": "ichor"
  },
  {
+  "category": "Medicine",
+  "id": "Ignisol",
+  "kind": "reagent",
+  "name": "ignisol"
+ },
+ {
   "category": "Narcotics",
   "id": "Impedrezene",
   "kind": "reagent",

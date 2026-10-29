@@ -267,6 +267,13 @@
    "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
   },
   {
+   "desc": "A jagged leaf. It's uncomfortably warm to the touch and smells like ozone and spice.",
+   "id": "FoodAloeIgnis",
+   "name": "aloe ignis leaf",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
    "desc": "An extremely sought-after medicinal plant. May have some funky side effects.",
    "id": "FoodAmbrosiaDeus",
    "name": "ambrosia deus",
@@ -1406,6 +1413,13 @@
    "name": "flattened tortilla dough",
    "serverOnly": false,
    "sourceFile": "Entities/Objects/Consumable/Food/ingredients.yml"
+  },
+  {
+   "desc": "A long, spiraling stalk that glows with a soft emerald light. It can be processed into useful compress to sooth burns.",
+   "id": "FoodDragonTail",
+   "name": "dragon's tail stalk",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
   },
   {
    "desc": "Maybe there's a chicken inside?",
