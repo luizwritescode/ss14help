@@ -1,6 +1,6 @@
 {
  "branch": "master",
- "commitDate": "2026-11-06T13:26:35-05:00",
+ "commitDate": "2026-11-09T08:44:20Z",
  "counts": {
   "cooking": 218,
   "entities": 623,
@@ -9,12 +9,12 @@
   "reagents": 420,
   "sources": 355
  },
- "generatedAt": "2026-11-06T22:28:11Z",
+ "generatedAt": "2026-11-09T14:30:38Z",
  "repo": "https://github.com/space-wizards/space-station-14",
  "schemaVersion": "1.1.0",
  "server": "upstream",
  "serverName": "Wizard's Den",
- "sha": "2561c7c9fee699d44cf6d314026f34258ec00bb6",
+ "sha": "33a1d0e32d639f05a17df0449ee4d087798688dc",
  "warnings": [
   {
    "code": "ftl-error",
