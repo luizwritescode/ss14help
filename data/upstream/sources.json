@@ -1661,16 +1661,18 @@
   {
    "entity": "MaterialSheetMeat",
    "grind": {
-    "Fat": 3,
-    "Protein": 7
+    "Blood": 5,
+    "Fat": 2,
+    "UncookedAnimalProteins": 3
    },
    "juice": null
   },
   {
    "entity": "MaterialSheetMeat1",
    "grind": {
-    "Fat": 3,
-    "Protein": 7
+    "Blood": 5,
+    "Fat": 2,
+    "UncookedAnimalProteins": 3
    },
    "juice": null
   },
