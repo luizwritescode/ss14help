@@ -6203,8 +6203,11 @@
    "category": "fun",
    "effects": [
     {
-     "_type": "SpawnEntity",
-     "entity": "ShardCrystalRandom"
+     "_type": "SpawnEntityTable",
+     "table": {
+      "_type": "NestedSelector",
+      "tableId": "RandomCrystalShardTable"
+     }
     }
    ],
    "id": "CreateCrystals",

@@ -3631,6 +3631,50 @@
    "sourceFile": "Reagents/botany.yml"
   },
   {
+   "color": "#74A1E8",
+   "desc": "A milkshake, but blue.",
+   "dispensable": false,
+   "group": "Drinks",
+   "id": "ShakeBlue",
+   "name": "blue milkshake",
+   "physicalDesc": "creamy",
+   "serverOnly": false,
+   "sourceFile": "Reagents/Consumable/Drink/drinks.yml"
+  },
+  {
+   "color": "#E88274",
+   "desc": "A milkshake made of blended bits of a once-living thing.",
+   "dispensable": false,
+   "group": "Drinks",
+   "id": "ShakeMeat",
+   "name": "meat shake",
+   "physicalDesc": "gloopy",
+   "serverOnly": false,
+   "sourceFile": "Reagents/Consumable/Drink/drinks.yml"
+  },
+  {
+   "color": "#5B445C",
+   "desc": "A robot has been ground into a fine dust and drowned in milk, sugar, and cream.",
+   "dispensable": false,
+   "group": "Drinks",
+   "id": "ShakeRobo",
+   "name": "robo shake",
+   "physicalDesc": "electric",
+   "serverOnly": false,
+   "sourceFile": "Reagents/Consumable/Drink/drinks.yml"
+  },
+  {
+   "color": "#FFFFFF",
+   "desc": "This shake is white, not vanilla.",
+   "dispensable": false,
+   "group": "Drinks",
+   "id": "ShakeWhite",
+   "name": "white shake",
+   "physicalDesc": "cold",
+   "serverOnly": false,
+   "sourceFile": "Reagents/Consumable/Drink/drinks.yml"
+  },
+  {
    "color": "#66538F",
    "desc": "~Shake me up some of that Shambler's Juice!~",
    "dispensable": false,

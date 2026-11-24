@@ -3475,6 +3475,30 @@
  },
  {
   "category": "Drinks",
+  "id": "ShakeBlue",
+  "kind": "reagent",
+  "name": "blue milkshake"
+ },
+ {
+  "category": "Drinks",
+  "id": "ShakeMeat",
+  "kind": "reagent",
+  "name": "meat shake"
+ },
+ {
+  "category": "Drinks",
+  "id": "ShakeRobo",
+  "kind": "reagent",
+  "name": "robo shake"
+ },
+ {
+  "category": "Drinks",
+  "id": "ShakeWhite",
+  "kind": "reagent",
+  "name": "white shake"
+ },
+ {
+  "category": "Drinks",
   "id": "ShamblersJuice",
   "kind": "reagent",
   "name": "Shambler's Juice"
