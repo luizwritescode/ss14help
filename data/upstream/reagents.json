@@ -2400,7 +2400,7 @@
   },
   {
    "color": "#5C6274",
-   "desc": "A slow-acting but incredibly lethal toxin found in steel, albeit in trace amounts. Tasteless.",
+   "desc": "A slow-acting but incredibly lethal toxin. Often utilized in covert assassinations for its lack of taste.",
    "dispensable": false,
    "group": "Toxins",
    "id": "Lead",
@@ -2807,7 +2807,7 @@
   },
   {
    "color": "#8a9a5b",
-   "desc": "A fungal growth, often found in dark, humid places or on expired bread. Will cause you to develop a disease if ingested.",
+   "desc": "A fungal growth, often found in dark, humid places or on expired bread.",
    "dispensable": false,
    "group": "Toxins",
    "id": "Mold",
@@ -4369,7 +4369,7 @@
   },
   {
    "color": "#000000",
-   "desc": "A jet black substance found in poorly maintained ventilation systems. Can cause vent cough.",
+   "desc": "A jet black substance found in poorly maintained ventilation systems.",
    "dispensable": false,
    "group": "Toxins",
    "id": "VentCrud",
