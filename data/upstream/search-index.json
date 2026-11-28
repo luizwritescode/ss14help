@@ -3600,6 +3600,12 @@
   "name": "Sol Dry"
  },
  {
+  "category": "Foods",
+  "id": "SolarOil",
+  "kind": "reagent",
+  "name": "Solar Oil"
+ },
+ {
   "category": "Drinks",
   "id": "SoyLatte",
   "kind": "reagent",

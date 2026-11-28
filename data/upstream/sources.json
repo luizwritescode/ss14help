@@ -1330,6 +1330,24 @@
    "juice": null
   },
   {
+   "entity": "FoodShadowflower",
+   "grind": {
+    "Nutriment": 5,
+    "Nyctalon": 5,
+    "Vitamin": 5
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodSolarflower",
+   "grind": {
+    "Nutriment": 5,
+    "SolarOil": 15,
+    "Vitamin": 5
+   },
+   "juice": null
+  },
+  {
    "entity": "FoodSoybeans",
    "grind": {
     "Nutriment": 8,
@@ -1362,6 +1380,15 @@
    "entity": "FoodSpaceshroomCooked",
    "grind": {
     "Nutriment": 20,
+    "Vitamin": 10
+   },
+   "juice": null
+  },
+  {
+   "entity": "FoodSunflower",
+   "grind": {
+    "Nutriment": 5,
+    "Oil": 15,
     "Vitamin": 10
    },
    "juice": null

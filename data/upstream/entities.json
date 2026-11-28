@@ -2549,6 +2549,13 @@
    "sourceFile": "Entities/Objects/Consumable/Food/meals.yml"
   },
   {
+   "desc": "A bulky flower with a core of darkness.",
+   "id": "FoodShadowflower",
+   "name": "shadowflower",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
+  },
+  {
    "desc": "Tastes like cardboard.",
    "id": "FoodSnackChocolateBar",
    "name": "chocolate bar",
@@ -2575,6 +2582,13 @@
    "name": "4no raisins",
    "serverOnly": false,
    "sourceFile": "Entities/Objects/Consumable/Food/snacks.yml"
+  },
+  {
+   "desc": "A bulky flower filled with a glistening solution, it just needs a push to get going.",
+   "id": "FoodSolarflower",
+   "name": "solarflower",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
   },
   {
    "desc": "A classic entrée from Space France.",
@@ -2743,6 +2757,13 @@
    "name": "cooked spaceshroom",
    "serverOnly": false,
    "sourceFile": "Entities/Objects/Misc/spaceshroom.yml"
+  },
+  {
+   "desc": "A bulky flower filled with natural oils.",
+   "id": "FoodSunflower",
+   "name": "sunflower",
+   "serverOnly": false,
+   "sourceFile": "Entities/Objects/Consumable/Food/produce.yml"
   },
   {
    "desc": "A very basic and run of the mill beef taco, now with cheese!",

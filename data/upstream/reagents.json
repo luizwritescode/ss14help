@@ -3862,6 +3862,17 @@
    "sourceFile": "Reagents/Consumable/Drink/soda.yml"
   },
   {
+   "color": "#fffb00",
+   "desc": "A viscous natural oil with luminescent properties found in solarflowers. Its exothermic byproduct can warm the body and even forcibly acclimatise plants to hotter environments.",
+   "dispensable": false,
+   "group": "Foods",
+   "id": "SolarOil",
+   "name": "Solar Oil",
+   "physicalDesc": "glowing",
+   "serverOnly": false,
+   "sourceFile": "Reagents/Consumable/Food/ingredients.yml"
+  },
+  {
    "color": "#664300",
    "desc": "A coffee drink made with espresso and steamed soy milk.",
    "dispensable": false,
